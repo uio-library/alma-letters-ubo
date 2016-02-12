@@ -26,11 +26,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </xsl:attribute>
         <xsl:call-template name="head" />
         <!-- header.xsl -->
-        <xsl:call-template name="senderReceiver" />
+       
         <!-- SenderReceiver.xsl -->
         <div class="messageArea">
           <div class="messageBody">
             <table cellspacing="0" cellpadding="5" border="0">
+
+             <br />
+
+             <tr>
+              <td> 
+               <xsl:choose>
+       <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
+        Hei,<br />
+       </xsl:when>
+       <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nn'">
+        Hei,<br />
+        
+       </xsl:when>
+       <xsl:otherwise>
+        Hi,<br />
+        
+       </xsl:otherwise>
+      </xsl:choose>
+     </td>  
+    </tr>  
     <tr>
      <td>@@your_request@@.</td>
     </tr>
@@ -51,19 +71,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </xsl:if>
 
     <xsl:if test="$isDigitalDocDelivery='true' or $isDeposit='false'"> <!-- DOCUMENT DELIVERY -->
-     <tr>
-      <td>@@material@@:</td>
-     </tr>
+     
      <tr>
       <td>
        <xsl:value-of select="notification_data/phys_item_display/title"/>
       </td>
      </tr>
-     <xsl:if test="$externalRequestId">
-      <tr>
-       <td>@@the_request_relates@@<xsl:value-of select="$externalRequestId"/> @@of@@ <xsl:value-of select="$externalSystem"/>.</td>
-      </tr>
-     </xsl:if>
 
      <xsl:if test="/notification_data/url_list[string]">
       <tr>
@@ -89,12 +102,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      </xsl:if>
                 </xsl:if>
 
-    <tr>
-    <td>@@request_type_digitization@@</td>
-     </tr>
-            <tr>
-    <td>@@sincerely@@<br />@@department@@</td>
-     </tr>
    </table>
           </div>
         </div>

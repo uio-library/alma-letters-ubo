@@ -77,10 +77,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    <br />
    @@additional_info_2@@
     <br />
-   <table>
-    <tr><td>@@sincerely@@</td></tr>
-    <tr><td>@@department@@</td></tr>
-   </table>
+   
 
           </div>
         </div>

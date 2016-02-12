@@ -16,7 +16,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:attribute name="style">
    <xsl:call-template name="listStyleCss" /> <!-- style.xsl -->
   </xsl:attribute>
-   <tr><td><xsl:value-of select="notification_data/user_for_printing/name"/></td></tr>
+   <tr><td><b><xsl:value-of select="notification_data/user_for_printing/name"/></b></td></tr>
    <tr><td><xsl:value-of select="notification_data/user_for_printing/address1"/></td></tr>
    <tr><td><xsl:value-of select="notification_data/user_for_printing/postal_code"/>&#160;<xsl:value-of select="notification_data/user_for_printing/city"/></td></tr>
    <tr><td><xsl:value-of select="notification_data/user_for_printing/country"/></td></tr>

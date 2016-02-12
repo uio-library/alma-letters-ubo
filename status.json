@@ -69,8 +69,8 @@
       "remote_date": "-"
     }, 
     "xsl/letters/FulDigitizationNotificationItemLetter.xsl": {
-      "checksum": "a6c232620a108beb08c06d091623362df3c5d7fa", 
-      "remote_date": "-"
+      "checksum": "d2b3fe2c4396ad0a3c22f70810cb5b387f0caecb", 
+      "remote_date": "11/02/2016"
     }, 
     "xsl/letters/FulFinesFeesNotificationLetter.xsl": {
       "checksum": "ed0da098fcc0039d214720925acb04307fc616ee", 
@@ -149,12 +149,12 @@
       "remote_date": "19/01/2016"
     }, 
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
-      "checksum": "d556515a2351d6bfc53f77854d19390cf3a359f3", 
-      "remote_date": "-"
+      "checksum": "a8734c9749b1b3e0e5687679b6ff668926c24566", 
+      "remote_date": "12/02/2016"
     }, 
     "xsl/letters/FulUserOverdueNoticeLetter.xsl": {
-      "checksum": "0f132cee3c99a7dfbf41bb28654a377186c886ff", 
-      "remote_date": "-"
+      "checksum": "e0d7c6cd09bdca03292a25347de6f4f87505781e", 
+      "remote_date": "12/02/2016"
     }, 
     "xsl/letters/GeneralAssignToLetter.xsl": {
       "checksum": "87f139e94b4184828169cd60cbba30eae8dc6c01", 
@@ -297,8 +297,8 @@
       "remote_date": "26/01/2016"
     }, 
     "xsl/letters/call_template/senderReceiver.xsl": {
-      "checksum": "4d8563778da96921f96ca560adea4e4fb0fd6afd", 
-      "remote_date": "09/02/2016"
+      "checksum": "a5162a01a73a5506e9067b0004c4a01ebdf81a7b", 
+      "remote_date": "12/02/2016"
     }, 
     "xsl/letters/call_template/smsRecordTitle.xsl": {
       "checksum": "af1a6166ce6a100b6a20e59ecbf17998bbe22299", 
