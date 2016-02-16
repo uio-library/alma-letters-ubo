@@ -411,7 +411,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        <xsl:if test="notification_data/library/address/city !=''">
         <tr>
          <td>
-          <xsl:value-of select="notification_data/library/address/city" />
+          <xsl:value-of select="notification_data/library/address/postal_code" />&#160;<xsl:value-of select="notification_data/library/address/city" />
          </td>
         </tr>
        </xsl:if>
