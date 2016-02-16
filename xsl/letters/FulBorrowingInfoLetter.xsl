@@ -17,48 +17,39 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:call-template name="bodyStyleCss" /> <!-- style.xsl -->
    </xsl:attribute>
     <xsl:call-template name="head" /> <!-- header.xsl -->
-    <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
-    <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
+   <!-- <xsl:call-template name="senderReceiver" />--> <!-- SenderReceiver.xsl -->
 
   <div class="messageArea">
     <div class="messageBody">
-      <table cellspacing="0" cellpadding="5" border="0">
-       
-      <xsl:choose>
-       <xsl:when test="notification_data/success='true'">
-        <!--<td>@@on@@ <xsl:value-of select="notification_data/general_data/current_date"/> @@we_renewed_y_req_from@@ <xsl:value-of select="notification_data/outgoing/create_date"/> @@detailed_below@@ :</td>-->
-        <tr><td>@@renewed_loan@@:</td></tr>
-       </xsl:when>
 
-       <xsl:otherwise>
-        <td>@@not_renewed_loan@@:</td>
-       </xsl:otherwise>
-      </xsl:choose>
+      <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
-      <tr>
-       <td><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
-      </tr>
+      <p>
+        <xsl:choose>
+          <xsl:when test="notification_data/success='true'">
+            <!--<td>@@on@@ <xsl:value-of select="notification_data/general_data/current_date"/> @@we_renewed_y_req_from@@ <xsl:value-of select="notification_data/outgoing/create_date"/> @@detailed_below@@ :</td>-->
+            @@renewed_loan@@:
+          </xsl:when>
+          <xsl:otherwise>
+            @@not_renewed_loan@@:
+          </xsl:otherwise>
+        </xsl:choose>
+      </p>
 
-      <xsl:choose>
+      <xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl -->
 
-       <xsl:when test="notification_data/success='true'">
-        <tr>
-         <td>@@new_due_date@@: <xsl:value-of select="notification_data/item_loan_due_date"/></td>
-        </tr>
-
-        <tr>
-         <td><b>@@success_reason@@</b></td>
-        </tr>
-       </xsl:when>
-
-       <xsl:otherwise>
-        <tr>
-         <td><b>@@contact_dep@@</b></td>
-        </tr>
-       </xsl:otherwise>
-
-      </xsl:choose>
-     </table>
+      <p>
+        <xsl:choose>
+          <xsl:when test="notification_data/success='true'">
+            @@new_due_date@@:
+            <xsl:value-of select="notification_data/item_loan_due_date"/><br/>
+            @@success_reason@@
+          </xsl:when>
+          <xsl:otherwise>
+           @@contact_dep@@
+          </xsl:otherwise>
+        </xsl:choose>
+      </p>
 
     </div>
    </div>
