@@ -39,7 +39,7 @@
          <xsl:value-of select="notification_data/outgoing/pickup_location_str"/>
         </xsl:when>
         <xsl:otherwise>
-         <xsl:value-of select="notification_data/request/assigned_unit_name"/>
+         <xsl:value-of select="notification_data/phys_item_display/owning_library_name"/>
         </xsl:otherwise>
        </xsl:choose>.
       </p>
@@ -83,7 +83,7 @@
        <xsl:otherwise>
         <p>@@following_item_requested_on@@
          <xsl:value-of select="notification_data/request/create_date"/>, @@can_picked_at@@
-         <xsl:value-of select="notification_data/request/assigned_unit_name"/>.
+         <xsl:value-of select="notification_data/phys_item_display/owning_library_name"/>.
         </p>
 
        </xsl:otherwise>
