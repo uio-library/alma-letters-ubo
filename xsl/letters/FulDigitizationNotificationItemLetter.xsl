@@ -26,83 +26,56 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </xsl:attribute>
         <xsl:call-template name="head" />
         <!-- header.xsl -->
-       
-        <!-- SenderReceiver.xsl -->
+
         <div class="messageArea">
           <div class="messageBody">
-            <table cellspacing="0" cellpadding="5" border="0">
 
-             <br />
+            <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
-             <tr>
-              <td> 
-               <xsl:choose>
-       <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
-        Hei,<br />
-       </xsl:when>
-       <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nn'">
-        Hei,<br />
-        
-       </xsl:when>
-       <xsl:otherwise>
-        Hi,<br />
-        
-       </xsl:otherwise>
-      </xsl:choose>
-     </td>  
-    </tr>  
-    <tr>
-     <td>@@your_request@@.</td>
-    </tr>
-    <xsl:if test="$isDeposit='true'">
-    <tr>
-     <td>@@material@@:</td>
-    </tr>
-    <tr>
-     <td>
-     <a>
-                        <xsl:attribute name="href">
-                          <xsl:value-of select="notification_data/item_url" />
-                        </xsl:attribute>
-      <xsl:value-of select="notification_data/phys_item_display/title"/>
-     </a>
-     </td>
-    </tr>
-    </xsl:if>
+            <div>
+              @@your_request@@.
+            </div>
 
-    <xsl:if test="$isDigitalDocDelivery='true' or $isDeposit='false'"> <!-- DOCUMENT DELIVERY -->
-     
-     <tr>
-      <td>
-       <xsl:value-of select="notification_data/phys_item_display/title"/>
-      </td>
-     </tr>
+            <xsl:if test="$isDeposit='true'">
+              <div>
+                @@material@@:
+              </div>
+              <div>
+                <a>
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="notification_data/item_url" />
+                  </xsl:attribute>
+                  <xsl:value-of select="notification_data/phys_item_display/title"/>
+                </a>
+              </div>
+            </xsl:if>
 
-     <xsl:if test="/notification_data/url_list[string]">
-      <tr>
-       <td>@@attached_are_the_urls@@:</td>
-      </tr>
+            <xsl:if test="$isDigitalDocDelivery='true' or $isDeposit='false'"> <!-- DOCUMENT DELIVERY -->
+              <div>
+                <xsl:value-of select="notification_data/phys_item_display/title"/>
+              </div>
 
-      <xsl:for-each select="/notification_data/attachments_list/attachments">
-       <xsl:if test="url">
-       <tr>
-        <td>
-         <a>
-         <xsl:attribute name="href">
-          <xsl:value-of select="url" />
-         </xsl:attribute>
-         <xsl:value-of select="url" />
-         </a>
-        </td>
-       </tr>
+              <xsl:if test="/notification_data/url_list[string]">
+                <div>
+                  @@attached_are_the_urls@@:
+                </div>
+                <ul>
+                  <xsl:for-each select="/notification_data/attachments_list/attachments">
+                   <xsl:if test="url">
+                   <li>
+                     <a>
+                     <xsl:attribute name="href">
+                      <xsl:value-of select="url" />
+                     </xsl:attribute>
+                     <xsl:value-of select="url" />
+                     </a>
+                    </li>
+                   </xsl:if>
+                  </xsl:for-each>
+                </ul>
+              </xsl:if>
+            </xsl:if>
 
-       </xsl:if>
-      </xsl:for-each>
-
-     </xsl:if>
-                </xsl:if>
-
-   </table>
           </div>
         </div>
 
