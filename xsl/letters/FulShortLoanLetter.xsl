@@ -45,17 +45,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
              </table>
-    <br />
-   <table>
-    <tr><td>@@sincerely@@</td></tr>
-    <tr><td>@@department@@</td></tr>
-   </table>
-
           </div>
         </div>
 
-        <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
+        <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+
       </body>
     </html>
   </xsl:template>

@@ -60,16 +60,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </table><br />
     <h><b>@@please_settle@@</b></h>
 
-    <br />
-    <br />
-    <table>
-      <tr><td>@@sincerely@@</td></tr>
-      <tr><td>@@department@@</td></tr>
-    </table>
     </table>
     <br />
 
     <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+
    </body>
  </html>
 </xsl:template>

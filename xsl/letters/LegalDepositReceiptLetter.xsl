@@ -115,10 +115,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
     <br />
-    <table>
 
-   </table>
     <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+
    </body>
  </html>
 </xsl:template>

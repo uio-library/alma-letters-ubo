@@ -105,8 +105,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    </table>
           </div>
         </div>
-        <xsl:call-template name="lastFooter" />
-        <!-- footer.xsl -->
+
+        <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+
       </body>
     </html>
   </xsl:template>

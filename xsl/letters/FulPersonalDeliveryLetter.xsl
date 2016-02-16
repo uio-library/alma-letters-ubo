@@ -56,20 +56,12 @@
        </tr>
       </table>
       <br />
-      <table>
-
-       <tr>
-        <td>@@sincerely@@</td>
-       </tr>
-       <tr>
-        <td>@@department@@</td>
-       </tr>
-
-      </table>
      </div>
     </div>
+
     <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
     <xsl:call-template name="contactUs" />
+
    </body>
   </html>
  </xsl:template>
