@@ -38,8 +38,11 @@
         <xsl:when test="notification_data/outgoing/pickup_location_str != ''">
          <xsl:value-of select="notification_data/outgoing/pickup_location_str"/>
         </xsl:when>
+        <xsl:when test="notification_data/request/assigned_unit_name != ''">
+         <xsl:value-of select="notification_data/request/assigned_unit_name"/>
+        </xsl:when>
         <xsl:otherwise>
-         <xsl:value-of select="notification_data/phys_item_display/owning_library_name"/>
+         <em>(Unknown pickup location. This bug is tracked)</em>
         </xsl:otherwise>
        </xsl:choose>.
       </p>
