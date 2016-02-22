@@ -23,7 +23,7 @@ h3 {
  #logoContainer img {
    max-width: 100%;
  }
- .messageBody, .lastFooter {
+ .messageBody, #lastFooter, #contactUs, #myAccount {
    padding: 0 1.8em;
  }
  </style>
