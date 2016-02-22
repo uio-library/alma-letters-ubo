@@ -22,68 +22,52 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:call-template name="head" /><!-- header.xsl -->
         <xsl:call-template name="senderReceiver" /> <!-- SenderReceiver.xsl -->
 
-  <br />
-  <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
+<div class="messageArea">
+  <div class="messageBody">
 
+    <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
 
-        <div class="messageArea">
-          <div class="messageBody">
+    <p>
+      @@message@@
+    </p>
 
-   <table cellspacing="0" cellpadding="5" border="0">
-              <tr>
-               <td>
-     <b>@@message@@</b>
-     <br/><br/>
-                </td>
-              </tr>
-              <tr>
-               <td>
-     <b>@@loans@@</b>
-                </td>
-              </tr>
-
-              <tr>
-                <td>
-                 <table cellpadding="5" class="listing">
+    <table cellpadding="5" class="listing">
       <xsl:attribute name="style">
        <xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
       </xsl:attribute>
       <tr>
        <th>@@title@@</th>
        <th>@@description@@</th>
-       <th>@@author@@</th>
        <th>@@due_date@@</th>
        <th>@@library@@</th>
       </tr>
 
-                  <xsl:for-each select="notification_data/item_loans/item_loan">
-      <tr>
-       <td><xsl:value-of select="title"/></td>
-       <td><xsl:value-of select="description"/></td>
-       <td><xsl:value-of select="author"/></td>
-       <td><xsl:value-of select="due_date"/></td>
-       <td><xsl:value-of select="library_name"/></td>
-
-      </tr>
+      <xsl:for-each select="notification_data/item_loans/item_loan">
+        <tr>
+         <td><xsl:value-of select="title"/></td>
+         <td><xsl:value-of select="description"/></td>
+         <td><xsl:value-of select="due_date"/></td>
+         <td><xsl:value-of select="library_name"/></td>
+        </tr>
       </xsl:for-each>
 
-                 </table>
-                </td>
-              </tr>
-             </table>
-    <br />
-   
-    @@additional_info_1@@
-   <br />
-   @@additional_info_2@@
-    
-   
-          </div>
-        </div>
+    </table>
 
-        <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter" />
-         
+    <p>
+      @@additional_info_1@@
+    </p>
+
+    <p>
+      @@additional_info_2@@
+    </p>
+
+  </div>
+</div>
+
+<!-- footer.xsl -->
+<xsl:call-template name="lastFooter" />
+<xsl:call-template name="myAccount" />
+
       </body>
     </html>
   </xsl:template>
