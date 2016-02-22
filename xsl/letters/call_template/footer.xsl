@@ -40,7 +40,7 @@
              Kontakt oss på
             </xsl:when>
             <xsl:otherwise>
-             Contact us at
+             Please contact us at
             </xsl:otherwise>
           </xsl:choose>
           <xsl:value-of select="email/email"/>
