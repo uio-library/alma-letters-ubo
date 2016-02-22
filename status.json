@@ -1,351 +1,351 @@
 {
   "letters": {
     "xsl/checksum_calc.xsl": {
-      "checksum": "5e316385ed1e11b359c9c0fd64320ed2e471d615", 
+      "checksum": "5e316385ed1e11b359c9c0fd64320ed2e471d615",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/AnalyticsLetter.xsl": {
-      "checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2", 
+      "checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/BorrowerOverdueEmailLetter.xsl": {
-      "checksum": "110e317f88a10ff256cbc1c8b179c76e9a314e1f", 
+      "checksum": "110e317f88a10ff256cbc1c8b179c76e9a314e1f",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/CollectionContributionLetter.xsl": {
-      "checksum": "9377a23a14f12ce980f34a20df8ec3146656c52e", 
+      "checksum": "9377a23a14f12ce980f34a20df8ec3146656c52e",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/CollectionContributionUpdateStatusLetter.xsl": {
-      "checksum": "b81f2289bd1bbcd76d3f091a4ba412f2554b34eb", 
+      "checksum": "b81f2289bd1bbcd76d3f091a4ba412f2554b34eb",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/ConversationLetter.xsl": {
-      "checksum": "334e4c3cb7147c3b157192e9f5aaae6ca283145a", 
+      "checksum": "334e4c3cb7147c3b157192e9f5aaae6ca283145a",
       "modified": "09/02/2016"
-    }, 
+    },
     "xsl/letters/EactivationtaskOverdueLetter.xsl": {
-      "checksum": "0af271c6add8174ce54f0ce9a127a4935e56d89b", 
+      "checksum": "0af271c6add8174ce54f0ce9a127a4935e56d89b",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/ExportUserLetter.xsl": {
-      "checksum": "5e316385ed1e11b359c9c0fd64320ed2e471d615", 
+      "checksum": "5e316385ed1e11b359c9c0fd64320ed2e471d615",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/ExternallyObtainedEmailLetter.xsl": {
-      "checksum": "a4a76b2bd6d5b7f0ba11e2b32c919ef3a981abbc", 
+      "checksum": "a4a76b2bd6d5b7f0ba11e2b32c919ef3a981abbc",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FineFeePaymentReceiptLetter.xsl": {
-      "checksum": "e9daaf2b3257235c4c188415b92b25f628d52323", 
+      "checksum": "e9daaf2b3257235c4c188415b92b25f628d52323",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FinesAndFeesReportLetter.xsl": {
-      "checksum": "dd2b0b63a71fe0cd8b6f276ddef2fd38dcef5667", 
+      "checksum": "dd2b0b63a71fe0cd8b6f276ddef2fd38dcef5667",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulBorrowedByLetter.xsl": {
-      "checksum": "f9edca9f77b983c0f7191dec9db097090604ac85", 
+      "checksum": "f9edca9f77b983c0f7191dec9db097090604ac85",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulBorrowingInfoLetter.xsl": {
-      "checksum": "074df7d3568f2c97a105015b891e0b2e85442822", 
+      "checksum": "074df7d3568f2c97a105015b891e0b2e85442822",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulCancelEmailLetter.xsl": {
-      "checksum": "b511d345170027affb86134906ad92a1feb5a5e8", 
+      "checksum": "b511d345170027affb86134906ad92a1feb5a5e8",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulCancelRequestLetter.xsl": {
-      "checksum": "83a5d58f715905eaa4eab3652e4d5320d65281c2", 
+      "checksum": "83a5d58f715905eaa4eab3652e4d5320d65281c2",
       "modified": "19/01/2016"
-    }, 
+    },
     "xsl/letters/FulCitationSlipLetter.xsl": {
-      "checksum": "2e60a8ef403a4e15208cad8a59788c2c7886a195", 
+      "checksum": "2e60a8ef403a4e15208cad8a59788c2c7886a195",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulCitationsSlipLetter.xsl": {
-      "checksum": "dd2b0b63a71fe0cd8b6f276ddef2fd38dcef5667", 
+      "checksum": "dd2b0b63a71fe0cd8b6f276ddef2fd38dcef5667",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulDigitizationNotificationItemLetter.xsl": {
-      "checksum": "84e4a289cf560878581e5735b0c64214ec5c5c41", 
+      "checksum": "84e4a289cf560878581e5735b0c64214ec5c5c41",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulFinesFeesNotificationLetter.xsl": {
-      "checksum": "14411285b3f171172aafe2a23f6b82a4ee364126", 
+      "checksum": "14411285b3f171172aafe2a23f6b82a4ee364126",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulIncomingSlipLetter.xsl": {
-      "checksum": "94f1382b6df7bf812bdd2bcf05a454bae0225b5b", 
-      "modified": "01/02/2016"
-    }, 
+      "checksum": "94f1382b6df7bf812bdd2bcf05a454bae0225b5b",
+      "modified": "19/02/2016"
+    },
     "xsl/letters/FulItemChangeDueDateLetter.xsl": {
-      "checksum": "24e9d5b87cd91fe52e3b3718de0c8a2dbd0f1562", 
+      "checksum": "24e9d5b87cd91fe52e3b3718de0c8a2dbd0f1562",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulLoanReceiptLetter.xsl": {
-      "checksum": "ecf03955779740ce217bd4d8f8e7387d7ffc54c6", 
+      "checksum": "ecf03955779740ce217bd4d8f8e7387d7ffc54c6",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulLostLoanLetter.xsl": {
-      "checksum": "136ee5e1574428382d96f7425c39b8749efe82a7", 
+      "checksum": "136ee5e1574428382d96f7425c39b8749efe82a7",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
-      "checksum": "7a63a6806faf106e6f5fb22ad98ed6d1b9864762", 
+      "checksum": "7a63a6806faf106e6f5fb22ad98ed6d1b9864762",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
-      "checksum": "524c9769aeb5e5eaca26fbacb497ce7d00ca35de", 
+      "checksum": "524c9769aeb5e5eaca26fbacb497ce7d00ca35de",
       "modified": "28/01/2016"
-    }, 
+    },
     "xsl/letters/FulOutgoingEmailLetter.xsl": {
-      "checksum": "65c32e899554f12f3fd3f71a43bc5aeb633cf1a5", 
+      "checksum": "65c32e899554f12f3fd3f71a43bc5aeb633cf1a5",
       "modified": "15/02/2016"
-    }, 
+    },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "75726a222a0088a22ed74504bafe8068225527ad", 
+      "checksum": "75726a222a0088a22ed74504bafe8068225527ad",
       "modified": "19/01/2016"
-    }, 
+    },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "8c43d203d309750d81b62d278672b7fef52b2415", 
+      "checksum": "8c43d203d309750d81b62d278672b7fef52b2415",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
-      "checksum": "70006caa2e60331b72b04005019ffd901580885e", 
+      "checksum": "70006caa2e60331b72b04005019ffd901580885e",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulPickupRequestReportLetter.xsl": {
-      "checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9", 
+      "checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "ac878bf987cf05db24b2821bc378b88d0c40df8c", 
+      "checksum": "ac878bf987cf05db24b2821bc378b88d0c40df8c",
       "modified": "17/02/2016"
-    }, 
+    },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "595177d5bb22ea79e7edd22354909eeb2a064d44", 
+      "checksum": "595177d5bb22ea79e7edd22354909eeb2a064d44",
       "modified": "03/02/2016"
-    }, 
+    },
     "xsl/letters/FulRenewEmailLetter.xsl": {
-      "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f", 
+      "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/FulReturnReceiptLetter.xsl": {
-      "checksum": "183bd89d37adcb9eaeb896ea2b4610d3fc27375f", 
+      "checksum": "183bd89d37adcb9eaeb896ea2b4610d3fc27375f",
       "modified": "20/01/2016"
-    }, 
+    },
     "xsl/letters/FulShortLoanLetter.xsl": {
-      "checksum": "c332b5dc1731d3ecdbccf17ca3b6117ac039a70b", 
+      "checksum": "c332b5dc1731d3ecdbccf17ca3b6117ac039a70b",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/FulTransitSlipLetter.xsl": {
-      "checksum": "3f9d1a04acc91397021976889b3c59c949e38571", 
+      "checksum": "3f9d1a04acc91397021976889b3c59c949e38571",
       "modified": "25/01/2016"
-    }, 
+    },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
-      "checksum": "44a573c7bea1d78e2f0dac706d091ca7ae01c812", 
+      "checksum": "44a573c7bea1d78e2f0dac706d091ca7ae01c812",
       "modified": "19/01/2016"
-    }, 
+    },
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
-      "checksum": "a8734c9749b1b3e0e5687679b6ff668926c24566", 
+      "checksum": "a8734c9749b1b3e0e5687679b6ff668926c24566",
       "modified": "12/02/2016"
-    }, 
+    },
     "xsl/letters/FulUserOverdueNoticeLetter.xsl": {
-      "checksum": "e0d7c6cd09bdca03292a25347de6f4f87505781e", 
+      "checksum": "e0d7c6cd09bdca03292a25347de6f4f87505781e",
       "modified": "12/02/2016"
-    }, 
+    },
     "xsl/letters/GeneralAssignToLetter.xsl": {
-      "checksum": "87f139e94b4184828169cd60cbba30eae8dc6c01", 
+      "checksum": "87f139e94b4184828169cd60cbba30eae8dc6c01",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/InterestedInLetter.xsl": {
-      "checksum": "ae1ca3eeb04a8e232b0e5cc24975c5ddc451b13b", 
+      "checksum": "ae1ca3eeb04a8e232b0e5cc24975c5ddc451b13b",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/InterestedUsersInLetter.xsl": {
-      "checksum": "1a384dd7b3179a9578dd2872ecf2951055f0582e", 
+      "checksum": "1a384dd7b3179a9578dd2872ecf2951055f0582e",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/LegalDepositClaimLetter.xsl": {
-      "checksum": "02f4fcf68a53a9662a3098433f434a9f40c91669", 
+      "checksum": "02f4fcf68a53a9662a3098433f434a9f40c91669",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/LegalDepositOrderLetter.xsl": {
-      "checksum": "8e142e13baba25921119bda231ebe0fb93d4e849", 
+      "checksum": "8e142e13baba25921119bda231ebe0fb93d4e849",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/LegalDepositReceiptLetter.xsl": {
-      "checksum": "ebfd59dbecc4c97934754c7054afb8a750e3b632", 
+      "checksum": "ebfd59dbecc4c97934754c7054afb8a750e3b632",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/LegantoNotificationsLetter.xsl": {
-      "checksum": "134ad7fa8a2b9bf30f431937167fe8d68c124195", 
+      "checksum": "134ad7fa8a2b9bf30f431937167fe8d68c124195",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/LendingRecallEmailLetter.xsl": {
-      "checksum": "78d21197e5fe99d0c794e6e1c9773dc9b77f9916", 
+      "checksum": "78d21197e5fe99d0c794e6e1c9773dc9b77f9916",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/LendingReqReportSlipLetter.xsl": {
-      "checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9", 
+      "checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/NotifyUponRenewalLetter.xsl": {
-      "checksum": "0ee298cabf347b8e5042611768028bcc88d3fc7f", 
+      "checksum": "0ee298cabf347b8e5042611768028bcc88d3fc7f",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/OrderListLetter.xsl": {
-      "checksum": "083a7ea5b667b7d8dcc8b00acad119cbdf5cdc46", 
+      "checksum": "083a7ea5b667b7d8dcc8b00acad119cbdf5cdc46",
       "modified": "09/02/2016"
-    }, 
+    },
     "xsl/letters/OrderNowLetter.xsl": {
-      "checksum": "c45ab9cfcd183c9267d204606ba388fa6fae957a", 
+      "checksum": "c45ab9cfcd183c9267d204606ba388fa6fae957a",
       "modified": "09/02/2016"
-    }, 
+    },
     "xsl/letters/OverlapAnalysisLetter.xsl": {
-      "checksum": "ee3be72e2ffcbd8ed510f1fcbdf6d033f23d702f", 
+      "checksum": "ee3be72e2ffcbd8ed510f1fcbdf6d033f23d702f",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/OwnerSubscriptionLetter.xsl": {
-      "checksum": "85e8ab412bfaf720fc6ad87074dad2299d3a4f75", 
+      "checksum": "85e8ab412bfaf720fc6ad87074dad2299d3a4f75",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/PINNumberLetter.xsl": {
-      "checksum": "ca6cdcccbf6c8cf9acc732b52e3d0f7323ec7078", 
+      "checksum": "ca6cdcccbf6c8cf9acc732b52e3d0f7323ec7078",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/POLineCancellationLetter.xsl": {
-      "checksum": "d78a5143201c8d68e1a0f74cc9c45d867604156d", 
+      "checksum": "d78a5143201c8d68e1a0f74cc9c45d867604156d",
       "modified": "09/02/2016"
-    }, 
+    },
     "xsl/letters/POLineClaimLetter.xsl": {
-      "checksum": "c80a2b2ea51f0032fc3aea61445c79e2b08857cf", 
+      "checksum": "c80a2b2ea51f0032fc3aea61445c79e2b08857cf",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/POLineRenewalLetter.xsl": {
-      "checksum": "8563b48e56da220f3f17c25210f96a110ca968c7", 
+      "checksum": "8563b48e56da220f3f17c25210f96a110ca968c7",
       "modified": "09/02/2016"
-    }, 
+    },
     "xsl/letters/PdaThresholdLetter.xsl": {
-      "checksum": "921b1b2a03bfce040754e18effa7788462aea31f", 
+      "checksum": "921b1b2a03bfce040754e18effa7788462aea31f",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/ProcessBibExportFinishedLetter.xsl": {
-      "checksum": "03d4a70cc5b6716785e26af28c7e271d03d82256", 
+      "checksum": "03d4a70cc5b6716785e26af28c7e271d03d82256",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/PurchaseRequestStatusLetter.xsl": {
-      "checksum": "79e070c95c413ead652acbb3871f2028b8adbea0", 
+      "checksum": "79e070c95c413ead652acbb3871f2028b8adbea0",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/QueryToPatronLetter.xsl": {
-      "checksum": "beb2e44d8cf69ce7787f7d0d74b8ab9298c22b10", 
+      "checksum": "beb2e44d8cf69ce7787f7d0d74b8ab9298c22b10",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/QueryToRequesterLetter.xsl": {
-      "checksum": "25a4664d2eb0a09ceab3b431ef34a1c243d7ddce", 
+      "checksum": "25a4664d2eb0a09ceab3b431ef34a1c243d7ddce",
       "modified": "16/02/2016"
-    }, 
+    },
     "xsl/letters/ReceivingSlipLetter.xsl": {
-      "checksum": "9de52f49815ac4c6749931858695ea495e802830", 
+      "checksum": "9de52f49815ac4c6749931858695ea495e802830",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/ResendNotificationLetter.xsl": {
-      "checksum": "1683c8761ea4f3035a8e967867b8e387527606a4", 
+      "checksum": "1683c8761ea4f3035a8e967867b8e387527606a4",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
-      "checksum": "8152c6c15abd64e178b4b61ac7b5763d370615c1", 
+      "checksum": "8152c6c15abd64e178b4b61ac7b5763d370615c1",
       "modified": "25/01/2016"
-    }, 
+    },
     "xsl/letters/RestrictedLoginIPLetter.xsl": {
-      "checksum": "49e2533afb204cd04761d76487dccaf05939e162", 
+      "checksum": "49e2533afb204cd04761d76487dccaf05939e162",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/SystemJobLetter.xsl": {
-      "checksum": "3a2b4c7b38d8394c1e04022beb37af8c102e4b42", 
+      "checksum": "3a2b4c7b38d8394c1e04022beb37af8c102e4b42",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/TrialLetter.xsl": {
-      "checksum": "3d1102550ced6431853c45ea6c9b5158150c7f7f", 
+      "checksum": "3d1102550ced6431853c45ea6c9b5158150c7f7f",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/UserDeletionLetter.xsl": {
-      "checksum": "17b3d7d2e05d998fbdb1a714efb5a31b00f081fa", 
+      "checksum": "17b3d7d2e05d998fbdb1a714efb5a31b00f081fa",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/UserNotificationsLetter.xsl": {
-      "checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2", 
+      "checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/call_template/footer.xsl": {
-      "checksum": "767825fb7b80124fa2fc3c017e88f0cae7dfe092", 
+      "checksum": "767825fb7b80124fa2fc3c017e88f0cae7dfe092",
       "modified": "19/01/2016"
-    }, 
+    },
     "xsl/letters/call_template/header.xsl": {
-      "checksum": "e8dbed9a4fd5352de332127a7b76a2107064a5e0", 
+      "checksum": "e8dbed9a4fd5352de332127a7b76a2107064a5e0",
       "modified": "20/01/2016"
-    }, 
+    },
     "xsl/letters/call_template/mailReason.xsl": {
-      "checksum": "2de1172c5bd274be2759ca5544540a5fd38b64cc", 
+      "checksum": "2de1172c5bd274be2759ca5544540a5fd38b64cc",
       "modified": "19/01/2016"
-    }, 
+    },
     "xsl/letters/call_template/recordTitle.xsl": {
-      "checksum": "2f681ff1dbad163da4ceac46f1d0c423c88433df", 
+      "checksum": "2f681ff1dbad163da4ceac46f1d0c423c88433df",
       "modified": "26/01/2016"
-    }, 
+    },
     "xsl/letters/call_template/senderReceiver.xsl": {
-      "checksum": "a5162a01a73a5506e9067b0004c4a01ebdf81a7b", 
+      "checksum": "a5162a01a73a5506e9067b0004c4a01ebdf81a7b",
       "modified": "12/02/2016"
-    }, 
+    },
     "xsl/letters/call_template/smsRecordTitle.xsl": {
-      "checksum": "af1a6166ce6a100b6a20e59ecbf17998bbe22299", 
+      "checksum": "af1a6166ce6a100b6a20e59ecbf17998bbe22299",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/call_template/style.xsl": {
-      "checksum": "b2f239b6a94ba68ace388b95054abdab5555a7ea", 
+      "checksum": "b2f239b6a94ba68ace388b95054abdab5555a7ea",
       "modified": "20/01/2016"
-    }, 
+    },
     "xsl/letters/sms/SmsFulCancelRequestLetter.xsl": {
-      "checksum": "25ae46a59832ac74ce889dd0bc684a51652a1803", 
+      "checksum": "25ae46a59832ac74ce889dd0bc684a51652a1803",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulFinesFeesNotificationLetter.xsl": {
-      "checksum": "7277bdf0e7c52c9b3df1e46701eae2ad745c92d5", 
+      "checksum": "7277bdf0e7c52c9b3df1e46701eae2ad745c92d5",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulItemChangeDueDateLetter.xsl": {
-      "checksum": "20aaad92e90189d2d580325032f3c63b13ab1419", 
+      "checksum": "20aaad92e90189d2d580325032f3c63b13ab1419",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulLostLoanLetter.xsl": {
-      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2", 
+      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulLostLoanNotificationLetter.xsl": {
-      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2", 
+      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2", 
+      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "edc04c345a0c7771c29e9f8bd5b36fbec97f4959", 
+      "checksum": "edc04c345a0c7771c29e9f8bd5b36fbec97f4959",
       "modified": "15/02/2016"
-    }, 
+    },
     "xsl/letters/sms/SmsFulUserBorrowingActivityLetter.xsl": {
-      "checksum": "b69973c79b9e7deddd779ae27325e5cfd314a709", 
+      "checksum": "b69973c79b9e7deddd779ae27325e5cfd314a709",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulUserLoansCourtesyLetter.xsl": {
-      "checksum": "05b01f67ef815602d6d7c64cc4c8f575a70a8626", 
+      "checksum": "05b01f67ef815602d6d7c64cc4c8f575a70a8626",
       "modified": "-"
-    }, 
+    },
     "xsl/letters/sms/SmsFulUserOverdueNoticeLetter.xsl": {
-      "checksum": "85d40824512c5fa4a0ef6e9201517148bce695df", 
+      "checksum": "85d40824512c5fa4a0ef6e9201517148bce695df",
       "modified": "16/02/2016"
     }
   }
