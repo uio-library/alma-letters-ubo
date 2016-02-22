@@ -37,8 +37,8 @@
       "modified": "16/02/2016"
     },
     "xsl/letters/FineFeePaymentReceiptLetter.xsl": {
-      "checksum": "e9daaf2b3257235c4c188415b92b25f628d52323",
-      "modified": "16/02/2016"
+      "checksum": "13ec7a0f168c0947a64d12286c9f537aebc94885",
+      "modified": "22/02/2016"
     },
     "xsl/letters/FinesAndFeesReportLetter.xsl": {
       "checksum": "dd2b0b63a71fe0cd8b6f276ddef2fd38dcef5667",
@@ -81,16 +81,16 @@
       "modified": "19/02/2016"
     },
     "xsl/letters/FulItemChangeDueDateLetter.xsl": {
-      "checksum": "24e9d5b87cd91fe52e3b3718de0c8a2dbd0f1562",
-      "modified": "16/02/2016"
+      "checksum": "a278af05a9dbc9ca35a68aea46849e1f8fc67dfd",
+      "modified": "22/02/2016"
     },
     "xsl/letters/FulLoanReceiptLetter.xsl": {
       "checksum": "ecf03955779740ce217bd4d8f8e7387d7ffc54c6",
       "modified": "16/02/2016"
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
-      "checksum": "136ee5e1574428382d96f7425c39b8749efe82a7",
-      "modified": "16/02/2016"
+      "checksum": "9fa65c11df7e4a641e77de22448391f09646fbe4",
+      "modified": "22/02/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
       "checksum": "7a63a6806faf106e6f5fb22ad98ed6d1b9864762",
