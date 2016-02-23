@@ -182,6 +182,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:value-of select="notification_data/phys_item_display/publication_date"/>
        </td>
       </tr>
+      <xsl:if test="notification_data/phys_item_display/issue_level_description != ''">
+       <tr>
+        <td><font color="#666666">Issue:</font></td>
+        <td>
+         <xsl:value-of select="notification_data/phys_item_display/issue_level_description"/>
+        </td>
+       </tr>
+      </xsl:if>
       <xsl:if test="notification_data/request/record_display_section/series_small != ''" >
        <tr>
         <td><font color="#666666">Series:</font></td>
