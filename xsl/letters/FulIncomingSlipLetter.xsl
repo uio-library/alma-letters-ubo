@@ -178,7 +178,11 @@
         <tr>
          <td valign="top">Availability:</td>
          <td>
-          <xsl:value-of select="notification_data/incoming_request/display/availability"  disable-output-escaping="yes" />
+            <xsl:call-template name="string-replace"><!-- Defined in header.xsl -->
+              <xsl:with-param name="string" select="notification_data/incoming_request/display/availability" />
+              <xsl:with-param name="replace" select="'Availability:'" />
+              <xsl:with-param name="with" select="''" />
+            </xsl:call-template>
          </td>
         </tr>
        </xsl:if>
