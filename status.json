@@ -89,12 +89,12 @@
       "modified": "16/02/2016"
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
-      "checksum": "9fa65c11df7e4a641e77de22448391f09646fbe4",
-      "modified": "22/02/2016"
+      "checksum": "d22931e3d00c93dd240f83769ca25beee15f1d09",
+      "modified": "23/02/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
       "checksum": "7a63a6806faf106e6f5fb22ad98ed6d1b9864762",
-      "modified": "16/02/2016"
+      "modified": "23/02/2016"
     },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
       "checksum": "524c9769aeb5e5eaca26fbacb497ce7d00ca35de",
@@ -281,8 +281,8 @@
       "modified": "-"
     },
     "xsl/letters/call_template/footer.xsl": {
-      "checksum": "bf163c7f4b507e36c3935cb3a175afc31c9685e7",
-      "modified": "22/02/2016"
+      "checksum": "1095755ffac36f12472ee475d4c312bcb0554999",
+      "modified": "23/02/2016"
     },
     "xsl/letters/call_template/header.xsl": {
       "checksum": "cfdb9bc70989928c90729fcc89d74ef6af67f20a",

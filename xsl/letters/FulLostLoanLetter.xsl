@@ -89,7 +89,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </table>
     <br />
 
-    <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+    <!-- Use special email adress if we're at ub.uio.no -->
+    <xsl:choose>
+      <xsl:when test="contains(notification_data/organization_unit/email/email, 'ub.uio.no')">
+        <xsl:call-template name="lastFooter"><!-- Defined in footer.xsl -->
+          <xsl:with-param name="email" select="'erstatninger@ub.uio.no'"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="lastFooter" /><!-- Defined in footer.xsl -->
+      </xsl:otherwise>
+    </xsl:choose>
+
     <xsl:call-template name="contactUs" /> <!-- footer.xsl -->
 
    </body>

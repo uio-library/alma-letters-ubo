@@ -4,6 +4,7 @@
  <xsl:template name="salutation"/>
 
  <xsl:template name="lastFooter">
+  <xsl:param name="email" />
 
   <div id="lastFooter">
 
@@ -29,6 +30,22 @@
       </xsl:choose>
 
       <xsl:choose>
+
+        <!-- Bruk epost-adresse fra parameter hvis gitt -->
+        <xsl:when test="$email != ''">
+          <xsl:choose>
+            <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
+             Kontakt oss på
+            </xsl:when>
+            <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nn'">
+             Kontakt oss på
+            </xsl:when>
+            <xsl:otherwise>
+             Please contact us at
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:value-of select="$email"/>
+        </xsl:when>
 
         <!-- Bruk epost-adresse til notification_data/organization_unit hvis tilgjengelig -->
         <xsl:when test="email/email != ''">
