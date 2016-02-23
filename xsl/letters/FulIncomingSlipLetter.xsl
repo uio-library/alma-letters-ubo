@@ -65,9 +65,9 @@
               <tr>
                 <td>@@supplied_to@@: </td>
                 <td>
-                  <xsl:value-of select="notification_data/partner_name"/>(
-                  <xsl:value-of select="notification_data/incoming_request/requester_email"/>
-                  )</td>
+                  <xsl:value-of select="notification_data/partner_name"/>
+                  (<xsl:value-of select="notification_data/incoming_request/requester_email"/>)
+                </td>
               </tr>
 
               <!--
@@ -81,7 +81,7 @@
                     <xsl:call-template name="normalizedDate"><!-- Defined in header.xsl -->
                       <xsl:with-param name="value" select="notification_data/incoming_request/create_date_str"/>
                     </xsl:call-template>
-                    <xsl:if test="notification_data/incoming_request/create_date_str != notification_data/incoming_request/modification_date_str">(updated
+                    <xsl:if test="notification_data/incoming_request/create_date_str != notification_data/incoming_request/modification_date_str">&#160;(updated
                       <xsl:call-template name="normalizedDate">
                         <!-- header.xsl -->
                         <xsl:with-param name="value" select="notification_data/incoming_request/modification_date_str"/></xsl:call-template>)
@@ -129,42 +129,78 @@
               <tr>
                 <td valign="top">Metadata:</td>
                 <td>
-                  <xsl:if test="notification_data/metadata/material_type != ''">
-                    <em>Type: </em>
-                    <xsl:value-of select="notification_data/metadata/material_type"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/title != ''">
-                    <em>Tittel: </em>
-                    <xsl:value-of select="notification_data/metadata/title"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/author != ''">
-                    <em>Forfatter: </em>
-                    <xsl:value-of select="notification_data/metadata/author"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/journal_title != ''">
-                    <em>Tidsskr.: </em>
-                    <xsl:value-of select="notification_data/metadata/journal_title"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/volume != ''">
-                    <em>Bind: </em>
-                    <xsl:value-of select="notification_data/metadata/volume"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/issue != ''">
-                    <em>Hefte: </em>
-                    <xsl:value-of select="notification_data/metadata/issue"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/start_page != ''">
-                    <em>S.: </em>
-                    <xsl:value-of select="notification_data/metadata/start_page"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/start_page = '' and notification_data/metadata/pages != ''">
-                    <em>S.: </em>
-                    <xsl:value-of select="notification_data/metadata/pages"/>
-                  </xsl:if>
-                  <xsl:if test="notification_data/metadata/publication_date != ''">
-                    <em>Publiseringsdato: </em>
-                    <xsl:value-of select="notification_data/metadata/publication_date"/>
-                  </xsl:if>
+                  <table border="0" cellpadding="2" cellspacing="0">
+
+                    <xsl:if test="notification_data/metadata/material_type != ''">
+                      <tr>
+                        <td align="right">Type:</td>
+                        <td><xsl:value-of select="notification_data/metadata/material_type"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/title != ''">
+                      <tr>
+                        <td align="right">Title:</td>
+                        <td><xsl:value-of select="notification_data/metadata/title"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/author != ''">
+                      <tr>
+                        <td align="right">Author:</td>
+                        <td><xsl:value-of select="notification_data/metadata/author"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/journal_title != ''">
+                      <tr>
+                        <td align="right">Journal:</td>
+                        <td><xsl:value-of select="notification_data/metadata/journal_title"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/volume != ''">
+                      <tr>
+                        <td align="right">Vol.:</td>
+                        <td>
+                          <xsl:call-template name="string-replace"><!-- Defined in header.xsl -->
+                            <xsl:with-param name="string" select="notification_data/metadata/volume"/>
+                            <xsl:with-param name="replace" select="'Vol:'"/>
+                            <xsl:with-param name="with" select="''"/>
+                          </xsl:call-template>
+                        </td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/issue != ''">
+                      <tr>
+                        <td align="right">Issue:</td>
+                        <td><xsl:value-of select="notification_data/metadata/issue"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/start_page != ''">
+                      <tr>
+                        <td align="right">Start page:</td>
+                        <td><xsl:value-of select="notification_data/metadata/start_page"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/start_page = '' and notification_data/metadata/pages != ''">
+                      <tr>
+                        <td align="right">Pages:</td>
+                        <td><xsl:value-of select="notification_data/metadata/pages"/></td>
+                      </tr>
+                    </xsl:if>
+
+                    <xsl:if test="notification_data/metadata/publication_date != ''">
+                      <tr>
+                        <td align="right">Date:</td>
+                        <td><xsl:value-of select="notification_data/metadata/publication_date"/></td>
+                      </tr>
+                    </xsl:if>
+
+                  </table>
                 </td>
               </tr>
 
