@@ -44,7 +44,7 @@
      <!-- style.xsl -->
     </xsl:attribute>
 
-    <xsl:call-template name="head"/>
+    <xsl:call-template name="head_without_logo"/>
     <!-- header.xsl -->
 
     <div class="messageArea">

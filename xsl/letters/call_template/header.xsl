@@ -11,7 +11,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 <!-- DMOH 2016-01-20: SLUTT -->
 
-
+<!-- Heading with logo for outgoing letters -->
 <xsl:template name="head">
 <table cellspacing="0" cellpadding="5" border="0">
  <xsl:attribute name="style">
@@ -49,7 +49,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </tr>
 </table>
 
+</xsl:template>
 
+<!-- Heading without logo for internal letters -->
+<xsl:template name="head_without_logo">
+  <xsl:for-each select="notification_data/general_data">
+    <div>
+      <xsl:attribute name="style">
+        <xsl:call-template name="headerTableStyleCss" /> <!-- style.xsl -->
+      </xsl:attribute>
+      <table width="100%">
+        <tr>
+          <td>
+            <h2><xsl:value-of select="letter_name"/></h2>
+          </td>
+          <td align="right" valign="top">
+            <h2>
+              <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+                <xsl:with-param name="value" select="current_date"/>
+              </xsl:call-template>
+            </h2>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </xsl:for-each>
 </xsl:template>
 
 </xsl:stylesheet>
