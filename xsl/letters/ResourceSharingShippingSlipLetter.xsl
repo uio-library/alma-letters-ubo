@@ -180,6 +180,16 @@
          </td>
         </tr>
        </xsl:if>
+
+       <xsl:if test="notification_data/item/barcode != ''">
+        <tr>
+          <td>Item:</td>
+          <td>
+            <xsl:value-of select="notification_data/item/barcode"/>
+          </td>
+        </tr>
+       </xsl:if>
+
        <xsl:if test="notification_data/incoming_request/item_sent_date != ''">
         <tr>
          <td>Item sent:</td>
