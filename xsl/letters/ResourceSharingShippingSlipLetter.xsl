@@ -57,7 +57,8 @@
      <div class="messageBody">
 
       <p align="center">
-       <img alt="externalId" src="externalId.png"/>
+       <!--<img alt="externalId" src="externalId.png"/>--><!-- External identifier, used by sender -->
+       <img alt="group_qualifier" src="group_qualifier.png"/><!-- Borrower reference, used by receiver -->
       </p>
 
       <table border="0" cellpadding="5" cellspacing="0">
@@ -93,6 +94,7 @@
         </td>
        </tr>
 
+       <!-- Commented out since this is already covered by the barcode
        <tr>
         <td>
          @@borrower_reference@@:
@@ -101,6 +103,7 @@
          <xsl:call-template name="id-info-hdr"/>
         </td>
        </tr>
+       -->
 
        <!--
        <xsl:if test="notification_data/qualifier">
