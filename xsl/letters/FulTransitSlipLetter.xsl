@@ -39,19 +39,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                  103 &#160; 0317
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
-                 Juridisk bibliotek, DB<br/>103 &#160; 0000
+                 103 &#160; 0000
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Kriminologibiblioteket')">
-                 IKRS-bibl, DN 6. etg.<br/>103 &#160; 0002
+                 103 &#160; 0002
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Læringssenteret DN')">
-                 Læringssenteret, DN 2. etg<br/>103 &#160; 0009
+                 103 &#160; 0009
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek')">
                  103 &#160; 2300
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Menneskerettighetsbiblioteket')">
-                 SMR-bibl, CA 30<br/>103 &#160; 0048
+                 103 &#160; 0048
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO NSSF Selvmordsforskning/forebygging')">
                  103 &#160; 2304
@@ -63,25 +63,25 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                  103 &#160; 0307
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Offentligrettsbiblioteket')">
-                 IOR-bibl, DB<br/>103 &#160; 0003
+                 103 &#160; 0003
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Petroleums- og EU-rettsbiblioteket')">
-                 EU-bibl, DMØ<br/>103 &#160; 0005
+                 103 &#160; 0005
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Privatrettsbiblioteket')">
-                 Juridisk bibliotek, DB<br/>103 &#160; 0000
+                 103 &#160; 0001
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Realfagsbiblioteket')">
                  103 &#160; 0310
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Rettshistorisk samling')">
-                 RS, DB 2. etg<br/>103 &#160; 0015
+                 103 &#160; 0015
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Rettsinformatikkbiblioteket')">
-                 SERI-bibl, DN 4. etg.<br/>103 &#160; 0004
+                 103 &#160; 0004
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Sjørettsbiblioteket')">
-                 Juridisk bibliotek, DB<br/>103 &#160; 0000
+                 103 &#160; 0006
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Sophus Bugge')">
                  103 &#160; 0303
