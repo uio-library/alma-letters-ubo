@@ -200,16 +200,20 @@
 
                    &#160;from&#160;
 
-                  <!-- Physical items -->
-                  <xsl:if test="notification_data/item/library_name != ''">
-                     <xsl:value-of select="notification_data/item/library_name"/>&#160;
-                     <xsl:value-of select="notification_data/item/location_name"/>
-                  </xsl:if>
+                  <xsl:choose>
 
-                  <!-- Articles, etc. (non-returnable, digital) -->
-                  <xsl:if test="notification_data/item/library_name = ''">
-                     <xsl:value-of select="notification_data/organization_unit/name"/>
-                  </xsl:if>
+                    <!-- Physical items -->
+                    <xsl:when test="notification_data/item/library_name != ''">
+                       <xsl:value-of select="notification_data/item/library_name"/>&#160;
+                       <xsl:value-of select="notification_data/item/location_name"/>
+                    </xsl:when>
+
+                    <!-- Articles, etc. (non-returnable, digital) -->
+                    <xsl:otherwise>
+                      <xsl:value-of select="notification_data/organization_unit/name"/>
+                    </xsl:otherwise>
+
+                  </xsl:choose>
 
          </td>
         </tr>
