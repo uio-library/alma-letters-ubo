@@ -278,6 +278,17 @@
               </tr>
             </xsl:if>
 
+            <xsl:if test="notification_data/metadata/chapter != ''">
+              <tr>
+                <td align="right">
+                  <em>Chapter:</em>
+                </td>
+                <td>
+                  <xsl:value-of select="notification_data/metadata/chapter"/>
+                </td>
+              </tr>
+            </xsl:if>
+
             <xsl:if test="notification_data/metadata/author != ''">
               <tr>
                 <td align="right">
@@ -329,6 +340,17 @@
                 </td>
                 <td>
                   <xsl:value-of select="notification_data/metadata/start_page"/>
+                </td>
+              </tr>
+            </xsl:if>
+
+            <xsl:if test="notification_data/metadata/pages != ''">
+              <tr>
+                <td align="right">
+                  <em>Pages:</em>
+                </td>
+                <td>
+                  <xsl:value-of select="notification_data/metadata/pages"/>
                 </td>
               </tr>
             </xsl:if>
