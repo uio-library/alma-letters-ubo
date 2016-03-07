@@ -142,7 +142,7 @@
     },
     "xsl/letters/FulTransitSlipLetter.xsl": {
       "checksum": "3f9d1a04acc91397021976889b3c59c949e38571",
-      "modified": "25/01/2016"
+      "modified": "29/02/2016"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
       "checksum": "44a573c7bea1d78e2f0dac706d091ca7ae01c812",
@@ -257,8 +257,8 @@
       "modified": "-"
     },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
-      "checksum": "fad8fa2df3843f9a0bc8131d6ea2dfe72215a238",
-      "modified": "29/02/2016"
+      "checksum": "6e12aeb39968df7e1d716727fe46e1c5f942cd61",
+      "modified": "07/03/2016"
     },
     "xsl/letters/RestrictedLoginIPLetter.xsl": {
       "checksum": "49e2533afb204cd04761d76487dccaf05939e162",
