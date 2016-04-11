@@ -429,8 +429,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of select="notification_data/phys_item_display/barcode"/> :
-                <xsl:value-of select="notification_data/phys_item_display/library_name"/>
-                <xsl:value-of select="notification_data/phys_item_display/location_name"/>
+                <xsl:value-of select="notification_data/phys_item_display/library_name"/>&#160;
+                <xsl:value-of select="notification_data/phys_item_display/location_name"/>&#160;
                 <xsl:value-of select="notification_data/phys_item_display/call_number"/>
               </xsl:otherwise>
             </xsl:choose>
