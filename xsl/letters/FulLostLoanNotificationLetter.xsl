@@ -29,7 +29,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <tr>
     <td>
      <h>@@inform_you_item_below@@ </h>
-     <h>@@borrowed_by_you@@ @@decalred_as_lost@@</h>
     </td>
     </tr>
     </table>
@@ -43,56 +42,53 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <table>
      <tr>
       <td>
-      <b>@@lost_item@@ :</b> <xsl:value-of select="item_loan/title"/>
+      <b><xsl:value-of select="item_loan/title"/></b>
       <br />
-      <b>@@description@@ :</b><xsl:value-of select="item_loan/description"/>
+      @@description@@ :<xsl:value-of select="item_loan/description"/>
       <br />
-      <b> @@by@@ :</b><xsl:value-of select="item_loan/author"/>
+      @@by@@ :<xsl:value-of select="item_loan/author"/>
       <br />
-      <b>@@library@@ :</b><xsl:value-of select="organization_unit/name"/>
+      @@library@@ :<xsl:value-of select="organization_unit/name"/>
       <br />
-      <b>@@loan_date@@ :</b><xsl:value-of select="item_loan/loan_date"/>
+      @@loan_date@@ :<xsl:value-of select="item_loan/loan_date"/>
       <br />
-      <b>@@due_date@@ :</b><xsl:value-of select="item_loan/due_date"/>
+      @@due_date@@ :<xsl:value-of select="item_loan/due_date"/>
       <br />
-      <b>@@barcode@@ :</b><xsl:value-of select="item_loan/barcode"/>
+      @@barcode@@ :<xsl:value-of select="item_loan/barcode"/>
       <br />
-      <b>@@call_number@@ :</b><xsl:value-of select="phys_item_display/call_number"/>
+      @@call_number@@ :<xsl:value-of select="phys_item_display/call_number"/>
       <br />
-      <b>@@charged_with_fines_fees@@ </b>
+      <br />
       </td>
      </tr>
     </table>
     </xsl:for-each>
 
-    <table cellpadding="5" class="listing">
-    <xsl:attribute name="style">
-     <xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
-    </xsl:attribute>
-     <tr>
-      <th>@@fee_type@@</th>
-      <th>@@fee_amount@@</th>
-      <th>@@note@@</th>
-     </tr>
-     <xsl:for-each select="notification_data/fines_fees_list/user_fines_fees">
-     <tr>
-      <td><xsl:value-of select="fine_fee_type_display"/></td>
-      <td><xsl:value-of select="fine_fee_ammount/sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
-      <td><xsl:value-of select="ff"/></td>
-     </tr>
-     </xsl:for-each>
-
-    </table>
-    <br />
-    <br />
+    <xsl:choose>
+      <xsl:when test="notification_data/item_loan/process_status = 'RECALLED'">
+    <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'"><b>Dette er siste varsel før erstatningskrav</b></xsl:if>
+    <xsl:if test="notification_data/receivers/receiver/preferred_language = 'nn'"><b>Dette er siste varsel før erstatningskrav</b></xsl:if>
+    <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'"><b>This is the final notification before the item will be considered lost, and you will be charged with a replacement fee.</b></xsl:if>
+    </xsl:when>
+    <xsl:otherwise>
+    <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'"><b>Purring</b></xsl:if>
+    <xsl:if test="notification_data/receivers/receiver/preferred_language = 'nn'"><b>Purring</b></xsl:if>
+    <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'"><b>Overdue notification</b></xsl:if>
+    </xsl:otherwise>
+    </xsl:choose>
+    
     @@additional_info_1@@
     <br />
     @@additional_info_2@@
     <br />
     </table>
-    <br />
 
-    <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+ <!-- Use special email adress if we're at ub.uio.no -->
+    
+        <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+         
+      
+
 
    </body>
  </html>
