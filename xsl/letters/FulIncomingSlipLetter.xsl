@@ -154,7 +154,7 @@
 
                     <xsl:if test="notification_data/metadata/journal_title != ''">
                       <tr>
-                        <td align="right">Journal:</td>
+                        <td align="right">Journal/series:</td>
                         <td><xsl:value-of select="notification_data/metadata/journal_title"/></td>
                       </tr>
                     </xsl:if>
@@ -203,6 +203,24 @@
                   </table>
                 </td>
               </tr>
+
+              <xsl:if test="notification_data/incoming_request/locate_status != ''">
+                <tr>
+                  <td>Locate status: </td>
+                  <td>
+                    <xsl:value-of select="notification_data/incoming_request/locate_status"/>
+                  </td>
+                </tr>
+              </xsl:if>
+
+              <xsl:if test="notification_data/incoming_request/display/title != '' and notification_data/metadata/material_type = 'Article'">
+                <tr>
+                  <td valign="top">Journal (located):</td>
+                  <td>
+                    <xsl:value-of select="notification_data/incoming_request/display/title"/>
+                  </td>
+                </tr>
+              </xsl:if>
 
               <xsl:if test="notification_data/incoming_request/display/availability != ''">
                 <tr>
