@@ -219,18 +219,19 @@
 
             </table>
 
-            <hr/>
-
             <!-- Available items -->
-            <xsl:if test="count(notification_data/items/physical_item_display_for_printing/available_items/available_item) != 0">
+            <xsl:if test="count(notification_data/items/physical_item_display_for_printing/available_items/available_item) != 0 and notification_data/metadata/material_type != 'Article'">
+
+              <hr/>
+
               <h3>Available items:</h3>
               <table>
                 <th>@@item_barcode@@</th>
                 <th>@@location@@</th>
                 <th>@@call_number@@</th>
                 <th>@@shelving_location_for_item@@</th>
-                <!-- ITEMS -->
-                <xsl:for-each select="notification_data/items/physical_item_display_for_printing/available_items/available_item">
+                <!-- Loop over available items, but show max 10 -->
+                <xsl:for-each select="notification_data/items/physical_item_display_for_printing[position() &lt;= 10]/available_items/available_item">
                   <tr>
                     <td>
                       <xsl:value-of select="barcode"/>
@@ -251,6 +252,11 @@
                   </tr>
                 </xsl:for-each>
               </table>
+              <xsl:if test="count(notification_data/items/physical_item_display_for_printing/available_items/available_item) > 10">
+                <p><em>
+                  (Only showing the first 10 items)
+                </em></p>
+              </xsl:if>
             </xsl:if>
           </div>
         </div>
