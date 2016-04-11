@@ -416,17 +416,29 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        </xsl:if>
        -->
 
-      <tr><td colspan="2">
+      <!-- ITEM -->
+      <xsl:if  test="notification_data/request/selected_inventory_type='ITEM'" >
+        <tr>
+          <td>
+            @@shelving_location_for_item@@:
+          </td>
+          <td>
+            <xsl:choose>
+              <xsl:when test="notification_data/phys_item_display/shelving_location/string != ''">
+                <xsl:value-of select="notification_data/phys_item_display/shelving_location/string"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="notification_data/phys_item_display/barcode"/> :
+                <xsl:value-of select="notification_data/phys_item_display/library_name"/>
+                <xsl:value-of select="notification_data/phys_item_display/location_name"/>
+                <xsl:value-of select="notification_data/phys_item_display/call_number"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </td>
+        </tr>
+      </xsl:if>
 
-       <!-- ITEM -->
-       <xsl:if  test="notification_data/request/selected_inventory_type='ITEM'" >
-        <p>
-         @@shelving_location_for_item@@:
-        </p>
-        <xsl:for-each select="notification_data/phys_item_display/shelving_location/string">
-         <xsl:value-of select="."/>
-         </xsl:for-each>
-       </xsl:if>
+      <tr><td colspan="2">
 
        <xsl:if test="notification_data/request/selected_inventory_type='VIRTUAL_HOLDING'" >
         <p>
