@@ -65,7 +65,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </xsl:for-each>
 
     <xsl:choose>
-      <xsl:when test="notification_data/item_loan/process_status = 'RECALLED'">
+      <xsl:when test="notification_data/item_loan/process_status = 'RECALL'">
     <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'"><b>Dette er siste varsel før erstatningskrav</b></xsl:if>
     <xsl:if test="notification_data/receivers/receiver/preferred_language = 'nn'"><b>Dette er siste varsel før erstatningskrav</b></xsl:if>
     <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'"><b>This is the final notification before the item will be considered lost, and you will be charged with a replacement fee.</b></xsl:if>
