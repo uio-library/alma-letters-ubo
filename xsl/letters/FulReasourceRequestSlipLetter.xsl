@@ -508,17 +508,37 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
      <tr><td colspan="2">
 
-      <!-- DM 2016-01-13 -->
+      <!-- ALERT1: Dokumentet skal sendes til folkebibliotek. Denne seddelen fungerer som sendeseddel. -->
       <xsl:if test="contains(notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib')">
        <p>
         <hr/>
         <strong>
-         OBS!
+          Merk:
         </strong>
-        <em>Mottaker er et bibliotek. Pass på at dokumentet ikke ender på hentehylla, men blir lånt ut og sendt.</em>
+        <em>
+          Mottaker er et bibliotek. Bruk "Scan In" for å låne ut dokumentet.
+          Som sendeseddel brukes denne seddelen.
+        </em>
+        <hr/>
        </p>
       </xsl:if>
-      <!-- SLUTT: DM 2016-01-13 -->
+      <!-- ALERT1: END -->
+
+      <!-- ALERT2: Dokumentet skal sendes til bestillende bibliotek (lending request). Denne seddelen fungerer ikke som sendeseddel. -->
+      <xsl:if test="notification_data/request/request_type = 'RESOURCE_SHARING_PHYSICAL_SHIPMENT'">
+       <p>
+        <hr/>
+        <strong>
+          Merk:
+        </strong>
+        <em>
+          Dokumentet skal til et annet Bibsys-bibliotek. Bruk derfor "Shipping Items", ikke "Scan In".
+          Husk å krysse av for at du vil ha sendeseddel ("Automatically print slip").
+        </em>
+        <hr/>
+       </p>
+      </xsl:if>
+      <!-- ALERT2: END -->
 
      </td></tr>
     </table>
