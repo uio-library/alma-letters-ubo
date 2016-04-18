@@ -44,6 +44,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <td>
       <b><xsl:value-of select="phys_item_display/title_abcnph"/></b><br />
 
+       <!-- BEGIN: Extremely crappy workaround for https://github.com/scriptotek/alma-slipsomat/issues/9 -->
+       <xsl:if test="phys_item_display/chron_i != ''"><!-- Warning: We assume `chron_i` is always used. Is it? -->
+        Issue : &#160;
+        <xsl:value-of select="phys_item_display/enum_a"/>
+
+        <xsl:if test="phys_item_display/chron_i != '' and phys_item_display/enum_a != ''">&#160;(</xsl:if>
+        <xsl:value-of select="phys_item_display/chron_i"/>
+        <xsl:if test="phys_item_display/chron_i != '' and phys_item_display/enum_a != ''">)</xsl:if>
+
+        <xsl:if test="phys_item_display/chron_i != '' and phys_item_display/enum_a = ''">&#160;(</xsl:if>
+        <xsl:value-of select="phys_item_display/enum_b"/>
+        <xsl:if test="phys_item_display/chron_i != '' and phys_item_display/enum_a = ''">)</xsl:if>
+
+        <br />
+      </xsl:if>
+      <!-- END: Extremely crappy workaround for https://github.com/scriptotek/alma-slipsomat/issues/9 -->
+
       <xsl:if test="item_loan/description != ''">
         @@description@@ :<xsl:value-of select="item_loan/description"/><br />
       </xsl:if>
