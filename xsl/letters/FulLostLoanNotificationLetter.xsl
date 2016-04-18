@@ -46,8 +46,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
        <!-- BEGIN: Extremely crappy workaround for https://github.com/scriptotek/alma-slipsomat/issues/9 -->
        <xsl:if test="phys_item_display/chron_i != ''"><!-- Warning: We assume `chron_i` is always used. Is it? -->
-        Issue : &#160;
-        <xsl:value-of select="phys_item_display/enum_a"/>
+        Issue: <xsl:value-of select="phys_item_display/enum_a"/>
 
         <xsl:if test="phys_item_display/chron_i != '' and phys_item_display/enum_a != ''">&#160;(</xsl:if>
         <xsl:value-of select="phys_item_display/chron_i"/>
@@ -62,27 +61,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <!-- END: Extremely crappy workaround for https://github.com/scriptotek/alma-slipsomat/issues/9 -->
 
       <xsl:if test="item_loan/description != ''">
-        @@description@@ :<xsl:value-of select="item_loan/description"/><br />
+        @@description@@: <xsl:value-of select="item_loan/description"/><br />
       </xsl:if>
 
       <xsl:if test="item_loan/author != ''">
-        @@by@@ :<xsl:value-of select="item_loan/author"/><br />
+        @@by@@: <xsl:value-of select="item_loan/author"/><br />
       </xsl:if>
 
-      @@library@@ :<xsl:value-of select="organization_unit/name"/>
+      @@library@@: <xsl:value-of select="organization_unit/name"/>
       <br />
 
       <xsl:if test="phys_item_display/call_number != ''">
-        @@call_number@@ :<xsl:value-of select="phys_item_display/call_number"/><br />
+        @@call_number@@: <xsl:value-of select="phys_item_display/call_number"/><br />
       </xsl:if>
 
-      @@barcode@@ :<xsl:value-of select="item_loan/barcode"/>
+      @@barcode@@: <xsl:value-of select="item_loan/barcode"/>
       <br />
 
-      @@loan_date@@ :<xsl:value-of select="item_loan/loan_date"/>
+      @@loan_date@@: <xsl:value-of select="item_loan/loan_date"/>
       <br />
 
-      @@due_date@@ :<xsl:value-of select="item_loan/due_date"/>
+      @@due_date@@: <xsl:value-of select="item_loan/due_date"/>
       <br />
 
       <br />
