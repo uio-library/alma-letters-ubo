@@ -93,8 +93,8 @@
       "modified": "23/02/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
-      "checksum": "152a5446495d067f5a4978aeb6b6e9d4f001708d",
-      "modified": "11/04/2016"
+      "checksum": "ef5fd80b3ee914ae41cf9146b634dbc8f8b39e6d",
+      "modified": "18/04/2016"
     },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
       "checksum": "524c9769aeb5e5eaca26fbacb497ce7d00ca35de",
@@ -125,8 +125,8 @@
       "modified": "22/02/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "6e0666a6db182f77c99064409216e3f4c0034d04",
-      "modified": "11/04/2016"
+      "checksum": "26030e7b217beee86f5a7af23cd137660c7d7a77",
+      "modified": "14/04/2016"
     },
     "xsl/letters/FulRenewEmailLetter.xsl": {
       "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",

@@ -42,22 +42,32 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <table>
      <tr>
       <td>
-      <b><xsl:value-of select="item_loan/title"/></b>
-      <br />
-      @@description@@ :<xsl:value-of select="item_loan/description"/>
-      <br />
-      @@by@@ :<xsl:value-of select="item_loan/author"/>
-      <br />
+      <b><xsl:value-of select="phys_item_display/title_abcnph"/></b><br />
+
+      <xsl:if test="item_loan/description != ''">
+        @@description@@ :<xsl:value-of select="item_loan/description"/><br />
+      </xsl:if>
+
+      <xsl:if test="item_loan/author != ''">
+        @@by@@ :<xsl:value-of select="item_loan/author"/><br />
+      </xsl:if>
+
       @@library@@ :<xsl:value-of select="organization_unit/name"/>
       <br />
-      @@loan_date@@ :<xsl:value-of select="item_loan/loan_date"/>
-      <br />
-      @@due_date@@ :<xsl:value-of select="item_loan/due_date"/>
-      <br />
+
+      <xsl:if test="phys_item_display/call_number != ''">
+        @@call_number@@ :<xsl:value-of select="phys_item_display/call_number"/><br />
+      </xsl:if>
+
       @@barcode@@ :<xsl:value-of select="item_loan/barcode"/>
       <br />
-      @@call_number@@ :<xsl:value-of select="phys_item_display/call_number"/>
+
+      @@loan_date@@ :<xsl:value-of select="item_loan/loan_date"/>
       <br />
+
+      @@due_date@@ :<xsl:value-of select="item_loan/due_date"/>
+      <br />
+
       <br />
       </td>
      </tr>
