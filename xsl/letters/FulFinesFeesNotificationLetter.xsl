@@ -28,9 +28,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <table cellspacing="0" cellpadding="5" border="0">
     <tr>
     <td>
-     <h>@@dear@@ </h> <br />
-     <h>@@we_would_like@@ <xsl:value-of select="notification_data/organization_unit/name"/> @@debt_of@@ <b><xsl:value-of select="notification_data/total_fines_amount"/>
-     &#160;<xsl:value-of select="notification_data/total_fines_currency"/></b></h>
+     <p>@@dear@@ </p> <br />
+     <p>@@we_would_like@@ <xsl:value-of select="notification_data/organization_unit/name"/> @@debt_of@@ <b><xsl:value-of select="notification_data/total_fines_amount"/>
+     &#160;<xsl:value-of select="notification_data/total_fines_currency"/></b></p>
     </td>
     </tr>
     </table>
@@ -58,7 +58,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      </xsl:for-each>
 
     </table><br />
-    <h><b>@@please_settle@@</b></h>
+    <p><b>@@please_settle@@</b></p>
 
     </table>
     <br />

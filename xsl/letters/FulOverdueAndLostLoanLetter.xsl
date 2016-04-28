@@ -28,8 +28,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <table cellspacing="0" cellpadding="5" border="0">
     <tr>
     <td>
-     <h>@@inform_you_item_below@@ </h>
-     <h>@@borrowed_by_you@@ @@decalred_as_lost@@</h>
+     <p>@@inform_you_item_below@@ </p>
+     <p>@@borrowed_by_you@@ @@decalred_as_lost@@</p>
     </td>
     </tr>
     </table>

@@ -73,8 +73,8 @@
       "modified": "16/02/2016"
     },
     "xsl/letters/FulFinesFeesNotificationLetter.xsl": {
-      "checksum": "14411285b3f171172aafe2a23f6b82a4ee364126",
-      "modified": "16/02/2016"
+      "checksum": "261060fbe539993ef7f319941f3d549dc8828c16",
+      "modified": "28/04/2016"
     },
     "xsl/letters/FulIncomingSlipLetter.xsl": {
       "checksum": "1002a639be646ea35d0cb53bc4d6c7ad3574e9c7",
@@ -93,24 +93,24 @@
       "modified": "28/04/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
-      "checksum": "53368f0b01722d399e70204d4f063c18ef6ca877",
-      "modified": "18/04/2016"
+      "checksum": "318794390f9f16220ce20edda0b01c85ef2d6eeb",
+      "modified": "28/04/2016"
     },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
-      "checksum": "524c9769aeb5e5eaca26fbacb497ce7d00ca35de",
-      "modified": "28/01/2016"
+      "checksum": "d258ef07d474b299965cd836692cc280da1e1b2d",
+      "modified": "28/04/2016"
     },
     "xsl/letters/FulOutgoingEmailLetter.xsl": {
       "checksum": "65c32e899554f12f3fd3f71a43bc5aeb633cf1a5",
       "modified": "15/02/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "75726a222a0088a22ed74504bafe8068225527ad",
-      "modified": "19/01/2016"
+      "checksum": "8187df61407639d81109889cd63984afc98a55b5",
+      "modified": "28/04/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "8c43d203d309750d81b62d278672b7fef52b2415",
-      "modified": "16/02/2016"
+      "checksum": "848cb1bb51a147090108a4c6a300419aaed740f7",
+      "modified": "28/04/2016"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
       "checksum": "70006caa2e60331b72b04005019ffd901580885e",
@@ -253,8 +253,8 @@
       "modified": "-"
     },
     "xsl/letters/ResendNotificationLetter.xsl": {
-      "checksum": "1683c8761ea4f3035a8e967867b8e387527606a4",
-      "modified": "-"
+      "checksum": "59287094a7cc986c6a9c6bde53b8875f08630c04",
+      "modified": "28/04/2016"
     },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
       "checksum": "96d9a7d5e91e263bb5786ad852720b2e3011e1a6",
@@ -273,8 +273,8 @@
       "modified": "-"
     },
     "xsl/letters/UserDeletionLetter.xsl": {
-      "checksum": "17b3d7d2e05d998fbdb1a714efb5a31b00f081fa",
-      "modified": "-"
+      "checksum": "df40cf290e0ec0abac75b0020d98a9f60d037264",
+      "modified": "28/04/2016"
     },
     "xsl/letters/UserNotificationsLetter.xsl": {
       "checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",

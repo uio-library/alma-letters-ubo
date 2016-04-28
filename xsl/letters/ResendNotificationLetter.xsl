@@ -34,7 +34,7 @@
       <table cellspacing="0" cellpadding="5" border="0">
        <tr>
         <td>
-         <h>@@find_attached@@ </h>
+         <p>@@find_attached@@ </p>
         </td>
        </tr>
       </table>

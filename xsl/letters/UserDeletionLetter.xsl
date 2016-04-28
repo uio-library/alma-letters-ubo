@@ -28,7 +28,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <table cellspacing="0" cellpadding="5" border="0">
     <tr>
     <td>
-     <h>@@notification_message@@ </h>
+     <p>@@notification_message@@ </p>
     </td>
     </tr>
     </table>

@@ -25,7 +25,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <br />
     <xsl:call-template name="toWhomIsConcerned" /> <!-- mailReason.xsl -->
-    <h>@@following_loaned_item_which_has@@</h>
+    <p>@@following_loaned_item_which_has@@</p>
 
     <table cellpadding="5" class="listing">
     <xsl:attribute name="style">
