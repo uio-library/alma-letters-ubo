@@ -28,7 +28,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <table cellspacing="0" cellpadding="5" border="0">
     <tr>
     <td>
-     @@inform_you_item_below@@. @@decalred_as_lost@@.
+     @@inform_you_item_below@@.
     </td>
     </tr>
     </table>
@@ -42,19 +42,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <table>
      <tr>
       <td>
-      <b>@@lost_item@@ :</b> <xsl:value-of select="item_loan/title"/>
+      <b><xsl:value-of select="item_loan/title"/></b>
       <br />
-      <b>@@description@@ :</b><xsl:value-of select="item_loan/description"/>
+      @@description@@ :<xsl:value-of select="item_loan/description"/>
       <br />
-      <b>@@library@@ :</b><xsl:value-of select="organization_unit/name"/>
+      @@library@@ :<xsl:value-of select="organization_unit/name"/>
       <br />
-      <b>@@loan_date@@ :</b><xsl:value-of select="item_loan/loan_date"/>
+      @@loan_date@@ :<xsl:value-of select="item_loan/loan_date"/>
       <br />
-      <b>@@due_date@@ :</b><xsl:value-of select="item_loan/due_date"/>
+      @@due_date@@ :<xsl:value-of select="item_loan/due_date"/>
       <br />
-      <b>@@barcode@@ :</b><xsl:value-of select="item_loan/barcode"/>
+      @@barcode@@ :<xsl:value-of select="item_loan/barcode"/>
       <br />
-      <b>@@charged_with_fines_fees@@ </b>
+      <br />
+      @@charged_with_fines_fees@@
       </td>
      </tr>
     </table>
@@ -78,7 +79,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      </xsl:for-each>
 
     </table>
-    
+     <br />
+      <xsl:choose>
+        <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
+         Du kan betale i biblioteket eller med
+        </xsl:when>
+        <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nn'">
+         Du kan betale i biblioteket eller med
+        </xsl:when>
+        <xsl:otherwise>
+         You can pay at the library or with
+        </xsl:otherwise>
+      </xsl:choose>
+
+    <a>
+      <xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>
+      E-pay
+    </a>
     <!--
     @@additional_info_1@@
     <br />
@@ -92,7 +109,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:choose>
       <xsl:when test="contains(notification_data/organization_unit/email/email, 'ub.uio.no')">
         <xsl:call-template name="lastFooter"><!-- Defined in footer.xsl -->
-          <xsl:with-param name="email" select="'erstatninger@ub.uio.no'"/>
+          
         </xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
