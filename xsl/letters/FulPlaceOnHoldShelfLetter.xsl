@@ -59,7 +59,7 @@
            <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'">Hentenummer</xsl:if>
            <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'">Pick-up number</xsl:if>:
 
-           <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/></b>
+           <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if></b>
          </p>
         </xsl:if>
         <!-- Fredriks tillegg slutt -->
