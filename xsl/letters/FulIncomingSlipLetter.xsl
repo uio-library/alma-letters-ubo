@@ -276,6 +276,20 @@
                 </em></p>
               </xsl:if>
             </xsl:if>
+
+            <!-- ALERT1: Ikke en sendeseddel. -->
+             <p>
+              <hr/>
+              <strong>
+                Merk:
+              </strong>
+              <em>
+                Dette er ikke en sendeseddel. Bruk "Ship non-returnable" (for kopier) eller "Ship Item" (for andre dokumenter) for å angi at dokumentet er klar til sending. Etterpå vil "Print Slip" gi sendeseddel.
+              </em>
+              <hr/>
+             </p>
+            <!-- ALERT1: END -->
+
           </div>
         </div>
 
