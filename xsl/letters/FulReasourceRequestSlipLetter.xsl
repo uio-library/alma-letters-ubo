@@ -54,10 +54,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <h2>
          <xsl:choose>
           <xsl:when test="notification_data/request/work_flow_entity/step_type = 'PICKUP_FROM_SHELF'">
-           Pickup From Shelf
+            Pickup From Shelf
           </xsl:when>
           <xsl:otherwise>
-           Resource Request
+            Resource Request
           </xsl:otherwise>
          </xsl:choose>
         </h2>
@@ -510,13 +510,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <!-- ALERT1: Dokumentet skal sendes til folkebibliotek. Denne seddelen fungerer som sendeseddel. -->
       <xsl:if test="contains(notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib')">
-       <p>
         <hr/>
+        <h4>Bestilling fra bibliotek utenfor Bibsys</h4>
+       <p>
         <strong>
-          Merk:
+          Neste steg:
         </strong>
         <em>
-          Mottaker er et bibliotek. Bruk "Scan In" for å låne ut dokumentet.
+          Dokumentet skal til et bibliotek utenfor Bibsys. Bruk "Scan In" for å låne ut dokumentet.
           Som sendeseddel brukes denne seddelen.
         </em>
         <hr/>
@@ -526,14 +527,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <!-- ALERT2: Dokumentet skal sendes til bestillende bibliotek (lending request). Denne seddelen fungerer ikke som sendeseddel. -->
       <xsl:if test="notification_data/request/request_type = 'RESOURCE_SHARING_PHYSICAL_SHIPMENT'">
-       <p>
         <hr/>
+        <h4>Bestilling fra annet Bibsys-bibliotek</h4>
+       <p>
         <strong>
-          Merk:
+          Neste steg:
         </strong>
         <em>
-          Dokumentet skal til et annet Bibsys-bibliotek. Bruk derfor "Shipping Items", ikke "Scan In".
-          Husk å krysse av for at du vil ha sendeseddel ("Automatically print slip").
+          Bruk "Shipping Items" for å få sendeseddel. Husk å krysse av for "Automatically print slip".
         </em>
         <hr/>
        </p>
