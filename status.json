@@ -72,7 +72,7 @@
     },
     "xsl/letters/FulCancelRequestLetter.xsl": {
       "checksum": "83a5d58f715905eaa4eab3652e4d5320d65281c2",
-      "default_checksum": "861a5715a4906bcad70a2438cdc9f4d1fb19b20c",
+      "default_checksum": "c530ad5e696f363e83a78a57f14ce10574e13185",
       "modified": "22/04/2016"
     },
     "xsl/letters/FulCitationSlipLetter.xsl": {
