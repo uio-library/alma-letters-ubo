@@ -95,6 +95,39 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </xsl:for-each>
                     </xsl:attribute>
         </xsl:element>
+        
+        <xsl:element name="meta">
+          <xsl:attribute name="name">address</xsl:attribute>
+          <xsl:attribute name="content">
+
+            <xsl:for-each select="notification_data/request">
+               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
+                 Juridisk bibliotek, DB
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Kriminologibiblioteket')">
+                 IKR-bibl, DN 6. etg.
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Læringssenteret DN')">
+                 Læringssenteret, DN 2. etg
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Menneskerettighetsbiblioteket')">
+                 SMR-bibl, CA 30
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Offentligrettsbiblioteket')">
+                 IOR-bibl, DB
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Petroleums- og EU-rettsbiblioteket')">
+                 EU-bibl, DMØ
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Rettshistorisk samling')">
+                 RS, DB 2. etg
+               </xsl:if>
+               <xsl:if test="contains(calculated_destination_name, 'UiO Rettsinformatikkbiblioteket')">
+                 SERI-bibl, DN 4. etg.
+               </xsl:if>
+               </xsl:for-each>
+           </xsl:attribute>
+        </xsl:element>
 <!-- SKRIPTOTEKETS TILLEGG SLUTT -->
 
 
