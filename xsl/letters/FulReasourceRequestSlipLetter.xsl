@@ -35,20 +35,42 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <table width="100%">
     <tr>
-     <!-- Fredriks tillegg: Hvis på hentehylle: Hentenr, konstruert av hentefrist og tre siste siffer i LTID. Hvis ikke hentehylle, skriv noe annet -->
      <xsl:choose>
+
       <xsl:when test="notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
- 
-       <!-- Hentenummer: -->
-       <xsl:if test="not(contains(notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib'))">
+        <!-- ===========================================================
+             START: Hentehylle 
+             =========================================================== -->
         <td>
-         <b><font size="12">
-          <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if>
-         </font></b>
+          <xsl:choose>
+
+            <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån'">
+              <font size="5"><b>
+                <xsl:value-of select="notification_data/user_for_printing/name"/>
+              </b></font>
+            </xsl:when>
+
+            <xsl:when test="contains(notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib')">
+              <!-- Nothing -->
+            </xsl:when>
+
+            <xsl:otherwise>
+
+              <!-- Hentenummer konstruert av hentefrist, siste tre siffer i LTID og to siffer fra selected_inventory_id -->
+              <font size="7"><b>
+                <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if>
+              </b></font>
+
+            </xsl:otherwise>
+
+          </xsl:choose>
         </td>
-       </xsl:if>
+        <!-- ===========================================================
+             SLUTT: Hentehylle 
+             =========================================================== -->
 
       </xsl:when>
+
       <xsl:otherwise>
        <td>
         <h2>
