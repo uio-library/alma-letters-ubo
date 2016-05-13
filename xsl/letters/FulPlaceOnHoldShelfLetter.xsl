@@ -46,24 +46,37 @@
       </p>
 
 
-      <!-- Hentenummer -->
+      <!-- ===========================================================
+           START: Hentehylle 
+           =========================================================== -->
       <xsl:if test="notification_data/request/work_flow_entity/expiration_date">
-       <p>
 
-        <!-- Fredriks tillegg: Hentenr, konstruert av hentefrist og siste tre siffer i LTID -->
-        <xsl:if test="notification_data/request/calculated_destination_name != 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån'">
-         <p>
+        <!-- Merk: Innlånte bøker ved HumSam-biblioteket-Innlån stilles opp på navn, ikke på hentenummer -->
+        <p>
           <b>
-           <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'">Hentenummer</xsl:if>
-           <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'">Pick-up number</xsl:if>:
+            <xsl:choose>
 
-           <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if></b>
-         </p>
-        </xsl:if>
-        <!-- Fredriks tillegg slutt -->
+              <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån'">
+                <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'">Hentes i skranken</xsl:if>
+                <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'">Pick-up at the counter</xsl:if>:
+              </xsl:when>
 
-       </p>
+              <!-- Hentenummer konstruert av hentefrist, siste tre siffer i LTID og to siffer fra selected_inventory_id -->
+              <xsl:otherwise>
+                <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'">Hentenummer</xsl:if>
+                <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'">Pick-up number</xsl:if>:
+                <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if>
+              </xsl:otherwise>
+
+            </xsl:choose>
+          </b>
+        </p>
       </xsl:if>
+      <!-- ===========================================================
+           SLUTT: Hentehylle 
+           =========================================================== -->
+
+
 
 <!--      <p>
   <xsl:when test="notification_data/outgoing/format_display = 'Physical non-returnable'">
