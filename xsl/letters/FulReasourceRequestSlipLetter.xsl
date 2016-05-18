@@ -291,7 +291,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             └──────────────────────────────────────────────────────────────
          -->
          <xsl:if test="notification_data/request/user_group = '4'">
-           (egne ansatte)
+           <h1>(egne ansatte)</h1>
          </xsl:if>
         </td>
        </tr>
