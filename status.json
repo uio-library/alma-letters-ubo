@@ -151,12 +151,12 @@
       "modified": "-"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "734f494a8d9564702e6d4ae47901a50f6b88c761",
+      "checksum": "9d0329081334d0ede7ccf1cf8d3b6b75c2d14b13",
       "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
-      "modified": "12/05/2016"
+      "modified": "18/05/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "d9736e99cee0e2b8b9ae6b6f5a93cd3932fd88e3",
+      "checksum": "1ca431484ed52be7b99e547c59f923d509a2e5a3",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
       "modified": "18/05/2016"
     },

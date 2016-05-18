@@ -56,7 +56,7 @@
           <b>
             <xsl:choose>
 
-              <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån'">
+              <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån' or notification_data/request/calculated_destination_name = 'UiO Informatikkbiblioteket - Utlånet Inf'">
                 <xsl:if test="notification_data/receivers/receiver/preferred_language = 'no'">Hentes i skranken</xsl:if>
                 <xsl:if test="notification_data/receivers/receiver/preferred_language = 'en'">Pick-up at the counter</xsl:if>:
               </xsl:when>

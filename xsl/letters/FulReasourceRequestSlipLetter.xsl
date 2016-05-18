@@ -44,7 +44,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <td>
           <xsl:choose>
 
-            <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån'">
+            <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån' or notification_data/request/calculated_destination_name = 'UiO Informatikkbiblioteket - Utlånet Inf'">
               <font size="5"><b>
                 <xsl:value-of select="notification_data/user_for_printing/name"/>
               </b></font>
