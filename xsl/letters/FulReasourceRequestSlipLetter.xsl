@@ -45,7 +45,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <xsl:choose>
 
             <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån' or notification_data/request/calculated_destination_name = 'UiO Informatikkbiblioteket - Utlånet Inf'">
-              <font size="5"><b>
+              <font size="7"><b>
                 <xsl:value-of select="notification_data/user_for_printing/name"/>
               </b></font>
             </xsl:when>
@@ -57,7 +57,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:otherwise>
 
               <!-- Hentenummer konstruert av hentefrist, siste tre siffer i LTID og to siffer fra selected_inventory_id -->
-              <font size="7"><b>
+              <!-- Merk: html2ps støtter font size > 7, så 12 blir faktisk større enn 7. -->
+              <font size="12"><b>
                 <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if>
               </b></font>
 
