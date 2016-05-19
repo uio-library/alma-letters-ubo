@@ -106,12 +106,6 @@
       <div style="padding-left:1em;">
        <xsl:call-template name="recordTitle"/>
        <!-- recordTitle.xsl -->
-
-       <xsl:if test="notification_data/outgoing/note != ''">
-        <div>
-         Note: <em><xsl:value-of select="notification_data/outgoing/note"/></em>
-        </div>
-       </xsl:if>
       </div>
 
       <xsl:if test="notification_data/request/work_flow_entity/expiration_date != ''">
