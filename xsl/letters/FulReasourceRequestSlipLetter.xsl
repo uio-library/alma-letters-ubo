@@ -297,6 +297,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </td>
        </tr>
       </xsl:if>
+      <xsl:if  test="notification_data/user_for_printing/email != ''" >
+       <tr>
+        <td valign="top">
+         <font color="#666666">@@email@@:</font>
+        </td>
+        <td>
+         <xsl:value-of select="notification_data/user_for_printing/email"/>
+        </td>
+       </tr>
+      </xsl:if>
       <xsl:if  test="notification_data/external_id != ''" >
        <tr>
         <td valign="top">
