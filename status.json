@@ -156,9 +156,9 @@
       "modified": "19/05/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "d7a8c3654896c27ea0b75caa4f37a44952cfd8cb",
+      "checksum": "8b41abfbec9abbd7dc364e8954a0fe64087db61d",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
-      "modified": "18/05/2016"
+      "modified": "21/05/2016"
     },
     "xsl/letters/FulRenewEmailLetter.xsl": {
       "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",
