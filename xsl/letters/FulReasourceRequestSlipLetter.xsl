@@ -485,7 +485,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        </xsl:if>
 
        <!-- DMOH 2016-01-04: Viser barcode for available items -->
-       <xsl:if test="notification_data/request/selected_inventory_type='HOLDING'" >
+       <xsl:if test="notification_data/request/selected_inventory_type='HOLDING' or notification_data/request/selected_inventory_type='VIRTUAL_HOLDING'" >
         <xsl:if test="count(notification_data/phys_item_display/available_items/available_item[library_code=/notification_data/organization_unit/code]) != 0">
          <p>
           Available item(s):
