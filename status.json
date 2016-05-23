@@ -151,12 +151,12 @@
       "modified": "-"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "774a418b5cae186612d2f2112991e0e201b88377",
+      "checksum": "bd996d96d3e5ed0ba3e5c899d7278787731c1220",
       "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
-      "modified": "19/05/2016"
+      "modified": "23/05/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "768f7d1edee3d3aeea70aba3afeec32e00572be9",
+      "checksum": "0968de86924c6f814d49b622a67aa2f26f9fb6c0",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
       "modified": "23/05/2016"
     },
@@ -416,9 +416,9 @@
       "modified": "-"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "ff12b5779e0259674531cfbd29c56766129f0571",
+      "checksum": "6b472db650e41dc9c9b6b1e72f853aac453131a5",
       "default_checksum": "fde1eebd8c0c425f7e57001cb508f6f1fe668912",
-      "modified": "12/05/2016"
+      "modified": "23/05/2016"
     },
     "xsl/letters/sms/SmsFulUserBorrowingActivityLetter.xsl": {
       "checksum": "b69973c79b9e7deddd779ae27325e5cfd314a709",
