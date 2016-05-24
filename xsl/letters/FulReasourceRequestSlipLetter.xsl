@@ -59,7 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <!-- Hentenummer konstruert av hentefrist, siste tre siffer i LTID og to siffer fra selected_inventory_id -->
               <!-- Merk: html2ps støtter font size > 7, så 12 blir faktisk større enn 7. -->
               <font size="12"><b>
-                <xsl:call-template name="pickupNumber"/><!-- header.xsl -->
+                <xsl:call-template name="pickupNumber"/><!-- mailReason.xsl -->
               </b></font>
 
             </xsl:otherwise>
