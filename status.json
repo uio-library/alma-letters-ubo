@@ -151,14 +151,14 @@
       "modified": "-"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "bd996d96d3e5ed0ba3e5c899d7278787731c1220",
+      "checksum": "068aaf6e80e46e1de5c5f983bdef415be4c843fe",
       "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
-      "modified": "23/05/2016"
+      "modified": "24/05/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "0968de86924c6f814d49b622a67aa2f26f9fb6c0",
+      "checksum": "25624df132081a95d86d449b72e2686776e49037",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
-      "modified": "23/05/2016"
+      "modified": "24/05/2016"
     },
     "xsl/letters/FulRenewEmailLetter.xsl": {
       "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",
@@ -356,9 +356,9 @@
       "modified": "23/02/2016"
     },
     "xsl/letters/call_template/header.xsl": {
-      "checksum": "cfdb9bc70989928c90729fcc89d74ef6af67f20a",
+      "checksum": "e57c0b3e74e7f592939662f38989a96bf9345089",
       "default_checksum": "c9b52c2622eac71bf29114c399bf9b65a0040cdc",
-      "modified": "23/02/2016"
+      "modified": "24/05/2016"
     },
     "xsl/letters/call_template/mailReason.xsl": {
       "checksum": "2de1172c5bd274be2759ca5544540a5fd38b64cc",
@@ -416,9 +416,9 @@
       "modified": "-"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "6b472db650e41dc9c9b6b1e72f853aac453131a5",
+      "checksum": "93f2a9335f47ca11d83167f5b271c7aaab453eed",
       "default_checksum": "fde1eebd8c0c425f7e57001cb508f6f1fe668912",
-      "modified": "23/05/2016"
+      "modified": "24/05/2016"
     },
     "xsl/letters/sms/SmsFulUserBorrowingActivityLetter.xsl": {
       "checksum": "b69973c79b9e7deddd779ae27325e5cfd314a709",

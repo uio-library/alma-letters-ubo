@@ -39,7 +39,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <xsl:when test="notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
         <!-- ===========================================================
-             START: Hentehylle 
+             START: Hentehylle
              =========================================================== -->
         <td>
           <xsl:choose>
@@ -59,7 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <!-- Hentenummer konstruert av hentefrist, siste tre siffer i LTID og to siffer fra selected_inventory_id -->
               <!-- Merk: html2ps støtter font size > 7, så 12 blir faktisk større enn 7. -->
               <font size="12"><b>
-                <xsl:value-of select="substring-before(notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value/value, string-length(notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="notification_data/request/selected_inventory_id"><xsl:value-of select="substring(notification_data/request/selected_inventory_id, string-length(notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if>
+                <xsl:call-template name="pickupNumber"/><!-- header.xsl -->
               </b></font>
 
             </xsl:otherwise>
@@ -67,7 +67,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           </xsl:choose>
         </td>
         <!-- ===========================================================
-             SLUTT: Hentehylle 
+             SLUTT: Hentehylle
              =========================================================== -->
 
       </xsl:when>
