@@ -168,20 +168,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <!-- S3: Grunnleggende metadata: tittel/forfatter m.m. Vises uansett brevtype-->
       <tr>
-       <td><font color="#666666">Title:</font></td>
+       <td>Title:</td>
        <td>
         <xsl:value-of select="notification_data/phys_item_display/title_abcnph"/>
        </td>
       </tr>
       <tr>
-       <td><font color="#666666">By:</font></td>
+       <td>By:</td>
        <td>
         <xsl:value-of select="notification_data/phys_item_display/author"/>
        </td>
       </tr>
       <xsl:if test="notification_data/phys_item_display/isbn != ''">
        <tr>
-        <td><font color="#666666">@@isbn@@:</font></td>
+        <td>@@isbn@@:</td>
         <td>
          <xsl:value-of select="notification_data/phys_item_display/isbn"/>
         </td>
@@ -189,14 +189,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </xsl:if>
       <xsl:if test="notification_data/phys_item_display/issn != ''">
        <tr>
-        <td><font color="#666666">@@issn@@:</font></td>
+        <td>@@issn@@:</td>
         <td>
          <xsl:value-of select="notification_data/phys_item_display/issn"/>
         </td>
        </tr>
       </xsl:if>
       <tr>
-       <td><font color="#666666">Edition/year:</font></td>
+       <td>Edition/year:</td>
        <td>
         <xsl:value-of select="notification_data/phys_item_display/edition"/>
         <xsl:if test="notification_data/phys_item_display/edition != ''">
@@ -207,7 +207,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </tr>
       <xsl:if test="notification_data/phys_item_display/issue_level_description != ''">
        <tr>
-        <td><font color="#666666">Issue:</font></td>
+        <td>Issue:</td>
         <td>
          <xsl:value-of select="notification_data/phys_item_display/issue_level_description"/>
         </td>
@@ -215,7 +215,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </xsl:if>
       <xsl:if test="notification_data/request/record_display_section/series_small != ''" >
        <tr>
-        <td><font color="#666666">Series:</font></td>
+        <td>Series:</td>
         <td>
          <xsl:value-of select="notification_data/request/record_display_section/series_small"/>
         </td>
@@ -224,7 +224,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if  test="notification_data/request/manual_description != ''" >
        <tr>
         <td>
-         <em><font color="#666666">Description: </font></em>
+         <em>Description: </em>
         </td>
         <td>
          <b>
@@ -257,7 +257,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <!-- Destination, request type, notes -->
       <tr>
-       <td><font color="#666666">@@request_type@@:</font></td>
+       <td>@@request_type@@:</td>
        <td>
         <xsl:value-of select="notification_data/request_type"/>
         (<xsl:value-of select="notification_data/request/request_type"/>)
@@ -266,7 +266,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if test="notification_data/user_for_printing/name">
        <tr>
         <td valign="top">
-         <font color="#666666">@@requested_for@@:</font>
+         @@requested_for@@:
         </td>
         <td>
          <xsl:value-of select="notification_data/user_for_printing/identifiers/code_value[1]/value"/>
@@ -300,7 +300,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if  test="notification_data/user_for_printing/email != ''" >
        <tr>
         <td valign="top">
-         <font color="#666666">@@email@@:</font>
+         @@email@@:
         </td>
         <td>
          <xsl:value-of select="notification_data/user_for_printing/email"/>
@@ -310,7 +310,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if  test="notification_data/external_id != ''" >
        <tr>
         <td valign="top">
-         <font color="#666666">@@external_id@@:</font>
+         @@external_id@@:
         </td>
         <td>
          <xsl:value-of select="notification_data/external_id"/>
@@ -318,14 +318,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        </tr>
       </xsl:if>
       <tr>
-       <td><font color="#666666">@@move_to_library@@:</font></td>
+       <td>@@move_to_library@@:</td>
        <td>
         <xsl:value-of select="notification_data/destination"/>
        </td>
       </tr>
       <xsl:if test="notification_data/request/system_notes != ''">
        <tr>
-        <td><font color="#666666">@@system_notes@@:</font></td>
+        <td>@@system_notes@@:</td>
         <td>
          <xsl:value-of select="notification_data/request/system_notes"/>
         </td>
@@ -333,8 +333,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </xsl:if>
       <xsl:if test="notification_data/request/note != ''">
        <tr>
-        <td><font color="#666666"><em>@@request_note@@:</em></font></td>
-        <td bgcolor="#EEEEEE">
+        <td><em>@@request_note@@:</em></td>
+        <td>
          <b>
           <xsl:value-of select="notification_data/request/note"/>
          </b>
