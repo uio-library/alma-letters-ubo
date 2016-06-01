@@ -95,13 +95,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     
     <xsl:if test="notification_data/notification_type = 'OverdueNotificationType1'">
-       @@decalred_as_lost_type1@@ 
+       @@decalred_as_lost_type1@@
     </xsl:if>
     <xsl:if test="notification_data/notification_type = 'OverdueNotificationType2'">
-        @@decalred_as_lost_type2@@ 
+        @@decalred_as_lost_type2@@
     </xsl:if>
     <xsl:if test="notification_data/notification_type = 'OverdueNotificationType3'">
-       @@decalred_as_lost_type3@@ 
+       @@decalred_as_lost_type3@@
     </xsl:if>
      
 
