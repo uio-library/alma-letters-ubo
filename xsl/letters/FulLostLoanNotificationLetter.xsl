@@ -93,7 +93,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </table>
     </xsl:for-each>
 
-    
+    <!--Beskjed type i forhold til hvilken purringtype -->
     <xsl:if test="notification_data/notification_type = 'OverdueNotificationType1'">
        @@decalred_as_lost_type1@@
     </xsl:if>
