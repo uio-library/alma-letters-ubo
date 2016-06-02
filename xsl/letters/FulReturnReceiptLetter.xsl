@@ -1,70 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:include href="header.xsl"/>
-  <xsl:include href="senderReceiver.xsl"/>
-  <xsl:include href="mailReason.xsl"/>
-  <xsl:include href="footer.xsl"/>
-  <xsl:include href="style.xsl"/>
-  <xsl:include href="recordTitle.xsl"/>
-  <xsl:template match="/">
-    <html>
-      <head>
-        <xsl:call-template name="generalStyle"/>
-      </head>
-      <body>
+<xsl:include href="header.xsl"/>
+<xsl:include href="senderReceiver.xsl"/>
+<xsl:include href="mailReason.xsl"/>
+<xsl:include href="footer.xsl"/>
+<xsl:include href="style.xsl"/>
+<xsl:include href="recordTitle.xsl"/>
 
-        <xsl:attribute name="style">
-          <xsl:call-template name="bodyStyleCss"/>
-          <!-- style.xsl -->
-        </xsl:attribute>
+<xsl:template match="/">
+  <xsl:call-template name="email-template"/><!-- header.xsl -->
+</xsl:template>
 
-        <xsl:call-template name="head"/>
-        <!-- header.xsl -->
-        <!--    <xsl:call-template name="senderReceiver" />-->
-        <!-- SenderReceiver.xsl -->
+<xsl:template match="/notification_data">
 
-        <div class="messageArea">
-          <div class="messageBody">
+  <xsl:call-template name="email-logo"/><!-- header.xsl -->
+  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
-            <xsl:call-template name="toWhomIsConcerned"/>
-            <!-- mailReason.xsl -->
+  <p>
+    @@inform_returned_items@@ <xsl:value-of select="organization_unit/name"/>:
+  </p>
 
-            <p>
-              @@inform_returned_items@@ <xsl:value-of select="notification_data/organization_unit/name"/>.
-            </p>
+  <table cellpadding="5" cellspacing="0" class="listing" width="100%">
+    <tr>
+      <th align="left">@@title@@</th>
+      <th align="left">@@return_date@@</th>
+    </tr>
+    <xsl:for-each select="items/item_loan">
+      <tr>
+        <td>
+          <xsl:value-of select="title"/>
+          <xsl:if test="description != ''">
+            <xsl:value-of select="description"/>
+          </xsl:if>
+        </td>
+        <td valign="top" style="white-space: nowrap;">
+          <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+            <xsl:with-param name="value" select="return_date_str"/>
+          </xsl:call-template>
+        </td>
+      </tr>
+    </xsl:for-each>
+  </table>
 
-            <table cellpadding="5" class="listing">
-              <xsl:attribute name="style">
-                <xsl:call-template name="mainTableStyleCss"/>
-                <!-- style.xsl -->
-              </xsl:attribute>
-              <tr>
-                <th>@@title@@</th>
-                <th>@@description@@</th>
-                <th>@@return_date@@</th>
-              </tr>
-              <xsl:for-each select="notification_data/items/item_loan">
-                <tr>
-                  <td>
-                    <xsl:value-of select="title"/>
-                  </td>
-                  <td>
-                    <xsl:value-of select="description"/>
-                  </td>
-                  <td>
-                    <xsl:value-of select="return_date_str"/>
-                  </td>
-                </tr>
-              </xsl:for-each>
-            </table>
+  <xsl:call-template name="email-footer" /> <!-- footer.xsl -->
 
-          </div>
-        </div>
-
-        <!-- footer.xsl -->
-        <xsl:call-template name="lastFooter"/>
-
-      </body>
-    </html>
-  </xsl:template>
+</xsl:template>
 </xsl:stylesheet>
