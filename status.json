@@ -176,14 +176,14 @@
       "modified": "16/02/2016"
     },
     "xsl/letters/FulShortenedDueDateLetter.xsl": {
-      "checksum": null,
+      "checksum": "c927cc5040e8c6c948f178b896658750eeebf5a3",
       "default_checksum": "c927cc5040e8c6c948f178b896658750eeebf5a3",
       "modified": "-"
     },
     "xsl/letters/FulTransitSlipLetter.xsl": {
-      "checksum": "753f95525e17940200f7afcfb234f055d7c8afaa",
+      "checksum": "5574ceb3d8daef78ba08ca2c833dd435bd835ad5",
       "default_checksum": "7123666a1031fe712c66677c51bdd4660e5c5c64",
-      "modified": "13/05/2016"
+      "modified": "07/06/2016"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
       "checksum": "44a573c7bea1d78e2f0dac706d091ca7ae01c812",
@@ -336,7 +336,7 @@
       "modified": "-"
     },
     "xsl/letters/SocialLoginInviteLetter.xsl": {
-      "checksum": null,
+      "checksum": "02967f65bcf8fd0419dba056d3726f277ce3524b",
       "default_checksum": "02967f65bcf8fd0419dba056d3726f277ce3524b",
       "modified": "-"
     },
@@ -431,7 +431,7 @@
       "modified": "24/05/2016"
     },
     "xsl/letters/sms/SmsFulShortenedDueDateLetter.xsl": {
-      "checksum": null,
+      "checksum": "acabda14a9943b15954a34156515b7aee68d9555",
       "default_checksum": "acabda14a9943b15954a34156515b7aee68d9555",
       "modified": "-"
     },
