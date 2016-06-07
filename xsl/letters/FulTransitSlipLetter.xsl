@@ -243,18 +243,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </td>
                </tr>
               </xsl:if>
-            <!--
-        <xsl:if test="notification_data/user_for_printing/name">
+              <xsl:if test="notification_data/user_for_printing/name">
                 <tr>
-                  <td>
+                  <td valign="top">
                     <b>@@requested_for@@:</b>
                   </td>
-                </tr>
-                <tr>
                   <td>
+                    <xsl:value-of select="notification_data/user_for_printing/identifiers/code_value[1]/value"/>
+                    :
                     <xsl:value-of select="notification_data/user_for_printing/name" />
+                    <xsl:if test="notification_data/request/user_group = '4'">
+                      <h1>(egne ansatte)</h1>
+                    </xsl:if>
                   </td>
                 </tr>
+                <!--
                 <xsl:if test="notification_data/user_for_printing/email">
                   <tr>
                     <td><b>@@email@@: </b>
@@ -277,8 +280,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     <xsl:value-of select="notification_data/request/lastInterestDate" /></td>
                   </tr>
                 </xsl:if>
+                -->
               </xsl:if>
-        -->
         <!-- <xsl:if test="notification_data/phys_item_display/owning_library_name">
                   <tr>
                     <td><b>@@owning_library@@: </b>
