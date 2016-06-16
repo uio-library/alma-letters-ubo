@@ -37,6 +37,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:if test="notification_data/notification_type = 'OverdueNotificationType3'">
         <h> @@inform_you_item_below_type3@@</h> 
     </xsl:if>    
+    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType4'">
+       <h>@@inform_you_item_below_type4@@</h> 
+    </xsl:if>
      
     </td>
     </tr>
@@ -102,6 +105,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </xsl:if>
     <xsl:if test="notification_data/notification_type = 'OverdueNotificationType3'">
        @@decalred_as_lost_type3@@
+    </xsl:if>
+    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType4'">
+       @@decalred_as_lost_type4@@
     </xsl:if>
      
 
