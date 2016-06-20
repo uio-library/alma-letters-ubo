@@ -156,9 +156,9 @@
       "modified": "24/05/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "5efb887c401751e37d8ff2cebcfcc3994708cafe",
+      "checksum": "7fc7d87c89cc5f119198f4edec3cf672abb17b95",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
-      "modified": "26/05/2016"
+      "modified": "20/06/2016"
     },
     "xsl/letters/FulRenewEmailLetter.xsl": {
       "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",
@@ -371,9 +371,9 @@
       "modified": "24/05/2016"
     },
     "xsl/letters/call_template/mailReason.xsl": {
-      "checksum": "046801e8898aeb4acae46bb05c8166977ac5b59c",
+      "checksum": "d306b9b8624ea20dbaba4b809ddfd8276d341298",
       "default_checksum": "f2ac8788cab9440909bd5ab6c3263cf448510d33",
-      "modified": "24/05/2016"
+      "modified": "20/06/2016"
     },
     "xsl/letters/call_template/recordTitle.xsl": {
       "checksum": "2f681ff1dbad163da4ceac46f1d0c423c88433df",
