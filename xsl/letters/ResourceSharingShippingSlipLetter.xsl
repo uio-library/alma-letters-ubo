@@ -29,23 +29,32 @@
    <xsl:with-param name="label" select="'Bibliographic Information:'"/>
   </xsl:call-template>
  </xsl:template>
- <xsl:template match="/">
-  <html>
-   <head>
+
+<xsl:template match="/">
+<html>
+  <head>
     <xsl:call-template name="generalStyle"/>
 
+    <!-- =====================================================================================
+      Libnummer
+
+      Alternativ 1: UiO-løsning: Vi legger dette i en meta-tagg,
+      som en instruksjon til html2ps om å skrive den ut i footer.
+
+      Se https://github.com/scriptotek/alma-slipsomat#libnummer-norsk-isil-kode
+      ===================================================================================== -->
+
     <xsl:element name="meta">
-     <xsl:attribute name="name">libnummer</xsl:attribute>
-     <xsl:attribute name="content">
-
-      <xsl:for-each select="notification_data/partner_shipping_info_list/partner_shipping_info[1]/address5">
-              <xsl:value-of select="substring(., 4,3)"/>&#160;&#160;<xsl:value-of select="substring(., 7,4)"/>
-      </xsl:for-each>
-
-          </xsl:attribute>
+      <xsl:attribute name="name">libnummer</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:for-each select="/notification_data/partner_shipping_info_list/partner_shipping_info[1]/address5">
+          <xsl:value-of select="substring(., 4,3)"/>&#160;&#160;<xsl:value-of select="substring(., 7,4)"/>
+        </xsl:for-each>
+      </xsl:attribute>
     </xsl:element>
+    <!-- ===================================================================================== -->
 
-   </head>
+  </head>
    <body>
     <xsl:attribute name="style">
      <xsl:call-template name="bodyStyleCss"/>
@@ -384,9 +393,20 @@
      </div>
     </div>
 
-    <!--
-  <xsl:call-template name="lastFooter" />-->
-    <!-- footer.xsl -->
+    <!-- =====================================================================================
+          Libnummer
+
+          Alternativ 2: CSS-basert løsning for de som ikke bruker html2ps
+
+          Se https://github.com/scriptotek/alma-slipsomat#libnummer-norsk-isil-kode
+          ===================================================================================== -->
+    <xsl:if test="/notification_data/organization_unit/org_scope/institution_id != '2204'">
+      <div id="libnummer" style="position: fixed; bottom: 100px; left: 30px; font-size: 60px;">
+        <xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 4, 3)"/>&#160;&#160;<xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 7, 4)"/>
+      </div>
+    </xsl:if>
+    <!-- ===================================================================================== -->
+
    </body>
   </html>
  </xsl:template>

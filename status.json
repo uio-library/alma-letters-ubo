@@ -156,7 +156,7 @@
       "modified": "27/06/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "ad1dde4ce9833f2aae8f65296fb501b02c6fbb63",
+      "checksum": "d5273225d7db8d29da6d5dd177d7fc7b385be7a9",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
       "modified": "27/06/2016"
     },
@@ -326,9 +326,9 @@
       "modified": "28/04/2016"
     },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
-      "checksum": "96d9a7d5e91e263bb5786ad852720b2e3011e1a6",
+      "checksum": "3d511cc192381401250aabaed39fe625169943ec",
       "default_checksum": "1d169cd88751835afad337772a12f7be2e4dbf9d",
-      "modified": "07/03/2016"
+      "modified": "27/06/2016"
     },
     "xsl/letters/RestrictedLoginIPLetter.xsl": {
       "checksum": "49e2533afb204cd04761d76487dccaf05939e162",

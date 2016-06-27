@@ -15,29 +15,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:call-template name="generalStyle" />
 
       <!-- =====================================================================================
-        Libnummer skrives ut hvis LTID begynner med "lib". Vi legger dette i en meta-tagg,
-        som en instruksjon til html2ps om å skrive den ut i footer. Hvis en ikke bruker html2ps
-        kan man i stedet legge
+        Libnummer skrives ut hvis LTID begynner med "lib".
 
-          <xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value[1]/value, 4, 3)"/>&#160;&#160;<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value[1]/value, 7, 4)"/>
-
-        på bunnen av dokumentet, og med litt CSS kan man muligens få justert det riktig.
+        Alternativ 1: UiO-løsning: Vi legger dette i en meta-tagg,
+        som en instruksjon til html2ps om å skrive den ut i footer.
 
         Se https://github.com/scriptotek/alma-slipsomat#libnummer-norsk-isil-kode
         ===================================================================================== -->
-      <xsl:if test="contains(notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib')">
+      <xsl:if test="contains(/notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib')">
         <xsl:element name="meta">
-         <xsl:attribute name="name">libnummer</xsl:attribute>
-         <xsl:attribute name="content">
-          <xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value[1]/value, 4, 3)"/>&#160;&#160;<xsl:value-of select="substring(notification_data/user_for_printing/identifiers/code_value[1]/value, 7, 4)"/>
-         </xsl:attribute>
+          <xsl:attribute name="name">libnummer</xsl:attribute>
+          <xsl:attribute name="content">
+            <xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 4, 3)"/>&#160;&#160;<xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 7, 4)"/>
+          </xsl:attribute>
         </xsl:element>
       </xsl:if>
       <!-- ===================================================================================== -->
 
   </head>
 
-   <body>
+  <body>
 
     <table width="100%">
     <tr>
@@ -478,7 +475,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       </table>
     </div>
-   </div>
+  </div>
+
+  <!-- =====================================================================================
+        Libnummer skrives ut hvis LTID begynner med "lib".
+
+        Alternativ 2: CSS-basert løsning for de som ikke bruker html2ps
+
+        Se https://github.com/scriptotek/alma-slipsomat#libnummer-norsk-isil-kode
+        ===================================================================================== -->
+  <xsl:if test="contains(/notification_data/user_for_printing/identifiers/code_value[1]/value, 'lib') and /notification_data/organization_unit/org_scope/institution_id != '2204'">
+    <div id="libnummer" style="position: fixed; bottom: 100px; left: 30px; font-size: 60px;">
+      <xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 4, 3)"/>&#160;&#160;<xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 7, 4)"/>
+    </div>
+  </xsl:if>
+  <!-- ===================================================================================== -->
 
 </body>
 </html>
