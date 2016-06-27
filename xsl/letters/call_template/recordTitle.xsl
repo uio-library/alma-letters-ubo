@@ -3,7 +3,7 @@
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="recordTitle">
- <xsl:for-each select="notification_data/phys_item_display">
+ <xsl:for-each select="/notification_data/phys_item_display">
   <div>
    <xsl:if test="title !=''">
     <em><span class="recordTitle spacer_after_1em"><xsl:value-of select="title"/>.&#160;</span></em>
