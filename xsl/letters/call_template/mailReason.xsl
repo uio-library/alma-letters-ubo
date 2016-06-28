@@ -15,7 +15,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     Added by: DMOH 2016-05-24
 -->
 <xsl:template name="pickupNumber">
-  <xsl:value-of select="substring-before(/notification_data/request/work_flow_entity/expiration_date,'/')"/>-<xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value/value, string-length(/notification_data/user_for_printing/identifiers/code_value/value)-2)"/><xsl:if test="/notification_data/request/selected_inventory_id"><xsl:value-of select="substring(/notification_data/request/selected_inventory_id, string-length(/notification_data/request/selected_inventory_id)-8, 2)"/></xsl:if>
+  <xsl:value-of select="concat(
+      substring-before(/notification_data/request/work_flow_entity/expiration_date,'/'),
+      ' ',
+      substring(/notification_data/user_for_printing/identifiers/code_value/value, string-length(/notification_data/user_for_printing/identifiers/code_value/value)-1),
+      ' ',
+      substring(/notification_data/request/selected_inventory_id, string-length(/notification_data/request/selected_inventory_id)-8, 2)
+      )"/>
 </xsl:template>
 
 <xsl:template name="pickupNumberWithLabel">
