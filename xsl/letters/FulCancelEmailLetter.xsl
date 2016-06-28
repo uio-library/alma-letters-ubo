@@ -26,7 +26,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:value-of select="request/needed_by"/>
       </xsl:when>
       <xsl:otherwise>
-        @@requested@@ <xsl:value-of select="request_sending_date" />:
+        @@requested@@
+        <xsl:call-template name="stdDate"><!-- Defined in mailReason.xsl -->
+          <xsl:with-param name="value" select="request_sending_date"/>
+        </xsl:call-template>:
       </xsl:otherwise>
     </xsl:choose>
   </p>
@@ -302,69 +305,39 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   </table>
 
-  <br />
-
-  <table cellspacing="0" cellpadding="5" border="0" style="font-family: Arial, Helvetica, sans-serif;font-size: 13px; color:#5F6163;">
-
-   <tr>
-    <td>@@signature@@</td>
-   </tr>
-   <tr>
-    <td>
-     <xsl:value-of select="library/name" />
-    </td>
-   </tr>
-   <xsl:if test="library/address/line1 !=''">
-    <tr>
-     <td>
+  <p>
+    @@signature@@
+    <br />
+    <xsl:value-of select="library/name" />
+    <br />
+    <xsl:if test="library/address/line1 !=''">
       <xsl:value-of select="library/address/line1" />
-     </td>
-    </tr>
-   </xsl:if>
-   <xsl:if test="library/address/line2 !=''">
-    <tr>
-     <td>
+      <br />
+    </xsl:if>
+    <xsl:if test="library/address/line2 !=''">
       <xsl:value-of select="library/address/line2" />
-     </td>
-    </tr>
-   </xsl:if>
-   <xsl:if test="library/address/line3 !=''">
-    <tr>
-     <td>
+      <br />
+    </xsl:if>
+    <xsl:if test="library/address/line3 !=''">
       <xsl:value-of select="library/address/line3" />
-     </td>
-    </tr>
-   </xsl:if>
-   <xsl:if test="library/address/line4 !=''">
-    <tr>
-     <td>
+      <br />
+    </xsl:if>
+    <xsl:if test="library/address/line4 !=''">
       <xsl:value-of select="library/address/line4" />
-     </td>
-    </tr>
-   </xsl:if>
-   <xsl:if test="library/address/line5 !=''">
-    <tr>
-     <td>
+      <br />
+    </xsl:if>
+    <xsl:if test="library/address/line5 !=''">
       <xsl:value-of select="library/address/line5" />
-     </td>
-    </tr>
-   </xsl:if>
-   <xsl:if test="library/address/city !=''">
-    <tr>
-     <td>
-      <xsl:value-of select="library/address/city" />
-     </td>
-    </tr>
-   </xsl:if>
-   <xsl:if test="library/address/country !=''">
-    <tr>
-     <td>
+      <br />
+    </xsl:if>
+    <xsl:if test="library/address/city !=''">
+      <xsl:value-of select="library/address/postal_code" />&#160;<xsl:value-of select="library/address/city" />
+      <br />
+    </xsl:if>
+    <xsl:if test="library/address/country !=''">
       <xsl:value-of select="library/address/country" />
-     </td>
-    </tr>
-
-   </xsl:if>
-  </table>
+    </xsl:if>
+  </p>
 
 </xsl:template>
 </xsl:stylesheet>
