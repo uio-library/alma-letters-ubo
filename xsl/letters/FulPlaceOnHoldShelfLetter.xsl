@@ -36,7 +36,7 @@
   <!-- ===========================================================
        START: Hentehylle
        =========================================================== -->
-  <xsl:if test="notification_data/request/work_flow_entity/expiration_date">
+  <xsl:if test="/notification_data/request/work_flow_entity/expiration_date">
     <p>
       <b>
         <xsl:call-template name="pickupNumberWithLabel"/><!-- mailReason.xsl -->
