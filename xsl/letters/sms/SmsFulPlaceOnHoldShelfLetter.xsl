@@ -31,7 +31,9 @@
 <xsl:when test="/notification_data/outgoing/format_display = 'Physical non-returnable'">
 </xsl:when>
 <xsl:otherwise>
-@@note_item_held_until@@: <xsl:value-of select="/notification_data/request/work_flow_entity/expiration_date"/>. 
+@@note_item_held_until@@: <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
+  <xsl:with-param name="value" select="/notification_datarequest/work_flow_entity/expiration_date"/>
+</xsl:call-template>.
 </xsl:otherwise>
 </xsl:choose>
 </xsl:template>

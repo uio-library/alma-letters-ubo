@@ -19,7 +19,9 @@
   <!-- Materialet du bestilte (dato) kan nå hentes i (ditt bibliotek) -->
   <p>
     @@following_item_requested_on@@
-    <xsl:value-of select="request/create_date"/>,
+    <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
+      <xsl:with-param name="value" select="request/create_date"/>
+    </xsl:call-template>,
     @@can_picked_at@@
 
     <xsl:choose>
@@ -55,10 +57,12 @@
   <xsl:if test="request/work_flow_entity/expiration_date != ''">
     <p>
       @@note_item_held_until@@
-      <xsl:value-of select="request/work_flow_entity/expiration_date"/>.
+      <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
+        <xsl:with-param name="value" select="request/work_flow_entity/expiration_date"/>
+      </xsl:call-template>.
     </p>
   </xsl:if>
-  
+
   <xsl:if test="request/system_notes != ''">
     <p>
       <b>@@notes_affect_loan@@:</b>
