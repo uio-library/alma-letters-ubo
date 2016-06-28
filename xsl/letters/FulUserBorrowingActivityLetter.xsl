@@ -42,7 +42,7 @@
             </xsl:if>
           </td>
           <td valign="top" style="white-space: nowrap;">
-            <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+            <xsl:call-template name="isoDate"><!-- header.xsl -->
               <xsl:with-param name="value" select="due_date"/>
             </xsl:call-template>
           </td>
@@ -76,7 +76,7 @@
         <xsl:value-of select="title"/>
        </td>
        <td valign="top" style="white-space: nowrap;">
-        <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+        <xsl:call-template name="isoDate"><!-- header.xsl -->
           <xsl:with-param name="value" select="due_date"/>
         </xsl:call-template>
        </td>

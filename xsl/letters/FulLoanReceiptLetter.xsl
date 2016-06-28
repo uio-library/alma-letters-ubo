@@ -35,12 +35,12 @@
           </xsl:if>
         </td>
         <td valign="top" style="white-space: nowrap;">
-            <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+            <xsl:call-template name="isoDate"><!-- header.xsl -->
               <xsl:with-param name="value" select="loan_date"/>
             </xsl:call-template>
         </td>
         <td valign="top" style="white-space: nowrap;">
-            <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+            <xsl:call-template name="isoDate"><!-- header.xsl -->
               <xsl:with-param name="value" select="new_due_date_str"/>
             </xsl:call-template>
         </td>

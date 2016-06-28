@@ -9,9 +9,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     Parameters:
       value:     The date on format MM/DD/YYYY
 -->
-<xsl:template name="normalizedDate">
+<xsl:template name="isoDate">
   <xsl:param name="value"/>
-  <xsl:value-of select="substring($value, 7, 4)"/>-<xsl:value-of select="substring($value, 4, 2)"/>-<xsl:value-of select="substring($value, 1, 2)"/>
+  <xsl:value-of select="concat(
+    substring($value, 7, 4),
+    '-',
+    substring($value, 4, 2),
+    '-',
+    substring($value, 1, 2)
+  )"/>
 </xsl:template>
 
 
@@ -76,7 +82,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
  </td>
  <td align="right" bgcolor="#eee">
   <h2>
-   <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+   <xsl:call-template name="isoDate"><!-- header.xsl -->
               <xsl:with-param name="value" select="current_date"/>
             </xsl:call-template>
   </h2>
@@ -102,7 +108,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           </td>
           <td align="right" valign="top">
             <h2>
-              <xsl:call-template name="normalizedDate"><!-- header.xsl -->
+              <xsl:call-template name="isoDate"><!-- header.xsl -->
                 <xsl:with-param name="value" select="current_date"/>
               </xsl:call-template>
             </h2>

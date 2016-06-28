@@ -78,11 +78,11 @@
                 <tr>
                   <td>Request created:</td>
                   <td>
-                    <xsl:call-template name="normalizedDate"><!-- Defined in header.xsl -->
+                    <xsl:call-template name="isoDate"><!-- Defined in header.xsl -->
                       <xsl:with-param name="value" select="notification_data/incoming_request/create_date_str"/>
                     </xsl:call-template>
                     <xsl:if test="notification_data/incoming_request/create_date_str != notification_data/incoming_request/modification_date_str">&#160;(updated
-                      <xsl:call-template name="normalizedDate">
+                      <xsl:call-template name="isoDate">
                         <!-- header.xsl -->
                         <xsl:with-param name="value" select="notification_data/incoming_request/modification_date_str"/></xsl:call-template>)
                     </xsl:if>
