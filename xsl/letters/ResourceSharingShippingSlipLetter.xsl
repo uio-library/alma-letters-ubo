@@ -60,8 +60,7 @@
      <xsl:call-template name="bodyStyleCss"/>
      <!-- style.xsl -->
     </xsl:attribute>
-    <xsl:call-template name="head_without_logo"/>
-    <!-- header.xsl -->
+    <xsl:call-template name="headWithoutLogo"/><!-- Defined in mailReason.xsl -->
     <div class="messageArea">
      <div class="messageBody">
 
@@ -177,12 +176,12 @@
         <tr>
          <td>Request created:</td>
          <td>
-             <xsl:call-template name="isoDate"><!-- header.xsl -->
+             <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
                      <xsl:with-param name="value" select="notification_data/incoming_request/create_date_str"/>
                    </xsl:call-template>
 
           <xsl:if test="notification_data/incoming_request/create_date_str != notification_data/incoming_request/modification_date_str">
-           &#160;(updated <xsl:call-template name="isoDate"><!-- header.xsl -->
+           &#160;(updated <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
                       <xsl:with-param name="value" select="notification_data/incoming_request/modification_date_str"/>
                     </xsl:call-template>)
           </xsl:if>
@@ -203,7 +202,7 @@
         <tr>
          <td>Item sent:</td>
          <td>
-             <xsl:call-template name="isoDate"><!-- header.xsl -->
+             <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
                      <xsl:with-param name="value" select="notification_data/incoming_request/item_sent_date"/>
                    </xsl:call-template>
 

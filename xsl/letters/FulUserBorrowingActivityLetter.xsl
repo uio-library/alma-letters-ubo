@@ -13,7 +13,7 @@
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="email-logo"/><!-- header.xsl -->
+  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <xsl:if test="item_loans/item_loan or overdue_item_loans/item_loan">
@@ -42,7 +42,7 @@
             </xsl:if>
           </td>
           <td valign="top" style="white-space: nowrap;">
-            <xsl:call-template name="isoDate"><!-- header.xsl -->
+            <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
               <xsl:with-param name="value" select="due_date"/>
             </xsl:call-template>
           </td>
@@ -76,7 +76,7 @@
         <xsl:value-of select="title"/>
        </td>
        <td valign="top" style="white-space: nowrap;">
-        <xsl:call-template name="isoDate"><!-- header.xsl -->
+        <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
           <xsl:with-param name="value" select="due_date"/>
         </xsl:call-template>
        </td>

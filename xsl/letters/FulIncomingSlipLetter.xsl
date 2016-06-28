@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:variable name="counter" select="0"/>
-  <xsl:include href="header.xsl"/>
-  <xsl:include href="senderReceiver.xsl"/>
-  <xsl:include href="mailReason.xsl"/>
-  <xsl:include href="footer.xsl"/>
-  <xsl:include href="style.xsl"/>
-  <xsl:include href="recordTitle.xsl"/>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:variable name="counter" select="0"/>
+<xsl:include href="header.xsl"/>
+<xsl:include href="senderReceiver.xsl"/>
+<xsl:include href="mailReason.xsl"/>
+<xsl:include href="footer.xsl"/>
+<xsl:include href="style.xsl"/>
+<xsl:include href="recordTitle.xsl"/>
 
   <xsl:template name="id-info">
     <xsl:param name="line"/>
@@ -44,7 +45,7 @@
           <!-- style.xsl -->
         </xsl:attribute>
 
-        <xsl:call-template name="head_without_logo"/><!-- Defined in header.xsl -->
+        <xsl:call-template name="headWithoutLogo"/><!-- Defined in mailReason.xsl -->
 
         <div class="messageArea">
           <div class="messageBody">

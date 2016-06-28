@@ -89,9 +89,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        <td align="right" valign="top">
         <tt>
           <!-- =====================================================================================
-               Merk: Krever malen "isoDate" fra header.xsl
+               Merk: Krever malen "isoDate" fra mailReason.xsl
                ===================================================================================== -->
-          <xsl:call-template name="isoDate"><!-- header.xsl -->
+          <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
             <xsl:with-param name="value" select="notification_data/request/create_date"/>
           </xsl:call-template>
           &#160;<xsl:value-of select="notification_data/request/create_time"/>

@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="email-logo"/><!-- header.xsl -->
+  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
   <!--<xsl:call-template name="toWhomIsConcerned"/>--><!-- mailReason.xsl -->
 
   <h3>@@header@@</h3>

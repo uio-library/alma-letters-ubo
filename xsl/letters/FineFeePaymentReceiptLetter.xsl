@@ -13,7 +13,7 @@
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="email-logo"/><!-- header.xsl -->
+  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
   <xsl:call-template name="senderReceiver" /> <!-- senderReceiver.xsl -->
   <!--<xsl:call-template name="toWhomIsConcerned"/>--><!-- mailReason.xsl -->
 
@@ -43,7 +43,7 @@
           </xsl:if>
         </td>
         <td valign="top" style="white-space: nowrap;">
-          <xsl:call-template name="isoDate"><!-- header.xsl -->
+          <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
             <xsl:with-param name="value" select="create_date"/>
           </xsl:call-template>
         </td>
