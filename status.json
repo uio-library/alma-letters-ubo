@@ -376,7 +376,7 @@
       "modified": "06/07/2016"
     },
     "xsl/letters/call_template/mailReason.xsl": {
-      "checksum": "1907669919c389a652d47083273b8109224b0c09",
+      "checksum": "88eae3b7c3ebfb2bac40659ac4492530b357c59a",
       "default_checksum": "f2ac8788cab9440909bd5ab6c3263cf448510d33",
       "modified": "06/07/2016"
     },
@@ -436,7 +436,7 @@
       "modified": "-"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "16fe30508f0039573f4adda69c431ddcb1d766a6",
+      "checksum": "2b7c8c3ec9c20b9e4c1b264f0ae7c7a6185fb853",
       "default_checksum": "fde1eebd8c0c425f7e57001cb508f6f1fe668912",
       "modified": "06/07/2016"
     },
