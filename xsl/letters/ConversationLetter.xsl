@@ -27,6 +27,7 @@
 
     <p class="sincerely">
       @@sincerely@@,<br />
+      <!-- Can we use @@department@@ ? Dunno -->
       <xsl:value-of select="author/first_name" />&#160;<xsl:value-of select="author/last_name" /><br />
       <xsl:value-of select="/notification_data/organization_unit/name" />
     </p>

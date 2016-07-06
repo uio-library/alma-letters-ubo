@@ -11,10 +11,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
 
   <xsl:if test="/notification_data/request/resource_sharing_request_id != ''">
-     <xsl:message terminate="yes">Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
+    <xsl:message terminate="yes">Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
   </xsl:if>
-  <xsl:if test="/notification_data/request/convertable_to_resource_sharing = 'true'">
-     <xsl:message terminate="yes">Converted to resoruce sharing, no need for cancel message.</xsl:message>
+  <xsl:if test="/notification_data/request/status_note = 'ConvertedToResourceSharingRequest'">
+    <xsl:message terminate="yes">Converted to Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
   </xsl:if>
 
   <xsl:call-template name="email-template"/><!-- header.xsl -->

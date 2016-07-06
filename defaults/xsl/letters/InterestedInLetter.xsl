@@ -60,6 +60,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
      </td>
      </tr>
+    <tr>
+     <td>
+    <br />
+    @@mmsId@@ :
+
+      <br />
+
+     </td>
+      <td>
+    <br />
+    <xsl:value-of  select="notification_data/mms_id"/>
+
+      <br />
+
+     </td>
+     </tr>
      <tr>
      <td>
     <br />
@@ -72,6 +88,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <br />
     <xsl:value-of  select="notification_data/poline_inventory/call_number"/>
 
+      <br />
+
+     </td>
+     </tr>
+    <tr>
+     <td>
+    <br />
+    @@receivingNote@@ :
+
+      <br />
+
+     </td>
+      <td>
+    <br />
+    <xsl:value-of  select="notification_data/receiving_note"/>
       <br />
 
      </td>
