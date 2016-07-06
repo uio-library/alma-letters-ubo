@@ -35,6 +35,11 @@
       "default_checksum": "c72a380890adffa0bc54d95e587c17b22f89d034",
       "modified": "16/02/2016"
     },
+    "xsl/letters/EmailRecordsLetter.xsl": {
+      "checksum": "44db8f8a8b8155a8ba7a11023572d31aceaae329",
+      "default_checksum": null,
+      "modified": "-"
+    },
     "xsl/letters/ExportUserLetter.xsl": {
       "checksum": "5e316385ed1e11b359c9c0fd64320ed2e471d615",
       "default_checksum": "5e316385ed1e11b359c9c0fd64320ed2e471d615",
@@ -423,6 +428,11 @@
     "xsl/letters/sms/SmsFulOverdueAndLostLoanLetter.xsl": {
       "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2",
       "default_checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2",
+      "modified": "-"
+    },
+    "xsl/letters/sms/SmsFulOverdueAndLostLoanNotificationLetter.xsl": {
+      "checksum": "5be478863ddefb31d2342867f99e022b5e5de7f2",
+      "default_checksum": null,
       "modified": "-"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
