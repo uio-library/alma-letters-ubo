@@ -401,7 +401,9 @@
           ===================================================================================== -->
     <xsl:if test="/notification_data/organization_unit/org_scope/institution_id != '2204'">
       <div id="libnummer" style="position: fixed; bottom: 100px; left: 30px; font-size: 60px;">
-        <xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 4, 3)"/>&#160;&#160;<xsl:value-of select="substring(/notification_data/user_for_printing/identifiers/code_value[1]/value, 7, 4)"/>
+        <xsl:for-each select="/notification_data/partner_shipping_info_list/partner_shipping_info[1]/address5">
+          <xsl:value-of select="substring(., 4,3)"/>&#160;&#160;<xsl:value-of select="substring(., 7,4)"/>
+        </xsl:for-each>
       </div>
     </xsl:if>
     <!-- ===================================================================================== -->
