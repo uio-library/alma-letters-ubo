@@ -90,6 +90,11 @@
       "default_checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9",
       "modified": "16/02/2016"
     },
+    "xsl/letters/FulDigitizationDocumentDeliveryNotificationLetter.xsl": {
+      "checksum": "81bb6c9e2e53e4dd6649f390d19111e1b0a07bd2",
+      "default_checksum": "81bb6c9e2e53e4dd6649f390d19111e1b0a07bd2",
+      "modified": "-"
+    },
     "xsl/letters/FulDigitizationNotificationItemLetter.xsl": {
       "checksum": "84e4a289cf560878581e5735b0c64214ec5c5c41",
       "default_checksum": "a6c232620a108beb08c06d091623362df3c5d7fa",

@@ -22,18 +22,21 @@
       <xsl:with-param name="value" select="/notification_data/request/create_date"/>
     </xsl:call-template>:
   </p>
-  <ul>
-    <li>
-      <xsl:call-template name="recordTitle" />
-    </li>
-  </ul>
   <p>
-    @@delivered_to@@: <xsl:value-of select="/notification_data/delivery_address" />
+    <xsl:value-of select="/notification_data/optional_barcodes/string" />: <xsl:call-template name="recordTitle" />
   </p>
   <p>
     @@due_date@@: <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
       <xsl:with-param name="value" select="/notification_data/due_date"/>
     </xsl:call-template>
+  </p>
+  <p>
+    @@delivered_to@@:
+    <xsl:value-of select="/notification_data/user_for_printing/name" />. <xsl:value-of select="/notification_data/delivery_address" />
+  </p>
+  <p>
+    Sent from:
+    <xsl:value-of select="/phys_item_display/owning_library_name" />
   </p>
 
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
