@@ -16,16 +16,16 @@
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType1'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType1'">
       @@inform_you_item_below_type1@@
     </xsl:if>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType2'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType2'">
       @@inform_you_item_below_type2@@
     </xsl:if>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType3'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType3'">
       @@inform_you_item_below_type3@@
     </xsl:if>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType4'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType4'">
       @@inform_you_item_below_type4@@
     </xsl:if>
   </p>
@@ -73,16 +73,16 @@
 
   <!--Beskjed type i forhold til hvilken purringtype -->
   <p>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType1'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType1'">
       @@decalred_as_lost_type1@@
     </xsl:if>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType2'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType2'">
       @@decalred_as_lost_type2@@
     </xsl:if>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType3'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType3'">
       @@decalred_as_lost_type3@@
     </xsl:if>
-    <xsl:if test="notification_data/notification_type = 'OverdueNotificationType4'">
+    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType4'">
        @@decalred_as_lost_type4@@
     </xsl:if>
   </p>
