@@ -12,6 +12,15 @@
   <xsl:call-template name="email-template"/><!-- header.xsl -->
 </xsl:template>
 
+<!-- Using the string-replace method defined in header.xsl to remove the 'Home Address:' prefix from the address -->
+<xsl:variable name="delivery_address">
+  <xsl:call-template name="string-replace">
+    <xsl:with-param name="string" select="/notification_data/delivery_address" />
+    <xsl:with-param name="replace" select="'Home Address:'" />
+    <xsl:with-param name="with" select="''" />
+  </xsl:call-template>
+</xsl:variable>
+
 <xsl:template match="/notification_data">
 
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
@@ -23,8 +32,10 @@
     </xsl:call-template>:
   </p>
   <p>
-    <xsl:value-of select="/notification_data/optional_barcodes/string" />: <xsl:call-template name="recordTitle" />
+    <xsl:call-template name="recordTitle" />
+    (holdings ID: <xsl:value-of select="/notification_data/request/selected_inventory_id" />)
   </p>
+
   <p>
     @@due_date@@: <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
       <xsl:with-param name="value" select="/notification_data/due_date"/>
@@ -32,11 +43,11 @@
   </p>
   <p>
     @@delivered_to@@:
-    <xsl:value-of select="/notification_data/user_for_printing/name" />. <xsl:value-of select="/notification_data/delivery_address" />
+    <xsl:value-of select="/notification_data/receivers/receiver/user/first_name" />. <xsl:value-of select="$delivery_address" />
   </p>
   <p>
-    Sent from:
-    <xsl:value-of select="/phys_item_display/owning_library_name" />
+    Fra:
+    <xsl:value-of select="/notification_data/phys_item_display/owning_library_name" />
   </p>
 
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
