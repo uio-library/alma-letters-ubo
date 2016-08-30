@@ -161,58 +161,77 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <tr><td colspan="2"><hr/></td></tr>
 
         <!-- Del 3: Grunnleggende metadata: tittel, forfatter, osv. Dette viser vi alltid! -->
-        <tr>
-          <td valign="top">Title:</td>
-          <td>
-            <xsl:value-of select="notification_data/phys_item_display/title_abcnph"/>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">By:</td>
-          <td>
-            <xsl:value-of select="notification_data/phys_item_display/author"/>
-          </td>
-        </tr>
-        <xsl:if test="notification_data/phys_item_display/isbn != ''">
-          <tr>
-            <td valign="top">@@isbn@@:</td>
-            <td>
-              <xsl:value-of select="notification_data/phys_item_display/isbn"/>
-            </td>
-          </tr>
-        </xsl:if>
-        <xsl:if test="notification_data/phys_item_display/issn != ''">
-          <tr>
-            <td valign="top">@@issn@@:</td>
-            <td>
-              <xsl:value-of select="notification_data/phys_item_display/issn"/>
-            </td>
-         </tr>
-        </xsl:if>
-        <tr>
-          <td valign="top">Edition/year:</td>
-          <td>
-            <xsl:value-of select="notification_data/phys_item_display/edition"/>
-            <xsl:if test="notification_data/phys_item_display/edition != ''">&#160;</xsl:if>
-            <xsl:value-of select="notification_data/phys_item_display/publication_date"/>
-          </td>
-        </tr>
-        <xsl:if test="notification_data/phys_item_display/issue_level_description != ''">
-          <tr>
-            <td valign="top">Issue:</td>
-            <td>
-              <xsl:value-of select="notification_data/phys_item_display/issue_level_description"/>
-            </td>
-          </tr>
-        </xsl:if>
-        <xsl:if test="notification_data/request/record_display_section/series_small != ''" >
-          <tr>
-            <td valign="top">Series:</td>
-            <td>
-              <xsl:value-of select="notification_data/request/record_display_section/series_small"/>
-            </td>
-          </tr>
-        </xsl:if>
+
+        <xsl:choose>
+
+          <!-- Tidsskrift -->
+          <xsl:when test="contains(/notification_data/request/record_display_section/resource_type, 'Journal')">
+            <tr>
+              <td valign="top">Journal title:</td>
+              <td>
+                <xsl:value-of select="notification_data/phys_item_display/title_abcnph"/>
+              </td>
+            </tr>
+            <xsl:if test="notification_data/phys_item_display/issn != ''">
+              <tr>
+                <td valign="top">@@issn@@:</td>
+                <td>
+                  <xsl:value-of select="notification_data/phys_item_display/issn"/>
+                </td>
+             </tr>
+            </xsl:if>
+            <xsl:if test="notification_data/phys_item_display/issue_level_description != ''">
+              <tr>
+                <td valign="top">Issue:</td>
+                <td>
+                  <xsl:value-of select="notification_data/phys_item_display/issue_level_description"/>
+                </td>
+              </tr>
+            </xsl:if>
+          </xsl:when>
+
+          <!-- Ikke tidsskrift -->
+          <xsl:otherwise>
+            <tr>
+              <td valign="top">Title:</td>
+              <td>
+                <xsl:value-of select="notification_data/phys_item_display/title_abcnph"/>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">By:</td>
+              <td>
+                <xsl:value-of select="notification_data/phys_item_display/author"/>
+              </td>
+            </tr>
+            <xsl:if test="notification_data/phys_item_display/isbn != ''">
+              <tr>
+                <td valign="top">@@isbn@@:</td>
+                <td>
+                  <xsl:value-of select="notification_data/phys_item_display/isbn"/>
+                </td>
+              </tr>
+            </xsl:if>
+            <tr>
+              <td valign="top">Edition/year:</td>
+              <td>
+                <xsl:value-of select="notification_data/phys_item_display/edition"/>
+                <xsl:if test="notification_data/phys_item_display/edition != ''">&#160;</xsl:if>
+                <xsl:value-of select="notification_data/phys_item_display/publication_date"/>
+              </td>
+            </tr>
+            <xsl:if test="notification_data/request/record_display_section/series_small != ''" >
+              <tr>
+                <td valign="top">Series:</td>
+                <td>
+                  <xsl:value-of select="notification_data/request/record_display_section/series_small"/>
+                </td>
+              </tr>
+            </xsl:if>
+          </xsl:otherwise>
+        </xsl:choose>
+
+        <!-- Felles -->
         <xsl:if  test="notification_data/request/manual_description != ''" >
           <tr>
             <td valign="top"><em>Description: </em></td>
