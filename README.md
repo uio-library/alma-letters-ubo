@@ -1,69 +1,10 @@
 
 This is a collection of the XSL files used to generate letters and slips in
 Alma, as customized by the University of Oslo Library. In general, we try to
-make the files re-usable by others, but we fail in some cases. Included in
-this repo are also scripts for pulling and pushing the files to Alma using
-Selenium browser automation (since no API or other access method is
-available).
+make the files re-usable by others, but we fail in some cases.
 
-## The slipsomat script
-
-### Configuration
-
-Copy `config.cfg.dist` to `config.cfg` and fill in the empty values:
-
-* `domain` is your Feide domain, e.g. `uio.no`
-* `username` is your Feide username
-* `password` can be left blank if you want to be asked for it each time. This is the recommended solution,
-  since it's not recommended to store your password in plain text.
-
-* `browser` can be set to `firefox`, `chrome` or `phantomjs`. Currently, `firefox`
-  is the driver we have tested the most. Both `chrome` and `phantomjs` requires
-  separate driver installs, while `firefox` can use your standard firefox installation.
-* `firefox_path` is the path to the Firefox binary (the path should not be quoted even if it contains spaces)
-  * Example on Mac (Firefox installed through homebrew-cask): `/opt/homebrew-cask/Caskroom/firefox/38.0.5/Firefox.app/Contents/MacOS/firefox-bin`
-  * Example on Windows: `C:\Program Files (x86)\Mozilla Firefox\firefox.exe`
-
-Dependencies:
-
-Install Python 2 or 3, then `pip install selenium colorama python-dateutil`.
-
-### Workflow
-
-- `git pull` to pull in changes from other users.
-
-- `python slipsomat.py` starts the slipsomat
-
-- Optional: the slipsomat command `pull` will check if any files have been updated
-  directly in Alma (without using `slipsomat`), fetch those and update `status.json`.
-  Comparison is done by comparing the update date in Alma with the update date in `status.json`.
-  Alma does not provide time granularity for updates, only date, so for files that have been
-  modified today, the script will open the letter in Alma to get the text and calculate a
-  checksum to compare with the checksum in `status.json`.
-  Note: If you skip this step, `slipsomat` will still warn you if you try to push a
-  letter that have been modified remotely (checksums not matching), but then you will
-  have to merge manually.
-
-- After having made modifications to one or more letters, run the slipsomat command `push`
-  to push the updates to Alma. Comparison is done by comparing checksums of the local files
-  with the checksums in `status.json`. Before making any changes, the script will print a list
-  of files and confirm that you want to upload these.
-
-- After having tested the modifications, do a `git commit` (remember to include the updated
-  `status.json`) and `git push`
-
-- The shell has a command history, and tab completion. For example
-  `test Ful<tab><tab>`.
-
-### Updating default letters
-
-- Use the slipsomat command `defaults` to pull in all default letters. Note that the command
-  takes quite some time to run, since all letters have to be checked as Alma provides no
-  information whatsoever on when the default letters were last updated.
-
-### Todo
-
-See [issues](https://github.com/scriptotek/alma-slipsomat/issues)
+We also have a Python script for synchronizing the files with Alma at
+https://github.com/scriptotek/alma-slipsomat
 
 ## Overview of the .xsl files
 
@@ -115,11 +56,17 @@ overdue letters and such, so I should probably make a new sample later.
 ### Templates
 
 The files in `xsl/letters/call_template` contains templates used by the other
-files.
+files. This means that if you intend to use some of our letter files, such as
+`xsl/letters/FulReasourceRequestSlipLetter.xsl`, you also need to copy the
+template files (or at least some of them).
 
-When creating new templates, we need to put them into existing template files
-since we're not allowed to create new ones. That's fine, except we need to
-remember which file we put a template in. Our current guideline is to use
+Ideally, we would have created new template files to hold any new templates
+we add, but since we aren't allowed to create new files, we have had to add
+new templates to the existing files. Wherever a template is used, however,
+we try to remember to add a comment indicating which template file the template
+is defined in, to ease lookup.
+
+Our current guideline is to use
 
 * `mailReason.xsl` for all new templates, except templates having
   dependencies on other files (like `style.xsl`). This ensures that
@@ -145,8 +92,8 @@ Quick overview of new templates we've added:
   * `emailLogo` : Logo styled for email
   * `email-template` : The main email template
 
-
-In the remaining template files we've only done modifications to the existing templates.
+In the other template files we've only done smaller modifications to the
+existing templates.
 
 ## Utskriftsløsning
 
