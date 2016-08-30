@@ -372,57 +372,60 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     Litt usikker på om vi burde ha en test på aksede bøker og andre spesialtilfeller...
                   -->
 
-                <!-- Hvis det finnes tilgjengelige eksemplarer ved biblioteksavdelingen jeg befinner meg på nå,
-                     skriver vi ut dem. -->
-                <xsl:if test="count(notification_data/phys_item_display/available_items/available_item[library_code=/notification_data/organization_unit/code]) != 0">
-                  <p>
-                    Available item(s):
-                  </p>
-                  <table>
-                    <xsl:for-each select="notification_data/phys_item_display/available_items/available_item[library_code=/notification_data/organization_unit/code]">
-                      <tr>
-                        <td>
-                          <font size="4"><xsl:value-of select="barcode"/></font>
-                        </td>
-                        <td>
-                          <font size="4"><xsl:value-of select="location_name"/></font>
-                        </td>
-                        <td>
-                          <u><font size="4"><xsl:value-of select="call_number"/></font></u>
-                        </td>
-                        <td>
-                          <xsl:value-of select="public_note"/>
-                        </td>
-                      </tr>
-                    </xsl:for-each>
-                  </table>
-                </xsl:if>
+                <xsl:choose>
+                  <!-- Hvis det finnes tilgjengelige eksemplarer ved biblioteksavdelingen jeg befinner meg på nå,
+                       skriver vi ut dem. Men vi vil ikke ha en uendelig liste over enkelthefter.. så sjekk at
+                       material_type != 'ISSUE' -->
+                  <xsl:when test="count(notification_data/phys_item_display/available_items/available_item[library_code = /notification_data/organization_unit/code and material_type != 'ISSUE']) != 0">
+                    <p>
+                      Available item(s):
+                    </p>
+                    <table>
+                      <xsl:for-each select="notification_data/phys_item_display/available_items/available_item[library_code=/notification_data/organization_unit/code]">
+                        <tr>
+                          <td>
+                            <font size="4"><xsl:value-of select="barcode"/></font>
+                          </td>
+                          <td>
+                            <font size="4"><xsl:value-of select="location_name"/></font>
+                          </td>
+                          <td>
+                            <u><font size="4"><xsl:value-of select="call_number"/></font></u>
+                          </td>
+                          <td>
+                            <xsl:value-of select="public_note"/>
+                          </td>
+                        </tr>
+                      </xsl:for-each>
+                    </table>
+                  </xsl:when>
 
-                <!-- Hvis det ikke finnes tilgjengelige eksemplarer ved biblioteksavdelingen jeg befinner meg på nå,
-                     faller vi tilbake på standard-forslaget fra Alma. -->
-                <xsl:if test="count(notification_data/phys_item_display/available_items/available_item[library_code=/notification_data/organization_unit/code]) = 0">
-                  <p>
-                    <strong>
-                      <xsl:value-of select="notification_data/phys_item_display/location_name"/>
-                      <xsl:if test="notification_data/phys_item_display/call_number != ''">
-                        &#160;<xsl:value-of select="notification_data/phys_item_display/call_number"/>
-                      </xsl:if>
-                      <xsl:if test="notification_data/phys_item_display/accession_number != ''">
-                        &#160; - @@accession_number@@:
-                        <xsl:value-of select="notification_data/phys_item_display/accession_number"/>
-                      </xsl:if>
-                    </strong>
+                  <!-- Hvis det ikke finnes tilgjengelige eksemplarer ved biblioteksavdelingen jeg befinner meg på nå,
+                       faller vi tilbake på standard-forslaget fra Alma. -->
+                  <xsl:otherwise>
+                    <p>
+                      <strong>
+                        <xsl:value-of select="notification_data/phys_item_display/location_name"/>
+                        <xsl:if test="notification_data/phys_item_display/call_number != ''">
+                          &#160;<xsl:value-of select="notification_data/phys_item_display/call_number"/>
+                        </xsl:if>
+                        <xsl:if test="notification_data/phys_item_display/accession_number != ''">
+                          &#160; - @@accession_number@@:
+                          <xsl:value-of select="notification_data/phys_item_display/accession_number"/>
+                        </xsl:if>
+                      </strong>
 
-                    <xsl:for-each select="notification_data/phys_item_display/summary_holding_infos/summary_holding_info">
-                      <span>
-                        &#160;&#160;
-                        <xsl:value-of select="summary_holding"/>
-                        &#160;
-                        <xsl:value-of select="notes/string"/>
-                      </span>
-                    </xsl:for-each>
-                  </p>
-                </xsl:if>
+                      <xsl:for-each select="notification_data/phys_item_display/summary_holding_infos/summary_holding_info">
+                        <span>
+                          &#160;&#160;
+                          <xsl:value-of select="summary_holding"/>
+                          &#160;
+                          <xsl:value-of select="notes/string"/>
+                        </span>
+                      </xsl:for-each>
+                    </p>
+                  </xsl:otherwise>
+                </xsl:choose>
 
               </xsl:if>
               <!-- Slutt: Bestilling på HOLDING -->
