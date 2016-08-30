@@ -335,6 +335,11 @@
       "default_checksum": "1683c8761ea4f3035a8e967867b8e387527606a4",
       "modified": "28/04/2016"
     },
+    "xsl/letters/ResourceSharingReturnSlipLetter.xsl": {
+      "checksum": "3ce3b65d1f7b6578e6315c71cf85945fa75413c1",
+      "default_checksum": "3ce3b65d1f7b6578e6315c71cf85945fa75413c1",
+      "modified": "-"
+    },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
       "checksum": "38a184f30468661c2e115cc65dbe796479384c7b",
       "default_checksum": "1d169cd88751835afad337772a12f7be2e4dbf9d",
