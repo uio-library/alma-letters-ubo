@@ -34,6 +34,8 @@
 
     <em><xsl:value-of select="phys_item_display/title_abcnph"/></em><br />
 
+    @@barcode@@: <xsl:value-of select="item_loan/barcode"/><br />
+
     <!-- BEGIN: Extremely crappy workaround for https://github.com/scriptotek/alma-slipsomat/issues/9 -->
     <xsl:if test="phys_item_display/chron_i != ''"><!-- Warning: We assume `chron_i` is always used. Is it? -->
       Issue: <xsl:value-of select="phys_item_display/enum_a"/>
@@ -59,16 +61,6 @@
     </xsl:if>
     -->
 
-    @@library@@: <xsl:value-of select="organization_unit/name"/>
-    <br />
-
-    @@barcode@@: <xsl:value-of select="item_loan/barcode"/>
-    <br />
-
-    @@loan_date@@: <xsl:value-of select="item_loan/loan_date"/>
-    <br />
-
-    @@due_date@@: <xsl:value-of select="item_loan/due_date"/>
   </div>
 
   <!--Beskjed type i forhold til hvilken purringtype -->
@@ -87,11 +79,8 @@
     </xsl:if>
   </p>
 
-  <p>
-    @@additional_info_1@@
-    <br />
-    @@additional_info_2@@
-  </p>
+  <div>@@additional_info_1@@</div>
+  <div>@@additional_info_2@@</div>
 
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
 
