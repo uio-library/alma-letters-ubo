@@ -15,6 +15,11 @@
       "default_checksum": "bdeb9d01f59e7e1e9e35c911dd571d26ebe53e3d",
       "modified": "28/06/2016"
     },
+    "xsl/letters/CloudIdPUserCreatedLetter.xsl": {
+      "checksum": "75334e9efa4931eed72eb3f445b5c6eb751cc605",
+      "default_checksum": "75334e9efa4931eed72eb3f445b5c6eb751cc605",
+      "modified": "-"
+    },
     "xsl/letters/CollectionContributionLetter.xsl": {
       "checksum": "9377a23a14f12ce980f34a20df8ec3146656c52e",
       "default_checksum": "25878f15325b7a1f52c3ac580263761201bf0c38",
