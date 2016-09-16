@@ -31,7 +31,7 @@
  </td>
  <td align="right" bgcolor="#eee">
   <h2>
-   <xsl:call-template name="isoDate"><!-- header.xsl -->
+   <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
               <xsl:with-param name="value" select="current_date"/>
             </xsl:call-template>
   </h2>
@@ -57,7 +57,7 @@
           </td>
           <td align="right" valign="top">
             <h2>
-              <xsl:call-template name="isoDate"><!-- header.xsl -->
+              <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
                 <xsl:with-param name="value" select="current_date"/>
               </xsl:call-template>
             </h2>
