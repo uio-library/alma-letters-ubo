@@ -221,9 +221,9 @@
       "modified": "-"
     },
     "xsl/letters/InterestedInLetter.xsl": {
-      "checksum": "0f35466123e42a4397632b68d733d581e7d4e42f",
+      "checksum": "88b059738c93903c892ed01be42b200a46731267",
       "default_checksum": "1ae256a8c7f84f467603f9911cdc1c409371e0f1",
-      "modified": "28/06/2016"
+      "modified": "22/09/2016"
     },
     "xsl/letters/InterestedUsersInLetter.xsl": {
       "checksum": "1a384dd7b3179a9578dd2872ecf2951055f0582e",

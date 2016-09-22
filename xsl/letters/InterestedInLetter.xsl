@@ -23,12 +23,13 @@
     <em><xsl:value-of  select="title"/></em>
   </p>
 
-  <xsl:if test="message">
+  <xsl:if test="message != 'Item was received.'">
+    <!-- Not yet sure what other values this field can take, but show it just in case it's something important. -->
     <p>
-      <b><xsl:value-of  select="message"/></b>
+      <xsl:value-of  select="message"/>
     </p>
   </xsl:if>
- 
+
   <xsl:call-template name="email-footer" /><!-- footer.xsl -->
 
 </xsl:template>
