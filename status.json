@@ -173,7 +173,7 @@
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
       "checksum": "72ff337ed373e02b64a800c744bdb11ea2eb297e",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
-      "modified": "01/09/2016"
+      "modified": "22/09/2016"
     },
     "xsl/letters/FulRenewEmailLetter.xsl": {
       "checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",
@@ -341,9 +341,9 @@
       "modified": "28/04/2016"
     },
     "xsl/letters/ResourceSharingReturnSlipLetter.xsl": {
-      "checksum": "09fdd928977a83a70ba38c5447c3b6324dd3e2b4",
+      "checksum": "6f97b08157c4ec402bcde27af3112399033e141e",
       "default_checksum": "3ce3b65d1f7b6578e6315c71cf85945fa75413c1",
-      "modified": "05/09/2016"
+      "modified": "22/09/2016"
     },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
       "checksum": "38a184f30468661c2e115cc65dbe796479384c7b",
