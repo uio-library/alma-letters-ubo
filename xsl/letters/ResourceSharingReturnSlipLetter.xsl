@@ -42,7 +42,7 @@
       <tr>
         <td>
           <h2>
-            Retur til eierbibliotek
+            @@returned@@
           </h2>
         </td>
         <td align="right" valign="top">
@@ -64,12 +64,6 @@
         <xsl:call-template name="listStyleCss"/>
         <!-- style.xsl -->
       </xsl:attribute>
-
-      <tr>
-        <td colspan="2">
-          @@returned@@
-        </td>
-      </tr>
 
       <tr>
         <td valign="top" colspan="2" align="center">
@@ -96,6 +90,19 @@
       </xsl:if>
 
       <tr>
+        <th align="right" valign="top">
+          <xsl:if test="/notification_data/partner_address/country = 'NOR'">Avsender:</xsl:if>
+          <xsl:if test="/notification_data/partner_address/country != 'NOR'">Sent from:</xsl:if>
+        </th>
+        <td>
+          <xsl:value-of select="/notification_data/library/name"/> (<xsl:value-of select="/notification_data/library/code"/>)<br />
+          <xsl:value-of select="/notification_data/library/address/line1"/><br />
+          <xsl:value-of select="/notification_data/library/address/postal_code"/>&#160;<xsl:value-of select="/notification_data/library/address/city"/><br />
+          <xsl:value-of select="/notification_data/library/email/email"/><br />
+        </td>
+      </tr>
+
+      <tr>
         <th valign="top" align="right" nowrap="nowrap">@@returned_to@@:</th>
         <td>
           <xsl:value-of select="/notification_data/partner_name"/><br />
@@ -117,33 +124,6 @@
            <xsl:if test="/notification_data/partner_address/country !=''">
               <xsl:value-of select="/notification_data/partner_address/country"/><br />
            </xsl:if>
-        </td>
-      </tr>
-
-      <tr>
-        <th align="right" valign="top">Avsender:<!-- @@signature@@ --></th>
-        <td>
-          <xsl:value-of select="/notification_data/library/name"/><br />
-          <xsl:value-of select="/notification_data/library/code"/>
-        </td>
-      </tr>
-
-      <tr>
-        <th align="right"  valign="top">Tidslinje: </th>
-        <td>
-          Mottatt:
-            <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
-              <xsl:with-param name="value" select="/notification_data/request/item_arrival_date"/>
-            </xsl:call-template><br />
-          Forfalt:
-            <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
-              <xsl:with-param name="value" select="/notification_data/request/due_date"/>
-            </xsl:call-template><br />
-          Returnert:
-            <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
-              <xsl:with-param name="value" select="/notification_data/request/item_return_date"/>
-            </xsl:call-template><br />
-
         </td>
       </tr>
 
