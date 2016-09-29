@@ -126,19 +126,19 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
-      "checksum": "51df82a75e9e63bb980fbfa546438d42c9ac41d5",
+      "checksum": "762bf58b85e358bcc228ee2d9f8ec09aeb8577de",
       "default_checksum": "649f6f843acb53e8374c47ae1f1ab13cefe00b2e",
-      "modified": "28/06/2016"
+      "modified": "29/09/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
-      "checksum": "aebd03d53c4f8f7d64b767bcea1f7b83086aa8d6",
+      "checksum": "3eb158b8e300b94362e1bbcf7b0917fcac4401cb",
       "default_checksum": "649f6f843acb53e8374c47ae1f1ab13cefe00b2e",
-      "modified": "01/09/2016"
+      "modified": "29/09/2016"
     },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
-      "checksum": "4583ce668979f8a21a1a5b397922b5c345733b38",
+      "checksum": "c97f7b12bef24fcd891b4a18b288257ac47307f1",
       "default_checksum": "0fd7f5c0ef9aed34bb5a1e8c69ccd5dd12b0b986",
-      "modified": "28/06/2016"
+      "modified": "29/09/2016"
     },
     "xsl/letters/FulOutgoingEmailLetter.xsl": {
       "checksum": "cedc23763bcfab77e7c4f18f24eddfc5f447480b",
@@ -146,14 +146,14 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "8187df61407639d81109889cd63984afc98a55b5",
+      "checksum": "88999697da73933d0dd40a0680bf53ddf7b04584",
       "default_checksum": "76a31e2698562d0bcf67ab7e4d61b35e6726d3fa",
-      "modified": "28/04/2016"
+      "modified": "29/09/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "848cb1bb51a147090108a4c6a300419aaed740f7",
+      "checksum": "e4277916463ba8c41f215bf84165fd74ab2cc2d5",
       "default_checksum": "ee2da2b05866f8a2aeffd13d1cedfcd7d48a957a",
-      "modified": "28/04/2016"
+      "modified": "29/09/2016"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
       "checksum": "9e46c82f92640b217156a896018bbadbbaec545d",

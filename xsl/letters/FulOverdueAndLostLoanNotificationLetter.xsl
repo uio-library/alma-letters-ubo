@@ -86,6 +86,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <br />
 
     <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
+    <xsl:call-template name="myAccount" /> <!-- footer.xsl -->
 
    </body>
  </html>

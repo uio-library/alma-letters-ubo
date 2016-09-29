@@ -42,7 +42,7 @@
   </table>
    
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
-  <xsl:call-template name="contactUs" /><!-- footer.xsl -->
+  <xsl:call-template name="myAccount" /><!-- footer.xsl -->
 
 </xsl:template>
 
