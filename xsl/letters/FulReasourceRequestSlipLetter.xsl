@@ -244,19 +244,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         </xsl:if>
         <!-- Del 3: SLUTT -->
 
-        <!-- Kommentar fra bruker (bestillingsskjemaet i Primo). En bruker ønsket å se kommentaren sin
-             på hentelappen for å huske hva det var han skulle finne i dokumentet hen bestilte, så vi
-             viser det der også (#11) -->
-        <xsl:if test="notification_data/request/note != ''">
-          <tr>
-            <td valign="top"><em>@@request_note@@:</em></td>
-            <td>
-              <b>
-                <xsl:value-of select="notification_data/request/note"/>
-              </b>
-            </td>
-          </tr>
-        </xsl:if>
 
         <!-- Del 4: Mer metadata, og informasjon om dokumentets plassering. Dette skjules for hentehyllelapp. -->
         <xsl:if test="notification_data/request/work_flow_entity/step_type != 'ON_HOLD_SHELF'">
@@ -335,6 +322,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               <td valign="top">@@system_notes@@:</td>
               <td>
                 <xsl:value-of select="notification_data/request/system_notes"/>
+              </td>
+            </tr>
+          </xsl:if>
+          <xsl:if test="notification_data/request/note != ''">
+            <tr>
+              <td valign="top"><em>@@request_note@@:</em></td>
+              <td>
+                <b>
+                  <xsl:value-of select="notification_data/request/note"/>
+                </b>
               </td>
             </tr>
           </xsl:if>
