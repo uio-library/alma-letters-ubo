@@ -117,12 +117,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if test="$lcfirst">
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">hentes i skranken</xsl:if>
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nb'">hentes i skranken</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nn'">hentast i skranken</xsl:if>
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">pick-up at the counter</xsl:if>
       </xsl:if>
       <xsl:if test="not($lcfirst)">
-        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">Hentes i skranken</xsl:if>
-        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nb'">Hentes i skranken</xsl:if>
-        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">Pick-up at the counter</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">Henvend deg i skranken for henting.</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nb'">Henvend deg i skranken for henting.</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nn'">Til henting i skranken.</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">Ask at the counter to pick up the material.</xsl:if>
       </xsl:if>
     </xsl:when>
 
@@ -131,15 +133,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if test="$lcfirst">
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">hentenummer</xsl:if>
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nb'">hentenummer</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nn'">hentenummer</xsl:if>
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">pick-up number</xsl:if>
+        <xsl:text>: </xsl:text>
+        <xsl:call-template name="pickupNumber"/>
       </xsl:if>
       <xsl:if test="not($lcfirst)">
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">Hentenummer</xsl:if>
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nb'">Hentenummer</xsl:if>
+        <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'nn'">Hentenummer</xsl:if>
         <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">Pick-up number</xsl:if>
+        <xsl:text>: </xsl:text>
+        <b><xsl:call-template name="pickupNumber"/></b>
       </xsl:if>
-      <xsl:text>: </xsl:text>
-      <xsl:call-template name="pickupNumber"/>
     </xsl:otherwise>
 
   </xsl:choose>

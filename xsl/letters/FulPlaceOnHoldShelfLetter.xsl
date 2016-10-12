@@ -16,13 +16,13 @@
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
-  <!-- Materialet du bestilte (dato) kan nå hentes i (ditt bibliotek) -->
+  <!--
+    en: The following item is ready for pick up at {your library}:
+    nb: Følgende er klar til henting i {navn på bibliotek}:
+    nn: Følgjande er klar til henting i {navn på bibliotek}:
+  -->
   <p>
     @@following_item_requested_on@@
-    <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
-      <xsl:with-param name="value" select="request/create_date"/>
-    </xsl:call-template>,
-    @@can_picked_at@@
 
     <xsl:choose>
       <xsl:when test="request/delivery_address != ''">
@@ -32,27 +32,34 @@
         <!-- Physical non-returnable -->
         <xsl:value-of select="phys_item_display/owning_library_name"/>
       </xsl:otherwise>
-    </xsl:choose>.
+    </xsl:choose>:
   </p>
 
+  <div style="padding: 0 1.2em; border-left:5px solid #eee;">
+    <xsl:call-template name="recordTitle"/><!-- recordTitle.xsl -->
+  </div>
+
   <!-- ===========================================================
-       START: Hentehylle
+       START: Hentekode eller informasjon om henting
        =========================================================== -->
   <xsl:if test="/notification_data/request/work_flow_entity/expiration_date">
     <p>
-      <b>
-        <xsl:call-template name="pickupNumberWithLabel"/><!-- mailReason.xsl -->
-      </b>
+      <xsl:call-template name="pickupNumberWithLabel"/><!-- mailReason.xsl -->
     </p>
   </xsl:if>
   <!-- ===========================================================
-       SLUTT: Hentehylle
+       SLUTT: Hentekode eller informasjon om henting
        =========================================================== -->
 
-
-  <div style="padding: 0 1.8em;">
-    <xsl:call-template name="recordTitle"/><!-- recordTitle.xsl -->
-  </div>
+  <!-- Examples of "system notes" (notes that may affect the loan):
+        - "Cash - Limit of 200.00 NOK exceeded. User has 2,250.00 NOK."
+        - "Patron is not active"
+   -->
+  <xsl:if test="/notification_data/request/system_notes != ''">
+    <p>
+      @@notes_affect_loan@@: <xsl:value-of select="/notification_data/request/system_notes"/>
+    </p>
+  </xsl:if>
 
   <xsl:if test="request/work_flow_entity/expiration_date != ''">
     <p>
@@ -60,15 +67,6 @@
       <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
         <xsl:with-param name="value" select="request/work_flow_entity/expiration_date"/>
       </xsl:call-template>.
-    </p>
-  </xsl:if>
-
-  <xsl:if test="request/system_notes != ''">
-    <p>
-      <b>@@notes_affect_loan@@:</b>
-    </p>
-    <p>
-      <xsl:value-of select="request/system_notes"/>
     </p>
   </xsl:if>
 

@@ -166,9 +166,9 @@
       "modified": "-"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "d43ea63050fe436c99e0bd2069811aa78efb3238",
+      "checksum": "d0029d480278f40f87c03909e0c242f7649cffe4",
       "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
-      "modified": "28/06/2016"
+      "modified": "12/10/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
       "checksum": "72ff337ed373e02b64a800c744bdb11ea2eb297e",
@@ -391,9 +391,9 @@
       "modified": "16/09/2016"
     },
     "xsl/letters/call_template/mailReason.xsl": {
-      "checksum": "88eae3b7c3ebfb2bac40659ac4492530b357c59a",
+      "checksum": "e6dfaf7874334edb6252c4dcdec71cf3c53f0c57",
       "default_checksum": "f2ac8788cab9440909bd5ab6c3263cf448510d33",
-      "modified": "06/07/2016"
+      "modified": "12/10/2016"
     },
     "xsl/letters/call_template/recordTitle.xsl": {
       "checksum": "e06e53cecfa41fd79a1fb8b0dcccc8ab4ebbbde3",
