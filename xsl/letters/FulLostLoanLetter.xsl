@@ -16,13 +16,18 @@
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-     @@inform_you_item_below@@.
+    @@inform_you_item_below@@
   </p>
 
   <div style="margin: 0.8em 1.2em;">
-    <em><xsl:value-of select="phys_item_display/title_abcnph"/></em><br />
-    @@description@@: <xsl:value-of select="item_loan/description"/>
+    <em>
+      <xsl:value-of select="phys_item_display/title_abcnph"/>
+    </em>
     <br />
+    <xsl:if test="item_loan/description != ''">
+      @@description@@: <xsl:value-of select="item_loan/description"/>
+      <br />
+    </xsl:if>
     @@library@@: <xsl:value-of select="organization_unit/name"/>
     <br />
     @@loan_date@@: <xsl:value-of select="item_loan/loan_date"/>
@@ -53,6 +58,9 @@
 
   <p>
     <xsl:choose>
+      <xsl:when test="receivers/receiver/preferred_language = 'nb'">
+        Du kan betale i biblioteket eller med
+      </xsl:when>
       <xsl:when test="receivers/receiver/preferred_language = 'no'">
         Du kan betale i biblioteket eller med
       </xsl:when>

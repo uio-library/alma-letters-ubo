@@ -126,9 +126,9 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
-      "checksum": "762bf58b85e358bcc228ee2d9f8ec09aeb8577de",
+      "checksum": "1f351c49e61a83a7c51184fa5d9360cafb3afb16",
       "default_checksum": "649f6f843acb53e8374c47ae1f1ab13cefe00b2e",
-      "modified": "29/09/2016"
+      "modified": "19/10/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
       "checksum": "3eb158b8e300b94362e1bbcf7b0917fcac4401cb",
