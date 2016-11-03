@@ -361,6 +361,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                     <xsl:value-of select="notification_data/phys_item_display/call_number"/>
                   </xsl:otherwise>
                 </xsl:choose>
+                <xsl:if test="notification_data/phys_item_display/item_policy != ''">
+                  (<xsl:value-of select="notification_data/phys_item_display/item_policy"/>)
+                </xsl:if>
               </td>
             </tr>
           </xsl:if>
@@ -412,7 +415,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                             <u><font size="4"><xsl:value-of select="call_number"/></font></u>
                           </td>
                           <td>
-                            <xsl:value-of select="public_note"/>
+                            <xsl:value-of select="public_note"/>&#160;
+                            <xsl:if test="item_policy != ''">
+                              (Item policy: <xsl:value-of select="item_policy"/>)
+                            </xsl:if>
                           </td>
                         </tr>
                       </xsl:for-each>
@@ -442,6 +448,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                           <xsl:value-of select="notes/string"/>
                         </span>
                       </xsl:for-each>
+
+                      <xsl:if test="notification_data/phys_item_display/item_policy != ''">
+                        (<xsl:value-of select="notification_data/phys_item_display/item_policy"/>)
+                      </xsl:if>
                     </p>
                   </xsl:otherwise>
                 </xsl:choose>
