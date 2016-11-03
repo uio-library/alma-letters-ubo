@@ -325,6 +325,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </td>
             </tr>
           </xsl:if>
+          <xsl:if test="notification_data/request/last_interest_date != ''">
+            <tr>
+              <td valign="top">Last interest date:</td>
+              <td>
+                <xsl:value-of select="notification_data/request/last_interest_date"/>
+              </td>
+            </tr>
+          </xsl:if>
           <xsl:if test="notification_data/request/note != ''">
             <tr>
               <td valign="top"><em>@@request_note@@:</em></td>
