@@ -166,9 +166,9 @@
       "modified": "-"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "d0029d480278f40f87c03909e0c242f7649cffe4",
+      "checksum": "e17eff3010b596c06f82f9942143d9e2c54829a7",
       "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
-      "modified": "12/10/2016"
+      "modified": "03/11/2016"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
       "checksum": "2d07b6ed0bf173ffa21a81a088465eaeb0893a69",
