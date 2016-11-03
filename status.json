@@ -206,9 +206,9 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
-      "checksum": "a8734c9749b1b3e0e5687679b6ff668926c24566",
+      "checksum": "9f9c971006d5b6acd6d6dbdf8c1140e5822a9074",
       "default_checksum": "d556515a2351d6bfc53f77854d19390cf3a359f3",
-      "modified": "12/02/2016"
+      "modified": "03/11/2016"
     },
     "xsl/letters/FulUserOverdueNoticeLetter.xsl": {
       "checksum": "84ad71ad17656fa94195a06ad48c50596ed71683",
