@@ -424,9 +424,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                           </td>
                           <td>
                             <xsl:value-of select="public_note"/>&#160;
-                            <xsl:if test="item_policy != ''">
-                              (Item policy: <xsl:value-of select="item_policy"/>)
-                            </xsl:if>
+                            <xsl:choose>
+                              <xsl:when test="item_policy = '1'">(Ikke utlån)</xsl:when>
+                              <xsl:when test="item_policy = '14'">(Manuell)</xsl:when>
+                              <xsl:when test="item_policy = '4'">(Intern)</xsl:when>
+                              <xsl:when test="item_policy = '6'">(2 ukers lån)</xsl:when>
+                              <xsl:when test="item_policy = '11'">(Gjenbruk)</xsl:when>
+                              <xsl:when test="item_policy = '3'">(Dagslån)</xsl:when>
+                            </xsl:choose>
                           </td>
                         </tr>
                       </xsl:for-each>
