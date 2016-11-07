@@ -180,6 +180,11 @@
       "default_checksum": "19a615e3dd73c2d867249d5cc250790d2ed9df2f",
       "modified": "-"
     },
+    "xsl/letters/FulRequestsReportLetter.xsl": {
+      "checksum": "6bb92ad23d4bb4ebf16c928a7748e02b587aebea",
+      "default_checksum": "6bb92ad23d4bb4ebf16c928a7748e02b587aebea",
+      "modified": "-"
+    },
     "xsl/letters/FulReturnReceiptLetter.xsl": {
       "checksum": "b4c26d14601ba4fc75153d3103f14ae694cd66fa",
       "default_checksum": "869e7991bc640742532ab316f15566126b6ccaf4",
@@ -229,6 +234,11 @@
       "checksum": "1a384dd7b3179a9578dd2872ecf2951055f0582e",
       "default_checksum": "a0a90d7bcf3ca4ab3ff1cea52c5bf17fe95e6aee",
       "modified": "16/02/2016"
+    },
+    "xsl/letters/LegalDepositAnnualReceiptsLetter.xsl": {
+      "checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2",
+      "default_checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2",
+      "modified": "-"
     },
     "xsl/letters/LegalDepositClaimLetter.xsl": {
       "checksum": "02f4fcf68a53a9662a3098433f434a9f40c91669",
