@@ -71,7 +71,7 @@
         You can pay at the library or with
       </xsl:otherwise>
     </xsl:choose>
-    <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>E-pay</a>.
+    <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
   </p>
 
   <p>
