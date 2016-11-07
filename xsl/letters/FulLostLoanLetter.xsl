@@ -74,6 +74,23 @@
     <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>E-pay</a>.
   </p>
 
+  <p>
+    <xsl:choose>
+      <xsl:when test="receivers/receiver/preferred_language = 'nb'">
+        Hvis du betaler med Epay, skriv inn DokumentID i kommentarfeltet.
+      </xsl:when>
+      <xsl:when test="receivers/receiver/preferred_language = 'no'">
+        Hvis du betaler med Epay, skriv inn DokumentID i kommentarfeltet.
+      </xsl:when>
+      <xsl:when test="receivers/receiver/preferred_language = 'nn'">
+        Om du betalar med Epay, skriv inn DokumentID i kommentarfeltet.
+      </xsl:when>
+      <xsl:otherwise>
+        If you use Epay, please write the DocumentID in the comment field.
+      </xsl:otherwise>
+    </xsl:choose>
+  </p>
+
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
   <xsl:call-template name="myAccount" /> <!-- footer.xsl -->
 
