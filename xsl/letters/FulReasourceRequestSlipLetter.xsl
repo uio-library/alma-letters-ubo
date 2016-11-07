@@ -311,12 +311,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </td>
             </tr>
           </xsl:if>
-          <tr>
-            <td valign="top">@@move_to_library@@:</td>
-            <td>
-              <xsl:value-of select="notification_data/destination"/>
-            </td>
-          </tr>
+          <xsl:if test="notification_data/request/request_type != 'RESOURCE_SHARING_PHYSICAL_SHIPMENT'">
+            <tr>
+              <td valign="top">@@move_to_library@@:</td>
+              <td>
+                <xsl:value-of select="notification_data/destination"/>
+              </td>
+            </tr>
+          </xsl:if>
           <xsl:if test="notification_data/request/system_notes != ''">
             <tr>
               <td valign="top">@@system_notes@@:</td>
