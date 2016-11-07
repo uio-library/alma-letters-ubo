@@ -27,8 +27,7 @@
                           <xsl:attribute name="href">
                             <xsl:value-of select="notification_data/attach_social_account_url" />
                           </xsl:attribute>
-        @@linkLabel@@
-       </a>
+        @@linkLabel@@</a>
        @@bodyTextAfterLink@@
                   </td>
                 </tr>

@@ -51,6 +51,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <td>@@for_cas_users@@<a><xsl:attribute name="href"><xsl:value-of select="notification_data/download_url_cas" /></xsl:attribute>@@click_here@@</a></td>
     </tr>
     <tr>
+     <td>@@max_num_of_views@@ <xsl:value-of select="notification_data/request/document_delivery_max_num_of_views"/>.</td>
+    </tr>
+    <tr>
      <td>@@sincerely@@<br />@@department@@</td>
     </tr>
            </table>

@@ -97,7 +97,7 @@
     },
     "xsl/letters/FulDigitizationDocumentDeliveryNotificationLetter.xsl": {
       "checksum": "81bb6c9e2e53e4dd6649f390d19111e1b0a07bd2",
-      "default_checksum": "81bb6c9e2e53e4dd6649f390d19111e1b0a07bd2",
+      "default_checksum": "e5af81004eb9bbbc549fe0a01669a61a786501d9",
       "modified": "-"
     },
     "xsl/letters/FulDigitizationNotificationItemLetter.xsl": {
@@ -367,7 +367,7 @@
     },
     "xsl/letters/SocialLoginInviteLetter.xsl": {
       "checksum": "02967f65bcf8fd0419dba056d3726f277ce3524b",
-      "default_checksum": "cda8211a139765e789cdd2de2c70b714a05f2b95",
+      "default_checksum": "4de81dd469e825ecc3e97fb0c83bdadce97939fb",
       "modified": "-"
     },
     "xsl/letters/SystemJobLetter.xsl": {
