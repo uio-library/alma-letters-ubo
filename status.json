@@ -68,7 +68,7 @@
     "xsl/letters/FulBorrowedByLetter.xsl": {
       "checksum": "113cff039dde233b987d67d7518e25ebe83cb5a8",
       "default_checksum": "76a8f1195bac948460845183eaca9c857b6f0b3f",
-      "modified": "28/06/2016"
+      "modified": "21/11/2016"
     },
     "xsl/letters/FulBorrowingInfoLetter.xsl": {
       "checksum": "074df7d3568f2c97a105015b891e0b2e85442822",
@@ -201,9 +201,9 @@
       "modified": "-"
     },
     "xsl/letters/FulTransitSlipLetter.xsl": {
-      "checksum": "2a374f146cd33bb6feab60db1886a7d7bbbfb980",
+      "checksum": "75b2c9a479ba587eb9406b808a6a9d5371a4ca23",
       "default_checksum": "7123666a1031fe712c66677c51bdd4660e5c5c64",
-      "modified": "07/06/2016"
+      "modified": "25/11/2016"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
       "checksum": "29a268a71479144bea97b596af20f15ecff7daea",

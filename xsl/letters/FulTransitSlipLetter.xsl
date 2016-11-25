@@ -233,7 +233,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </xsl:if>
         -->
        
-              <xsl:if test="notification_data/request/system_notes">
+              <xsl:if test="notification_data/request/system_notes != ''">
                 <tr>
                   <th>
                     <b>@@system_notes@@:</b>
@@ -281,6 +281,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </tr>
                 </xsl:if>
                 -->
+              </xsl:if>
+              <xsl:if test="notification_data/request/note != ''">
+                <tr>
+                  <th>
+                    <b>@@user_note@@:</b>
+                  </th>
+                  <td>
+                    <xsl:value-of select="notification_data/request/note" />
+                  </td>
+               </tr>
               </xsl:if>
         <!-- <xsl:if test="notification_data/phys_item_display/owning_library_name">
                   <tr>
