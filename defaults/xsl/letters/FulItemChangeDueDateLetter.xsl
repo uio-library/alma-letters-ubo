@@ -78,7 +78,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:for-each select="notification_data/item_loans/item_loan">
       <tr>
        <td><xsl:value-of select="title"/></td>
-       <td><xsl:value-of select="description"/></td>
+       <td><xsl:value-of select="item_description"/></td>
        <td><xsl:value-of select="author"/></td>
        <td><xsl:value-of select="old_due_date_str"/></td>
        <td><xsl:value-of select="new_due_date_str"/></td>

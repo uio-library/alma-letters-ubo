@@ -72,7 +72,18 @@
        <strong>@@publication_place@@:</strong>&#160;<xsl:value-of select="publication_place" />
        <br />
        <strong>@@publisher@@:</strong>&#160;<xsl:value-of select="publisher" />
-
+       <xsl:choose >
+        <xsl:when test="/notification_data/line_details/last_receive_item_description!=''">
+         <br />
+         <strong>@@last_receive_item_description@@:</strong>&#160;<xsl:value-of select="last_receive_item_description" />
+        </xsl:when>
+       </xsl:choose>
+       <xsl:choose >
+        <xsl:when test="/notification_data/line_details/last_received_date!=''">
+         <br />
+         <strong>@@last_received_date@@:</strong>&#160;<xsl:value-of select="last_received_date" />
+        </xsl:when>
+       </xsl:choose>
        </td>
 
       </tr>
@@ -81,6 +92,28 @@
     </xsl:for-each>
     </td>
    </tr>
+
+   <xsl:choose >
+    <xsl:when test="/notification_data/line_details/issues_or_copies!=''">
+     <strong>@@missing_issues@@:</strong>
+     <br />
+     <table cellpadding="5" class="listing">
+     <xsl:attribute name="style">
+      <xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
+     </xsl:attribute>
+      <tr>
+       <th>@@item_description@@</th>
+       <th>@@expected_arrival_date@@</th>
+      </tr>
+      <xsl:for-each select="notification_data/line_details/issues_or_copies/issue_or_copy">
+      <tr>
+       <td><xsl:value-of select="item_description"/></td>
+       <td><xsl:value-of select="expected_arrival_date"/></td>
+      </tr>
+      </xsl:for-each>
+     </table>
+    </xsl:when>
+   </xsl:choose>
 
    </table>
    <br />

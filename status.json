@@ -15,9 +15,19 @@
       "default_checksum": "bdeb9d01f59e7e1e9e35c911dd571d26ebe53e3d",
       "modified": "28/06/2016"
     },
+    "xsl/letters/BorrowerReceiveEmailLetter.xsl": {
+      "checksum": "f6028203a10cbd7daff463bdb7d3b03acd349dce",
+      "default_checksum": "f6028203a10cbd7daff463bdb7d3b03acd349dce",
+      "modified": "-"
+    },
+    "xsl/letters/BorrowerReturnEmailLetter.xsl": {
+      "checksum": "15ebe121800858244ef70a59bad07f65eef9b0c8",
+      "default_checksum": "15ebe121800858244ef70a59bad07f65eef9b0c8",
+      "modified": "-"
+    },
     "xsl/letters/CloudIdPUserCreatedLetter.xsl": {
       "checksum": "75334e9efa4931eed72eb3f445b5c6eb751cc605",
-      "default_checksum": "75334e9efa4931eed72eb3f445b5c6eb751cc605",
+      "default_checksum": "6b05e29e9a89068bb076a7888fbdaa901c803491",
       "modified": "-"
     },
     "xsl/letters/CollectionContributionLetter.xsl": {
@@ -117,7 +127,7 @@
     },
     "xsl/letters/FulItemChangeDueDateLetter.xsl": {
       "checksum": "a278af05a9dbc9ca35a68aea46849e1f8fc67dfd",
-      "default_checksum": "7179c27110868da232f95eaea5c013b3f8114c92",
+      "default_checksum": "17d19ee6897d7580f98d3cf81d87e8ac00535a9d",
       "modified": "22/02/2016"
     },
     "xsl/letters/FulLoanReceiptLetter.xsl": {
@@ -225,6 +235,11 @@
       "default_checksum": "87f139e94b4184828169cd60cbba30eae8dc6c01",
       "modified": "-"
     },
+    "xsl/letters/GeneralMessageEmailLetter.xsl": {
+      "checksum": "6d640be399d28db40a82b8317a804123bba7c8e4",
+      "default_checksum": "6d640be399d28db40a82b8317a804123bba7c8e4",
+      "modified": "-"
+    },
     "xsl/letters/InterestedInLetter.xsl": {
       "checksum": "88b059738c93903c892ed01be42b200a46731267",
       "default_checksum": "1ae256a8c7f84f467603f9911cdc1c409371e0f1",
@@ -258,6 +273,31 @@
     "xsl/letters/LegantoNotificationsLetter.xsl": {
       "checksum": "134ad7fa8a2b9bf30f431937167fe8d68c124195",
       "default_checksum": "b8b5f0d376c43a985e5ec5af5c6bbf724eb1e717",
+      "modified": "-"
+    },
+    "xsl/letters/LenderCheckedInEmailLetter.xsl": {
+      "checksum": "04e12ddf63cbf4724cfd01477f90b4dc4acc74d3",
+      "default_checksum": "04e12ddf63cbf4724cfd01477f90b4dc4acc74d3",
+      "modified": "-"
+    },
+    "xsl/letters/LenderRejectEmailLetter.xsl": {
+      "checksum": "b90e481b4760f27f0df16fc4e27a43dcc1c326dc",
+      "default_checksum": "b90e481b4760f27f0df16fc4e27a43dcc1c326dc",
+      "modified": "-"
+    },
+    "xsl/letters/LenderRenewResponseEmailLetter.xsl": {
+      "checksum": "137c91c4db0c0acaf66dfa1a9a9f0db8f71099fe",
+      "default_checksum": "137c91c4db0c0acaf66dfa1a9a9f0db8f71099fe",
+      "modified": "-"
+    },
+    "xsl/letters/LenderShipEmailLetter.xsl": {
+      "checksum": "71718a4dfa0faf452f3a3eff35ee74a52f047551",
+      "default_checksum": "71718a4dfa0faf452f3a3eff35ee74a52f047551",
+      "modified": "-"
+    },
+    "xsl/letters/LenderWillSupplyEmailLetter.xsl": {
+      "checksum": "d885b670fe704430265253b3f1eaa912f832718c",
+      "default_checksum": "d885b670fe704430265253b3f1eaa912f832718c",
       "modified": "-"
     },
     "xsl/letters/LendingRecallEmailLetter.xsl": {
@@ -307,7 +347,7 @@
     },
     "xsl/letters/POLineClaimLetter.xsl": {
       "checksum": "c80a2b2ea51f0032fc3aea61445c79e2b08857cf",
-      "default_checksum": "c80a2b2ea51f0032fc3aea61445c79e2b08857cf",
+      "default_checksum": "cac645aba830dc4fb9d6237330225aaf0c9fb78c",
       "modified": "-"
     },
     "xsl/letters/POLineRenewalLetter.xsl": {

@@ -32,7 +32,7 @@
       </tr>
       <tr>
        <td>
-        @@password@@ <xsl:value-of select="notification_data/password" />
+        @@password@@ <span id="DO_NOT_REMOVE_OR_MOVE_PASSWORD"><xsl:value-of select="notification_data/password" /></span>
        </td>
       </tr>
       <tr>
