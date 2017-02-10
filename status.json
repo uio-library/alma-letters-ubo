@@ -405,6 +405,11 @@
       "default_checksum": "49e2533afb204cd04761d76487dccaf05939e162",
       "modified": "-"
     },
+    "xsl/letters/SocialLoginAccountAttachedLetter.xsl": {
+      "checksum": "4e4679b631bf7b35aeed84006cd176385803b313",
+      "default_checksum": "4e4679b631bf7b35aeed84006cd176385803b313",
+      "modified": "-"
+    },
     "xsl/letters/SocialLoginInviteLetter.xsl": {
       "checksum": "02967f65bcf8fd0419dba056d3726f277ce3524b",
       "default_checksum": "4de81dd469e825ecc3e97fb0c83bdadce97939fb",
