@@ -123,7 +123,7 @@
     "xsl/letters/FulIncomingSlipLetter.xsl": {
       "checksum": "ce99e1a05966c15e90c74147168eee7330bb45ce",
       "default_checksum": "28babbd4134e074706a5ed93a29975bfd8807568",
-      "modified": "28/06/2016"
+      "modified": "07/12/2016"
     },
     "xsl/letters/FulItemChangeDueDateLetter.xsl": {
       "checksum": "a278af05a9dbc9ca35a68aea46849e1f8fc67dfd",
@@ -252,7 +252,7 @@
     },
     "xsl/letters/LegalDepositAnnualReceiptsLetter.xsl": {
       "checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2",
-      "default_checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2",
+      "default_checksum": "2ec2edfcd890822de1542cea653431648f8a8768",
       "modified": "-"
     },
     "xsl/letters/LegalDepositClaimLetter.xsl": {
@@ -372,7 +372,7 @@
     },
     "xsl/letters/QueryToPatronLetter.xsl": {
       "checksum": "beb2e44d8cf69ce7787f7d0d74b8ab9298c22b10",
-      "default_checksum": "beb2e44d8cf69ce7787f7d0d74b8ab9298c22b10",
+      "default_checksum": "f5978d1ba2090f04541f47012e3705889939240b",
       "modified": "-"
     },
     "xsl/letters/QueryToRequesterLetter.xsl": {
