@@ -371,9 +371,9 @@
       "modified": "-"
     },
     "xsl/letters/QueryToPatronLetter.xsl": {
-      "checksum": "beb2e44d8cf69ce7787f7d0d74b8ab9298c22b10",
+      "checksum": "bcee28fa56fca70df24ea567afe0e5179f7d6965",
       "default_checksum": "f5978d1ba2090f04541f47012e3705889939240b",
-      "modified": "-"
+      "modified": "10/02/2017"
     },
     "xsl/letters/QueryToRequesterLetter.xsl": {
       "checksum": "25a4664d2eb0a09ceab3b431ef34a1c243d7ddce",

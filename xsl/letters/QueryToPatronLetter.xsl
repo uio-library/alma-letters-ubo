@@ -432,6 +432,18 @@
       </table>
       <br />
       <table>
+       <xsl:if test="notification_data/query_note !=''">
+        <tr>
+         <td>
+          <b> @@query_note@@: </b>
+          <xsl:value-of select="notification_data/query_note" />
+         </td>
+        </tr>
+       </xsl:if>
+
+      </table>
+      <br />
+      <table>
 
        <tr>
         <td>@@Type_1_Sincerely@@</td>
