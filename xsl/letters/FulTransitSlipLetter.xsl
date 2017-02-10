@@ -47,7 +47,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:if test="contains(calculated_destination_name, 'UiO Læringssenteret DN')">
                  103 &#160; 0009
                </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek')">
+               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek Rikshospitalet')">
                  103 &#160; 2300
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Menneskerettighetsbiblioteket')">
@@ -59,7 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:if test="contains(calculated_destination_name, 'UiO Naturhistorisk museum biblioteket')">
                  103 &#160; 0500
                </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Odontologisk bibliotek')">
+               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek Odontologi')">
                  103 &#160; 0307
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Offentligrettsbiblioteket')">
@@ -89,7 +89,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:if test="contains(calculated_destination_name, 'UiO Teologisk bibliotek')">
                  103 &#160; 0301
                </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Ullevål sykehus')">
+               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek Ullevål sykehus')">
                  103 &#160; 0338
                </xsl:if>
               </xsl:for-each>
