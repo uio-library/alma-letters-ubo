@@ -310,6 +310,11 @@
       "default_checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9",
       "modified": "-"
     },
+    "xsl/letters/LoginUsingOneTimeTokenLetter.xsl": {
+      "checksum": "04373877a853791bc22d9404b8c349d135383b5e",
+      "default_checksum": "04373877a853791bc22d9404b8c349d135383b5e",
+      "modified": "-"
+    },
     "xsl/letters/NotifyUponRenewalLetter.xsl": {
       "checksum": "0ee298cabf347b8e5042611768028bcc88d3fc7f",
       "default_checksum": "8207dc9c5009e2e1c333f920e1ca1edb31ab1fe8",
