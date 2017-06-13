@@ -16,18 +16,27 @@
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType1'">
-      @@inform_you_item_below_type1@@
-    </xsl:if>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType2'">
-      @@inform_you_item_below_type2@@
-    </xsl:if>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType3'">
-      @@inform_you_item_below_type3@@
-    </xsl:if>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType4'">
-      @@inform_you_item_below_type4@@
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType1' and /notification_data/phys_item_display/item_policy = 'Innlan Utland'">
+        @@inform_you_item_below_type4@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType1'">
+        @@inform_you_item_below_type1@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType2' and /notification_data/phys_item_display/item_policy = 'Innlan Utland'">
+        @@inform_you_item_below_type4@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType2'">
+        @@inform_you_item_below_type2@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType3'">
+        @@inform_you_item_below_type3@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType4'">
+        @@inform_you_item_below_type4@@
+      </xsl:when>
+      <xsl:otherwise><!-- This should never happen --></xsl:otherwise>
+    </xsl:choose>
   </p>
 
   <div style="margin: 0.8em 1.2em;">
@@ -65,22 +74,37 @@
 
   <!--Beskjed type i forhold til hvilken purringtype -->
   <p>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType1'">
-      @@decalred_as_lost_type1@@
-    </xsl:if>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType2'">
-      @@decalred_as_lost_type2@@
-    </xsl:if>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType3'">
-      @@decalred_as_lost_type3@@
-    </xsl:if>
-    <xsl:if test="/notification_data/notification_type = 'OverdueNotificationType4'">
-       @@decalred_as_lost_type4@@
-    </xsl:if>
+    <xsl:choose>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType1' and /notification_data/phys_item_display/item_policy = 'Innlan Utland'">
+        @@decalred_as_lost_type5@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType1'">
+        @@decalred_as_lost_type1@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType2' and /notification_data/phys_item_display/item_policy = 'Innlan Utland'">
+        @@decalred_as_lost_type4@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType2'">
+        @@decalred_as_lost_type2@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType3'">
+        @@decalred_as_lost_type3@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType4'">
+        @@decalred_as_lost_type4@@
+      </xsl:when>
+      <xsl:otherwise><!-- This should never happen --></xsl:otherwise>
+    </xsl:choose>
   </p>
 
   <div>@@additional_info_1@@</div>
   <div>@@additional_info_2@@</div>
+  
+    <!-- Imedlertid beskjed til brukerne inntil feil hos Exlibris rettes-->
+  <p>
+  <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">OBS: Vi har hatt problemer med påminnelsen du skulle fått på forfallsdato. Vi beklager dette.</xsl:if>
+  <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">We are experiencing some problems sending out due date reminders. We apologize for the inconvenience.</xsl:if>
+  </p>
 
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
   <xsl:call-template name="myAccount" /> <!-- footer.xsl -->
