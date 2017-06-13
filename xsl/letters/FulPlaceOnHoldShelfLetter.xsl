@@ -70,6 +70,15 @@
     </p>
   </xsl:if>
 
+  <xsl:if test="/notification_data/organization_unit/code = '1030000'">
+    <p>
+      <em>
+        Juridisk bibliotek er stengt for publikum, ta kontakt på ujur@ub.uio.no eller
+        telefon 22859885 for å avtale tidspunkt for henting av boken.
+      </em>
+    </p>
+  </xsl:if>
+
   <xsl:choose>
     <xsl:when test="/notification_data/request/delivery_address != ''">
       <xsl:call-template name="email-footer">
