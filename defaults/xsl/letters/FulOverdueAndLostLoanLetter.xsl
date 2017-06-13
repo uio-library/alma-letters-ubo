@@ -84,6 +84,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </tr>
       <hr/><br/>
      </xsl:for-each>
+     <xsl:if test="notification_data/overdue_notification_fee_amount/sum !=''">
+      <tr>
+       <td>
+        <b>@@overdue_notification_fee@@</b>
+        <xsl:value-of select="notification_data/overdue_notification_fee_amount/sum"/>&#160;<xsl:value-of select="notification_data/overdue_notification_fee_amount/currency"/>&#160;<xsl:value-of select="ff"/>
+       </td>
+      </tr>
+     </xsl:if>
      <br />
      <br />
      @@additional_info_1@@
