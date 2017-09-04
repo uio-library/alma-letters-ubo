@@ -99,12 +99,6 @@
 
   <div>@@additional_info_1@@</div>
   <div>@@additional_info_2@@</div>
-  
-    <!-- Imedlertid beskjed til brukerne inntil feil hos Exlibris rettes-->
-  <p>
-  <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'no'">OBS: Vi har hatt problemer med påminnelsen du skulle fått på forfallsdato. Vi beklager dette.</xsl:if>
-  <xsl:if test="/notification_data/receivers/receiver/preferred_language = 'en'">We are experiencing some problems sending out due date reminders. We apologize for the inconvenience.</xsl:if>
-  </p>
 
   <xsl:call-template name="email-footer"/><!-- footer.xsl -->
   <xsl:call-template name="myAccount" /> <!-- footer.xsl -->
