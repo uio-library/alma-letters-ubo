@@ -45,6 +45,11 @@
       "default_checksum": "7f7e8a57433b543bd23017aa4817b2b94a2af3de",
       "modified": "06/07/2016"
     },
+    "xsl/letters/DepositActivityLetter.xsl": {
+      "checksum": "6d20294adc3b7cfc8365993a527ec313a5fc7726",
+      "default_checksum": null,
+      "modified": "-"
+    },
     "xsl/letters/EactivationtaskOverdueLetter.xsl": {
       "checksum": "0af271c6add8174ce54f0ce9a127a4935e56d89b",
       "default_checksum": "c72a380890adffa0bc54d95e587c17b22f89d034",
@@ -141,9 +146,9 @@
       "modified": "07/11/2016"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
-      "checksum": "b54d8e54546b6681357718a0f8752da00a462fcd",
+      "checksum": "b109c2cd0c1100f8d4576a4c2c9e75cc1a8df57c",
       "default_checksum": "649f6f843acb53e8374c47ae1f1ab13cefe00b2e",
-      "modified": "08/05/2017"
+      "modified": "28/06/2017"
     },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
       "checksum": "467ab9bd237336d4000cc662c47d895ffb1111b2",
@@ -310,6 +315,11 @@
       "default_checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9",
       "modified": "-"
     },
+    "xsl/letters/LicensePrintoutLetter.xsl": {
+      "checksum": "eca01f15f58142dabfcd1fcfe7d19a4222db9db2",
+      "default_checksum": null,
+      "modified": "-"
+    },
     "xsl/letters/LoginUsingOneTimeTokenLetter.xsl": {
       "checksum": "04373877a853791bc22d9404b8c349d135383b5e",
       "default_checksum": "04373877a853791bc22d9404b8c349d135383b5e",
@@ -413,6 +423,11 @@
     "xsl/letters/RestrictedLoginIPLetter.xsl": {
       "checksum": "49e2533afb204cd04761d76487dccaf05939e162",
       "default_checksum": "49e2533afb204cd04761d76487dccaf05939e162",
+      "modified": "-"
+    },
+    "xsl/letters/SavedSearchesLetter.xsl": {
+      "checksum": "f8105830ff6d4aa518ddb3d669c2d885a57bfe1a",
+      "default_checksum": null,
       "modified": "-"
     },
     "xsl/letters/SocialLoginAccountAttachedLetter.xsl": {
