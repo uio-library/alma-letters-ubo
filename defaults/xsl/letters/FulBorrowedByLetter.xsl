@@ -30,10 +30,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    <table cellspacing="0" cellpadding="1" border="0">
               <tr>
                <td>
-     <xsl:value-of select="notification_data/messege"/>
-
+              @@the_item@@ <b><i><xsl:value-of select="notification_data/phys_item_display/title"/></i></b>
+     @@picked_up_by@@ <xsl:value-of select="notification_data/borrower/name"/>
                 </td>
               </tr>
+   <tr><td>@@request_complete@@</td></tr>
    &#160;
 
    <table>

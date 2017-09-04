@@ -31,9 +31,6 @@
         @@linkLabel@@</a>
        @@bodyTextAfterLink@@
       </xsl:if>
-      <xsl:if test="notification_data/alma_social_login_url = ''">
-       @@bodyTextBeforeLink@@
-      </xsl:if>
                   </td>
                 </tr>
               </table>
