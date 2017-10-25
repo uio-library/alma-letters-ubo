@@ -2,7 +2,7 @@
 <xsl:include href="smsRecordTitle.xsl" />
  <xsl:template match="/">
 
-<xsl:value-of select="notification_data/receivers/receiver/user_phone/phone"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.
+<xsl:value-of select="notification_data/receivers/sms_receiver/phone_list_str"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.
 @@hi@@ <xsl:value-of select="notification_data/user_for_printing/name"/>,
 @@title@@ &#160;<xsl:value-of select="notification_data/item_loan/title"/>
 @@due_back@@ &#160;<xsl:value-of select="notification_data/item_loan/shortened_due_date_reason"/>.

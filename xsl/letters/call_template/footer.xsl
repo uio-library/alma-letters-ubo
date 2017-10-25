@@ -17,6 +17,9 @@
     <xsl:for-each select="/notification_data/organization_unit">
       <p>
         <xsl:choose>
+          <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob'">
+           Har du spørsmål eller trenger hjelp?
+          </xsl:when>
           <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
            Har du spørsmål eller trenger hjelp?
           </xsl:when>
@@ -33,6 +36,9 @@
           <!-- Bruk epost-adresse fra parameter hvis gitt -->
           <xsl:when test="$email != ''">
             <xsl:choose>
+              <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob'">
+               Kontakt oss på
+              </xsl:when>
               <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
                Kontakt oss på
               </xsl:when>
@@ -49,6 +55,9 @@
           <!-- Bruk epost-adresse til notification_data/organization_unit hvis tilgjengelig -->
           <xsl:when test="email/email != ''">
             <xsl:choose>
+              <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob'">
+               Kontakt oss på
+              </xsl:when>
               <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
                Kontakt oss på
               </xsl:when>
@@ -74,6 +83,9 @@
 
       <p>
         <xsl:choose>
+         <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob'">
+          Vennlig hilsen,<br />
+         </xsl:when>
          <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'">
           Vennlig hilsen,<br />
          </xsl:when>

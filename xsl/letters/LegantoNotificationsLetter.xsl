@@ -46,7 +46,7 @@
         <tr>
          <td style="padding:0 0 5px 10px;">
           <xsl:value-of select="num_of_events" />
-          new
+          &#160;
           <xsl:value-of select="event_type_display" />
          </td>
 
