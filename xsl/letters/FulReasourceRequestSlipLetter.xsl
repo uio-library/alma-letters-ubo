@@ -40,11 +40,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <tr>
      <xsl:choose>
 
+      <!-- =====================================================================================
+           Lapp til oppstilling på hentehylle
+           Merk: Krever malen "pickupNumber" fra mailReason.xsl
+           ===================================================================================== -->
       <xsl:when test="notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
-        <!-- =====================================================================================
-             Hentehylle
-             Merk: Krever malen "pickupNumber" fra mailReason.xsl
-             ===================================================================================== -->
         <td>
           <xsl:choose>
 
@@ -74,9 +74,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           </xsl:choose>
         </td>
         <!-- ===================================================================================== -->
-
       </xsl:when>
 
+      <!-- =====================================================================================
+           Lapp for å finne frem til et dokument som er bestilt
+           ===================================================================================== -->
       <xsl:otherwise>
        <td>
         <h2>
@@ -247,6 +249,33 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
         <!-- Del 4: Mer metadata, og informasjon om dokumentets plassering. Dette skjules for hentehyllelapp. -->
         <xsl:if test="notification_data/request/work_flow_entity/step_type != 'ON_HOLD_SHELF'">
+
+          <xsl:if test="notification_data/request/chapter_article_author != ''">
+            <tr>
+              <td valign="top">Kapittelforfatter:</td>
+              <td>
+                <xsl:value-of select="notification_data/request/chapter_article_author"/>
+              </td>
+            </tr>
+          </xsl:if>
+          <xsl:if test="notification_data/request/chapter_article_title != ''">
+            <tr>
+              <td valign="top">Kapitteltittel:</td>
+              <td>
+                <xsl:value-of select="notification_data/request/chapter_article_title"/>
+              </td>
+            </tr>
+          </xsl:if>
+          <xsl:if test="notification_data/request/scan_from_page != '' or notification_data/request/scan_to_page != ''">
+            <tr>
+              <td valign="top">Ønskede sider:</td>
+              <td>
+                <b>
+                  <xsl:value-of select="notification_data/request/scan_from_page"/>–<xsl:value-of select="notification_data/request/scan_to_page"/>
+                </b>
+              </td>
+            </tr>
+          </xsl:if>
 
           <!-- Horizontal line -->
           <tr><td colspan="2"><hr/></td></tr>
