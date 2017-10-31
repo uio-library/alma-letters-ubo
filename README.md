@@ -19,7 +19,7 @@ this ready."
 A curiosity of the letters is that typos are not uncommon; from the name
 `FulReasourceRequestSlipLetter` to field names like `autho_initials` and what
 have we, odd translation placeholders like `@@You_were_specify@@`. Anyways,
-this doesn't affect the end result, it's just kinda annoying to work with,
+this doesn't affect the end result, it's just annoying to work with,
 and makes you wonder if the application code is written using the same amount
 of carelessness. Hopefully not.
 
@@ -108,6 +108,55 @@ når man trykker "Print slip") og at det er en enkel løsning å drifte. En ulem
 løsningen er at html2ps ikke støtter CSS, så vi kan bare gjøre enkel formatering.
 
 ## Spesielle elementer
+
+
+### Hentehylle og hentenummer
+
+#### `FulReasourceRequestSlipLetter` som hentehyllelapp
+
+Det eksisterer foreløpig ikke en egen hentehyllelapp i Alma ([Se Ideas Exchange-forslag](http://ideas.exlibrisgroup.com/forums/308173-alma/suggestions/32042020-new-letter-for-hold-shelf-slips)).
+Intensjonen til Ex Libris er at `FulReasourceRequestSlipLetter` skal brukes både
+som hentelapp for bibliotekspersonalet *og* som hentehyllelapp, men for oss fungerte
+det dårlig å bruke samme lapp til to nokså forskjellige formål. På hentehylla
+kan vi blant annet ikke vise informasjon som identifiserer hvem som har bestilt
+dokumentet av personvernhensyn.
+
+Det vi har gjort er et hack for å få én stikkseddel til å fylle to behov. I pseudokode:
+
+```
+% if work_flow_entity/step_type = 'ON_HOLD_SHELF' then
+    Hentehyllelapp retta mot bruker
+% else
+    Hentelapp retta mot personale
+% endif
+```
+
+(Stikkseddelen fungerer forresten *også* som sendelapp, så den fyller egentlig *tre* behov)
+
+Ulempen med denne løsningen er at en manuelt må trykke "Print slip" for å få ut hentehyllelappen
+etter man har tatt "Scan In" for å registrere at dokumentet er hentet frem og klar for hentehylla.
+På sikt håper vi Alma får en egen hentehyllelapp.
+
+#### Hentenummer
+
+Av personvernhensyn stiller vi opp dokumenter etter hentenummer, ikke navn.
+Alma har ikke noen mulighet for å genere hentenummer enda (selv om det forhåpentligvis er på vei, [se Ideas Exchange-forslag](http://ideas.exlibrisgroup.com/forums/308173-alma/suggestions/16708234-on-hold-shelf-new-sorting-option)).
+Enn så lenge generer vi derfor hentenummer selv på en litt hackete måte.
+Det er svært begrenset hva man kan gjøre i et lukket XSLT-miljø, så vi har ikke funnet noen måte å generere garantert unike numre på.
+I stedet generer vi numre som *stort sett* er unike. Vi har valgt å ha relativt korte numre (6 sifre), selv om det øker sjansen for en og annen kollisjon.
+
+![Hentenummer](hentenummer.jpg)
+
+Nummeret vårt begynner med to sifre fra hentefrist-datoen (for å gjøre sorteringen av hentehylla enkel).
+Deretter legger vi på to sifre fra en bruker-ID og to sifre fra en dokument-ID.
+Numrene genereres i XSLT-malen`pickupNumber` i [`mailReason.xsl`](https://github.com/scriptotek/alma-letters-ubo/blob/master/xsl/letters/call_template/mailReason.xsl#L98-L109).
+I tillegg har vi en mal `pickupNumberWithLabel` (i samme fil) som viser "Til henting i skranken" for dokumenter som ikke har hentefrist,
+samt for enkelte bibliotek som ikke har selvbetjent hentehylle.
+
+De to malene (`pickupNumber` og `pickupNumberWithLabel`) brukes av `FulReasourceRequestSlipLetter`
+(selve hentehyllelappen), samt hentemeldingene
+([FulPlaceOnHoldShelfLetter.xsl](https://github.com/scriptotek/alma-letters-ubo/blob/master/xsl/letters/FulPlaceOnHoldShelfLetter.xsl#L42-L52) og [SmsFulPlaceOnHoldShelfLetter.xsl](https://github.com/scriptotek/alma-letters-ubo/blob/master/xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl#L26-L32)).
+
 
 ### Libnummer (norsk ISIL-kode)
 
