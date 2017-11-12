@@ -201,20 +201,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </td>
             </tr>
             <tr>
-              <td valign="top">By:</td>
-              <td>
-                <xsl:value-of select="notification_data/phys_item_display/author"/>
-              </td>
-            </tr>
-            <xsl:if test="notification_data/phys_item_display/isbn != ''">
-              <tr>
-                <td valign="top">@@isbn@@:</td>
-                <td>
-                  <xsl:value-of select="notification_data/phys_item_display/isbn"/>
-                </td>
-              </tr>
-            </xsl:if>
-            <tr>
               <td valign="top">Edition/year:</td>
               <td>
                 <xsl:value-of select="notification_data/phys_item_display/edition"/>
@@ -227,6 +213,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <td valign="top">Series:</td>
                 <td>
                   <xsl:value-of select="notification_data/request/record_display_section/series_small"/>
+                </td>
+              </tr>
+            </xsl:if>
+            <xsl:if test="notification_data/phys_item_display/barcode != ''" >
+              <tr>
+                <td valign="top">Barcode:</td>
+                <td>
+                  <xsl:value-of select="notification_data/phys_item_display/barcode"/>
                 </td>
               </tr>
             </xsl:if>
