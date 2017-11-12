@@ -52,6 +52,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <tr>
       <td><b>@@billing_address@@: </b><xsl:value-of select="/notification_data/po/bill_to_address/line1"/>&#160;<xsl:value-of select="/notification_data/po/bill_to_address/line2"/>&#160;<xsl:value-of select="/notification_data/po/bill_to_address/city"/>&#160;<xsl:value-of select="/notification_data/po/bill_to_address/country"/></td>
      </tr>
+     <xsl:if test="/notification_data/po/erp_number != ''">
+      <tr>
+       <td><b>@@erp_number@@: </b><xsl:value-of select="/notification_data/po/erp_number"/></td>
+      </tr>
+     </xsl:if>
     </table>
     </xsl:for-each>
     <br />

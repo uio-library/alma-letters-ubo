@@ -49,6 +49,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <td><b>@@shipping_method@@: </b><xsl:value-of select="/notification_data/po/shipping_method"/></td>
      </tr>
      </xsl:if>
+
+    <xsl:if test="/notification_data/po/erp_number != ''">
+      <tr>
+       <td><b>@@erp_number@@: </b><xsl:value-of select="/notification_data/po/erp_number"/></td>
+      </tr>
+    </xsl:if>
+
      
      <xsl:if test="/notification_data/po/po_line_list/po_line/vendor_reference_number != ''">
      <tr>

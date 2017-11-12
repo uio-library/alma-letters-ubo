@@ -316,8 +316,8 @@
       "modified": "-"
     },
     "xsl/letters/LicensePrintoutLetter.xsl": {
-      "checksum": "eca01f15f58142dabfcd1fcfe7d19a4222db9db2",
-      "default_checksum": "eca01f15f58142dabfcd1fcfe7d19a4222db9db2",
+      "checksum": "72bfdcaf2eda409ca8fe7de3c8464107a7d07078",
+      "default_checksum": "72bfdcaf2eda409ca8fe7de3c8464107a7d07078",
       "modified": "-"
     },
     "xsl/letters/LoginUsingOneTimeTokenLetter.xsl": {
@@ -331,9 +331,9 @@
       "modified": "16/02/2016"
     },
     "xsl/letters/OrderListLetter.xsl": {
-      "checksum": "083a7ea5b667b7d8dcc8b00acad119cbdf5cdc46",
-      "default_checksum": "e67fd2f71308c77c0c53de60a65823a1df860704",
-      "modified": "09/02/2016"
+      "checksum": "24719906870c2024a0ac3277ac5733b8bf2baa70",
+      "default_checksum": "4d902a3d14923a0aba7486b9c7fc0439d99ff2b9",
+      "modified": "12/11/2017"
     },
     "xsl/letters/OrderNowLetter.xsl": {
       "checksum": "c45ab9cfcd183c9267d204606ba388fa6fae957a",
@@ -450,6 +450,11 @@
       "default_checksum": "3d1102550ced6431853c45ea6c9b5158150c7f7f",
       "modified": "-"
     },
+    "xsl/letters/UpdateCollectionContributionLetter.xsl": {
+      "checksum": "080ce0798cebde23626aec94a422f74c9a76da08",
+      "default_checksum": "080ce0798cebde23626aec94a422f74c9a76da08",
+      "modified": "-"
+    },
     "xsl/letters/UserDeletionLetter.xsl": {
       "checksum": "df40cf290e0ec0abac75b0020d98a9f60d037264",
       "default_checksum": "17b3d7d2e05d998fbdb1a714efb5a31b00f081fa",
@@ -458,6 +463,11 @@
     "xsl/letters/UserNotificationsLetter.xsl": {
       "checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
       "default_checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
+      "modified": "-"
+    },
+    "xsl/letters/WebhookFailureLetter.xsl": {
+      "checksum": "c6a5521ad686c32bc9b1cfc9cc1924e603a9b907",
+      "default_checksum": "c6a5521ad686c32bc9b1cfc9cc1924e603a9b907",
       "modified": "-"
     },
     "xsl/letters/call_template/footer.xsl": {

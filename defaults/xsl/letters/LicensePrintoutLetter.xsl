@@ -24,11 +24,11 @@
        <strong>@@Dear_Publisher@@</strong>
        <br />
 
-       
+
        <br />
        <br />
        <br />
-       
+
 
       </h3>
      </xsl:for-each>
@@ -61,7 +61,7 @@
        style="width:100%; padding: 0px 25px 25px 25px; border-bottom: 2px solid #dce8eb; font-family: 'Source Sans Pro' !important;padding: 25px 0 15px 0;">
 
        <tr>
-        <td style="font-size:50px;padding: 0px 0 5px 10px;">
+        <td style="font-size:30px;padding: 0px 0 5px 10px;">
          <b>
 
           <xsl:value-of select="notification_data/license/name" />
@@ -74,68 +74,67 @@
         <td style="font-size:18px;padding: 0px 0 5px 10px;">
          <b>
           @@licenseCode@@:
-          <xsl:value-of select="notification_data/license/code" />
          </b>
+          <xsl:value-of select="notification_data/license/code" />
          <br />
          <b>
           @@licenseType@@:
-          <xsl:value-of select="notification_data/license/type" />
          </b>
+          <xsl:value-of select="notification_data/license/type" />
          <br />
          <b>
           @@status@@:
-          <xsl:value-of select="notification_data/license/status" />
          </b>
+          <xsl:value-of select="notification_data/license/status" />
          <br />
          <b>
           @@signedBy@@:
-          <xsl:value-of select="notification_data/license/license_signedby" />
          </b>
+          <xsl:value-of select="notification_data/license/license_signedby" />
          <br />
          <b>
           @@SignedOn@@:
-          <xsl:value-of select="notification_data/license/license_signed" />
          </b>
+          <xsl:value-of select="notification_data/license/license_signed" />
          <br />
          <b>
           @@startDate@@:
-          <xsl:value-of select="notification_data/license/license_begins" />
          </b>
+          <xsl:value-of select="notification_data/license/license_begins" />
          <b>
           -
-          <xsl:value-of select="notification_data/license/license_ends" />
          </b>
+          <xsl:value-of select="notification_data/license/license_ends" />
          <br />
 
          <b>
           @@licensor@@:
-          <xsl:value-of select="notification_data/license/licensor" />
          </b>
+          <xsl:value-of select="notification_data/license/licensor" />
          <br />
          <b>
           @@URI@@:
-          <xsl:value-of select="notification_data/license/uri" />
          </b>
+          <xsl:value-of select="notification_data/license/uri" />
          <br />
          <br />
          <br />
         </td>
        </tr>
        <xsl:for-each
-        select="notification_data/license/license_term_list/license_term">
+        select="notification_data/list/term_license">
         <tr>
          <td style="font-size:18px;padding: 0px 0 5px 10px;">
           <b>@@licenseTerms@@:
           </b>
          </td>
+         <td style="padding: 0px 0px 0px 5px;">
+
+          <xsl:value-of select="field_label" />
+         </td>
          <td>
-
-          <xsl:value-of select="notification_data/license/code" />
-
-          <br />
-          <xsl:value-of select="license_term_code" />
-          @@term_type_display@@:
-          <xsl:value-of select="license_term_value_display" />
+          <b>@@term_type_display@@:</b>
+          <xsl:value-of select="comment" />
          </td>
 
         </tr>
