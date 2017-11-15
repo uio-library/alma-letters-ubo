@@ -200,6 +200,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <xsl:value-of select="notification_data/phys_item_display/title_abcnph"/>
               </td>
             </tr>
+            <xsl:if test="notification_data/request/work_flow_entity/step_type != 'ON_HOLD_SHELF'">
+              <tr>
+                <td valign="top">By:</td>
+                <td>
+                  <xsl:value-of select="notification_data/phys_item_display/author"/>
+                </td>
+              </tr>
+              <xsl:if test="notification_data/phys_item_display/isbn != ''">
+                <tr>
+                  <td valign="top">@@isbn@@:</td>
+                  <td>
+                    <xsl:value-of select="notification_data/phys_item_display/isbn"/>
+                  </td>
+                </tr>
+              </xsl:if>
+            </xsl:if>
             <tr>
               <td valign="top">Edition/year:</td>
               <td>
@@ -216,13 +232,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 </td>
               </tr>
             </xsl:if>
-            <xsl:if test="notification_data/phys_item_display/barcode != ''" >
-              <tr>
-                <td valign="top">Barcode:</td>
-                <td>
-                  <xsl:value-of select="notification_data/phys_item_display/barcode"/>
-                </td>
-              </tr>
+            <xsl:if test="notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
+              <xsl:if test="notification_data/phys_item_display/barcode != ''" >
+                <tr>
+                  <td valign="top">Barcode:</td>
+                  <td>
+                    <xsl:value-of select="notification_data/phys_item_display/barcode"/>
+                  </td>
+                </tr>
+              </xsl:if>
             </xsl:if>
           </xsl:otherwise>
         </xsl:choose>
