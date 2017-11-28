@@ -5,11 +5,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
 <!--
-    Template for converting date from MM/DD/YYYY to YYYY-MM-DD and remove time.
+    Template for converting date from DD/MM/YYYY to YYYY-MM-DD and remove time.
     Added by: DMOH 2016-01-20
 
     Parameters:
-      value:     The date on format MM/DD/YYYY
+      value:     The date on format DD/MM/YYYY
 -->
 <xsl:template name="isoDate">
   <xsl:param name="value"/>
