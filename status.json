@@ -416,9 +416,9 @@
       "modified": "22/09/2016"
     },
     "xsl/letters/ResourceSharingShippingSlipLetter.xsl": {
-      "checksum": "38a184f30468661c2e115cc65dbe796479384c7b",
+      "checksum": "aab8ad49cc198e17c7b89fc46e67b8e4ade2a80f",
       "default_checksum": "1d169cd88751835afad337772a12f7be2e4dbf9d",
-      "modified": "06/07/2016"
+      "modified": "28/11/2017"
     },
     "xsl/letters/RestrictedLoginIPLetter.xsl": {
       "checksum": "49e2533afb204cd04761d76487dccaf05939e162",

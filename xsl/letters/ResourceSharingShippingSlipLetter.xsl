@@ -47,7 +47,7 @@
     <xsl:element name="meta">
       <xsl:attribute name="name">libnummer</xsl:attribute>
       <xsl:attribute name="content">
-        <xsl:for-each select="/notification_data/partner_shipping_info_list/partner_shipping_info[1]/address5">
+        <xsl:for-each select="/notification_data/partner_code">
           <xsl:value-of select="substring(., 4,3)"/>&#160;&#160;<xsl:value-of select="substring(., 7,4)"/>
         </xsl:for-each>
       </xsl:attribute>
@@ -401,7 +401,7 @@
           ===================================================================================== -->
     <xsl:if test="/notification_data/organization_unit/org_scope/institution_id != '2204'">
       <div id="libnummer" style="position: fixed; bottom: 100px; left: 30px; font-size: 60px;">
-        <xsl:for-each select="/notification_data/partner_shipping_info_list/partner_shipping_info[1]/address5">
+        <xsl:for-each select="/notification_data/partner_code">
           <xsl:value-of select="substring(., 4,3)"/>&#160;&#160;<xsl:value-of select="substring(., 7,4)"/>
         </xsl:for-each>
       </div>
