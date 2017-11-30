@@ -160,7 +160,7 @@ De to malene (`pickupNumber` og `pickupNumberWithLabel`) brukes av `FulReasource
 
 ### Libnummer (norsk ISIL-kode)
 
-Tre av sedlene brukes som sendelapper mellom bibliotek og har derfor libnummer
+Fire av sedlene brukes som sendelapper mellom bibliotek og har derfor libnummer
 nederst. Nummeret må plasseres i en fast avstand fra bunnen av arket fordi det
 skal være synlig i vinduskonvolutter for sending av dokumenter. For sending av
 bøker stikkes sedlene i bøkene slik at arket stikker ut på bunnen av boka med
@@ -170,8 +170,8 @@ libummeret synlig.
   som ikke bruker Alma. Libnummer hentes fra
   `notification_data/user_for_printing/identifiers/code_value[1]/value`.
 * `ResourceSharingShippingSlipLetter`: Utlån til annet Alma-bibliotek basert
-  på bestilling (*lending requests*). Libnummer hentes fra
-  `notification_data/partner_shipping_info_list/partner_shipping_info[1]/address5`
+  på bestillinger (*lending requests*). Libnummer hentes fra
+  `notification_data/partner_code`.
   * Merk: `FulIncomingSlipLetter` (også kjent som `Resource sharing Lending
     Slip Letter`) ligner ganske mye på `ResourceSharingShippingSlipLetter`, og
     mange tror derfor denne kan brukes som sendeseddel for artikkelkopier –
@@ -181,6 +181,10 @@ libummeret synlig.
     item via almamenyen, velg ship non returnable og huk av for automatisk
     slip. Eller trykk ‘print slip’ etter man har valgt ‘ship item’, ‘ship non
     returnable’ e.l.
+* `ResourceSharingReturnSlipLetter`: Retur til annet Alma-bibliotek.
+  Libnummer hentes fra `/notification_data/partner_address[1]/line5`.
+  (Forhåpentligvis blir `notification_data/partner_code` definert her også
+   etterhvert, men per desember 2017 er det ikke det).
 * `FulTransitSlipLetter`: Sendelapp internt på UBO. Her har vi en hardkodet
   mapping fra `calculated_destination_name` til libnummer fordi libnummeret
   ikke er tilgjengelig i XML-dataene og lista over mottakere er overkommelig å
