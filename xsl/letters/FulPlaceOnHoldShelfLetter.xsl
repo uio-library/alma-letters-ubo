@@ -23,14 +23,22 @@
   -->
   <p>
     @@following_item_requested_on@@
-
     <xsl:choose>
-      <xsl:when test="request/delivery_address != ''">
-        <xsl:value-of select="request/delivery_address"/>
+      <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
+
+        <xsl:value-of select="/notification_data/phys_item_display/owning_library_name"/>
+        <!-- Vi kunne også brukt `outgoing/pickup_location_str` her, men bruker
+             i stedet `phys_item_display/owning_library_name` fordi denne ikke inkluderer skrankenavn.
+             Eksempel:
+             - 'phys_item_display/owning_library_name' : 'UiO Realfagsbiblioteket'
+             - 'outgoing/pickup_location_str'          : 'UiO Realfagsbiblioteket – Utlånet Ureal'
+        -->
+
       </xsl:when>
       <xsl:otherwise>
-        <!-- Physical non-returnable -->
-        <xsl:value-of select="phys_item_display/owning_library_name"/>
+
+        <xsl:value-of select="/notification_data/request/delivery_address"/>
+
       </xsl:otherwise>
     </xsl:choose>:
   </p>

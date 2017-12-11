@@ -181,9 +181,9 @@
       "modified": "-"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "fdc5c57f183be1471b54b5cccfbd54f3bc6f09d5",
+      "checksum": "b0f20a8f44d3a392175a2204b17876c117c815b0",
       "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
-      "modified": "04/09/2017"
+      "modified": "11/12/2017"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
       "checksum": "872be3dbdb26f1e87d66a692c4d9ea995562cc55",
@@ -541,9 +541,9 @@
       "modified": "-"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "2b7c8c3ec9c20b9e4c1b264f0ae7c7a6185fb853",
+      "checksum": "a8910d28281d9ff60a450b5524133410511a45d3",
       "default_checksum": "fde1eebd8c0c425f7e57001cb508f6f1fe668912",
-      "modified": "06/07/2016"
+      "modified": "11/12/2017"
     },
     "xsl/letters/sms/SmsFulShortenedDueDateLetter.xsl": {
       "checksum": "f81a3e2b6240c322f52dbf5c5fa44f6f49926de4",
