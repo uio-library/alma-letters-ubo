@@ -86,8 +86,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </table>
    
 
-    <xsl:call-template name="lastFooter" /> <!-- footer.xsl -->
-    <xsl:call-template name="myAccount" /> <!-- footer.xsl -->
+    <xsl:call-template name="email-footer"><!-- footer.xsl -->
+      <xsl:with-param name="show_my_account" select="true()"/>
+    </xsl:call-template>
+
    </body>
  </html>
 </xsl:template>

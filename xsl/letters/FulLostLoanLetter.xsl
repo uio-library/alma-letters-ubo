@@ -57,42 +57,25 @@
   </table>
 
   <p>
-    <xsl:choose>
-      <xsl:when test="receivers/receiver/preferred_language = 'nb'">
-        Du kan betale i biblioteket eller med
-      </xsl:when>
-      <xsl:when test="receivers/receiver/preferred_language = 'no'">
-        Du kan betale i biblioteket eller med
-      </xsl:when>
-      <xsl:when test="receivers/receiver/preferred_language = 'nn'">
-        Du kan betale i biblioteket eller med
-      </xsl:when>
-      <xsl:otherwise>
-        You can pay at the library or with
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Du kan betale i biblioteket eller med '"/>
+      <xsl:with-param name="nn" select="'Du kan betale i biblioteket eller med '"/>
+      <xsl:with-param name="en" select="'You can pay at the library or with '"/>
+    </xsl:call-template>
     <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
   </p>
 
   <p>
-    <xsl:choose>
-      <xsl:when test="receivers/receiver/preferred_language = 'nb'">
-        Hvis du betaler med Epay, skriv inn DokumentID i kommentarfeltet.
-      </xsl:when>
-      <xsl:when test="receivers/receiver/preferred_language = 'no'">
-        Hvis du betaler med Epay, skriv inn DokumentID i kommentarfeltet.
-      </xsl:when>
-      <xsl:when test="receivers/receiver/preferred_language = 'nn'">
-        Om du betalar med Epay, skriv inn DokumentID i kommentarfeltet.
-      </xsl:when>
-      <xsl:otherwise>
-        If you use Epay, please write the DocumentID in the comment field.
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Hvis du betaler med Epay, skriv inn DokumentID i kommentarfeltet.'"/>
+      <xsl:with-param name="nn" select="'Om du betalar med Epay, skriv inn DokumentID i kommentarfeltet.'"/>
+      <xsl:with-param name="en" select="'If you use Epay, please write the DocumentID in the comment field.'"/>
+    </xsl:call-template>
   </p>
 
-  <xsl:call-template name="email-footer"/><!-- footer.xsl -->
-  <xsl:call-template name="myAccount" /> <!-- footer.xsl -->
+  <xsl:call-template name="email-footer"><!-- footer.xsl -->
+    <xsl:with-param name="show_my_account" select="true()"/>
+  </xsl:call-template>
 
 </xsl:template>
 

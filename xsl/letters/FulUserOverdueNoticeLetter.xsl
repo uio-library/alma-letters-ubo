@@ -58,8 +58,9 @@
     @@additional_info_2@@
   </p>
 
-  <xsl:call-template name="email-footer" /> <!-- footer.xsl -->
-  <xsl:call-template name="myAccount" />
+  <xsl:call-template name="email-footer"><!-- footer.xsl -->
+    <xsl:with-param name="show_my_account" select="true()"/>
+  </xsl:call-template>
 
 </xsl:template>
 </xsl:stylesheet>

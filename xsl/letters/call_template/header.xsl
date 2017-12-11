@@ -71,7 +71,9 @@
 
 <!-- Just the logo -->
 <xsl:template name="logo">
-  <img src="cid:logo.jpg" alt="logo" class="logo"/>
+  <div id="logoContainer" style="margin: 0; padding: 0;">
+    <img src="cid:logo.jpg" alt="logo" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
+  </div>
 </xsl:template>
 
 

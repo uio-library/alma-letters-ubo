@@ -78,7 +78,6 @@
       </xsl:choose>
       <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>E-pay</a>.
     </p>
-
   </xsl:if>
 
   <!--
@@ -103,8 +102,9 @@
   </table>
   -->
 
-  <xsl:call-template name="email-footer"/><!-- footer.xsl -->
-  <xsl:call-template name="myAccount" /><!-- footer.xsl -->
+  <xsl:call-template name="email-footer"><!-- footer.xsl -->
+    <xsl:with-param name="show_my_account" select="true()"/>
+  </xsl:call-template>
 
 </xsl:template>
 
