@@ -161,14 +161,14 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "87647e9c094f5a8176f68d7813bed1f91a3588b8",
+      "checksum": "fe8e647cc4e2c696f5eef0a6a8bb0f017a44736d",
       "default_checksum": "e5c542d23c6d382c2bc8e5ab540e23dd17bffc7e",
-      "modified": "29/09/2016"
+      "modified": "04/12/2017"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "2e73dcd5a728d83bfdd14b5aa1b851c17ae94202",
+      "checksum": "ea795badc37f00a4b20852ff3cf10881e2ca4576",
       "default_checksum": "1880b5b96b17916ec974897d7b098828c26fbaf7",
-      "modified": "29/09/2016"
+      "modified": "04/12/2017"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
       "checksum": "9e46c82f92640b217156a896018bbadbbaec545d",
