@@ -56,16 +56,16 @@
     </xsl:when>
     <xsl:when test="contains(location_name, 'Fjernlån')">
       <xsl:call-template name="multilingual"><!-- footer.xsl -->
-        <xsl:with-param name="nb" select="'Manuelt fornybar'"/>
-        <xsl:with-param name="nn" select="'Manuelt fornybar'"/>
-        <xsl:with-param name="en" select="'Manually renewable'"/>
+        <xsl:with-param name="nb" select="'Fornybar'"/><!-- Fornyes i Oria? -->
+        <xsl:with-param name="nn" select="'Fornybar'"/>
+        <xsl:with-param name="en" select="'Renewable'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:otherwise>
       <xsl:call-template name="multilingual"><!-- footer.xsl -->
-        <xsl:with-param name="nb" select="'Fornybar'"/>
+        <xsl:with-param name="nb" select="'Fornybar'"/><!-- Fornyes automatisk? -->
         <xsl:with-param name="nn" select="'Fornybar'"/>
-        <xsl:with-param name="en" select="'Renewable'"/>
+        <xsl:with-param name="en" select="'Renewable'"/><!-- Renewed automatically -->
       </xsl:call-template>
     </xsl:otherwise>
   </xsl:choose>
@@ -119,16 +119,16 @@
 
 <xsl:template name="formatFee">
   <tr>
+    <td valign="top" style="white-space: nowrap;">
+      <xsl:call-template name="formatFineFeeType"></xsl:call-template>
+    </td>
     <td valign="top">
       <xsl:value-of select="item_title"/>
     </td>
     <td valign="top" style="white-space: nowrap;">
       <xsl:value-of select="translate(status_date,'/','.')"/>
     </td>
-    <td valign="top" style="white-space: nowrap;">
-      <xsl:call-template name="formatFineFeeType"></xsl:call-template>
-    </td>
-    <td valign="top" style="white-space: nowrap;">
+    <td valign="top" style="text-align: right; white-space: nowrap;">
       <xsl:value-of select="fine_fee_ammount/sum"/>,-
     </td>
   </tr>
@@ -147,9 +147,16 @@
 
   <p>
     <xsl:call-template name="multilingual"><!-- footer.xsl -->
-      <xsl:with-param name="nb" select="'Hei, kjære bruker av biblioteket! Vi ønsker å gjøre det enklest mulig for deg å holde oversikt over dine låneaktiviteter.'"/>
-      <xsl:with-param name="nn" select="'Hei, kjære brukar av biblioteket! Vi ynskjer å gjere det enklast mogleg for deg å halde oversikt over låneaktivitetane dine!'"/>
-      <xsl:with-param name="en" select="'Dear library patron, please find below a list of your current loans at the University of Oslo Library.'"/>
+      <xsl:with-param name="nb" select="'Kjære bruker av biblioteket,'"/>
+      <xsl:with-param name="nn" select="'Kjære brukar av biblioteket,'"/>
+      <xsl:with-param name="en" select="'Dear library patron,'"/>
+    </xsl:call-template>
+  </p>
+  <p>
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Vi ønsker å gjøre det enklest mulig for deg å holde oversikt over dine låneaktiviteter. Under finner du en oversikt over hvilke lån som er registrert på din bruker og forfallsdato for disse. Lån med status «Fornybar» vil bli fornyet automatisk.'"/>
+      <xsl:with-param name="nn" select="'Vi ynskjer å gjere det enklast mogleg for deg å halde oversikt over låneaktivitetane dine!'"/>
+      <xsl:with-param name="en" select="'Please find below a list of your current loans at the University of Oslo Library and their due dates. Loans marked as ‘Renewable’ will be renewed automatically.'"/>
     </xsl:call-template>
   </p>
 
@@ -213,13 +220,13 @@
       </xsl:attribute>
       <tr>
         <th align="left">
+          Type
+        </th>
+        <th align="left">
           @@title@@
         </th>
         <th align="left">
           @@due_date@@
-        </th>
-        <th align="left">
-          Type
         </th>
         <th align="left">
           @@fine@@
@@ -244,22 +251,46 @@
         </xsl:if>
       </xsl:for-each>
 
-      <!-- Manuelt innlagte gebyrer er ikke med i lista over.. Sannsynligvis legger vi ikke inn gebyrer manuelt, men skulle det skje kan vi prøve å vise dem som "Annet" -->
-      <!-- Utfordring: total_fee er en ferdigformatert streng som følger brukerens språk. Eks: "1,600.00 NOK" på engelsk, "1 600,00 NOK" på norsk. For å kunne
-           regne med denne må vi først normalisere den. Og 'replace()' er ikke tilgjengelig. -->
-      <xsl:if test="translate(substring-before(total_fee,'00 NOK'), ',. ', '') - sum(/notification_data/loans_by_library/library_loans_for_display/item_loans/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum) != 0.0">
+      <xsl:variable name="totalFeeAsNumber">
+        <!--
+            Utfordring: total_fee er en ferdigformatert streng på brukerens eget språk.
+            Eks: "1,600.00 NOK" på engelsk, "1 600,00 NOK" på norsk.
+            For å kunne regne med denne må vi derfor først normalisere den.
+            Merk at mellomrommet i den norske strengen er et hardt mellomrom.
+        -->
+        <xsl:call-template name="string-replace">
+          <xsl:with-param name="string" select="translate(substring-before(total_fee,'00 NOK'), ',. ', '')"/>
+          <xsl:with-param name="replace" select="'&#160;'"/>
+          <xsl:with-param name="with" select="''"/>
+        </xsl:call-template>
+      </xsl:variable>
+
+      <xsl:variable name="remainderFee">
+        <!--
+            Gebyrer for leverte dokumenter er ikke med i XML-en og vises derfor ikke i tabellen vår.
+            For å få summen av disse til å gå opp med totalsummen (som er med i XML-en),
+            regner vi ut differansen og viser dette som "Eldre gebyrer".
+        -->
+        <xsl:value-of select="$totalFeeAsNumber - sum(/notification_data/loans_by_library/library_loans_for_display/item_loans/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum)"/>
+      </xsl:variable>
+
+      <xsl:if test="$remainderFee != 0.0">
         <tr>
           <td>
-            Annet
+            <xsl:call-template name="multilingual"><!-- footer.xsl -->
+              <xsl:with-param name="nb" select="'Eldre gebyrer'"/>
+              <xsl:with-param name="nn" select="'Eldre gebyr'"/>
+              <xsl:with-param name="en" select="'Older fees'"/>
+            </xsl:call-template>
           </td>
           <td>
-            Annet
+            &#160;
           </td>
           <td>
-            Other
+            &#160;
           </td>
-          <td>
-            <xsl:value-of select="translate(substring-before(total_fee,'00 NOK'), ',. ', '') - sum(/notification_data/loans_by_library/library_loans_for_display/item_loans/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum)"/>,-
+          <td style="text-align: right; white-space: nowrap;">
+            <xsl:value-of select="$remainderFee"/>.00,-
           </td>
         </tr>
       </xsl:if>
@@ -279,7 +310,8 @@
     <p>
       <xsl:if test="item_loans/item_loan/process_status = 'LOST' or overdue_item_loans/item_loan/process_status = 'LOST'">
         <xsl:call-template name="multilingual"><!-- footer.xsl -->
-          <xsl:with-param name="nb" select="'Du må enten levere dokumentet, kjøpe nytt eksemplar eller betale erstatningskrav. '"/>
+          <!-- TODO: Endre til noe ála «Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyret må betales uansett.  -->
+          <xsl:with-param name="nb" select="'Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyr må betales uansett. '"/>
           <xsl:with-param name="nn" select="'Du må anten levere dokumentet, kjøpe nytt eksemplar eller betale erstatningskrav. '"/>
           <xsl:with-param name="en" select="'You must either return the document, buy a new one or pay the lost item bill. '"/>
         </xsl:call-template>
