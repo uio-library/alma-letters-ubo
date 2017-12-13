@@ -463,7 +463,7 @@
     "xsl/letters/UserNotificationsLetter.xsl": {
       "checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
       "default_checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
-      "modified": "-"
+      "modified": "22/11/2017"
     },
     "xsl/letters/WebhookFailureLetter.xsl": {
       "checksum": "c6a5521ad686c32bc9b1cfc9cc1924e603a9b907",
