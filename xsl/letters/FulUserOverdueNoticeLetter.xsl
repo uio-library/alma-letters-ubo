@@ -1,11 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:include href="header.xsl" />
-<xsl:include href="senderReceiver.xsl" />
-<xsl:include href="mailReason.xsl" />
-<xsl:include href="footer.xsl" />
-<xsl:include href="style.xsl" />
-<xsl:include href="recordTitle.xsl" />
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:date="http://exslt.org/dates-and-times"
+  extension-element-prefixes="date">
+<xsl:include href="header.xsl"/>
+<xsl:include href="senderReceiver.xsl"/>
+<xsl:include href="mailReason.xsl"/>
+<xsl:include href="footer.xsl"/>
+<xsl:include href="style.xsl"/>
+<xsl:include href="recordTitle.xsl"/>
+
+
+<!--
+  Template: formatProcessStatus
+
+  Genererer en brukervennlig status for et lån, til bruk i tabellen over lån.
+
+  Ved oppdatering av denne malen kan det være lurt å også ta en titt på den
+  tilsvarende malen i FulUserBorrowingActivityLetter.xsl, men merk at logikken
+  i malene er litt forskjellig. Default her er f.eks. at dokumentet ikke kan fornyes.
+-->
+<xsl:template name="formatProcessStatus">
+  <xsl:choose>
+    <xsl:when test="process_status = 'RECALL'">
+      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:with-param name="nb" select="'Andre lånere venter. Må leveres snarest'"/>
+        <xsl:with-param name="nn" select="'Andre lånarar ventar. Må leverast snarast'"/>
+        <xsl:with-param name="en" select="'Other patrons are waiting. Please return as soon as possible'"/>
+      </xsl:call-template>
+    </xsl:when>
+     <xsl:when test="contains(physical_item/barcode, 'RS')">
+      <!-- Innlån utland -->
+      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:with-param name="nb" select="'Lånt inn fra utlandet. Ta kontakt med biblioteket for å fornye'"/>
+        <xsl:with-param name="nn" select="'Lånt inn frå utlandet. Ta kontakt med biblioteket for å fornye'"/>
+        <xsl:with-param name="en" select="'Borrowed from an library abroad. Contact your library to renew'"/>
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:when test="contains(location_name, 'Fjernlån')">
+      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:with-param name="nb" select="'Lånt inn fra et annet bibliotek. Logg inn i Oria for å fornye '"/>
+        <xsl:with-param name="nn" select="'Lånt inn frå eit anna bibliotek. Logg inn i Oria for å fornye '"/>
+        <xsl:with-param name="en" select="'Borrowed from another library. Sign in to Oria to renew '"/>
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:with-param name="nb" select="'Kan ikke fornyes og må leveres'"/>
+        <xsl:with-param name="nn" select="'Kan ikkje fornyast og må leverast'"/>
+        <xsl:with-param name="en" select="'Cannot be renewed. Please return as soon as possible'"/>
+      </xsl:call-template>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+
+<!--
+  Template: formatLoan
+
+  Generates a row in the loans table.
+-->
+<xsl:template name="formatLoan">
+  <tr>
+    <td valign="top">
+      <xsl:value-of select="title"/>
+      <xsl:if test="description != ''">
+        <br />(<xsl:value-of select="description"/>)
+      </xsl:if>
+    </td>
+    <td valign="top">
+      <xsl:call-template name="formatProcessStatus"></xsl:call-template>
+    </td>
+  </tr>
+</xsl:template>
+
+
+<!-- The letter itself -->
 
 <xsl:template match="/">
   <xsl:call-template name="email-template"/><!-- header.xsl -->
@@ -14,49 +84,42 @@
 <xsl:template match="/notification_data">
 
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-    @@message@@
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Kjære bruker av biblioteket,'"/>
+      <xsl:with-param name="nn" select="'Kjære brukar av biblioteket,'"/>
+      <xsl:with-param name="en" select="'Dear library patron,'"/>
+    </xsl:call-template>
+  </p>
+
+  <p>
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Vi vil minne deg på at du har lån som forfaller i dag. Disse vil ikke bli fornyet automatisk. Under finner du en oversikt over de aktuelle bøkene.'"/>
+      <xsl:with-param name="nn" select="'Vi vil minne deg på at du har lån som forfell i dag. Desse vil ikkje bli fornya automatisk. Under finn du ein oversikt over dei aktuelle bøkene.'"/>
+      <xsl:with-param name="en" select="'We would like to remind you that you have one or more loans due today, that will not be automatically renewed.'"/>
+    </xsl:call-template>
   </p>
 
   <table cellpadding="5" cellspacing="0" class="listing" width="100%">
-    <!-- Når teksten ovenfor sier "forfaller i dag" er det unødvendig å skrive ut "due date". 
-         Bibliotek er også unødvendig fordi det er det samme hvor man leverer -->
-    <!--<tr>
-     <th align="left">@@title@@</th>
-     <th align="left">@@due_date@@</th>
-     <th align="left">@@library@@</th>
-    </tr>-->
+    <xsl:attribute name="style">
+      <xsl:call-template name="mainTableStyleCss"/><!-- style.xsl -->
+    </xsl:attribute>
+    <tr>
+      <th align="left">
+        @@title@@
+      </th>
+      <th align="left">
+        Status
+      </th>
+    </tr>
 
+    <!-- List overdue loans first -->
     <xsl:for-each select="item_loans/item_loan">
-      <tr>
-        <td>
-          <xsl:value-of select="title"/>
-          <xsl:if test="description != ''">
-            <br />(<xsl:value-of select="description"/>)
-          </xsl:if>
-        </td>
-        <!--<td valign="top" style="white-space: nowrap;">
-          <xsl:call-template name="isoDate">
-            <xsl:with-param name="value" select="due_date"/>
-          </xsl:call-template>
-        </td>
-        <td>
-          <xsl:value-of select="library_name"/>
-        </td>-->
-      </tr>
+      <xsl:call-template name="formatLoan"></xsl:call-template>
     </xsl:for-each>
 
   </table>
-
-  <p>
-    @@additional_info_1@@
-  </p>
-
-  <p>
-    @@additional_info_2@@
-  </p>
 
   <xsl:call-template name="email-footer"><!-- footer.xsl -->
     <xsl:with-param name="show_my_account" select="true()"/>
