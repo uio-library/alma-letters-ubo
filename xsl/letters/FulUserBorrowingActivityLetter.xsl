@@ -12,6 +12,11 @@
 
 <!-- Templates -->
 
+<!--
+  Template: checkDueDate
+
+  Formats a date with red text color if in the past.
+-->
 <xsl:template name="checkDueDate">
   <xsl:param name="dueDate" />
   <xsl:variable name="today" select="translate(substring-before(date:date-time(),'T'),'-','')"/>
@@ -30,6 +35,15 @@
   </xsl:choose>
 </xsl:template>
 
+<!--
+  Template: formatProcessStatus
+
+  Genererer en brukervennlig status for et lån, til bruk i utlånstabellen.
+
+  Ved oppdatering av denne malen kan det være lurt å også ta en titt på den
+  tilsvarende malen i FulUserOverdueNoticeLetter.xsl, men merk at logikken
+  i malene er litt forskjellig.
+-->
 <xsl:template name="formatProcessStatus">
   <xsl:choose>
     <xsl:when test="process_status = 'LOST'">
@@ -71,7 +85,11 @@
   </xsl:choose>
 </xsl:template>
 
+<!--
+  Template: formatFineFeeType
 
+  Genererer en brukervennlig forklaring på en gebyrtype, til bruk i gebyrtabellen.
+-->
 <xsl:template name="formatFineFeeType">
   <xsl:choose>
     <xsl:when test="fine_fee_type = 'LOSTITEMPROCESSFEE'">
@@ -98,6 +116,12 @@
   </xsl:choose>
 </xsl:template>
 
+
+<!--
+  Template: formatLoan
+
+  Generates a row in the loans table.
+-->
 <xsl:template name="formatLoan">
   <tr>
     <td valign="top">
@@ -117,6 +141,12 @@
   </tr>
 </xsl:template>
 
+
+<!--
+  Template: formatFee
+
+  Generates a row in the fees table.
+-->
 <xsl:template name="formatFee">
   <tr>
     <td valign="top" style="white-space: nowrap;">
@@ -133,6 +163,7 @@
     </td>
   </tr>
 </xsl:template>
+
 
 <!-- The letter itself -->
 
