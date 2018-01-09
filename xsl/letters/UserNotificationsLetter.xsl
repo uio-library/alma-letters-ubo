@@ -1,128 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0"
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
- <xsl:include href="header.xsl" />
- <xsl:include href="senderReceiver.xsl" />
- <xsl:include href="mailReason.xsl" />
- <xsl:include href="footer.xsl" />
- <xsl:include href="style.xsl" />
- <xsl:include href="recordTitle.xsl" />
- <xsl:template match="/">
-  <html>
-   <head>
-    <xsl:call-template name="generalStyle" />
-   </head>
-   <body>
-    <xsl:attribute name="style">
-     <xsl:call-template name="bodyStyleCss" />
-     <!-- style.xsl -->
-    </xsl:attribute>
-    <xsl:call-template name="head" />
-    <!-- header.xsl -->
+<xsl:stylesheet exclude-result-prefixes="java" version="1.0" xmlns:java="http://xml.apache.org/xslt/java" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:include href="header.xsl"/>
+<xsl:include href="senderReceiver.xsl"/>
+<xsl:include href="mailReason.xsl"/>
+<xsl:include href="footer.xsl"/>
+<xsl:include href="style.xsl"/>
+<xsl:include href="recordTitle.xsl"/>
 
-    <table>
+<xsl:template match="/">
+  <xsl:call-template name="email-template"/><!-- header.xsl -->
+</xsl:template>
 
-       <tr>
-        <td>
-         <h3>@@Dear@@</h3>
-        </td>
-       </tr>
+<xsl:template match="/notification_data">
 
-    </table>
-
-    <div class="messageArea">
-     <div class="messageBody">
+  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
+  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
 
+  <xsl:choose>
 
-      <table cellspacing="0" cellpadding="5" border="0">
-       <xsl:choose>
-        <xsl:when test="notification_data/notification_type = 'NOTIFY_PASSWORD_CHANGE' ">
-         <tr>
-          <td>
-           <h3>@@Line_1@@</h3>
-           <xsl:value-of select="notification_data/temp_password" />
-          </td>
+    <!-- Your password has been changed to: -->
+    <xsl:when test="notification_type = 'NOTIFY_PASSWORD_CHANGE' ">
+      <h3>@@Line_1@@</h3>
+      <p>
+        <xsl:value-of select="temp_password" />
+      </p>
+      <p>
+        @@Line_2@@
+      </p>
+    </xsl:when>
 
-         </tr>
-         <tr>
+    <!-- Forklarende kommentar -->
+    <xsl:when test="notification_type = 'EN_HELT_ANNEN_TING' ">
+      <p>
+        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+          <xsl:with-param name="nb" select="'Melding på bokmål'"/>
+          <xsl:with-param name="nn" select="'Melding på nynorsk'"/>
+          <xsl:with-param name="en" select="'Melding på engelsk'"/>
+        </xsl:call-template>
+      </p>
+      <p>
+        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+          <xsl:with-param name="nb" select="'Melding på bokmål'"/>
+          <xsl:with-param name="nn" select="'Melding på nynorsk'"/>
+          <xsl:with-param name="en" select="'Melding på engelsk'"/>
+        </xsl:call-template>
+      </p>
+    </xsl:when>
 
-          <td>
-           <h3>@@Line_2@@</h3>
-          </td>
-         </tr>
-        </xsl:when>
 
-       </xsl:choose>
-      </table>
-      <br />
-      <table>
+  </xsl:choose>
 
-       <tr>
-        <td>@@Sincerely@@</td>
-       </tr>
-       <tr>
-        <td>
-         <xsl:value-of select="notification_data/organization_unit/name" />
-        </td>
-       </tr>
-       <xsl:if test="notification_data/organization_unit/address/line1 !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/line1" />
-         </td>
-        </tr>
-       </xsl:if>
-       <xsl:if test="notification_data/organization_unit/address/line2 !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/line2" />
-         </td>
-        </tr>
-       </xsl:if>
-       <xsl:if test="notification_data/organization_unit/address/line3 !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/line3" />
-         </td>
-        </tr>
-       </xsl:if>
-       <xsl:if test="notification_data/organization_unit/address/line4 !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/line4" />
-         </td>
-        </tr>
-       </xsl:if>
-       <xsl:if test="notification_data/organization_unit/address/line5 !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/line5" />
-         </td>
-        </tr>
-       </xsl:if>
-       <xsl:if test="notification_data/organization_unit/address/city !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/city" />
-         </td>
-        </tr>
-       </xsl:if>
-       <xsl:if test="notification_data/organization_unit/address/country !=''">
-        <tr>
-         <td>
-          <xsl:value-of select="notification_data/organization_unit/address/country" />
-         </td>
-        </tr>
 
-       </xsl:if>
+  <xsl:call-template name="email-footer"><!-- footer.xsl -->
+    <xsl:with-param name="show_my_account" select="true()"/>
+  </xsl:call-template>
 
-      </table>
-     </div>
-    </div>
-    <xsl:call-template name="lastFooter" />
-    <!-- footer.xsl -->
-   </body>
-  </html>
- </xsl:template>
+</xsl:template>
 </xsl:stylesheet>
