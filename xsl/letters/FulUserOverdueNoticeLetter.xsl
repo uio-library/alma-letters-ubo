@@ -16,11 +16,12 @@
 
   Genererer en brukervennlig status for et lån, til bruk i tabellen over lån.
 
-  Ved oppdatering av denne malen kan det være lurt å også ta en titt på den
-  tilsvarende malen i FulUserBorrowingActivityLetter.xsl, men merk at logikken
-  i malene er litt forskjellig. Default her er f.eks. at dokumentet ikke kan fornyes.
+  Ved oppdatering av denne malen kan det være lurt å også ta en sjekk på tilsvarende
+  maler i FulUserBorrowingActivityLetter.xsl og FulOverdueAndLostLoanNotificationLetter.xsl,
+  men merk at logikken i malene er litt forskjellig.
 -->
 <xsl:template name="formatProcessStatus">
+<xsl:variable name="group" select="user_group"/>
   <xsl:choose>
     <xsl:when test="process_status = 'RECALL'">
       <xsl:call-template name="multilingual"><!-- footer.xsl -->
@@ -32,16 +33,23 @@
      <xsl:when test="contains(physical_item/barcode, 'RS-')">
       <!-- Innlån utland -->
       <xsl:call-template name="multilingual"><!-- footer.xsl -->
-        <xsl:with-param name="nb" select="'Lånt inn fra utlandet. Ta kontakt med biblioteket for å fornye'"/>
-        <xsl:with-param name="nn" select="'Lånt inn frå utlandet. Ta kontakt med biblioteket for å fornye'"/>
-        <xsl:with-param name="en" select="'Borrowed from an library abroad. Contact your library to renew'"/>
+        <xsl:with-param name="nb" select="'Lånt inn fra utlandet. Ta kontakt med oss for å fornye'"/>
+        <xsl:with-param name="nn" select="'Lånt inn frå utlandet. Ta kontakt med oss for å fornye'"/>
+        <xsl:with-param name="en" select="'Borrowed from a library abroad. Contact us to renew'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="contains(location_name, 'Fjernlån')">
       <xsl:call-template name="multilingual"><!-- footer.xsl -->
-        <xsl:with-param name="nb" select="'Lånt inn fra et annet bibliotek. Logg inn i Oria for å fornye '"/>
-        <xsl:with-param name="nn" select="'Lånt inn frå eit anna bibliotek. Logg inn i Oria for å fornye '"/>
+        <xsl:with-param name="nb" select="'Lånt inn fra annet bibliotek. Logg inn i Oria for å fornye '"/>
+        <xsl:with-param name="nn" select="'Lånt inn frå anna bibliotek. Logg inn i Oria for å fornye '"/>
         <xsl:with-param name="en" select="'Borrowed from another library. Sign in to Oria to renew '"/>
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:when test="$group = '8' or $group = '9' or $group = '10' or $group = '11' or $group = '12' or $group = '13' or $group = '14' or $group = '15' or $group = '16' or $group = '17' or $group = '20' or $group = '21' or $group = '22' or $group = '23' or $group = '24' or $group = '25'">
+      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:with-param name="nb" select="'Logg på Oria for å se om boka kan fornyes'"/>
+        <xsl:with-param name="nn" select="'Logg på Oria for å se om boka kan fornyes'"/>
+        <xsl:with-param name="en" select="'Sign in to Oria to check if renewal is possible'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:otherwise>

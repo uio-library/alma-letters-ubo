@@ -166,9 +166,9 @@
       "modified": "04/12/2017"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "ea795badc37f00a4b20852ff3cf10881e2ca4576",
+      "checksum": "9b7396fe31875851105b12c2a5f8724b9f47512d",
       "default_checksum": "1880b5b96b17916ec974897d7b098828c26fbaf7",
-      "modified": "08/01/2018"
+      "modified": "18/01/2018"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
       "checksum": "9e46c82f92640b217156a896018bbadbbaec545d",
@@ -221,9 +221,9 @@
       "modified": "10/02/2017"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
-      "checksum": "40978024ba9313aacf85baeb86dcf90cd90f124f",
+      "checksum": "bb2768903a173fb9fdb2ceb86dc6ea38bce6f704",
       "default_checksum": "9eca28112c993ed9988c033fc593abf2da31ac9f",
-      "modified": "04/01/2018"
+      "modified": "18/01/2018"
     },
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
       "checksum": "522331e47e1e12352c63522e4d836d223757060e",
@@ -231,9 +231,9 @@
       "modified": "03/11/2016"
     },
     "xsl/letters/FulUserOverdueNoticeLetter.xsl": {
-      "checksum": "c0063f9075bf95e908c5b7bc5f0f569559535ebd",
+      "checksum": "7b8fb13a11b3a906e38955d9f83027382fa837e6",
       "default_checksum": "0f132cee3c99a7dfbf41bb28654a377186c886ff",
-      "modified": "04/01/2018"
+      "modified": "18/01/2018"
     },
     "xsl/letters/GeneralAssignToLetter.xsl": {
       "checksum": "87f139e94b4184828169cd60cbba30eae8dc6c01",

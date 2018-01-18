@@ -40,9 +40,9 @@
 
   Genererer en brukervennlig status for et lån, til bruk i utlånstabellen.
 
-  Ved oppdatering av denne malen kan det være lurt å også ta en titt på den
-  tilsvarende malen i FulUserOverdueNoticeLetter.xsl, men merk at logikken
-  i malene er litt forskjellig.
+  Ved oppdatering av denne malen kan det være lurt å også ta en sjekk på tilsvarende
+  maler i FulUserOverdueNoticeLetter.xsl og FulOverdueAndLostLoanNotificationLetter.xsl,
+  men merk at logikken i malene er litt forskjellig.
 -->
 <xsl:template name="formatProcessStatus">
   <xsl:choose>
