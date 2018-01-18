@@ -50,9 +50,14 @@
 <xsl:value-of select="/notification_data/phys_item_display/author"/>
 <xsl:text>.</xsl:text>
 
-<!-- Hentefrist -->
+<!--
+  ## Hentefrist
 
-<xsl:if test="/notification_data/request/work_flow_entity/expiration_date != ''">
+  - 2018-01: Vi har 5 dagers hold shelf period konfigurert for circ-deskene, men lar
+             innlånte bøker stå lenger, inntil 28 dager hvis det er plass. For å ikke
+             gjøre dette altfor komplisert skjuler vi bare hentefristen for innlånte bøker.
+-->
+<xsl:if test="/notification_data/request/work_flow_entity/expiration_date != '' and not(contains(/notification_data/phys_item_display/location_name, 'Fjernlån'))">
   <xsl:text>&#10;&#10;@@note_item_held_until@@: </xsl:text>
   <xsl:call-template name="stdDate"><!-- Defined in mailReason.xsl -->
     <xsl:with-param name="value" select="/notification_data/request/work_flow_entity/expiration_date"/>
