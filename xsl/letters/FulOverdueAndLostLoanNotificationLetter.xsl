@@ -103,38 +103,38 @@
     </xsl:call-template>
   </p>
 
-  <xsl:choose>
-    <xsl:when test="notification_type = 'OverdueNotificationType1'">
-      @@inform_you_item_below_type1@@
-    </xsl:when>
-    <xsl:when test="notification_type = 'OverdueNotificationType2'">
-      @@inform_you_item_below_type2@@
-    </xsl:when>
-    <xsl:when test="notification_type = 'OverdueNotificationType3'">
-      @@inform_you_item_below_type3@@
-    </xsl:when>
-    <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType4'">
-      @@inform_you_item_below_type4@@
-    </xsl:when>
-    <xsl:otherwise><!-- This should never happen --></xsl:otherwise>
-  </xsl:choose>
-  <br />
-
-  <xsl:choose>
-    <xsl:when test="notification_type = 'OverdueNotificationType1'">
-      @@decalred_as_lost_type1@@
-    </xsl:when>
-    <xsl:when test="notification_type = 'OverdueNotificationType2'">
-      @@decalred_as_lost_type2@@
-    </xsl:when>
-    <xsl:when test="notification_type = 'OverdueNotificationType3'">
-      @@decalred_as_lost_type3@@
-    </xsl:when>
-    <xsl:when test="notification_type = 'OverdueNotificationType4'">
-      @@decalred_as_lost_type4@@
-    </xsl:when>
-  </xsl:choose>
-  <br />
+  <p>
+    <xsl:choose>
+      <xsl:when test="notification_type = 'OverdueNotificationType1'">
+        @@inform_you_item_below_type1@@
+      </xsl:when>
+      <xsl:when test="notification_type = 'OverdueNotificationType2'">
+        @@inform_you_item_below_type2@@
+      </xsl:when>
+      <xsl:when test="notification_type = 'OverdueNotificationType3'">
+        @@inform_you_item_below_type3@@
+      </xsl:when>
+      <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType4'">
+        @@inform_you_item_below_type4@@
+      </xsl:when>
+      <xsl:otherwise><!-- This should never happen --></xsl:otherwise>
+    </xsl:choose>
+    <br />
+    <xsl:choose>
+      <xsl:when test="notification_type = 'OverdueNotificationType1'">
+        @@decalred_as_lost_type1@@
+      </xsl:when>
+      <xsl:when test="notification_type = 'OverdueNotificationType2'">
+        @@decalred_as_lost_type2@@
+      </xsl:when>
+      <xsl:when test="notification_type = 'OverdueNotificationType3'">
+        @@decalred_as_lost_type3@@
+      </xsl:when>
+      <xsl:when test="notification_type = 'OverdueNotificationType4'">
+        @@decalred_as_lost_type4@@
+      </xsl:when>
+    </xsl:choose>
+  </p>
 
   <table cellpadding="5" cellspacing="0" class="listing" width="100%">
     <xsl:attribute name="style">

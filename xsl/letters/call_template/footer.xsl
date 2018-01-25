@@ -91,7 +91,7 @@
         <xsl:call-template name="myAccount"/>
       </xsl:if>
 
-      <p>
+      <p style="margin-bottom: 0;">
         <xsl:call-template name="multilingual">
           <xsl:with-param name="nb" select="'Vennlig hilsen,'"/>
           <xsl:with-param name="nn" select="'Vennlig helsing,'"/>
