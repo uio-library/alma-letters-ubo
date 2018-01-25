@@ -106,11 +106,6 @@
       <xsl:with-param name="nb" select="'Følgende lån er ikke blitt returnert etter flere påminnelser. Derfor mottar du nå erstatningskrav for disse.'"/>
       <xsl:with-param name="nn" select="'Følgjande lån er ikkje blitt returnert etter fleire påminningar. Derfor mottek du nå erstatningskrav for desse.'"/>
       <xsl:with-param name="en" select="'The following loans have been recalled several times without success. We now consider them lost and invoice you for the replacement costs.'"/>
-      <!--
-      <xsl:with-param name="nb" select="'Bøkene under har blitt innkalt flere ganger uten at de har blitt returnert, og har nå blitt erklært tapt.'"/>
-      <xsl:with-param name="nn" select="'Følgjande dokumentar er innkalt fleire gangar uten at dei har blitt returnert, og har nå blitt erklært tapt.'"/>
-      <xsl:with-param name="en" select="'The documents below has been recalled several times. We regret to inform you that we have now declared them as lost.'"/>
-      -->
     </xsl:call-template>
   </p>
 
@@ -129,10 +124,6 @@
       </xsl:call-template>
     </xsl:if>
   </p>
-
-<!-- TODO: Endre til noe ála «Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyret må betales uansett.  -->
-        <!--This means that a replacement fee and a processing must be paid. Note that if you deliver the document,
-    or replace it with a new copy yourself, the replacement fee will be waived, but the processing fee must be paid in any case.-->
 
   <!-- List of fees -->
 
@@ -174,10 +165,15 @@
     <xsl:value-of select="format-number(sum(display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum), '0.00 NOK')"/>
   </p>
 
+  <!-- Payment details -->
+
   <xsl:call-template name="payment-details"></xsl:call-template><!-- footer.xsl -->
+
+  <!-- Footer -->
 
   <xsl:call-template name="email-footer"><!-- footer.xsl -->
     <xsl:with-param name="show_my_account" select="true()"/>
+    <xsl:with-param name="email" select="'reply'"/>
   </xsl:call-template>
 
 </xsl:template>
