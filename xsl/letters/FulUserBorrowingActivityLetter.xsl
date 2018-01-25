@@ -344,16 +344,12 @@
           <!-- TODO: Endre til noe ála «Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyret må betales uansett.  -->
           <xsl:with-param name="nb" select="'Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyr må betales uansett. '"/>
           <xsl:with-param name="nn" select="'Du må anten levere dokumentet, kjøpe nytt eksemplar eller betale erstatningskrav. '"/>
-          <xsl:with-param name="en" select="'You must either return the document, buy a new one or pay the lost item bill. '"/>
+          <xsl:with-param name="en" select="'You must either return the document, buy a new one or pay the replacement cost. '"/>
         </xsl:call-template>
       </xsl:if>
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
-        <xsl:with-param name="nb" select="'Du kan enten betale i biblioteket eller med '"/>
-        <xsl:with-param name="nn" select="'Du kan enten betale i biblioteket eller med '"/>
-        <xsl:with-param name="en" select="'You can either pay in the library or with '"/>
-      </xsl:call-template>
-      <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
     </p>
+
+    <xsl:call-template name="payment-details"></xsl:call-template><!-- footer.xsl -->
 
   </xsl:if>
 
