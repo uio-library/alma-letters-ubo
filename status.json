@@ -536,9 +536,9 @@
       "modified": "-"
     },
     "xsl/letters/sms/SmsFulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "ce2c67daf0411682b7135bdde568cd69b2ebcd89",
+      "checksum": "0e684cd24a8a06ec5e226a6d1cc3d5a5966bd343",
       "default_checksum": "ce2c67daf0411682b7135bdde568cd69b2ebcd89",
-      "modified": "-"
+      "modified": "16/01/2018"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
       "checksum": "6f1ca1e806d88f3f401a47d65ca3cddd89e40820",
