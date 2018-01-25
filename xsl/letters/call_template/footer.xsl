@@ -77,8 +77,8 @@
 
       <p>
         <xsl:call-template name="multilingual">
-          <xsl:with-param name="nb" select="'Ha en fin dag! Med vennlig hilsen,'"/>
-          <xsl:with-param name="nn" select="'Ha ein fin dag! Beste helsing,'"/>
+          <xsl:with-param name="nb" select="'Vennlig hilsen,'"/>
+          <xsl:with-param name="nn" select="'Vennlig helsing,'"/>
           <xsl:with-param name="en" select="'Kind regards,'"/>
         </xsl:call-template><br />
         <xsl:choose>
