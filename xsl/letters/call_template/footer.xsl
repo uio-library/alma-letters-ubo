@@ -124,4 +124,30 @@
 </xsl:template>
 
 
+<!-- Link to the University of Oslo payment form -->
+<xsl:template name="payment-details">
+  <p>
+    <xsl:for-each select="/notification_data/receivers/receiver">
+      <xsl:choose>
+        <xsl:when test="preferred_language = 'nob' or preferred_language = 'no' or preferred_language = 'nb'">
+          Du kan enten betale i biblioteket eller med
+          <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
+          Hvis du betaler med Epay, legg inn DokumentID i kommentarfeltet.
+        </xsl:when>
+        <xsl:when test="preferred_language = 'nn' or preferred_language = 'nno'">
+          Du kan enten betale i biblioteket eller med
+          <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
+          Om du betalar med Epay, legg inn DokumentID i kommentarfeltet.
+        </xsl:when>
+        <xsl:otherwise>
+          You can either pay in the library or with
+          <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
+          If you use Epay, please include the DocumentID(s) in the comment field.
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+  </p>
+</xsl:template>
+
+
 </xsl:stylesheet>
