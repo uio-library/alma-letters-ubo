@@ -69,21 +69,6 @@
 </xsl:template>
 
 
-<!-- Just the logo -->
-<xsl:template name="logo">
-  <div id="logoContainer" style="margin: 0; padding: 0;">
-    <img src="cid:logo.jpg" alt="logo" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
-  </div>
-</xsl:template>
-
-
-<!-- Logo with bottom border -->
-<xsl:template name="emailLogo">
-  <div style="border-bottom:1px solid #ccc; padding-bottom:1em; margin-bottom: 1.8em;">
-    <xsl:call-template name="logo"/>
-  </div>
-</xsl:template>
-
 <!--
     Template for replacing text when the replace() function is not available.
     Source: https://gist.github.com/ijy/6572481
@@ -117,6 +102,16 @@
 </xsl:template>
 
 
+<!-- Deprecated: the old logo template -->
+<xsl:template name="emailLogo"></xsl:template>
+
+
+<!-- The logo -->
+<xsl:template name="logo">
+  <p id="logoContainer">
+    <img src="cid:logo.jpg" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
+  </p>
+</xsl:template>
 
 
 <!-- Main email template -->
@@ -130,35 +125,43 @@
 }
 .listing th {
     font-family: Arial, Helvetica, sans-serif;font-size: 13px;
-    background-color:#eeeeee;
+    background-color:#F9F9F9;
 }
 .transitLetter th { vertical-align: top; }
 .transitLetter th, .transitLetter td { padding: 3px; }
     </style>
   </head>
-  <body style="background-color: #f0f0f0; margin: 0; padding: 0;">
-<!--
-    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
-      <tr>
-        <td width="100%" valign="top" bgcolor="#eeeeee" style="padding: 18px 0;">
- -->
+  <body style="background-color: #F9F9F9; margin: 0; padding: 0;">
 
-  <div style="background-color: #f0f0f0; padding: .8em 0;">
-          <table style="max-width: 600px; margin: 0 auto;" border="0" cellpadding="0" cellspacing="0" align="center">
-            <tr>
-              <td width="100%" style="margin: 12px 0; padding:22px; font-family: Arial, Helvetica, sans-serif;font-size: 13px; line-height: 20px; color:#4b4d4e;" bgcolor="#ffffff">
+    <div style="background-color: #F9F9F9; padding: .8em 0;">
 
-                <xsl:apply-templates/>
+      <table style="max-width: 600px; margin: 0 auto;" border="0" cellpadding="0" cellspacing="0" align="center">
+        <tbody>
+          <tr>
+            <td width="100%" style="margin: 12px 0;">
 
-              </td>
-            </tr>
-          </table>
-        </div>
-<!--
+              <!-- Begin:CenteredColumn -->
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="padding: 12px 0;">
+                      <xsl:call-template name="logo"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding:22px; font-family: Arial, Helvetica, sans-serif;font-size: 13px; line-height: 20px; color:#4b4d4e; border:1px solid #efefef; border-radius: 3px;" bgcolor="#ffffff">
+                      <xsl:apply-templates/>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End:CenteredColumn -->
 
-        </td>
-      </tr>
-    </table>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </body>
 </html>
