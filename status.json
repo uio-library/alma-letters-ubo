@@ -161,7 +161,7 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "8496dd65af58909b61fd3697a35fe1b04c4be6f3",
+      "checksum": "1b655dbde10606da6e40501307b2d2f615622fa9",
       "default_checksum": "e5c542d23c6d382c2bc8e5ab540e23dd17bffc7e",
       "modified": "25/01/2018"
     },
@@ -471,7 +471,7 @@
       "modified": "-"
     },
     "xsl/letters/call_template/footer.xsl": {
-      "checksum": "913c7d8b3106eaf6c6ef5db43a10b632c8281a6b",
+      "checksum": "50d61af0f73383be2d9918725fa3197611a30238",
       "default_checksum": "51efdaa3307deda01307b3ca1a217bbcaba0f1b1",
       "modified": "25/01/2018"
     },
