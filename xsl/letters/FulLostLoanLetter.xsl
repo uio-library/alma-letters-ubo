@@ -13,16 +13,29 @@
 <xsl:template match="/notification_data">
 
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
+
+  <p style="margin-top: 0;">
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Kjære bruker av biblioteket,'"/>
+      <xsl:with-param name="nn" select="'Kjære brukar av biblioteket,'"/>
+      <xsl:with-param name="en" select="'Dear library patron,'"/>
+    </xsl:call-template>
+  </p>
 
   <p>
-    @@inform_you_item_below@@
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Følgende lån er ikke blitt returnert etter flere påminnelser. Derfor mottar du nå erstatningskrav for dette.'"/>
+      <xsl:with-param name="nn" select="'Følgjande lån er ikkje blitt returnert etter fleire påminningar. Derfor mottek du nå erstatningskrav for dette.'"/>
+      <xsl:with-param name="en" select="'The following loan has been recalled several times without success. We now consider it lost and invoice you for the replacement cost.'"/>
+    </xsl:call-template>
   </p>
 
   <div style="margin: 0.8em 1.2em;">
-    <em>
+    <strong>
       <xsl:value-of select="phys_item_display/title_abcnph"/>
-    </em>
+    </strong>
+    <br />
+    @@barcode@@: <strong><xsl:value-of select="item_loan/barcode"/></strong>
     <br />
     <xsl:if test="item_loan/description != ''">
       @@description@@: <xsl:value-of select="item_loan/description"/>
@@ -33,12 +46,22 @@
     @@loan_date@@: <xsl:value-of select="item_loan/loan_date"/>
     <br />
     @@due_date@@: <xsl:value-of select="item_loan/due_date"/>
-    <br />
-    @@barcode@@: <xsl:value-of select="item_loan/barcode"/>
   </div>
 
   <p>
-    @@charged_with_fines_fees@@
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Merk at vi frafraller erstatningskravet hvis du returnerer det eller kjøper et nytt erstatningseksemplar selv.'"/>
+      <xsl:with-param name="nn" select="'Merk at vi fråfaller erstatningskravet hvis du returnerer det eller kjøper eit nytt erstatningseksemplar sjølv.'"/>
+      <xsl:with-param name="en" select="'Note that we will waive the replacement cost claim if you return the document or a new replacement copy.'"/>
+    </xsl:call-template>
+
+    <xsl:if test="fines_fees_list/user_fines_fees/fine_fee_type = 'LOSTITEMPROCESSFEE'">
+      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:with-param name="nb" select="' Gebyret må betales uansett.'"/>
+        <xsl:with-param name="nn" select="' Gebyret må betalast uansett.'"/>
+        <xsl:with-param name="en" select="' The processing fee must be paid in any case though.'"/>
+      </xsl:call-template>
+    </xsl:if>
   </p>
 
   <table cellpadding="5" cellspacing="0" class="listing" width="100%">
@@ -56,10 +79,26 @@
     </xsl:for-each>
   </table>
 
+  <!-- Sum -->
+
+  <p>
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Sum: '"/>
+      <xsl:with-param name="nn" select="'Sum: '"/>
+      <xsl:with-param name="en" select="'Sum: '"/>
+    </xsl:call-template>
+    <xsl:value-of select="format-number(sum(fines_fees_list/user_fines_fees/fine_fee_ammount/sum), '0.00 NOK')"/>
+  </p>
+
+  <!-- Payment details -->
+
   <xsl:call-template name="payment-details"></xsl:call-template><!-- footer.xsl -->
+
+  <!-- Footer -->
 
   <xsl:call-template name="email-footer"><!-- footer.xsl -->
     <xsl:with-param name="show_my_account" select="true()"/>
+    <xsl:with-param name="email" select="'reply'"/>
   </xsl:call-template>
 
 </xsl:template>
