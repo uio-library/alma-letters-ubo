@@ -91,15 +91,7 @@
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-
-  <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
-      <xsl:with-param name="nb" select="'Kjære bruker av biblioteket,'"/>
-      <xsl:with-param name="nn" select="'Kjære brukar av biblioteket,'"/>
-      <xsl:with-param name="en" select="'Dear library patron,'"/>
-    </xsl:call-template>
-  </p>
+  <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
   <p>
     <xsl:call-template name="multilingual"><!-- footer.xsl -->

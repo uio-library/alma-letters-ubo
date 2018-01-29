@@ -173,16 +173,8 @@
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-  <!-- <xsl:call-template name="toWhomIsConcerned"/> -->
+  <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
-  <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
-      <xsl:with-param name="nb" select="'Kjære bruker av biblioteket,'"/>
-      <xsl:with-param name="nn" select="'Kjære brukar av biblioteket,'"/>
-      <xsl:with-param name="en" select="'Dear library patron,'"/>
-    </xsl:call-template>
-  </p>
   <p>
     <xsl:call-template name="multilingual"><!-- footer.xsl -->
       <xsl:with-param name="nb" select="'Vi ønsker å gjøre det enklest mulig for deg å holde oversikt over dine låneaktiviteter. Under finner du en oversikt over hvilke lån som er registrert på din bruker og forfallsdato for disse. Lån med status «Fornybar» vil bli fornyet automatisk.'"/>

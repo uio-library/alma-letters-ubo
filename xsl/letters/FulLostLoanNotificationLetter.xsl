@@ -12,8 +12,7 @@
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
+  <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
   <p>
     <xsl:choose>
