@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!-- Template to make it easier to insert multilingual text -->
 <xsl:template name="multilingual">
@@ -94,7 +94,7 @@
       <p style="margin-bottom: 0;">
         <xsl:call-template name="multilingual">
           <xsl:with-param name="nb" select="'Vennlig hilsen,'"/>
-          <xsl:with-param name="nn" select="'Vennlig helsing,'"/>
+          <xsl:with-param name="nn" select="'Venleg helsing,'"/>
           <xsl:with-param name="en" select="'Kind regards,'"/>
         </xsl:call-template><br />
         <xsl:choose>
@@ -151,7 +151,7 @@
           Hvis du betaler med Epay, legg inn DokumentID i kommentarfeltet.
         </xsl:when>
         <xsl:when test="preferred_language = 'nn' or preferred_language = 'nno'">
-          Du kan enten betale i biblioteket eller med
+          Du kan anten betale i biblioteket eller med
           <a><xsl:attribute name="href">https://epay.uio.no/pay/shop/order-create.html?projectStepId=5203685</xsl:attribute>Epay</a>.
           Om du betalar med Epay, legg inn DokumentID i kommentarfeltet.
         </xsl:when>
