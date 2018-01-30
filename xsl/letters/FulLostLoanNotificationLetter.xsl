@@ -81,15 +81,19 @@
         @@decalred_as_lost_type1@@
       </xsl:when>
       <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType2' and /notification_data/phys_item_display/item_policy = 'Innlan Utland'">
+        <xsl:attribute name="style">color: #cc0000; padding: 5px 0; border-top: 1px solid #cc0000; border-bottom: 1px solid #cc0000;</xsl:attribute>
         @@decalred_as_lost_type4@@
       </xsl:when>
       <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType2'">
+        <xsl:attribute name="style">color: #cc0000; padding: 5px 0; border-top: 1px solid #cc0000; border-bottom: 1px solid #cc0000;</xsl:attribute>
         @@decalred_as_lost_type2@@
       </xsl:when>
       <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType3'">
+        <xsl:attribute name="style">color: #cc0000; padding: 5px 0; border-top: 1px solid #cc0000; border-bottom: 1px solid #cc0000;</xsl:attribute>
         @@decalred_as_lost_type3@@
       </xsl:when>
       <xsl:when test="/notification_data/notification_type = 'OverdueNotificationType4'">
+        <xsl:attribute name="style">color: #cc0000; padding: 5px 0; border-top: 1px solid #cc0000; border-bottom: 1px solid #cc0000;</xsl:attribute>
         @@decalred_as_lost_type4@@
       </xsl:when>
       <xsl:otherwise><!-- This should never happen --></xsl:otherwise>
