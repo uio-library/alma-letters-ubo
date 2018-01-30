@@ -97,6 +97,12 @@
           </xsl:attribute>
           <xsl:value-of select="item_title"/>
         </td>
+        <td valign="top">
+          <xsl:attribute name="rowspan">
+            <xsl:value-of select="$fees"/>
+          </xsl:attribute>
+          <xsl:value-of select="$loan/physical_item_display_for_printing/library_name"/>
+        </td>
       </xsl:if>
       <td valign="top" style="white-space: nowrap;">
         <!--<xsl:value-of select="fine_fee_type_display"/>--><!-- Denne er ENSPRÅKLIG, så vi kan ikke bruke den. -->
@@ -154,6 +160,7 @@
     <xsl:with-param name="head">
       <column>@@barcode@@</column>
       <column>@@lost_item@@</column>
+      <column>@@library@@</column>
       <column>@@fee_type@@</column>
       <column>@@fee_amount@@</column>
     </xsl:with-param>

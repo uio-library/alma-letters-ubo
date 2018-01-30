@@ -161,9 +161,9 @@
       "modified": "28/06/2016"
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "4e10d74390fbbe7c5654a969c088209802fe58fd",
+      "checksum": "8f86bdd829602b12aa0d7d1fa70c3fa1d639ba59",
       "default_checksum": "e5c542d23c6d382c2bc8e5ab540e23dd17bffc7e",
-      "modified": "29/01/2018"
+      "modified": "30/01/2018"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
       "checksum": "617eef27e445f4af74c56d787d29f062797acf16",
