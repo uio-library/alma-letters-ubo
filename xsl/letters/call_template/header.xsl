@@ -3,6 +3,17 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
+<xsl:template name="dearLibraryPatron">
+  <p style="margin-top: 0;">
+    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:with-param name="nb" select="'Kjære bruker av biblioteket'"/>
+      <xsl:with-param name="nn" select="'Kjære brukar av biblioteket'"/>
+      <xsl:with-param name="en" select="'Dear library patron,'"/>
+    </xsl:call-template>
+  </p>
+</xsl:template>
+
+
 <!-- Heading with logo for outgoing letters -->
 <xsl:template name="head">
 <table cellspacing="0" cellpadding="5" border="0">
