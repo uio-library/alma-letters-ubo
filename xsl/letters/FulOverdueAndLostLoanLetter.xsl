@@ -184,7 +184,31 @@
 
   <!-- Payment details -->
 
-  <xsl:call-template name="payment-details"></xsl:call-template><!-- footer.xsl -->
+  <xsl:variable name="user_group" select="user_for_printing/user_group"/>
+  <xsl:variable name="user_is_library" select="$user_group = '8' or $user_group = '9' or $user_group = '10' or $user_group = '11' or $user_group = '12' or $user_group = '13' or $user_group = '14' or $user_group = '15' or $user_group = '16' or $user_group = '17' or $user_group = '20' or $user_group = '21' or $user_group = '22' or $user_group = '23' or $user_group = '24' or $user_group = '25'"/>
+
+  <xsl:choose>
+    <xsl:when test="$user_is_library">
+      <p>
+        <strong>
+          <xsl:call-template name="multilingual"><!-- footer.xsl -->
+            <xsl:with-param name="nb" select="'Til bibliotek: '"/>
+            <xsl:with-param name="nn" select="'Til bibliotek: '"/>
+            <xsl:with-param name="en" select="'Note for libraries: '"/>
+          </xsl:call-template>
+        </strong>
+        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+          <xsl:with-param name="nb" select="'Du vil motta faktura om 1–2 uker. Vennligst gi beskjed viss boka er på vei, i nærheten eller andre grunner til å utsette/avlyse utsendelse av fakturaen. Den vil bli sendt til '"/>
+          <xsl:with-param name="nn" select="'Du vil motta faktura om 1–2 uker. Vennligst gi beskjed viss boka er på vei, i nærheten eller andre grunner til å utsette/avlyse utsendelse av fakturaen. Den vil bli sendt til '"/>
+          <xsl:with-param name="en" select="'You will receive an invoice in 1–2 weeks. Please let us know if there is any reason to extend the grace period or halt the invoice. It will be sent to '"/>
+        </xsl:call-template>
+        <xsl:value-of select="user_for_printing/email"></xsl:value-of>.
+      </p>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:call-template name="payment-details"></xsl:call-template><!-- footer.xsl -->
+    </xsl:otherwise>
+  </xsl:choose>
 
   <!-- Footer -->
 
