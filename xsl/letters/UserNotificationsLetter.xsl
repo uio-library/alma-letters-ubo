@@ -31,19 +31,31 @@
     </xsl:when>
 
     <!-- Forklarende kommentar -->
-    <xsl:when test="notification_type = 'EN_HELT_ANNEN_TING' ">
+    <xsl:when test="notification_type = 'Informasjon'">
       <p>
         <xsl:call-template name="multilingual"><!-- footer.xsl -->
-          <xsl:with-param name="nb" select="'Melding på bokmål'"/>
-          <xsl:with-param name="nn" select="'Melding på nynorsk'"/>
-          <xsl:with-param name="en" select="'Melding på engelsk'"/>
+          <xsl:with-param name="nb" select="'Nå blir lånene dine fornyet automatisk!
+Lån fra Universitetsbibliotekets samlinger blir automatisk fornyet hvis det ikke er venteliste.
+'"/>
+          <xsl:with-param name="nn" select="'No blir låna dine fornya automatisk!
+Lån frå Universitetsbiblioteket si samling blir automatisk fornya visst det ikkje er venteliste.
+'"/>
+          <xsl:with-param name="en" select="'Loans from our collections are now automatically renewed when there is no waiting list.
+If we ask you to return a book, that means someone else has requested it, and it needs to be returned. If you return by the due date, you won’t need to pay late fee of 250 NOK.
+'"/>
         </xsl:call-template>
       </p>
       <p>
         <xsl:call-template name="multilingual"><!-- footer.xsl -->
-          <xsl:with-param name="nb" select="'Melding på bokmål'"/>
-          <xsl:with-param name="nn" select="'Melding på nynorsk'"/>
-          <xsl:with-param name="en" select="'Melding på engelsk'"/>
+          <xsl:with-param name="nb" select="'Får du beskjed om å levere boka betyr det at noen venter på den.
+Lever innen fristen, og du slipper å betale gebyr på kr 250 per bok.
+Alt om de nye lånereglene finner du her: http://www.ub.uio.no/bruk/alt-om-lan/
+'"/>
+          <xsl:with-param name="nn" select="'Får du beskjed om å levere boka betyr det at nokon ventar på den.
+Lever innan fristen, og du slepp å betale gebyr på kr 250 per bok.
+Alt om dei nye lånereglane finn du her: http://www.ub.uio.no/bruk/alt-om-lan/
+'"/>
+          <xsl:with-param name="en" select="'For more info, please see our library regulations: http://www.ub.uio.no/english/using/about-borrowing/'"/>
         </xsl:call-template>
       </p>
     </xsl:when>

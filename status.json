@@ -461,9 +461,9 @@
       "modified": "28/04/2016"
     },
     "xsl/letters/UserNotificationsLetter.xsl": {
-      "checksum": "cf25939271cc2de91064341ca0876c2987fbf7e4",
+      "checksum": "8600232d0d8c08068730e667804ec23b723891aa",
       "default_checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
-      "modified": "30/01/2018"
+      "modified": "06/02/2018"
     },
     "xsl/letters/WebhookFailureLetter.xsl": {
       "checksum": "c6a5521ad686c32bc9b1cfc9cc1924e603a9b907",
