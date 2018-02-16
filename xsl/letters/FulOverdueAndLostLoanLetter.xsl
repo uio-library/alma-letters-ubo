@@ -149,6 +149,13 @@
 <!-- The letter itself -->
 
 <xsl:template match="/">
+
+  <xsl:if test="count(/notification_data/display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees) = 0">
+    <!-- For lærerbiblioteket har vi erstatningskrav på 0 kr, men vi vil ikke
+         sende ut erstatningskrav på 0,-, så vi avslutter her. -->
+    <xsl:message terminate="yes">No fees, exiting.</xsl:message>
+  </xsl:if>
+
   <xsl:call-template name="email-template"/><!-- header.xsl -->
 </xsl:template>
 

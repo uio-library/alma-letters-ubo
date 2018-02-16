@@ -221,6 +221,10 @@ Eksempel på en meta-tagg: `<meta name="libnummer" content="103 0310"/>`.
 
 * Documentation: https://knowledge.exlibrisgroup.com/Alma/Product_Documentation/Alma_Online_Help_%28English%29/Administration/Configuring_General_Alma_Functions/Configuring_Alma_Letters
 
+* To prevent a letter from being sent:
+  `<xsl:message terminate="yes">Optional explanation</xsl:message>`
+  (see `FulCancelRequestLetter.xsl` for an example).
+
 * Footer: The link targets for "Contact us" and "My account" are set as
   `email_my_account` and `email_contact_us` in the General Customer Parameters
   mapping table (Administration > General Configuration > Configuration Menu >
