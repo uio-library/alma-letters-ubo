@@ -40,6 +40,13 @@
     </xsl:for-each>
   </table>
 
+  <xsl:if test="notification_data/fine_fee_notification_fee_amount/sum !=''">
+    <p>
+      <b>@@fine_fee_notification_fee@@ </b>
+      <xsl:value-of select="notification_data/fine_fee_notification_fee_amount/sum"/>&#160;<xsl:value-of select="notification_data/fine_fee_notification_fee_amount/currency"/>&#160;<xsl:value-of select="ff"/>
+    </p>
+  </xsl:if>
+
   <p>
     <b>@@please_settle@@</b>
   </p>

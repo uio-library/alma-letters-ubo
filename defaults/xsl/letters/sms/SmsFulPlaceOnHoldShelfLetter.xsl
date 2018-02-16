@@ -2,9 +2,23 @@
 <xsl:include href="smsRecordTitle.xsl" />
  <xsl:template match="/">
 
-<xsl:value-of select="notification_data/receivers/receiver/user_phone/phone"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.
-@@can_picked_at@@  <xsl:value-of select="notification_data/request/delivery_address"/>:
-<xsl:value-of select="notification_data/phys_item_display/title" />
-@@note_item_held_until@@ <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
+<xsl:value-of select="notification_data/receivers/receiver/user_phone/phone"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.: <xsl:for-each select="notification_data/user_for_printing/identifiers/code_value"><xsl:if test="code = 'Primary Identifier'"><xsl:value-of select="value" /></xsl:if></xsl:for-each>. 
+@@can_picked_at@@  <xsl:choose>
+  <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
+
+    <xsl:value-of select="/notification_data/phys_item_display/owning_library_name"/>:
+  </xsl:when>
+<xsl:otherwise>
+<xsl:value-of select="notification_data/request/delivery_address"/>:
+</xsl:otherwise>
+</xsl:choose><xsl:value-of select="notification_data/phys_item_display/title" />
+<xsl:choose>
+<xsl:when test= "/notification_data/request/work_flow_entity/expiration_date !=''">
+@@note_item_held_until@@: <xsl:value-of select="/notification_data/request/work_flow_entity/expiration_date"/>.</xsl:when>
+<!-- <xsl:otherwise>
+@@note_item_held_until@@: 7 Dager / Days.
+</xsl:otherwise>
+-->
+</xsl:choose>
  </xsl:template>
 </xsl:stylesheet>

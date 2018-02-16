@@ -75,54 +75,73 @@
          <b>
           @@licenseCode@@:
          </b>
-          <xsl:value-of select="notification_data/license/code" />
+         <xsl:value-of select="notification_data/license/code" />
          <br />
          <b>
           @@licenseType@@:
          </b>
-          <xsl:value-of select="notification_data/license/type" />
+         <xsl:value-of select="notification_data/license/type" />
          <br />
          <b>
           @@status@@:
          </b>
-          <xsl:value-of select="notification_data/license/status" />
+         <xsl:value-of select="notification_data/license/status" />
          <br />
          <b>
           @@signedBy@@:
          </b>
-          <xsl:value-of select="notification_data/license/license_signedby" />
+         <xsl:value-of select="notification_data/license/license_signedby" />
          <br />
          <b>
           @@SignedOn@@:
          </b>
-          <xsl:value-of select="notification_data/license/license_signed" />
+         <xsl:value-of select="notification_data/license/license_signed" />
          <br />
          <b>
           @@startDate@@:
          </b>
-          <xsl:value-of select="notification_data/license/license_begins" />
+         <xsl:value-of select="notification_data/license/license_begins" />
          <b>
           -
          </b>
-          <xsl:value-of select="notification_data/license/license_ends" />
+         <xsl:value-of select="notification_data/license/license_ends" />
          <br />
 
          <b>
           @@licensor@@:
          </b>
-          <xsl:value-of select="notification_data/license/licensor" />
+         <xsl:value-of select="notification_data/license/licensor" />
          <br />
          <b>
           @@URI@@:
          </b>
-          <xsl:value-of select="notification_data/license/uri" />
+         <xsl:value-of select="notification_data/license/uri" />
          <br />
          <br />
          <br />
         </td>
        </tr>
+       <tr>
+        <td style="font-size:18px;padding: 0px 0 0px 0px;">
+         <b>@@group_settings@@:
+         </b>
+        </td>
+       </tr>
+       <br />
        <xsl:for-each
-        select="notification_data/list/term_license">
+        select="notification_data/group_settings/license_af_management">
+        <tr>
+         <td style="font-size:18px">
+          <b>@@group_name@@:</b>
+          <xsl:value-of select="group_name" />
+         </td>
+        </tr>
+       </xsl:for-each>
+       <br />
+       <br />
+
+
+       <xsl:for-each select="notification_data/list/term_license">
         <tr>
          <td style="font-size:18px;padding: 0px 0 5px 10px;">
           <b>@@licenseTerms@@:
@@ -164,62 +183,78 @@
          <xsl:for-each
           select="notification_data/neg_license_rep_list/neg_license_rep">
           <div>
-          <h4>
-          <strong>@@negotiation@@</strong>
-          <br />
-         </h4>
-          <b>
-           @@member_name@@
-          </b>
-          <xsl:value-of select="neg_license/member_name" />
-
-          <br />
-          <b>
-           @@price@@:
-          </b>
-          <xsl:value-of select="neg_license/price" />
-          &#xA0;
-          <xsl:value-of select="neg_license/currency" />
-          <br />
-          <b>
-           @@start_date@@:
-          </b>
-          <xsl:value-of select="neg_license/start_date" />
-          <br />
-          <b>
-           @@end_date@@:
-          </b>
-          <xsl:value-of select="neg_license/end_date" />
-          <br />
-          <h4>
-           <strong>@@contact_people@@</strong>
-           <br />
-          </h4>
-          <xsl:for-each select="negotiation_contact_ui/negotiation_contact_ui">
+           <h4>
+            <strong>@@negotiation@@</strong>
+            <br />
+           </h4>
            <b>
-            @@fisrt_name@@:
+            @@member_name@@
            </b>
-           <xsl:value-of select="first_name" />
+           <xsl:value-of select="neg_license/member_name" />
 
+           <br />
+
+
+           <xsl:choose>
+            <xsl:when test="/notification_data/license/multiyear='true' ">
+
+             <b>@@price_per_year@@:</b>
+             <xsl:value-of select="neg_license/price_per_year" />
+             &#xA0;
+             <xsl:value-of select="neg_license/currency" />
+             <br />
+             <b>@@price_increase@@:</b>
+             <xsl:value-of select="neg_license/price_increase" />
+            </xsl:when>
+            <xsl:otherwise>
+             <b>@@price@@:</b>
+             <xsl:value-of select="neg_license/price" />
+             &#xA0;
+             <xsl:value-of select="neg_license/currency" />
+            </xsl:otherwise>
+           </xsl:choose>
+           <!-- &#xA0;
+           <xsl:value-of select="neg_license/currency" /> -->
            <br />
            <b>
-            @@last_name@@:
+            @@start_date@@:
            </b>
-           <xsl:value-of select="last_name" />
-
+           <xsl:value-of select="neg_license/start_date" />
            <br />
            <b>
-            @@email@@:
+            @@end_date@@:
            </b>
-           <xsl:value-of select="mail" />
-
+           <xsl:value-of select="neg_license/end_date" />
            <br />
-           <br />
+           <h4>
+            <strong>@@contact_people@@</strong>
+            <br />
+           </h4>
+           <xsl:for-each select="negotiation_contact_ui/negotiation_contact_ui">
+            <b>
+             @@fisrt_name@@:
+            </b>
+            <xsl:value-of select="first_name" />
+
+            <br />
+            <b>
+             @@last_name@@:
+            </b>
+            <xsl:value-of select="last_name" />
+
+            <br />
+            <b>
+             @@email@@:
+            </b>
+            <xsl:value-of select="mail" />
+
+            <br />
+            <br />
 
 
-          </xsl:for-each>
+           </xsl:for-each>
 
-                                      </div>
+          </div>
          </xsl:for-each>
         </td>
        </tr>

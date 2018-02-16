@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:date="http://exslt.org/dates-and-times"
@@ -11,10 +10,10 @@
 
 <xsl:value-of select="/notification_data/receivers/receiver/user_phone/phone"/>
 <xsl:text> : </xsl:text>
-<xsl:value-of select="/notification_data/organization_unit/name"/><xsl:text>.&#10;</xsl:text>
+<xsl:value-of select="/notification_data/organization_unit/name"/>
+<xsl:text>.&#10;</xsl:text><!-- Line feed -->
 
 <!-- Klar til henting ved ... -->
-
 <xsl:text>@@can_picked_at@@ </xsl:text>
 <xsl:choose>
   <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">

@@ -31,17 +31,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <div class="messageArea">
     <div class="messageBody">
      <table cellspacing="0" cellpadding="5" border="0">
-      <tr>
-       <td>@@following_item_requested_on@@ <xsl:value-of select="notification_data/request/create_date"/>, @@can_picked_at@@ <xsl:value-of select="notification_data/request/assigned_unit_name"/> @@circulation_desk@@.</td>
+       <tr>
+       <td>@@following_item_requested_on@@ <xsl:value-of select="notification_data/request/create_date"/>, @@can_picked_at@@ 
+       <xsl:choose><xsl:when test="notification_data/outgoing/format='PHYSICAL_NON_RETURNABLE'">
+       <xsl:value-of select="notification_data/phys_item_display/owning_library_name"/></xsl:when>
+       <xsl:otherwise><xsl:value-of select="notification_data/request/assigned_unit_name"/></xsl:otherwise>
+       
+       </xsl:choose> -  @@circulation_desk@@.</td>
       </tr>
-
-      <xsl:if test="notification_data/request/work_flow_entity/expiration_date">
+<xsl:choose>
+      <xsl:when test="notification_data/request/work_flow_entity/expiration_date">
       <tr>
        <td>
         @@note_item_held_until@@ <xsl:value-of select="notification_data/request/work_flow_entity/expiration_date"/>.
         </td>
       </tr>
-       </xsl:if>
+       </xsl:when>
+<!--
+                                              <xsl:otherwise><tr><td>
+        @@note_item_held_until@@: 7 dager / days.
+        </td></tr></xsl:otherwise> 
+--> 
+</xsl:choose>
       <tr>
        <td><xsl:call-template name="recordTitle" /> <!-- recordTitle.xsl --></td>
       </tr>

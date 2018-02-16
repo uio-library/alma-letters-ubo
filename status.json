@@ -121,8 +121,8 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulFinesFeesNotificationLetter.xsl": {
-      "checksum": "50d5973562378e505845e8413f77cab4b59adb59",
-      "default_checksum": "ed0da098fcc0039d214720925acb04307fc616ee",
+      "checksum": "625f5de7a59a33106366d4f2622afcfdcc217d04",
+      "default_checksum": "bcb9c55f510dbf07d2851f07826aa8b650e5dbfe",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulIncomingSlipLetter.xsl": {
@@ -182,7 +182,7 @@
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
       "checksum": "f53931f185e4f335e646718e41938805d4923060",
-      "default_checksum": "64027d2c923880f837eb31e8bda4b48c8455f454",
+      "default_checksum": "9dd033c82382a97d7d21fbff45056a5013b57779",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
@@ -316,9 +316,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/LicensePrintoutLetter.xsl": {
-      "checksum": "72bfdcaf2eda409ca8fe7de3c8464107a7d07078",
-      "default_checksum": "72bfdcaf2eda409ca8fe7de3c8464107a7d07078",
-      "modified": "-"
+      "checksum": "5a8d916b9397df9d4e0652a9c5fbd6e3715277fc",
+      "default_checksum": "c0be6f521ef968505b224c8639efd715eacb78e0",
+      "modified": "16/02/2018"
     },
     "xsl/letters/LoginUsingOneTimeTokenLetter.xsl": {
       "checksum": "dcb7e3353300d665384680778971699b774baa28",
@@ -406,9 +406,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/ResourceSharingReceiveSlipLetter.xsl": {
-      "checksum": "2eb27c5c39a419356507df4cfbdfbc4bff9582a9",
-      "default_checksum": "2eb27c5c39a419356507df4cfbdfbc4bff9582a9",
-      "modified": "-"
+      "checksum": "b4f03fdca2a8c8c82f62874d0fd955cfcbe47db1",
+      "default_checksum": "0faca6e910196a28d0e310c480a0559f16663167",
+      "modified": "16/02/2018"
     },
     "xsl/letters/ResourceSharingReturnSlipLetter.xsl": {
       "checksum": "015b0b66c087d55898d47a8d9386e5fe4d4cc353",
@@ -541,8 +541,8 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "e8c1f3b2e5c069aa878aa03b3c85b48e0f94a563",
-      "default_checksum": "fde1eebd8c0c425f7e57001cb508f6f1fe668912",
+      "checksum": "bea8028d8a778023f01627177e8be808b9d4d561",
+      "default_checksum": "272a776b7fb8aaac1df369fd8ab4398d8bb8a708",
       "modified": "16/02/2018"
     },
     "xsl/letters/sms/SmsFulShortenedDueDateLetter.xsl": {

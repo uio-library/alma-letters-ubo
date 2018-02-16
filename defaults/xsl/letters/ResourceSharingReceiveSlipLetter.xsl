@@ -26,12 +26,14 @@
         <!-- style.xsl -->
        </xsl:attribute>
 
-       <tr>
-         <td>
-          <br/>
-          <b>@@item_barcode@@: </b> <img src="Barcode.png" alt="Barcode" />
-         </td>
-       </tr>
+       <xsl:if test="notification_data/barcode !=''">
+        <tr>
+          <td>
+           <br/>
+           <b>@@item_barcode@@: </b> <img src="Barcode.png" alt="Barcode" />
+          </td>
+        </tr>
+       </xsl:if>
 
        <tr>
          <td>
@@ -94,6 +96,22 @@
          <xsl:value-of select="notification_data/request/shipping_cost/sum"/>&#160;<xsl:value-of select="notification_data/request/shipping_cost/currency"/>
         </td>
        </tr>
+       <xsl:if test="notification_data/citation_id !=''">
+
+       <tr>
+        <td>
+         <br/>
+         <b> @@reading_list@@: </b>
+         <xsl:value-of select="notification_data/reading_list_name" /> (<xsl:value-of select="notification_data/reading_list_code" />)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <b> @@citation_id@@: </b>
+         <xsl:value-of select="notification_data/citation_id" />
+        </td>
+       </tr>
+       </xsl:if>
 
       </table>
 
