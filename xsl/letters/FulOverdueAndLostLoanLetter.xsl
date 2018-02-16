@@ -23,7 +23,7 @@
     -->
     <xsl:value-of select="title"/>
     <xsl:if test="material_type = 'ISSUE'">
-        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
             <xsl:with-param name="nb" select="', hefte'"/>
             <xsl:with-param name="nn" select="', hefte'"/>
             <xsl:with-param name="en" select="', issue'"/>
@@ -75,14 +75,14 @@
 <xsl:template name="formatFineFeeType">
   <xsl:choose>
     <xsl:when test="fine_fee_type = 'LOSTITEMPROCESSFEE'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Gebyr'"/>
         <xsl:with-param name="nn" select="'Gebyr'"/>
         <xsl:with-param name="en" select="'Fee'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="fine_fee_type = 'LOSTITEMREPLACEMENTFEE'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Erstatningskrav'"/>
         <xsl:with-param name="nn" select="'Erstatningskrav'"/>
         <xsl:with-param name="en" select="'Replacement cost'"/>
@@ -164,7 +164,7 @@
   <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Følgende lån er ikke blitt returnert etter flere påminnelser. Du mottar derfor nå erstatningskrav for disse.'"/>
       <xsl:with-param name="nn" select="'Følgjande lån er ikkje blitt returnert etter fleire påminningar. Du mottek difor nå erstatningskrav for desse.'"/>
       <xsl:with-param name="en" select="'The following loans have been recalled several times without success. We now consider them lost and invoice you for the replacement costs.'"/>
@@ -172,14 +172,14 @@
   </p>
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Merk at vi frafraller erstatningskravet for et dokument hvis du returnerer det eller kjøper et nytt erstatningseksemplar selv.'"/>
       <xsl:with-param name="nn" select="'Merk at vi fråfaller erstatningskravet for eit dokument hvis du returnerer det eller kjøper eit nytt erstatningseksemplar sjølv.'"/>
       <xsl:with-param name="en" select="'Note that we will waive the replacement cost claim for a document if you return the document or a new replacement copy.'"/>
     </xsl:call-template>
 
     <xsl:if test="/notification_data/display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_type = 'LOSTITEMPROCESSFEE'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="' Gebyr må betales uansett.'"/>
         <xsl:with-param name="nn" select="' Gebyr må betalast uansett.'"/>
         <xsl:with-param name="en" select="' Fees must be paid in any case though.'"/>
@@ -207,7 +207,7 @@
   <!-- Sum -->
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Sum: '"/>
       <xsl:with-param name="nn" select="'Sum: '"/>
       <xsl:with-param name="en" select="'Sum: '"/>
@@ -224,13 +224,13 @@
     <xsl:when test="$user_is_library">
       <p>
         <strong>
-          <xsl:call-template name="multilingual"><!-- footer.xsl -->
+          <xsl:call-template name="multilingual"><!-- header.xsl -->
             <xsl:with-param name="nb" select="'Til bibliotek: '"/>
             <xsl:with-param name="nn" select="'Til bibliotek: '"/>
             <xsl:with-param name="en" select="'Note for libraries: '"/>
           </xsl:call-template>
         </strong>
-        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Du vil motta faktura om 1–2 uker. Vennligst gi beskjed viss boka er på vei, i nærheten eller andre grunner til å utsette/avlyse utsendelse av fakturaen. Den vil bli sendt til '"/>
           <xsl:with-param name="nn" select="'Du vil motta faktura om 1–2 uker. Vennligst gi beskjed viss boka er på vei, i nærheten eller andre grunner til å utsette/avlyse utsendelse av fakturaen. Den vil bli sendt til '"/>
           <xsl:with-param name="en" select="'You will receive an invoice in 1–2 weeks. Please let us know if there is any reason to extend the grace period or halt the invoice. It will be sent to '"/>

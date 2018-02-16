@@ -47,14 +47,14 @@
 <xsl:template name="formatProcessStatus">
   <xsl:choose>
     <xsl:when test="process_status = 'LOST'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Må leveres snarest, erstatningskrav sendt'"/>
         <xsl:with-param name="nn" select="'Må leverast snarast, erstatningskrav sendt'"/>
         <xsl:with-param name="en" select="'Must be returned immediately, lost item bill sent'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="process_status = 'RECALL'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Andre lånere venter'"/>
         <xsl:with-param name="nn" select="'Andre lånere venter'"/>
         <xsl:with-param name="en" select="'Other patrons are waiting'"/>
@@ -62,21 +62,21 @@
     </xsl:when>
     <xsl:when test="starts-with(barcode, 'RS-')">
       <!-- Innlån utland -->
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Kontakt biblioteket'"/>
         <xsl:with-param name="nn" select="'Kontakt biblioteket'"/>
         <xsl:with-param name="en" select="'Contact the library'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="contains(location_name, 'Fjernlån')">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Fornybar'"/><!-- Fornyes i Oria? -->
         <xsl:with-param name="nn" select="'Fornybar'"/>
         <xsl:with-param name="en" select="'Renewable'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:otherwise>
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Fornybar'"/><!-- Fornyes automatisk? -->
         <xsl:with-param name="nn" select="'Fornybar'"/>
         <xsl:with-param name="en" select="'Renewable'"/><!-- Renewed automatically -->
@@ -93,21 +93,21 @@
 <xsl:template name="formatFineFeeType">
   <xsl:choose>
     <xsl:when test="fine_fee_type = 'LOSTITEMPROCESSFEE'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Gebyr'"/>
         <xsl:with-param name="nn" select="'Gebyr'"/>
         <xsl:with-param name="en" select="'Processing fee'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="fine_fee_type = 'LOSTITEMREPLACEMENTFEE'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Erstatningskrav'"/>
         <xsl:with-param name="nn" select="'Erstatningskrav'"/>
         <xsl:with-param name="en" select="'Lost item bill'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:otherwise>
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Annet'"/>
         <xsl:with-param name="nn" select="'Anna'"/>
         <xsl:with-param name="en" select="'Other'"/>
@@ -176,7 +176,7 @@
   <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Vi ønsker å gjøre det enklest mulig for deg å holde oversikt over dine låneaktiviteter. Under finner du en oversikt over hvilke lån som er registrert på din bruker og forfallsdato for disse. Lån med status «Fornybar» vil bli fornyet automatisk.'"/>
       <xsl:with-param name="nn" select="'Vi ynskjer å gjere det enklast mogleg for deg å halde oversikt over låneaktivitetane dine!'"/>
       <xsl:with-param name="en" select="'Please find below a list of your current loans at the University of Oslo Library and their due dates. Loans marked as ‘Renewable’ will be renewed automatically.'"/>
@@ -223,7 +223,7 @@
     </xsl:when>
     <xsl:otherwise>
       <em>
-        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Du har ingen ingen aktive lån'"/>
           <xsl:with-param name="nn" select="'Du har ingen ingen aktive lån'"/>
           <xsl:with-param name="en" select="'You have no active loans'"/>
@@ -300,7 +300,7 @@
       <xsl:if test="$remainderFee != 0.0">
         <tr>
           <td>
-            <xsl:call-template name="multilingual"><!-- footer.xsl -->
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'Eldre gebyrer'"/>
               <xsl:with-param name="nn" select="'Eldre gebyr'"/>
               <xsl:with-param name="en" select="'Older fees'"/>
@@ -322,7 +322,7 @@
 
     <!-- Omsider: Grand totale! -->
     <p>
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Sum: '"/>
         <xsl:with-param name="nn" select="'Sum: '"/>
         <xsl:with-param name="en" select="'Sum: '"/>
@@ -332,7 +332,7 @@
 
     <p>
       <xsl:if test="item_loans/item_loan/process_status = 'LOST' or overdue_item_loans/item_loan/process_status = 'LOST'">
-        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <!-- TODO: Endre til noe ála «Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyret må betales uansett.  -->
           <xsl:with-param name="nb" select="'Merk at erstatningskrav frafaller hvis du leverer dokumentet eller kjøper nytt eksemplar. Gebyr må betales uansett. '"/>
           <xsl:with-param name="nn" select="'Du må anten levere dokumentet, kjøpe nytt eksemplar eller betale erstatningskrav. '"/>

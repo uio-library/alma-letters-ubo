@@ -33,7 +33,7 @@
     <!-- Forklarende kommentar -->
     <xsl:when test="notification_type = 'Informasjon'">
       <p>
-        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Nå blir lånene dine fornyet automatisk!
 Lån fra Universitetsbibliotekets samlinger blir automatisk fornyet hvis det ikke er venteliste.
 '"/>
@@ -46,7 +46,7 @@ If we ask you to return a book, that means someone else has requested it, and it
         </xsl:call-template>
       </p>
       <p>
-        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Får du beskjed om å levere boka betyr det at noen venter på den.
 Lever innen fristen, og du slipper å betale gebyr på kr 250 per bok.
 Alt om de nye lånereglene finner du her: http://www.ub.uio.no/bruk/alt-om-lan/

@@ -2,21 +2,6 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<!-- Template to make it easier to insert multilingual text -->
-<xsl:template name="multilingual">
-  <xsl:param name="en" />
-  <xsl:param name="nn" />
-  <xsl:param name="nb" />
-  <xsl:choose>
-    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob'"><xsl:value-of select="$nb"/></xsl:when>
-    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'"><xsl:value-of select="$nb"/></xsl:when>
-    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nb'"><xsl:value-of select="$nb"/></xsl:when>
-    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nn'"><xsl:value-of select="$nn"/></xsl:when>
-    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nno'"><xsl:value-of select="$nn"/></xsl:when>
-    <xsl:otherwise><xsl:value-of select="$en"/></xsl:otherwise>
-  </xsl:choose>
-</xsl:template>
-
 
 <xsl:template name="salutation"/>
 
@@ -34,7 +19,7 @@
 
     <xsl:for-each select="/notification_data/organization_unit">
       <p>
-        <xsl:call-template name="multilingual">
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Har du spørsmål eller trenger hjelp? '"/>
           <xsl:with-param name="nn" select="'Har du spørsmål eller treng hjelp? '"/>
           <xsl:with-param name="en" select="'Do you have questions or need help? '"/>
@@ -44,7 +29,7 @@
 
           <!-- Rreply to this email -->
           <xsl:when test="$email = 'reply'">
-            <xsl:call-template name="multilingual">
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
               <xsl:with-param name="nn" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
               <xsl:with-param name="en" select="'Please reply to this e-mail, and we will help you as best we can.'"/>
@@ -53,7 +38,7 @@
 
           <!-- Bruk epost-adresse fra parameter hvis gitt -->
           <xsl:when test="$email != ''">
-            <xsl:call-template name="multilingual">
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'Ikke nøl med å kontakte oss på '"/>
               <xsl:with-param name="nn" select="'Ikkje nøl med å kontakte oss på '"/>
               <xsl:with-param name="en" select="'Please contact us at '"/>
@@ -66,7 +51,7 @@
 
           <!-- Bruk epost-adresse til notification_data/organization_unit hvis tilgjengelig -->
           <xsl:when test="email/email != ''">
-            <xsl:call-template name="multilingual">
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'Ikke nøl med å kontakte oss på '"/>
               <xsl:with-param name="nn" select="'Ikkje nøl med å kontakte oss på '"/>
               <xsl:with-param name="en" select="'Please contact us at '"/>
@@ -92,7 +77,7 @@
       </xsl:if>
 
       <p style="margin-bottom: 0;">
-        <xsl:call-template name="multilingual">
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Vennlig hilsen,'"/>
           <xsl:with-param name="nn" select="'Venleg helsing,'"/>
           <xsl:with-param name="en" select="'Kind regards,'"/>
@@ -104,7 +89,7 @@
           <xsl:otherwise>
             <!-- Until someone can fix the missing space in "UiO,Universitetsbiblioteket" we set the name manually here -->
             <!--<xsl:value-of select="name"/>-->
-            <xsl:call-template name="multilingual">
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'UiO Universitetsbiblioteket'"/>
               <xsl:with-param name="nn" select="'UiO Universitetsbiblioteket'"/>
               <xsl:with-param name="en" select="'University of Oslo Library'"/>
@@ -125,13 +110,13 @@
 
 <xsl:template name="myAccount">
   <p id="myAccount">
-    <xsl:call-template name="multilingual">
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Besøk '"/>
       <xsl:with-param name="nn" select="'Besøk '"/>
       <xsl:with-param name="en" select="'Visit '"/>
     </xsl:call-template>
     <a><xsl:attribute name="href">@@email_my_account@@</xsl:attribute>@@my_account@@</a>
-    <xsl:call-template name="multilingual">
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="' for å administrere dine lån og bestillinger.'"/>
       <xsl:with-param name="nn" select="' for å administrere dine lån og bestillingar.'"/>
       <xsl:with-param name="en" select="' to manage your loans and orders.'"/>

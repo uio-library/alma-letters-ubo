@@ -3,7 +3,7 @@
  <xsl:template match="/">
 
 <xsl:value-of select="notification_data/receivers/sms_receiver/phone_list_str"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.
-<xsl:call-template name="multilingual"><!-- footer.xsl -->
+<xsl:call-template name="multilingual"><!-- header.xsl -->
   <xsl:with-param name="nb" select="'Hei, har du glemt oss?
 
 Du har materiale som skulle vært levert.

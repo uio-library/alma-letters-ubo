@@ -3,9 +3,31 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
+<!--
+  Template to make it easier to insert multilingual text.
+  Depends on: -
+-->
+<xsl:template name="multilingual">
+  <xsl:param name="en" />
+  <xsl:param name="nn" />
+  <xsl:param name="nb" />
+  <xsl:choose>
+    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob'"><xsl:value-of select="$nb"/></xsl:when>
+    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'no'"><xsl:value-of select="$nb"/></xsl:when>
+    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nb'"><xsl:value-of select="$nb"/></xsl:when>
+    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nn'"><xsl:value-of select="$nn"/></xsl:when>
+    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nno'"><xsl:value-of select="$nn"/></xsl:when>
+    <xsl:otherwise><xsl:value-of select="$en"/></xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<!--
+  Semi-formal greeting.
+  Depends on: multilingual
+  -->
 <xsl:template name="dearLibraryPatron">
   <p style="margin-top: 0;">
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Kjære bruker av biblioteket'"/>
       <xsl:with-param name="nn" select="'Kjære brukar av biblioteket'"/>
       <xsl:with-param name="en" select="'Dear library patron,'"/>
@@ -14,7 +36,9 @@
 </xsl:template>
 
 
-<!-- Heading with logo for outgoing letters -->
+<!--
+  Heading with logo for outgoing letters
+-->
 <xsl:template name="head">
 <table cellspacing="0" cellpadding="5" border="0">
  <xsl:attribute name="style">
@@ -53,6 +77,7 @@
 </table>
 
 </xsl:template>
+
 
 <!-- Heading without logo for internal letters -->
 <xsl:template name="headWithoutLogo">

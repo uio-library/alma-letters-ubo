@@ -25,7 +25,7 @@
  <xsl:variable name="group" select="item_loan/user_group"/>
   <xsl:choose>
     <xsl:when test="item_loan/process_status = 'RECALL'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Andre lånere venter. Boken må leveres snarest'"/>
         <xsl:with-param name="nn" select="'Andre lånarar ventar. Må leverast snarast'"/>
         <xsl:with-param name="en" select="'Other patrons are waiting. Please return as soon as possible'"/>
@@ -33,28 +33,28 @@
     </xsl:when>
     <xsl:when test="contains(item_loan/barcode, 'RS-')">
       <!-- Innlån utland -->
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Lånt inn fra utlandet. Ta kontakt med biblioteket for å fornye'"/>
         <xsl:with-param name="nn" select="'Lånt inn frå utlandet. Ta kontakt med biblioteket for å fornye'"/>
         <xsl:with-param name="en" select="'Borrowed from an library abroad. Contact your library to renew'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="contains(item_loan/location_name, 'Fjernlån')">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Lånt inn fra et annet bibliotek. Logg inn i Oria for å fornye '"/><!-- Fornyes i Oria? -->
         <xsl:with-param name="nn" select="'Lånt inn frå eit anna bibliotek. Logg inn i Oria for å fornye '"/>
         <xsl:with-param name="en" select="'Borrowed from another library. Sign in to Oria to renew '"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="$group = '8' or $group = '9' or $group = '10' or $group = '11' or $group = '12' or $group = '13' or $group = '14' or $group = '15' or $group = '16' or $group = '17' or $group = '20' or $group = '21' or $group = '22' or $group = '23' or $group = '24' or $group = '25'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Logg på Oria for å se om boka kan fornyes'"/>
         <xsl:with-param name="nn" select="'Logg på Oria for å se om boka kan fornyes'"/>
         <xsl:with-param name="en" select="'Sign in to Oria for renewal'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:otherwise>
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Kan ikke fornyes og må leveres'"/><!-- Fornyes automatisk? -->
         <xsl:with-param name="nn" select="'Kan ikkje fornyast og må leverast'"/>
         <xsl:with-param name="en" select="'Cannot be renewed. Please return as soon as possible'"/><!-- Renewed automatically -->

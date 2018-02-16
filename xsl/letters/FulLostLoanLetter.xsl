@@ -15,7 +15,7 @@
   <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Følgende lån er ikke blitt returnert etter flere påminnelser. Derfor mottar du nå erstatningskrav for dette.'"/>
       <xsl:with-param name="nn" select="'Følgjande lån er ikkje blitt returnert etter fleire påminningar. Derfor mottek du nå erstatningskrav for dette.'"/>
       <xsl:with-param name="en" select="'The following loan has been recalled several times without success. We now consider it lost and invoice you for the replacement cost.'"/>
@@ -41,14 +41,14 @@
   </div>
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Merk at vi frafraller erstatningskravet hvis du returnerer det eller kjøper et nytt erstatningseksemplar selv.'"/>
       <xsl:with-param name="nn" select="'Merk at vi fråfaller erstatningskravet hvis du returnerer det eller kjøper eit nytt erstatningseksemplar sjølv.'"/>
       <xsl:with-param name="en" select="'Note that we will waive the replacement cost claim if you return the document or a new replacement copy.'"/>
     </xsl:call-template>
 
     <xsl:if test="fines_fees_list/user_fines_fees/fine_fee_type = 'LOSTITEMPROCESSFEE'">
-      <xsl:call-template name="multilingual"><!-- footer.xsl -->
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="' Gebyret må betales uansett.'"/>
         <xsl:with-param name="nn" select="' Gebyret må betalast uansett.'"/>
         <xsl:with-param name="en" select="' The processing fee must be paid in any case though.'"/>
@@ -74,7 +74,7 @@
   <!-- Sum -->
 
   <p>
-    <xsl:call-template name="multilingual"><!-- footer.xsl -->
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Sum: '"/>
       <xsl:with-param name="nn" select="'Sum: '"/>
       <xsl:with-param name="en" select="'Sum: '"/>
