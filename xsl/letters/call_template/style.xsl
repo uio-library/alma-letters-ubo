@@ -23,7 +23,7 @@
         .transitLetter th, .transitLetter td { padding: 3px; }
       </style>
     </head>
-    <body style="background-color: #F9F9F9; margin: 0; padding: 0;">
+    <body bgcolor="#F9F9F9" style="background-color: #F9F9F9; margin: 0; padding: 0;">
       <div style="background-color: #F9F9F9; padding: .8em 0;">
         <table style="max-width: 600px; margin: 0 auto;" border="0" cellpadding="0" cellspacing="0" align="center">
           <tbody>
@@ -34,10 +34,8 @@
                 <table>
                   <tbody>
                     <tr>
-                      <td style="padding: 12px 0;">
-                        <p id="logoContainer">
-                          <img src="cid:logo.jpg" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
-                        </p>
+                      <td style="padding-bottom: 12px;">
+                        <img src="cid:logo.jpg" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
                       </td>
                     </tr>
                     <tr>
@@ -107,9 +105,6 @@ h2 {
 h3 {
    margin: 1em 0 .2em 0;
    padding: 0;
-}
-#logoContainer img {
-    max-width: 100%;
 }
 .messageBody, #contactUs, #myAccount {
     padding: 0 1.8em;
