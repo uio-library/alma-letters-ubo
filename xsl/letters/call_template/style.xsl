@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:date="http://exslt.org/dates-and-times"
+  xmlns:ext="http://exslt.org/common"
+  extension-element-prefixes="date ext">
 
 
 <!-- Our main email template -->
@@ -32,11 +35,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <tbody>
                     <tr>
                       <td style="padding: 12px 0;">
-                        <xsl:template name="logo">
-                            <p id="logoContainer">
-                              <img src="cid:logo.jpg" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
-                            </p>
-                          </xsl:template>
+                        <p id="logoContainer">
+                          <img src="cid:logo.jpg" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
+                        </p>
                       </td>
                     </tr>
                     <tr>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:date="http://exslt.org/dates-and-times"
+  xmlns:ext="http://exslt.org/common"
+  extension-element-prefixes="date ext">
   <xsl:template name="senderReceiver">
     <table border="0" cellpadding="5" cellspacing="0" width="100%" style="font-family: Arial, Helvetica, sans-serif;font-size: 13px; color:#5F6163;">
       <tr>

@@ -3,7 +3,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:date="http://exslt.org/dates-and-times"
   xmlns:ext="http://exslt.org/common"
-  extension-element-prefixes="date">
+  extension-element-prefixes="date ext">
 <xsl:include href="header.xsl" />
 <xsl:template match="/">
 
