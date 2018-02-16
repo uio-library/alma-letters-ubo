@@ -3,13 +3,23 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
+<!-- *DEPRECATED* -->
 <xsl:template name="salutation"/>
 
 
-<xsl:template name="lastFooter">
-</xsl:template>
+<!-- *DEPRECATED* -->
+<xsl:template name="lastFooter"/>
 
 
+<!-- *DEPRECATED* -->
+<xsl:template name="contactUs"/>
+
+
+<!--
+  Email footer
+
+  Depends on: multilingual, myAccount
+-->
 <xsl:template name="email-footer">
   <xsl:param name="show_my_account" />
   <xsl:param name="email" />
@@ -103,11 +113,11 @@
 </xsl:template>
 
 
-<xsl:template name="contactUs">
-  <!-- -->
-</xsl:template>
+<!--
+  Provides a link to my account
 
-
+  Depends on: multilingual
+-->
 <xsl:template name="myAccount">
   <p id="myAccount">
     <xsl:call-template name="multilingual"><!-- header.xsl -->
@@ -125,7 +135,11 @@
 </xsl:template>
 
 
-<!-- Link to the University of Oslo payment form -->
+<!--
+  Provides a link to the University of Oslo payment form
+
+  Depends on: (none)
+-->
 <xsl:template name="payment-details">
   <p>
     <xsl:for-each select="/notification_data/receivers/receiver">

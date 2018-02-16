@@ -50,7 +50,7 @@
             <!-- =====================================================================================
                  Merk: Krever malen "isoDate" fra mailReason.xsl
                  ===================================================================================== -->
-            <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
+            <xsl:call-template name="isoDate"><!-- header.xsl -->
               <xsl:with-param name="value" select="/notification_data/general_data/current_date"/>
             </xsl:call-template>
             <!-- ===================================================================================== -->

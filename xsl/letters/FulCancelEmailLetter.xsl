@@ -27,7 +27,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </xsl:when>
       <xsl:otherwise>
         @@requested@@
-        <xsl:call-template name="stdDate"><!-- Defined in mailReason.xsl -->
+        <xsl:call-template name="stdDate"><!-- header.xsl -->
           <xsl:with-param name="value" select="request_sending_date"/>
         </xsl:call-template>:
       </xsl:otherwise>

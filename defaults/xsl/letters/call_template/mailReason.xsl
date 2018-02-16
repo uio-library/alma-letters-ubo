@@ -4,7 +4,7 @@
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
-
+<!-- DEPRECATED -->
 <xsl:template name="toWhomIsConcerned">
 <table cellspacing="0" cellpadding="5" border="0">
  <tr>

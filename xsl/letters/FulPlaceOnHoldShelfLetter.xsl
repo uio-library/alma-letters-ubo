@@ -52,7 +52,7 @@
        =========================================================== -->
   <xsl:if test="/notification_data/request/work_flow_entity/expiration_date">
     <p>
-      <xsl:call-template name="pickupNumberWithLabel"/><!-- mailReason.xsl -->
+      <xsl:call-template name="pickupNumberWithLabel"/><!-- header.xsl -->
     </p>
   </xsl:if>
   <!-- ===========================================================
@@ -79,7 +79,7 @@
   <xsl:if test="/notification_data/request/work_flow_entity/expiration_date != '' and not(contains(/notification_data/phys_item_display/location_name, 'Fjernlån'))">
     <p>
       @@note_item_held_until@@
-      <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
+      <xsl:call-template name="stdDate"><!-- header.xsl -->
         <xsl:with-param name="value" select="request/work_flow_entity/expiration_date"/>
       </xsl:call-template>.
     </p>

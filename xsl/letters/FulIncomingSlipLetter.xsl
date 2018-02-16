@@ -45,7 +45,7 @@
           <!-- style.xsl -->
         </xsl:attribute>
 
-        <xsl:call-template name="headWithoutLogo"/><!-- Defined in mailReason.xsl -->
+        <xsl:call-template name="headWithoutLogo"/><!-- header.xsl -->
 
         <div class="messageArea">
           <div class="messageBody">
@@ -79,13 +79,13 @@
                 <tr>
                   <td>Request created:</td>
                   <td>
-                    <xsl:call-template name="stdDate"><!-- Defined in mailReason.xsl -->
+                    <xsl:call-template name="stdDate"><!-- header.xsl -->
                       <xsl:with-param name="value" select="notification_data/incoming_request/create_date_str"/>
                     </xsl:call-template>
                     <xsl:if test="notification_data/incoming_request/create_date_str != notification_data/incoming_request/modification_date_str">&#160;(updated
-                      <xsl:call-template name="stdDate">
-                        <!-- mailReason.xsl -->
-                        <xsl:with-param name="value" select="notification_data/incoming_request/modification_date_str"/></xsl:call-template>)
+                      <xsl:call-template name="stdDate"><!-- header.xsl -->
+                        <xsl:with-param name="value" select="notification_data/incoming_request/modification_date_str"/>
+                      </xsl:call-template>)
                     </xsl:if>
                   </td>
                 </tr>

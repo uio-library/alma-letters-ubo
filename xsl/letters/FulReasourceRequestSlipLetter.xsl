@@ -66,7 +66,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:otherwise>
               <!-- Reminder to self: html2ps støtter font size > 7, så 12 blir faktisk større enn 7. -->
               <font size="12"><b>
-                <xsl:call-template name="pickupNumber"/><!-- mailReason.xsl -->
+                <xsl:call-template name="pickupNumber"/><!-- header.xsl -->
               </b></font>
 
             </xsl:otherwise>
@@ -97,7 +97,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <!-- =====================================================================================
                Merk: Krever malen "isoDate" fra mailReason.xsl
                ===================================================================================== -->
-          <xsl:call-template name="isoDate"><!-- mailReason.xsl -->
+          <xsl:call-template name="isoDate"><!-- header.xsl -->
             <xsl:with-param name="value" select="notification_data/request/create_date"/>
           </xsl:call-template>
           &#160;<xsl:value-of select="notification_data/request/create_time"/>

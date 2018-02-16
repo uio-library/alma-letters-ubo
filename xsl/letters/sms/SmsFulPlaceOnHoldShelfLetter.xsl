@@ -1,6 +1,10 @@
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:include href="smsRecordTitle.xsl" />
-<xsl:include href="mailReason.xsl" />
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:date="http://exslt.org/dates-and-times"
+  xmlns:ext="http://exslt.org/common"
+  extension-element-prefixes="date">
+<xsl:include href="header.xsl" />
 <xsl:template match="/">
 
 <!-- Header -->
@@ -35,9 +39,9 @@
 <!-- Hentenummer eller "Hentes i skranken" -->
 
 <xsl:if test="/notification_data/request/work_flow_entity/expiration_date">
-  <xsl:call-template name="pickupNumberWithLabel">
+  <xsl:call-template name="pickupNumberWithLabel"><!-- header.xsl -->
     <xsl:with-param name="lcfirst" select="true()" />
-  </xsl:call-template><!-- Defined in mailReason.xsl -->
+  </xsl:call-template>
 </xsl:if>
 
 <xsl:text>:&#10;&#10; </xsl:text><!-- Line breaks and indent -->
@@ -59,7 +63,7 @@
 -->
 <xsl:if test="/notification_data/request/work_flow_entity/expiration_date != '' and not(contains(/notification_data/phys_item_display/location_name, 'Fjernlån'))">
   <xsl:text>&#10;&#10;@@note_item_held_until@@: </xsl:text>
-  <xsl:call-template name="stdDate"><!-- Defined in mailReason.xsl -->
+  <xsl:call-template name="stdDate"><!-- header.xsl -->
     <xsl:with-param name="value" select="/notification_data/request/work_flow_entity/expiration_date"/>
   </xsl:call-template>
   <xsl:text>.</xsl:text>

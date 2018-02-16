@@ -27,7 +27,7 @@
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-    @@we_sent@@ <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
+    @@we_sent@@ <xsl:call-template name="stdDate"><!-- header.xsl -->
       <xsl:with-param name="value" select="/notification_data/request/create_date"/>
     </xsl:call-template>:
   </p>
@@ -37,7 +37,7 @@
   </p>
 
   <p>
-    @@due_date@@: <xsl:call-template name="stdDate"><!-- Defined in header.xsl -->
+    @@due_date@@: <xsl:call-template name="stdDate"><!-- header.xsl -->
       <xsl:with-param name="value" select="/notification_data/due_date"/>
     </xsl:call-template>
   </p>

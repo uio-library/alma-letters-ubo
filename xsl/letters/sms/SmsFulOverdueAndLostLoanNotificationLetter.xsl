@@ -1,6 +1,11 @@
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:include href="smsRecordTitle.xsl" />
- <xsl:template match="/">
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:date="http://exslt.org/dates-and-times"
+  xmlns:ext="http://exslt.org/common"
+  extension-element-prefixes="date">
+<xsl:include href="header.xsl" />
+<xsl:template match="/">
 
 <xsl:value-of select="notification_data/receivers/sms_receiver/phone_list_str"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.
 <xsl:call-template name="multilingual"><!-- header.xsl -->
@@ -26,5 +31,5 @@ Check your mail or uio.oria.no for more info.
 
 Regards Library'"/>
 </xsl:call-template>
- </xsl:template>
+</xsl:template>
 </xsl:stylesheet>
