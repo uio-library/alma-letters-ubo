@@ -9,7 +9,7 @@
 <xsl:include href="recordTitle.xsl" />
 
 <xsl:template match="/">
-  <xsl:call-template name="email-template"/><!-- header.xsl -->
+  <xsl:call-template name="emailTemplate"/><!-- style.xsl -->
 </xsl:template>
 
 <!-- Using the string-replace method defined in header.xsl to remove the 'Home Address:' prefix from the address -->

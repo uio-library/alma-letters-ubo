@@ -8,7 +8,7 @@
 <xsl:include href="recordTitle.xsl" />
 
 <xsl:template match="/">
-  <xsl:call-template name="email-template"/><!-- header.xsl -->
+  <xsl:call-template name="emailTemplate"/><!-- style.xsl -->
 </xsl:template>
 
 <xsl:template match="/notification_data">

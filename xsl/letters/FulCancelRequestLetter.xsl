@@ -17,7 +17,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:message terminate="yes">Converted to Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
   </xsl:if>
 
-  <xsl:call-template name="email-template"/><!-- header.xsl -->
+  <xsl:call-template name="emailTemplate"/><!-- style.xsl -->
 </xsl:template>
 
 <xsl:template match="/notification_data">

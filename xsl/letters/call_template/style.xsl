@@ -2,6 +2,62 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+
+<!-- Our main email template -->
+<xsl:template name="emailTemplate">
+  <html>
+    <head>
+      <style>
+        .listing td {
+          border-bottom: 1px solid #eee;
+          font-family: Arial, Helvetica, sans-serif;font-size: 13px; line-height: 20px; color:#4b4d4e;
+        }
+        .listing th {
+          font-family: Arial, Helvetica, sans-serif;font-size: 13px;
+          background-color:#F9F9F9;
+        }
+        .transitLetter th { vertical-align: top; }
+        .transitLetter th, .transitLetter td { padding: 3px; }
+      </style>
+    </head>
+    <body style="background-color: #F9F9F9; margin: 0; padding: 0;">
+      <div style="background-color: #F9F9F9; padding: .8em 0;">
+        <table style="max-width: 600px; margin: 0 auto;" border="0" cellpadding="0" cellspacing="0" align="center">
+          <tbody>
+            <tr>
+              <td width="100%" style="margin: 12px 0;">
+
+                <!-- Begin:CenteredColumn -->
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="padding: 12px 0;">
+                        <xsl:template name="logo">
+                            <p id="logoContainer">
+                              <img src="cid:logo.jpg" class="logo" style="max-width: 100%; margin: 0; padding: 0;" />
+                            </p>
+                          </xsl:template>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:22px; font-family: Arial, Helvetica, sans-serif;font-size: 13px; line-height: 20px; color:#4b4d4e; border:1px solid #efefef; border-radius: 3px;" bgcolor="#ffffff">
+                        <xsl:apply-templates/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End:CenteredColumn -->
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </body>
+  </html>
+</xsl:template>
+
+
 <xsl:template name="generalStyle">
 <style>
 
