@@ -13,6 +13,29 @@
 
 <!-- Templates -->
 
+<xsl:template name="formatItemTitle">
+    <!--
+      Template to format the title of an item. For issues, we need to
+      include item_description. At some point, we might move this template to
+      one of the call_template files to re-use it!
+
+      Depends on: multilingual
+    -->
+    <xsl:value-of select="title"/>
+    <xsl:if test="material_type = 'ISSUE'">
+        <xsl:call-template name="multilingual"><!-- footer.xsl -->
+            <xsl:with-param name="nb" select="', hefte'"/>
+            <xsl:with-param name="nn" select="', hefte'"/>
+            <xsl:with-param name="en" select="', issue'"/>
+        </xsl:call-template>
+    </xsl:if>
+    <xsl:if test="item_description != ''">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="item_description"/><!-- Such as "53(2008) 11" -->
+    </xsl:if>
+</xsl:template>
+
+
 <!--
   Template to standardize table styling without too much inline code.
   The main reason this template exists is because many email clients ignore
@@ -95,7 +118,10 @@
           <xsl:attribute name="rowspan">
             <xsl:value-of select="$fees"/>
           </xsl:attribute>
-          <xsl:value-of select="item_title"/>
+          <xsl:for-each select="$loan/item_loan">
+            <!-- Not really a loop, we use for-each just to change scope to item_loan -->
+            <xsl:call-template name="formatItemTitle"></xsl:call-template>
+          </xsl:for-each>
         </td>
         <td valign="top">
           <xsl:attribute name="rowspan">
@@ -105,7 +131,7 @@
         </td>
       </xsl:if>
       <td valign="top" style="white-space: nowrap;">
-        <!--<xsl:value-of select="fine_fee_type_display"/>--><!-- Denne er ENSPRÅKLIG, så vi kan ikke bruke den. -->
+        <!-- Note: we're not using "fine_fee_type_display" since it's monolingual -->
         <xsl:call-template name="formatFineFeeType"></xsl:call-template>
       </td>
       <!--
