@@ -29,8 +29,7 @@
   </p>
 
   <p class="sincerely">
-    Kjærlig hilsen,<br />
-    Alma
+    Vennlig hilsen Alma
   </p>
 
 </xsl:template>

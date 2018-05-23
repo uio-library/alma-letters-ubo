@@ -6,9 +6,9 @@
       "modified": "-"
     },
     "xsl/letters/AnalyticsLetter.xsl": {
-      "checksum": "052f917bc859448787f79e7d7d31467796d44204",
+      "checksum": "11def4663f209990d9ee558fb48ccc86d110dbd0",
       "default_checksum": "a4cd8311927f62d72c1b16d5db21565c7daf9ec2",
-      "modified": "16/02/2018"
+      "modified": "03/05/2018"
     },
     "xsl/letters/BorrowerOverdueEmailLetter.xsl": {
       "checksum": "2d1655b998007e0bd1b149f96b678b77334bfc61",
@@ -565,5 +565,6 @@
       "default_checksum": "204f78a7bf76cdffe4e1167a5d73135144d7d853",
       "modified": "16/02/2018"
     }
-  }
+  },
+  "version": 1
 }
