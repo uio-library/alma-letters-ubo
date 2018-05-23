@@ -75,9 +75,11 @@
       <xsl:if test="description != ''">
         <br />(<xsl:value-of select="description"/>)
       </xsl:if>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
       <xsl:call-template name="formatProcessStatus"></xsl:call-template>
+      <br /><!-- linjeskift for RT -->
     </td>
   </tr>
 </xsl:template>

@@ -56,6 +56,7 @@
         <xsl:for-each select="ext:node-set($head)/column">
           <th align="left" style="background: #F9F9F9; border-bottom: 1px solid #ccc;">
             <xsl:value-of select="."/>
+            <br /><!-- linjeskift for RT og andre systemer som konverterer eposten til ren tekst -->
           </th>
         </xsl:for-each>
       </tr>
@@ -113,6 +114,7 @@
             <xsl:value-of select="$fees"/>
           </xsl:attribute>
           <xsl:value-of select="$loan/item_loan/barcode"/>
+          <br /><!-- linjeskift for RT -->
         </td>
         <td valign="top">
           <xsl:attribute name="rowspan">
@@ -122,17 +124,20 @@
             <!-- Not really a loop, we use for-each just to change scope to item_loan -->
             <xsl:call-template name="formatItemTitle"></xsl:call-template>
           </xsl:for-each>
+          <br /><!-- linjeskift for RT -->
         </td>
         <td valign="top">
           <xsl:attribute name="rowspan">
             <xsl:value-of select="$fees"/>
           </xsl:attribute>
           <xsl:value-of select="$loan/physical_item_display_for_printing/library_name"/>
+          <br /><!-- linjeskift for RT -->
         </td>
       </xsl:if>
       <td valign="top" style="white-space: nowrap;">
         <!-- Note: we're not using "fine_fee_type_display" since it's monolingual -->
         <xsl:call-template name="formatFineFeeType"></xsl:call-template>
+        <br /><!-- linjeskift for RT -->
       </td>
       <!--
       <td valign="top" style="white-space: nowrap;">
@@ -140,6 +145,7 @@
       </td>-->
       <td valign="top" style="text-align: right; white-space: nowrap;">
         <xsl:value-of select="fine_fee_ammount/sum"/>,-
+        <br /><!-- linjeskift for RT -->
       </td>
     </tr>
   </xsl:for-each>

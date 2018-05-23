@@ -129,14 +129,20 @@
       <xsl:if test="description != ''">
         <br />(<xsl:value-of select="description"/>)
       </xsl:if>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top" style="white-space: nowrap;">
       <xsl:call-template name="checkDueDate">
         <xsl:with-param name="dueDate" select="due_date"/>
       </xsl:call-template>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
       <xsl:call-template name="formatProcessStatus"></xsl:call-template>
+      <br /><!-- linjeskift for RT -->
+    </td>
+    <td valign="top">
+      <br /><!-- linjeskift for RT -->
     </td>
   </tr>
 </xsl:template>
@@ -151,15 +157,22 @@
   <tr>
     <td valign="top" style="white-space: nowrap;">
       <xsl:call-template name="formatFineFeeType"></xsl:call-template>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
       <xsl:value-of select="item_title"/>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top" style="white-space: nowrap;">
       <xsl:value-of select="translate(status_date,'/','.')"/>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top" style="text-align: right; white-space: nowrap;">
       <xsl:value-of select="fine_fee_ammount/sum"/>,-
+      <br /><!-- linjeskift for RT -->
+    </td>
+    <td valign="top">
+      <br /><!-- linjeskift for RT -->
     </td>
   </tr>
 </xsl:template>
@@ -196,12 +209,18 @@
         <tr>
           <th align="left">
             @@title@@
+            <br /><!-- linjeskift for RT -->
           </th>
           <th align="left">
             @@due_date@@
+            <br /><!-- linjeskift for RT -->
           </th>
           <th align="left">
             Status
+            <br /><!-- linjeskift for RT -->
+          </th>
+          <th>
+            <br /><!-- linjeskift for RT -->
           </th>
         </tr>
 
@@ -244,15 +263,19 @@
       <tr>
         <th align="left">
           Type
+          <br /><!-- linjeskift for RT -->
         </th>
         <th align="left">
           @@title@@
+          <br /><!-- linjeskift for RT -->
         </th>
         <th align="left">
           @@due_date@@
+          <br /><!-- linjeskift for RT -->
         </th>
         <th align="left">
           @@fine@@
+          <br /><!-- linjeskift for RT -->
         </th>
       </tr>
       <xsl:for-each select="loans_by_library/library_loans_for_display/item_loans/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees">

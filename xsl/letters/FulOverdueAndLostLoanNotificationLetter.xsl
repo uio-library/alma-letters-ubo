@@ -75,12 +75,18 @@
       <xsl:if test="description != ''">
         <br />(<xsl:value-of select="description"/>)
       </xsl:if>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
       <xsl:value-of select="item_loan/barcode"/>
+      <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
       <xsl:call-template name="formatProcessStatus"></xsl:call-template>
+      <br /><!-- linjeskift for RT -->
+    </td>
+    <td valign="top">
+      <br /><!-- linjeskift for RT -->
     </td>
   </tr>
 </xsl:template>
@@ -134,12 +140,18 @@
     <tr>
       <th align="left">
         @@lost_item@@
+        <br /><!-- linjeskift for RT -->
       </th>
       <th align="left">
         @@barcode@@
+        <br /><!-- linjeskift for RT -->
       </th>
       <th align="left">
         Status
+        <br /><!-- linjeskift for RT -->
+      </th>
+      <th>
+        <br /><!-- linjeskift for RT -->
       </th>
     </tr>
 
