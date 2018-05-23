@@ -20,10 +20,9 @@
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
-
   <xsl:choose>
 
-    <!-- Your password has been changed to: -->
+    <!-- Melding om passordendring (ikke i bruk) -->
     <xsl:when test="notification_type = 'NOTIFY_PASSWORD_CHANGE' ">
       <h3>@@Line_1@@</h3>
       <p>
@@ -34,7 +33,24 @@
       </p>
     </xsl:when>
 
-    <!-- Forklarende kommentar -->
+    <!-- Melding til tidligere studenter -->
+    <xsl:when test="notification_type = 'ferdigstudert'">
+      <p>
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
+
+          <xsl:with-param name="nb" select="'Du får denne mailen fordi du har lånt bøker fra Universitetsbiblioteket i Oslo, og brukerkontoen din viser at du ikke er registrert student og betalt for vår 2018. Brukeren din i biblioteksystemet har dermed fått en utløpsdato. Hvis du ikke er aktiv student lenger trenger vi å oppdatere informasjonen din knyttet til pålogging i oria, studentkort ol. Fint om du tar en tur innom skranken neste gang du er i biblioteket for å se på dette hvis du fortsatt ønsker å bruke Universitetsbiblioteket.'"/>
+
+          <xsl:with-param name="nn" select="'Du får denne e-posten då du har lånt bøker frå Universitetsbiblioteket i Oslo, og brukarkontoen din viser at du ikkje er registrert student for våren 2018.
+Din brukarkonto i biblioteksystemet vil difor snart gå ut på dato. Om du ikkje er aktiv student lenger treng vi å oppdatere informasjonen din knytt til pålogging i Oria, studentkort o.l.
+Om du fortsatt ynskjer å bruke Universitetsbiblioteket, er det fint om du tar ein tur innom oss i skranken neste gong du er i biblioteket.'"/>
+
+          <xsl:with-param name="en" select="'You have received this email because you are registered with loans in our library system, and your user account has an imminent expiry date. If you are no longer an active student, we need to update your information regarding login to Oria, student card, etc. If you wish to continue using the University of Oslo Library’s services, please stop by a circulation desk the next time you visit the library so we can update your details.'"/>
+
+        </xsl:call-template>
+      </p>
+    </xsl:when>
+
+    <!-- Informasjonsmelding om automatisk fornying av lån. -->
     <xsl:when test="notification_type = 'Informasjon'">
       <p>
         <xsl:call-template name="multilingual"><!-- header.xsl -->
@@ -63,7 +79,6 @@ Alt om dei nye lånereglane finn du her: http://www.ub.uio.no/bruk/alt-om-lan/
         </xsl:call-template>
       </p>
     </xsl:when>
-
 
   </xsl:choose>
 
