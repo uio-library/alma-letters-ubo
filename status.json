@@ -181,9 +181,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "f53931f185e4f335e646718e41938805d4923060",
+      "checksum": "3f0454f3a82d5705044d4aa75570b7573b39c09e",
       "default_checksum": "9dd033c82382a97d7d21fbff45056a5013b57779",
-      "modified": "16/02/2018"
+      "modified": "23/05/2018"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
       "checksum": "261b90cc6265aa5db8b061b88ac12b1fa0376f0f",
@@ -471,9 +471,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/call_template/footer.xsl": {
-      "checksum": "791e39ad7d011566c8b62407999bf5077dc21ea1",
+      "checksum": "e39af0e5bbf409fcf9b8ee360862c78138570cac",
       "default_checksum": "51efdaa3307deda01307b3ca1a217bbcaba0f1b1",
-      "modified": "16/02/2018"
+      "modified": "23/05/2018"
     },
     "xsl/letters/call_template/header.xsl": {
       "checksum": "880fc9075f7bef7b1b7f3c02144b6501ce243346",

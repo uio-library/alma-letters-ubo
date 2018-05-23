@@ -93,14 +93,12 @@
     <xsl:when test="/notification_data/request/delivery_address != ''">
       <xsl:call-template name="email-footer">
         <xsl:with-param name="sender_name" select="/notification_data/request/delivery_address" />
-        <xsl:with-param name="email" select="'oria-hjelp@ub.uio.no'" />
       </xsl:call-template><!-- footer.xsl -->
     </xsl:when>
     <xsl:otherwise>
       <!-- Physical non-returnable -->
       <xsl:call-template name="email-footer">
         <xsl:with-param name="sender_name" select="/notification_data/phys_item_display/owning_library_name" />
-        <xsl:with-param name="email" select="'oria-hjelp@ub.uio.no'" />
       </xsl:call-template><!-- footer.xsl -->
     </xsl:otherwise>
   </xsl:choose>

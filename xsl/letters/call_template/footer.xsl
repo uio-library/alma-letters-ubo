@@ -40,16 +40,7 @@
 
         <xsl:choose>
 
-          <!-- Rreply to this email -->
-          <xsl:when test="$email = 'reply'">
-            <xsl:call-template name="multilingual"><!-- header.xsl -->
-              <xsl:with-param name="nb" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
-              <xsl:with-param name="nn" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
-              <xsl:with-param name="en" select="'Please reply to this e-mail, and we will help you as best we can.'"/>
-            </xsl:call-template>
-          </xsl:when>
-
-          <!-- Bruk epost-adresse fra parameter hvis gitt -->
+          <!-- Bruk en bestemt epost-adresse fra parameter hvis gitt -->
           <xsl:when test="$email != ''">
             <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'Ikke nøl med å kontakte oss på '"/>
@@ -62,26 +53,15 @@
             </a>.
           </xsl:when>
 
-          <!-- Bruk epost-adresse til notification_data/organization_unit hvis tilgjengelig -->
-          <xsl:when test="email/email != ''">
-            <xsl:call-template name="multilingual"><!-- header.xsl -->
-              <xsl:with-param name="nb" select="'Ikke nøl med å kontakte oss på '"/>
-              <xsl:with-param name="nn" select="'Ikkje nøl med å kontakte oss på '"/>
-              <xsl:with-param name="en" select="'Please contact us at '"/>
-            </xsl:call-template>
-            <a>
-              <xsl:attribute name="href"><xsl:value-of select="email/email"/></xsl:attribute>
-              <xsl:value-of select="email/email"/>
-            </a>.
-          </xsl:when>
-
-          <!-- Alternativt: Bruk standard-URL -->
+          <!-- Reply to this email -->
           <xsl:otherwise>
-            <a>
-              <xsl:attribute name="href">@@email_contact_us@@</xsl:attribute>
-              @@contact_us@@
-            </a>.
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
+              <xsl:with-param name="nb" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
+              <xsl:with-param name="nn" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
+              <xsl:with-param name="en" select="'Please reply to this e-mail, and we will help you as best we can.'"/>
+            </xsl:call-template>
           </xsl:otherwise>
+
         </xsl:choose>
       </p>
 
