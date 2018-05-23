@@ -30,7 +30,7 @@
         <xsl:with-param name="en" select="'Other patrons are waiting. Please return as soon as possible'"/>
       </xsl:call-template>
     </xsl:when>
-     <xsl:when test="contains(physical_item/barcode, 'RS-')">
+     <xsl:when test="starts-with(physical_item/barcode, 'RS-')">
       <!-- Innlån utland -->
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Lånt inn fra utlandet. Ta kontakt med oss for å fornye'"/>
