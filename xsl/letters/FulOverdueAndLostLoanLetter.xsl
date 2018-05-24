@@ -256,7 +256,6 @@
 
   <xsl:call-template name="email-footer"><!-- footer.xsl -->
     <xsl:with-param name="show_my_account" select="true()"/>
-    <xsl:with-param name="email" select="'reply'"/>
   </xsl:call-template>
 
 </xsl:template>
