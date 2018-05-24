@@ -103,6 +103,10 @@
 <xsl:template name="formatLoan">
   <tr>
     <td valign="top">
+      <xsl:value-of select="barcode"/>
+      <br /><!-- linjeskift for RT -->
+    </td>
+    <td valign="top">
       <xsl:value-of select="title"/>
       <xsl:if test="description != ''">
         <br />(<xsl:value-of select="description"/>)
@@ -140,6 +144,13 @@
 
   <xsl:call-template name="defaultTableStyle"><!-- header.xsl -->
     <xsl:with-param name="head">
+      <column>
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
+          <xsl:with-param name="nb" select="'DokumentID'"/>
+          <xsl:with-param name="nn" select="'DokumentID'"/>
+          <xsl:with-param name="en" select="'DocumentID'"/>
+        </xsl:call-template>
+      </column>
       <column>@@title@@</column>
       <column>Status</column>
       <column><!-- Tom kolonne for RT --></column>
