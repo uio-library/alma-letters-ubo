@@ -352,7 +352,7 @@
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Totalt kr '"/>
         <xsl:with-param name="nn" select="'Totalt kr '"/>
-        <xsl:with-param name="en" select="'Totalt kr '"/>
+        <xsl:with-param name="en" select="'Sum: NOK '"/>
       </xsl:call-template>
       <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
         <xsl:with-param name="value" select="translate(substring-before(total_fee,'00 NOK'), ',. ', '')"/>

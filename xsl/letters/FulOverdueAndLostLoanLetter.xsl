@@ -218,7 +218,7 @@
     <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Totalt kr '"/>
       <xsl:with-param name="nn" select="'Totalt kr '"/>
-      <xsl:with-param name="en" select="'Totalt kr '"/>
+      <xsl:with-param name="en" select="'Sum: NOK '"/>
     </xsl:call-template>
     <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
       <xsl:with-param name="value" select="sum(display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum)"/>
