@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:date="http://exslt.org/dates-and-times"
+  xmlns:ext="http://exslt.org/common"
   extension-element-prefixes="date">
 <xsl:include href="header.xsl"/>
 <xsl:include href="senderReceiver.xsl"/>
@@ -9,6 +10,37 @@
 <xsl:include href="footer.xsl"/>
 <xsl:include href="style.xsl"/>
 <xsl:include href="recordTitle.xsl"/>
+
+
+<!--
+  Template to standardize table styling without too much inline code.
+  The main reason this template exists is because many email clients ignore
+  css classes, so we need to embed inline styling.
+
+  WARNING: If we move this to one of the call_template files, all letters
+           including that template must define the ext: namespace prefix:
+           xmlns:ext="http://exslt.org/common"
+-->
+<xsl:template name="defaultTableStyle">
+  <xsl:param name="head" />
+  <xsl:param name="body" />
+
+  <table cellpadding="5" cellspacing="0" class="listing" width="100%; text-align:left;">
+    <thead>
+      <tr>
+        <xsl:for-each select="ext:node-set($head)/column">
+          <th align="left" style="background: #F9F9F9; border-bottom: 1px solid #ccc;">
+            <xsl:value-of select="."/>
+            <br /><!-- linjeskift for RT og andre systemer som konverterer eposten til ren tekst -->
+          </th>
+        </xsl:for-each>
+      </tr>
+    </thead>
+    <tbody>
+      <xsl:copy-of select="ext:node-set($body)"/>
+    </tbody>
+  </table>
+</xsl:template>
 
 
 <!--
@@ -81,6 +113,9 @@
       <xsl:call-template name="formatProcessStatus"></xsl:call-template>
       <br /><!-- linjeskift for RT -->
     </td>
+    <td>
+      <br /><!-- ekstra linjeskift for RT -->
+    </td>
   </tr>
 </xsl:template>
 
@@ -103,25 +138,18 @@
     </xsl:call-template>
   </p>
 
-  <table cellpadding="5" cellspacing="0" class="listing" width="100%">
-    <xsl:attribute name="style">
-      <xsl:call-template name="mainTableStyleCss"/><!-- style.xsl -->
-    </xsl:attribute>
-    <tr>
-      <th align="left">
-        @@title@@
-      </th>
-      <th align="left">
-        Status
-      </th>
-    </tr>
-
-    <!-- List overdue loans first -->
-    <xsl:for-each select="item_loans/item_loan">
-      <xsl:call-template name="formatLoan"></xsl:call-template>
-    </xsl:for-each>
-
-  </table>
+  <xsl:call-template name="defaultTableStyle"><!-- header.xsl -->
+    <xsl:with-param name="head">
+      <column>@@title@@</column>
+      <column>Status</column>
+      <column><!-- Tom kolonne for RT --></column>
+    </xsl:with-param>
+    <xsl:with-param name="body">
+      <xsl:for-each select="item_loans/item_loan">
+        <xsl:call-template name="formatLoan"></xsl:call-template>
+      </xsl:for-each>
+    </xsl:with-param>
+  </xsl:call-template>
 
   <xsl:call-template name="email-footer"><!-- footer.xsl -->
     <xsl:with-param name="show_my_account" select="true()"/>

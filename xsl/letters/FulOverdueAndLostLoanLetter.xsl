@@ -13,6 +13,37 @@
 
 <!-- Templates -->
 
+<!--
+  Template to standardize table styling without too much inline code.
+  The main reason this template exists is because many email clients ignore
+  css classes, so we need to embed inline styling.
+
+  WARNING: If we move this to one of the call_template files, all letters
+           including that template must define the ext: namespace prefix:
+           xmlns:ext="http://exslt.org/common"
+-->
+<xsl:template name="defaultTableStyle">
+  <xsl:param name="head" />
+  <xsl:param name="body" />
+
+  <table cellpadding="5" cellspacing="0" class="listing" width="100%; text-align:left;">
+    <thead>
+      <tr>
+        <xsl:for-each select="ext:node-set($head)/column">
+          <th align="left" style="background: #F9F9F9; border-bottom: 1px solid #ccc;">
+            <xsl:value-of select="."/>
+            <br /><!-- linjeskift for RT og andre systemer som konverterer eposten til ren tekst -->
+          </th>
+        </xsl:for-each>
+      </tr>
+    </thead>
+    <tbody>
+      <xsl:copy-of select="ext:node-set($body)"/>
+    </tbody>
+  </table>
+</xsl:template>
+
+
 <xsl:template name="formatItemTitle">
     <!--
       Template to format the title of an item. For issues, we need to
@@ -33,38 +64,6 @@
         <xsl:text> </xsl:text>
         <xsl:value-of select="item_description"/><!-- Such as "53(2008) 11" -->
     </xsl:if>
-</xsl:template>
-
-
-<!--
-  Template to standardize table styling without too much inline code.
-  The main reason this template exists is because many email clients ignore
-  css classes, so we need to embed inline styling.
-
-  NOTE: If we move this to one of the call_template files, all letters including that template
-  must define the ext: namespace prefix:
-
-      xmlns:ext="http://exslt.org/common"
--->
-<xsl:template name="default-table-style">
-  <xsl:param name="head" />
-  <xsl:param name="body" />
-
-  <table cellpadding="5" cellspacing="0" class="listing" width="100%; text-align:left;">
-    <thead>
-      <tr>
-        <xsl:for-each select="ext:node-set($head)/column">
-          <th align="left" style="background: #F9F9F9; border-bottom: 1px solid #ccc;">
-            <xsl:value-of select="."/>
-            <br /><!-- linjeskift for RT og andre systemer som konverterer eposten til ren tekst -->
-          </th>
-        </xsl:for-each>
-      </tr>
-    </thead>
-    <tbody>
-      <xsl:copy-of select="ext:node-set($body)"/>
-    </tbody>
-  </table>
 </xsl:template>
 
 
@@ -197,7 +196,7 @@
 
   <!-- List of fees -->
 
-  <xsl:call-template name="default-table-style"><!-- footer.xsl -->
+  <xsl:call-template name="defaultTableStyle"><!-- header.xsl -->
     <xsl:with-param name="head">
       <column>@@barcode@@</column>
       <column>@@lost_item@@</column>

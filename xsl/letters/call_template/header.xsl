@@ -302,14 +302,14 @@ background-color:#e8e8e8;  width:100%; height:30px; text-shadow:1px 1px 1px #fff
 -->
 <xsl:template name="formatDecimalNumber">
   <!--
-    1. fjern tusenskilletegn
+    1. Fjern tusenskilletegn
     2. Gjør om til tall
     3. Formater tallet vha. format-number
 
     Husk å alltid teste både på norsk og engelsk!
   -->
   <xsl:param name="value"/>
-  <xsl:variable name="numeric_value" select="number(translate($value, ' ,', ''))"/>
+  <xsl:variable name="numeric_value" select="number(translate($value, '&#160;,', ''))"/>
   <xsl:choose>
     <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob' or /notification_data/receivers/receiver/preferred_language = 'no' or /notification_data/receivers/receiver/preferred_language = 'nb' or /notification_data/receivers/receiver/preferred_language = 'nn' or /notification_data/receivers/receiver/preferred_language = 'nno'">
       <xsl:decimal-format name="no" decimal-separator="," grouping-separator="&#160;"/>

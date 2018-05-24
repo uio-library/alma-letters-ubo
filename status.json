@@ -161,7 +161,7 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
-      "checksum": "1f8015e0a9ff65eb966c653603f39e83a0b0c8e8",
+      "checksum": "5c3dd8732691604a4e6e6d8c2c352f710d996ee8",
       "default_checksum": "e5c542d23c6d382c2bc8e5ab540e23dd17bffc7e",
       "modified": "24/05/2018"
     },
@@ -231,9 +231,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulUserOverdueNoticeLetter.xsl": {
-      "checksum": "e4a4919b94e78709b1709d5adc70ae775a20f95b",
+      "checksum": "62d3fad216eee6428d4ce60bedbf0c06d88a5c92",
       "default_checksum": "0f132cee3c99a7dfbf41bb28654a377186c886ff",
-      "modified": "23/05/2018"
+      "modified": "24/05/2018"
     },
     "xsl/letters/GeneralAssignToLetter.xsl": {
       "checksum": "66a5c6958f129b2c60f99747160ff0eaa6f77764",
@@ -476,9 +476,9 @@
       "modified": "23/05/2018"
     },
     "xsl/letters/call_template/header.xsl": {
-      "checksum": "68e93bc3c00c8ca50dc46f83679274698def07a1",
+      "checksum": "1b1e469f2a7af927910cb9170cd5f917810c4ae9",
       "default_checksum": "c9b52c2622eac71bf29114c399bf9b65a0040cdc",
-      "modified": "23/05/2018"
+      "modified": "24/05/2018"
     },
     "xsl/letters/call_template/mailReason.xsl": {
       "checksum": "e5a1662a151900fb3fa874aaa574efd6b83234d4",
