@@ -144,7 +144,9 @@
         <xsl:value-of select="translate(status_date,'/','.')"/>
       </td>-->
       <td valign="top" style="text-align: right; white-space: nowrap;">
-        <xsl:value-of select="fine_fee_ammount/sum"/>,-
+        <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
+          <xsl:with-param name="value" select="fine_fee_ammount/sum"/>
+        </xsl:call-template>
         <br /><!-- linjeskift for RT -->
       </td>
     </tr>
@@ -157,8 +159,8 @@
 <xsl:template match="/">
 
   <xsl:if test="count(/notification_data/display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees) = 0">
-    <!-- For lærerbiblioteket har vi erstatningskrav på 0 kr, men vi vil ikke
-         sende ut erstatningskrav på 0,-, så vi avslutter her. -->
+    <!-- For UREAL Lærerbiblioteket er erstatningskravet på 0 kr.
+         Vi sender *ikke* ut brev for et slikt krav. -->
     <xsl:message terminate="yes">No fees, exiting.</xsl:message>
   </xsl:if>
 
@@ -214,11 +216,13 @@
 
   <p>
     <xsl:call-template name="multilingual"><!-- header.xsl -->
-      <xsl:with-param name="nb" select="'Sum: '"/>
-      <xsl:with-param name="nn" select="'Sum: '"/>
-      <xsl:with-param name="en" select="'Sum: '"/>
+      <xsl:with-param name="nb" select="'Totalt kr '"/>
+      <xsl:with-param name="nn" select="'Totalt kr '"/>
+      <xsl:with-param name="en" select="'Totalt kr '"/>
     </xsl:call-template>
-    <xsl:value-of select="format-number(sum(display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum), '0.00 NOK')"/>
+    <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
+      <xsl:with-param name="value" select="sum(display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_ammount/sum)"/>
+    </xsl:call-template>
   </p>
 
   <!-- Payment details -->

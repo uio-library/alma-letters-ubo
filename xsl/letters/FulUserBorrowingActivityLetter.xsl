@@ -168,7 +168,9 @@
       <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top" style="text-align: right; white-space: nowrap;">
-      <xsl:value-of select="fine_fee_ammount/sum"/>,-
+      <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
+        <xsl:with-param name="value" select="fine_fee_ammount/sum"/>
+      </xsl:call-template>
       <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
@@ -273,7 +275,7 @@
           @@due_date@@
           <br /><!-- linjeskift for RT -->
         </th>
-        <th align="left">
+        <th align="right" style="text-align: right;">
           @@fine@@
           <br /><!-- linjeskift for RT -->
         </th>
@@ -336,7 +338,9 @@
             &#160;
           </td>
           <td style="text-align: right; white-space: nowrap;">
-            <xsl:value-of select="$remainderFee"/>.00,-
+            <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
+              <xsl:with-param name="value" select="$remainderFee"/>
+            </xsl:call-template>
           </td>
         </tr>
       </xsl:if>
@@ -346,11 +350,13 @@
     <!-- Omsider: Grand totale! -->
     <p>
       <xsl:call-template name="multilingual"><!-- header.xsl -->
-        <xsl:with-param name="nb" select="'Sum: '"/>
-        <xsl:with-param name="nn" select="'Sum: '"/>
-        <xsl:with-param name="en" select="'Sum: '"/>
+        <xsl:with-param name="nb" select="'Totalt kr '"/>
+        <xsl:with-param name="nn" select="'Totalt kr '"/>
+        <xsl:with-param name="en" select="'Totalt kr '"/>
       </xsl:call-template>
-      <xsl:value-of select="total_fee"/>,-
+      <xsl:call-template name="formatDecimalNumber"><!-- header.xsl -->
+        <xsl:with-param name="value" select="translate(substring-before(total_fee,'00 NOK'), ',. ', '')"/>
+      </xsl:call-template>
     </p>
 
     <p>

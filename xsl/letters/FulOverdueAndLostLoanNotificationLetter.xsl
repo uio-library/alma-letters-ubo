@@ -36,7 +36,7 @@
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Lånt inn fra utlandet. Ta kontakt med biblioteket for å fornye'"/>
         <xsl:with-param name="nn" select="'Lånt inn frå utlandet. Ta kontakt med biblioteket for å fornye'"/>
-        <xsl:with-param name="en" select="'Borrowed from an library abroad. Contact your library to renew'"/>
+        <xsl:with-param name="en" select="'Borrowed from a library abroad. Contact your library to renew'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:when test="contains(item_loan/location_name, 'Fjernlån')">

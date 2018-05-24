@@ -292,6 +292,38 @@ background-color:#e8e8e8;  width:100%; height:30px; text-shadow:1px 1px 1px #fff
 
 
 <!--
+    Template for formatting decimal numbers according to the user's locale.
+    Added by: DMOH 2018-05-23
+
+    Depends on: (none)
+
+    Parameters:
+      value:     The number, as formatted by Alma.
+-->
+<xsl:template name="formatDecimalNumber">
+  <!--
+    1. fjern tusenskilletegn
+    2. Gjør om til tall
+    3. Formater tallet vha. format-number
+
+    Husk å alltid teste både på norsk og engelsk!
+  -->
+  <xsl:param name="value"/>
+  <xsl:variable name="numeric_value" select="number(translate($value, ' ,', ''))"/>
+  <xsl:choose>
+    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'nob' or /notification_data/receivers/receiver/preferred_language = 'no' or /notification_data/receivers/receiver/preferred_language = 'nb' or /notification_data/receivers/receiver/preferred_language = 'nn' or /notification_data/receivers/receiver/preferred_language = 'nno'">
+      <xsl:decimal-format name="no" decimal-separator="," grouping-separator="&#160;"/>
+      <xsl:value-of select="format-number($numeric_value, '#&#160;##0,00', 'no')"></xsl:value-of>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:decimal-format name="en" decimal-separator="." grouping-separator=","/>
+      <xsl:value-of select="format-number($numeric_value, '#,##0.00', 'en')"></xsl:value-of>
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+
+<!--
   *DEPRECATED*: the old logo template
 -->
 <xsl:template name="emailLogo"></xsl:template>
