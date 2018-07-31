@@ -41,15 +41,7 @@
       </xsl:when>
       <xsl:otherwise>
 
-  <xsl:choose>
-       <xsl:when test="/notification_data/request/delivery_address = 'UiO Informatikkbiblioteket'">
-         <xsl:value-of select="'UiO Realfagsbiblioteket - Vilhelm Bjerknes hus'"/>
-      </xsl:when>
- <xsl:otherwise>
-         <xsl:value-of select="/notification_data/request/delivery_address"/>
- </xsl:otherwise>
-    </xsl:choose>
-
+        <xsl:value-of select="/notification_data/request/delivery_address"/>
 
       </xsl:otherwise>
     </xsl:choose>:
