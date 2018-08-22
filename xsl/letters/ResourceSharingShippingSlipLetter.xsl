@@ -336,10 +336,21 @@
             <xsl:if test="notification_data/metadata/volume != ''">
               <tr>
                 <td align="right">
-                  <em>Vol.:</em>
+                  <em>Volume:</em>
                 </td>
                 <td>
                   <xsl:value-of select="notification_data/metadata/volume"/>
+                </td>
+              </tr>
+            </xsl:if>
+
+            <xsl:if test="notification_data/metadata/volume_bk != ''">
+              <tr>
+                <td align="right">
+                  <em>Book volume:</em>
+                </td>
+                <td>
+                  <xsl:value-of select="notification_data/metadata/volume_bk"/>
                 </td>
               </tr>
             </xsl:if>
