@@ -16,9 +16,7 @@
     <xsl:call-template name="generalStyle" />
    </head>
    <body>
-<xsl:if test="/notification_data/request/resource_sharing_request_id != ''">
-   <xsl:message terminate="yes">Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
-</xsl:if>
+
 <xsl:if test="notification_data/request/status_note= 'ConvertedToResourceSharingRequest'">
       <xsl:message terminate="yes">Converted to Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
 </xsl:if>

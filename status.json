@@ -87,7 +87,7 @@
     },
     "xsl/letters/FulBorrowingInfoLetter.xsl": {
       "checksum": "45f42ccc802593155fd54fcec681f0d7373597c7",
-      "default_checksum": "8eaaeb5cbe96521bd5105ec014561ece3a028bd2",
+      "default_checksum": "a4339d02710a13ce1db37b698c33ba9de8dd6569",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulCancelEmailLetter.xsl": {
@@ -97,7 +97,7 @@
     },
     "xsl/letters/FulCancelRequestLetter.xsl": {
       "checksum": "2858bc9177575fc08db71600652ee37a9ffd7d6e",
-      "default_checksum": "e0e555b3cb4f6c60a9d3f278a9a9eb144f3343b6",
+      "default_checksum": "c1b4d836ccda342a43ba4bb1f6109cb3e252d470",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulCitationSlipLetter.xsl": {
@@ -227,7 +227,7 @@
     },
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
       "checksum": "1510136d5198bc8c74d746dae2ba12d9d5dc6cf5",
-      "default_checksum": "d556515a2351d6bfc53f77854d19390cf3a359f3",
+      "default_checksum": "22e85b91053aa283517d8a14b0cd9feac906bade",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulUserOverdueNoticeLetter.xsl": {
@@ -317,7 +317,7 @@
     },
     "xsl/letters/LicensePrintoutLetter.xsl": {
       "checksum": "5a8d916b9397df9d4e0652a9c5fbd6e3715277fc",
-      "default_checksum": "c0be6f521ef968505b224c8639efd715eacb78e0",
+      "default_checksum": "7c9f3541ad0801fc803ef59f4319feb7c177933a",
       "modified": "16/02/2018"
     },
     "xsl/letters/LoginUsingOneTimeTokenLetter.xsl": {
@@ -362,7 +362,7 @@
     },
     "xsl/letters/POLineClaimLetter.xsl": {
       "checksum": "2f2ef1017893e20b20c56d2afed597b5b072ef85",
-      "default_checksum": "cac645aba830dc4fb9d6237330225aaf0c9fb78c",
+      "default_checksum": "6819ec81fd268ebd98aa8e43e2b2e3290f63c595",
       "modified": "16/02/2018"
     },
     "xsl/letters/POLineRenewalLetter.xsl": {
@@ -404,6 +404,11 @@
       "checksum": "4462eaf4a0bbfe754fceeddcd642cd30c0db83d3",
       "default_checksum": "1683c8761ea4f3035a8e967867b8e387527606a4",
       "modified": "16/02/2018"
+    },
+    "xsl/letters/ResetPwLetter.xsl": {
+      "checksum": "338c6cac3e318c835537aba721c6ad52924192f2",
+      "default_checksum": "338c6cac3e318c835537aba721c6ad52924192f2",
+      "modified": "-"
     },
     "xsl/letters/ResourceSharingReceiveSlipLetter.xsl": {
       "checksum": "b4f03fdca2a8c8c82f62874d0fd955cfcbe47db1",

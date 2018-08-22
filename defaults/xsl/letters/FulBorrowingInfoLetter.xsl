@@ -52,6 +52,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
        </xsl:when>
 
        <xsl:otherwise>
+        <xsl:choose>
+         <xsl:when test="notification_data/note != ''">
+          <tr>
+           <td><b>@@failure_reason@@: <xsl:value-of select="notification_data/note"/></b></td>
+          </tr>
+         </xsl:when>
+        </xsl:choose>
         <tr>
          <td><b>@@contact_dep@@</b></td>
         </tr>

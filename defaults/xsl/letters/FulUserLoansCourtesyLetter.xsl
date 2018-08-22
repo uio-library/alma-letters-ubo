@@ -32,7 +32,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    <table cellspacing="0" cellpadding="5" border="0">
               <tr>
                <td>
-     <b>@@message@@</b>
+     <xsl:if test="notification_data/short_loans='true'">
+      <b>@@short_loans_message@@</b>
+     </xsl:if>
+     <xsl:if test="notification_data/short_loans='false'">
+      <b>@@message@@</b>
+     </xsl:if>
      <br/><br/>
                 </td>
               </tr>
