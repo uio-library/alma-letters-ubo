@@ -70,9 +70,9 @@
     </xsl:when>
     <xsl:when test="contains(location_name, 'Fjernlån')">
       <xsl:call-template name="multilingual"><!-- header.xsl -->
-        <xsl:with-param name="nb" select="'Fornybar'"/><!-- Fornyes i Oria? -->
-        <xsl:with-param name="nn" select="'Fornybar'"/>
-        <xsl:with-param name="en" select="'Renewable'"/>
+        <xsl:with-param name="nb" select="'Fornyes i Oria'"/><!-- Fornyes i Oria? -->
+        <xsl:with-param name="nn" select="'Fornyast i Oria'"/>
+        <xsl:with-param name="en" select="'Renewable in Oria'"/>
       </xsl:call-template>
     </xsl:when>
     <xsl:otherwise>
@@ -192,9 +192,9 @@
 
   <p>
     <xsl:call-template name="multilingual"><!-- header.xsl -->
-      <xsl:with-param name="nb" select="'Vi ønsker å gjøre det enklest mulig for deg å holde oversikt over dine låneaktiviteter. Under finner du en oversikt over hvilke lån som er registrert på din bruker og forfallsdato for disse. Lån med status «Fornybar» vil bli fornyet automatisk.'"/>
-      <xsl:with-param name="nn" select="'Vi ynskjer å gjere det enklast mogleg for deg å halde oversikt over låneaktivitetane dine!'"/>
-      <xsl:with-param name="en" select="'Please find below a list of your current loans at the University of Oslo Library and their due dates. Loans marked as ‘Renewable’ will be renewed automatically.'"/>
+      <xsl:with-param name="nb" select="'Vi ønsker å gjøre det enklest mulig for deg å holde oversikt over dine låneaktiviteter. Under finner du en oversikt over hvilke lån som er registrert på din bruker og forfallsdato for disse. Lån med status «Fornybar» vil bli fornyet automatisk hvis du ikke får beskjed om annet på forfallsdato.'"/>
+      <xsl:with-param name="nn" select="'Vi ynskjer å gjere det enklast mogleg for deg å halde oversikt over låneaktivitetane dine. Under finn du ein oversikt over kva for lån som er registrert på  brukaren din og forfallsdato. Lån med status «Fornybar» vil bli fornya automatisk om du ikkje får beskjed om anna på forfallsdato.'"/>
+      <xsl:with-param name="en" select="'Please find below a list of your current loans at the University of Oslo Library and their due dates. Loans marked as ‘Renewable’ will be renewed automatically if not other information is given at due date.'"/>
     </xsl:call-template>
   </p>
 
