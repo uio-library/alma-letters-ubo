@@ -21,82 +21,86 @@
      <xsl:element name="meta">
           <xsl:attribute name="name">libnummer</xsl:attribute>
           <xsl:attribute name="content">
-
             <xsl:for-each select="notification_data/request">
-                <xsl:if test="contains(calculated_destination_name, 'UiO Arkeologisk bibliotek')">
+              <xsl:choose>
+                <xsl:when test="calculated_destination_name = 'UiO Arkeologisk bibliotek'">
                  103 &#160; 0011
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Etnografisk bibliotek')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Etnografisk bibliotek'">
                  103 &#160; 0010
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Etnografisk bibliotek Numismatikk')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Etnografisk bibliotek Numismatikk'">
                  103 &#160; 0010
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO HumSam-biblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO HumSam-biblioteket'">
                  103 &#160; 0300
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Ibsensenterets bibliotek')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Ibsensenterets bibliotek'">
                  103 &#160; 0104
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Informatikkbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Informatikkbiblioteket'">
                  103 &#160; 0317
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Juridisk bibliotek DB'">
                  103 &#160; 0000
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Kriminologibiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Kriminologibiblioteket'">
                  103 &#160; 0002
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Læringssenteret DN')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Læringssenteret DN'">
                  103 &#160; 0009
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek Rikshospitalet')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Medisinsk bibliotek Rikshospitalet'">
                  103 &#160; 2300
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Menneskerettighetsbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Menneskerettighetsbiblioteket'">
                  103 &#160; 0048
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO NSSF Selvmordsforskning/forebygging')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO NSSF Selvmordsforskning/forebygging'">
                  103 &#160; 2304
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Naturhistorisk museum biblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Naturhistorisk museum biblioteket'">
                  103 &#160; 0500
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek Odontologi')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Medisinsk bibliotek Odontologi'">
                  103 &#160; 0307
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Offentligrettsbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Offentligrettsbiblioteket'">
                  103 &#160; 0003
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Petroleums- og EU-rettsbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Petroleums- og EU-rettsbiblioteket'">
                  103 &#160; 0005
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Privatrettsbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Privatrettsbiblioteket'">
                  103 &#160; 0001
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Realfagsbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Realfagsbiblioteket'">
                  103 &#160; 0310
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Rettshistorisk samling')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Rettshistorisk samling'">
                  103 &#160; 0015
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Rettsinformatikkbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Rettsinformatikkbiblioteket'">
                  103 &#160; 0004
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Sjørettsbiblioteket')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Sjørettsbiblioteket'">
                  103 &#160; 0006
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Sophus Bugge')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Sophus Bugge'">
                  103 &#160; 0303
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Teologisk bibliotek')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Teologisk bibliotek'">
                  103 &#160; 0301
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Medisinsk bibliotek Ullevål sykehus')">
+               </xsl:when>
+               <xsl:when test="calculated_destination_name = 'UiO Medisinsk bibliotek Ullevål sykehus'">
                  103 &#160; 0338
-               </xsl:if>
-              </xsl:for-each>
-                    </xsl:attribute>
+               </xsl:when>
+               <xsl:otherwise>
+                 Fant ikke libnummer. Gi beskjed til Dan Michael!
+               </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
+          </xsl:attribute>
         </xsl:element>
         
         <xsl:element name="meta">
