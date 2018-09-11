@@ -381,9 +381,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/PurchaseRequestStatusLetter.xsl": {
-      "checksum": "ec233eb063472b65b1c9cf0194c42c621880f6eb",
+      "checksum": "1d331d52eb132d996a827296d03c2eb83acdc8d2",
       "default_checksum": "79e070c95c413ead652acbb3871f2028b8adbea0",
-      "modified": "16/02/2018"
+      "modified": "11/09/2018"
     },
     "xsl/letters/QueryToPatronLetter.xsl": {
       "checksum": "0bb37296eafe416018f8d592ba9f9a1f02bff9a0",
@@ -391,9 +391,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/QueryToRequesterLetter.xsl": {
-      "checksum": "dfac248b18cee1a3b20480821dad7677af52aef3",
+      "checksum": "bf086ed4a58c318fc6613c04da3fb4a6ecf65a09",
       "default_checksum": "58d06a8ec49176810ee6e279401d33e532826710",
-      "modified": "16/02/2018"
+      "modified": "11/09/2018"
     },
     "xsl/letters/ReceivingSlipLetter.xsl": {
       "checksum": "1a3bd67aa91153e0b0cfb4bacd2ea59755e9e36c",
