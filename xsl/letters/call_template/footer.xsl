@@ -25,12 +25,13 @@
 -->
 <xsl:template name="email-footer">
   <xsl:param name="show_my_account" />
+  <xsl:param name="show_help" select="true()"/>
   <xsl:param name="email" />
   <xsl:param name="sender_name" />
 
   <div>
 
-    <xsl:for-each select="/notification_data/organization_unit">
+    <xsl:if test="$show_help">
       <p>
         <xsl:call-template name="multilingual"><!-- header.xsl -->
           <xsl:with-param name="nb" select="'Har du spørsmål eller trenger hjelp? '"/>
@@ -39,7 +40,6 @@
         </xsl:call-template>
 
         <xsl:choose>
-
           <!-- Bruk en bestemt epost-adresse fra parameter hvis gitt -->
           <xsl:when test="$email != ''">
             <xsl:call-template name="multilingual"><!-- header.xsl -->
@@ -61,37 +61,37 @@
               <xsl:with-param name="en" select="'Please reply to this e-mail, and we will help you as best we can.'"/>
             </xsl:call-template>
           </xsl:otherwise>
-
         </xsl:choose>
       </p>
+    </xsl:if>
 
-      <xsl:if test="$show_my_account">
-        <xsl:call-template name="myAccount"/>
-      </xsl:if>
+    <xsl:if test="$show_my_account">
+      <xsl:call-template name="myAccount"/>
+    </xsl:if>
 
-      <p style="margin-bottom: 0;">
-        <xsl:call-template name="multilingual"><!-- header.xsl -->
-          <xsl:with-param name="nb" select="'Vennlig hilsen,'"/>
-          <xsl:with-param name="nn" select="'Venleg helsing,'"/>
-          <xsl:with-param name="en" select="'Kind regards,'"/>
-        </xsl:call-template><br />
-        <xsl:choose>
-          <xsl:when test="$sender_name != ''">
-            <xsl:value-of select="$sender_name"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <!-- Until someone can fix the missing space in "UiO,Universitetsbiblioteket" we set the name manually here -->
-            <!--<xsl:value-of select="name"/>-->
-            <xsl:call-template name="multilingual"><!-- header.xsl -->
-              <xsl:with-param name="nb" select="'UiO Universitetsbiblioteket'"/>
-              <xsl:with-param name="nn" select="'UiO Universitetsbiblioteket'"/>
-              <xsl:with-param name="en" select="'University of Oslo Library'"/>
-            </xsl:call-template>
-          </xsl:otherwise>
-        </xsl:choose>
-      </p>
+    <p style="margin-bottom: 0;">
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
+        <xsl:with-param name="nb" select="'Vennlig hilsen,'"/>
+        <xsl:with-param name="nn" select="'Venleg helsing,'"/>
+        <xsl:with-param name="en" select="'Kind regards,'"/>
+      </xsl:call-template><br />
+      <xsl:choose>
+        <xsl:when test="$sender_name != ''">
+          <xsl:value-of select="$sender_name"/>
+        </xsl:when>
+        <xsl:otherwise>
 
-    </xsl:for-each>
+          <!-- Until someone can fix the missing space in "UiO,Universitetsbiblioteket" we set the name manually here -->
+          <!--<xsl:value-of select="/notification_data/organization_unitname"/>-->
+          <xsl:call-template name="multilingual"><!-- header.xsl -->
+            <xsl:with-param name="nb" select="'UiO Universitetsbiblioteket'"/>
+            <xsl:with-param name="nn" select="'UiO Universitetsbiblioteket'"/>
+            <xsl:with-param name="en" select="'University of Oslo Library'"/>
+          </xsl:call-template>
+        </xsl:otherwise>
+      </xsl:choose>
+    </p>
+
   </div>
 </xsl:template>
 
