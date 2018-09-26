@@ -166,9 +166,9 @@
       "modified": "24/05/2018"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "b32d9125f24e2cb367a05bcc25991d3bba9f9d0c",
+      "checksum": "75f3f115265a67a072a6dc7b18fde8ebeab3c22f",
       "default_checksum": "1880b5b96b17916ec974897d7b098828c26fbaf7",
-      "modified": "23/05/2018"
+      "modified": "26/09/2018"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
       "checksum": "3c5eac7d1d04f607f3d681b422eceb5ff3528a9e",

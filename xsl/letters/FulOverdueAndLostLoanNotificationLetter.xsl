@@ -71,14 +71,14 @@
 <xsl:template name="formatLoan">
   <tr>
     <td valign="top">
-      <xsl:value-of select="item_loan/title"/>
-      <xsl:if test="description != ''">
-        <br />(<xsl:value-of select="description"/>)
-      </xsl:if>
+      <xsl:value-of select="item_loan/barcode"/>
       <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
-      <xsl:value-of select="item_loan/barcode"/>
+      <xsl:value-of select="item_loan/title"/>
+      <xsl:if test="item_loan/description != ''">
+        <br /><xsl:value-of select="item_loan/description"/>
+      </xsl:if>
       <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top">
