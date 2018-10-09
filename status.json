@@ -381,9 +381,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/PurchaseRequestStatusLetter.xsl": {
-      "checksum": "1d331d52eb132d996a827296d03c2eb83acdc8d2",
+      "checksum": "1b5ccabba53d4708f29a40f2dbe7f66b4531efe0",
       "default_checksum": "79e070c95c413ead652acbb3871f2028b8adbea0",
-      "modified": "11/09/2018"
+      "modified": "09/10/2018"
     },
     "xsl/letters/QueryToPatronLetter.xsl": {
       "checksum": "0bb37296eafe416018f8d592ba9f9a1f02bff9a0",

@@ -27,15 +27,20 @@
     <xsl:choose >
       <xsl:when test="purchase_request/request_status='APPROVED'">
         <!-- approved and an order has been created  -->
-        @@approved@@ <xsl:value-of select="purchase_request/poline_reference" />.
+        @@approved@@. 
       </xsl:when>
       <xsl:otherwise>
         <!-- rejected with the following reason -->
         @@rejected@@: <xsl:value-of select="purchase_request/reject_reason_desc" />.
       </xsl:otherwise>
     </xsl:choose>
-    <br />
-    @@title@@: <xsl:value-of select="purchase_request/title" />.
+  </p>
+  <p>
+    @@title@@: <xsl:value-of select="purchase_request/title" />
+    <xsl:if test="purchase_request/issn_isbn != ''">
+      <br />
+      ISBN: <xsl:value-of select="purchase_request/issn_isbn" />
+    </xsl:if>
   </p>
 
   <xsl:call-template name="email-footer"><!-- footer.xsl -->
