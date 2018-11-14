@@ -110,6 +110,11 @@
       "default_checksum": "76e7f588edb5837a5cb771ece90958f9664fd9d9",
       "modified": "16/02/2018"
     },
+    "xsl/letters/FulDamagedEmailLetter.xsl": {
+      "checksum": "55db26b1fad5731630f2b6508f0234ca939d139d",
+      "default_checksum": "55db26b1fad5731630f2b6508f0234ca939d139d",
+      "modified": "-"
+    },
     "xsl/letters/FulDigitizationDocumentDeliveryNotificationLetter.xsl": {
       "checksum": "37e5cc995529f56fb833a7bbc54221201679f35c",
       "default_checksum": "e5af81004eb9bbbc549fe0a01669a61a786501d9",
@@ -139,6 +144,11 @@
       "checksum": "cbe149c774bfcc809d616c5f32e50762607d8e36",
       "default_checksum": "d7ab00fed285100c2b56d4ae309283e32e6bc37d",
       "modified": "16/02/2018"
+    },
+    "xsl/letters/FulLostEmailLetter.xsl": {
+      "checksum": "e8e262df8d266d01753f483afcadced56f9e1783",
+      "default_checksum": "e8e262df8d266d01753f483afcadced56f9e1783",
+      "modified": "-"
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
       "checksum": "21246b6eda26a378a39af6c8e4f835b5969e9d1c",
@@ -277,7 +287,7 @@
     },
     "xsl/letters/LegantoNotificationsLetter.xsl": {
       "checksum": "c4dce00ec02fd5a65534f987e26b6c4984164b58",
-      "default_checksum": "b8b5f0d376c43a985e5ec5af5c6bbf724eb1e717",
+      "default_checksum": "3458e741b9ec824ea0b93389c71d0660576b03e0",
       "modified": "16/02/2018"
     },
     "xsl/letters/LenderCheckedInEmailLetter.xsl": {
@@ -362,7 +372,7 @@
     },
     "xsl/letters/POLineClaimLetter.xsl": {
       "checksum": "2f2ef1017893e20b20c56d2afed597b5b072ef85",
-      "default_checksum": "6819ec81fd268ebd98aa8e43e2b2e3290f63c595",
+      "default_checksum": "7928adea12f338aa45445813ca85cb00837d3882",
       "modified": "16/02/2018"
     },
     "xsl/letters/POLineRenewalLetter.xsl": {
@@ -399,6 +409,11 @@
       "checksum": "1a3bd67aa91153e0b0cfb4bacd2ea59755e9e36c",
       "default_checksum": "9de52f49815ac4c6749931858695ea495e802830",
       "modified": "16/02/2018"
+    },
+    "xsl/letters/ResearchDepositActionLetter.xsl": {
+      "checksum": "d108e3b41d4dab05a4e39cf1572f4765d2cc893b",
+      "default_checksum": "d108e3b41d4dab05a4e39cf1572f4765d2cc893b",
+      "modified": "-"
     },
     "xsl/letters/ResendNotificationLetter.xsl": {
       "checksum": "4462eaf4a0bbfe754fceeddcd642cd30c0db83d3",
@@ -494,6 +509,11 @@
       "checksum": "a45d1cc71ba50e937069bf7099a13da9e30f98d4",
       "default_checksum": "696ea372fbd4c34a6f3de79714de9a2c08a22ef2",
       "modified": "16/02/2018"
+    },
+    "xsl/letters/call_template/research/header.xsl": {
+      "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "default_checksum": "781823b34ca236631e8d374cdfc36384ac011a40",
+      "modified": "-"
     },
     "xsl/letters/call_template/senderReceiver.xsl": {
       "checksum": "af7e6abb284f1bab68150bbbbcbb5f886a1fdee9",

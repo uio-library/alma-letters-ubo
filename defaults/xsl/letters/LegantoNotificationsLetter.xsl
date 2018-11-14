@@ -52,6 +52,8 @@
 
         </tr>
        </xsl:for-each>
+       
+       <xsl:if test="notification_data/leganto_url  !=''">
        <span style="padding:0 0 5px 10px;">
        To see all your lists
        <xsl:element name="a">
@@ -65,6 +67,7 @@
         go to Leganto
        </xsl:element>
        </span>
+       </xsl:if>
       </table>
 
       <br />

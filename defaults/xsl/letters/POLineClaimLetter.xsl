@@ -102,15 +102,15 @@
       <xsl:call-template name="mainTableStyleCss" /> <!-- style.xsl -->
      </xsl:attribute>
       <tr>
-
        <th>@@item_description@@</th>
        <th>@@expected_arrival_date@@</th>
+       <th>@@SICI@@</th>
       </tr>
       <xsl:for-each select="notification_data/line_details/issues_or_copies/issue_or_copy">
       <tr>
-
        <td><xsl:value-of select="item_description"/></td>
        <td><xsl:value-of select="expected_arrival_date"/></td>
+       <td><xsl:value-of select="sici"/></td>
       </tr>
       </xsl:for-each>
      </table>
