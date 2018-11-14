@@ -34,9 +34,9 @@
     <xsl:if test="$show_help">
       <p>
         <xsl:call-template name="multilingual"><!-- header.xsl -->
-          <xsl:with-param name="nb" select="'Har du spørsmål eller trenger hjelp? '"/>
-          <xsl:with-param name="nn" select="'Har du spørsmål eller treng hjelp? '"/>
-          <xsl:with-param name="en" select="'Do you have questions or need help? '"/>
+          <xsl:with-param name="nb" select="'Lurer du på noe? '"/>
+          <xsl:with-param name="nn" select="'Lurer du på noko? '"/>
+          <xsl:with-param name="en" select="'If you have any questions or concerns, '"/>
         </xsl:call-template>
 
         <xsl:choose>
@@ -45,7 +45,7 @@
             <xsl:call-template name="multilingual"><!-- header.xsl -->
               <xsl:with-param name="nb" select="'Ikke nøl med å kontakte oss på '"/>
               <xsl:with-param name="nn" select="'Ikkje nøl med å kontakte oss på '"/>
-              <xsl:with-param name="en" select="'Please contact us at '"/>
+              <xsl:with-param name="en" select="'please contact us at '"/>
             </xsl:call-template>
             <a>
               <xsl:attribute name="href"><xsl:value-of select="$email"/></xsl:attribute>
@@ -56,10 +56,11 @@
           <!-- Reply to this email -->
           <xsl:otherwise>
             <xsl:call-template name="multilingual"><!-- header.xsl -->
-              <xsl:with-param name="nb" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
-              <xsl:with-param name="nn" select="'Svar på denne e-posten, så hjelper vi deg så raskt vi kan.'"/>
-              <xsl:with-param name="en" select="'Please reply to this e-mail, and we will help you as best we can.'"/>
+              <xsl:with-param name="nb" select="'Svar på denne e-posten, så hjelper vi deg.'"/>
+              <xsl:with-param name="nn" select="'Svar på denne e-posten, så hjelper vi deg.'"/>
+              <xsl:with-param name="en" select="'please do not hesitate to contact us by replying to this e-mail.'"/>
             </xsl:call-template>
+
           </xsl:otherwise>
         </xsl:choose>
       </p>
@@ -110,8 +111,8 @@
     </xsl:call-template>
     <a><xsl:attribute name="href">@@email_my_account@@</xsl:attribute>@@my_account@@</a>
     <xsl:call-template name="multilingual"><!-- header.xsl -->
-      <xsl:with-param name="nb" select="' for å administrere dine lån og bestillinger.'"/>
-      <xsl:with-param name="nn" select="' for å administrere dine lån og bestillingar.'"/>
+      <xsl:with-param name="nb" select="' for å administrere lån og bestillinger.'"/>
+      <xsl:with-param name="nn" select="' for å administrere lån og bestillingar.'"/>
       <xsl:with-param name="en" select="' to manage your loans and orders.'"/>
     </xsl:call-template>
   </p>
