@@ -71,9 +71,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FineFeePaymentReceiptLetter.xsl": {
-      "checksum": "f2236060a43c93cdf43732f86a59ed79bbf0fedd",
+      "checksum": "e6ab803fe8b62ccc07725904493e30443a96a4ee",
       "default_checksum": "0b664b40ae3d79b99a040db5d020bf8e65ddafce",
-      "modified": "16/02/2018"
+      "modified": "14/11/2018"
     },
     "xsl/letters/FinesAndFeesReportLetter.xsl": {
       "checksum": "52ff52b58753b167b611b686c761603cba381c80",
