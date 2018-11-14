@@ -96,7 +96,7 @@
                  103 &#160; 0338
                </xsl:when>
                <xsl:otherwise>
-                 Fant ikke libnummer. Gi beskjed til Dan Michael!
+                 <xsl:value-of select="calculated_destination_name" />
                </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>

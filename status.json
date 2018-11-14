@@ -226,9 +226,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulTransitSlipLetter.xsl": {
-      "checksum": "e35adfea8c3acec0aa10bb02ef4865f1ca10fd98",
+      "checksum": "f8df96182683920bcaa48b223c957c2fb08d54da",
       "default_checksum": "7123666a1031fe712c66677c51bdd4660e5c5c64",
-      "modified": "03/09/2018"
+      "modified": "10/09/2018"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
       "checksum": "779e90c763cf1d100d8184b32f1413454a63da74",
@@ -256,9 +256,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/InterestedInLetter.xsl": {
-      "checksum": "96d49f7c953ccf74e7666202b104447d9bab7fbb",
+      "checksum": "e4e4339d78c67a8f099b9ba045177d57a54f205f",
       "default_checksum": "1ae256a8c7f84f467603f9911cdc1c409371e0f1",
-      "modified": "16/02/2018"
+      "modified": "27/06/2018"
     },
     "xsl/letters/InterestedUsersInLetter.xsl": {
       "checksum": "78e17f5630ab583ec96cc73efeab51435765916b",
@@ -481,9 +481,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/UserNotificationsLetter.xsl": {
-      "checksum": "cf45e25ff3ef45a8c6496087ad00fcb54afa4bea",
+      "checksum": "0a51fb1ad5f3abe2776372fbd6a7e1d1cd59df14",
       "default_checksum": "d809e32cc167349cb14269a6e08eaf167c0884b2",
-      "modified": "23/05/2018"
+      "modified": "08/10/2018"
     },
     "xsl/letters/WebhookFailureLetter.xsl": {
       "checksum": "f4bb3ab7eadb0e6e4f83431d719776db8b5c13f3",
