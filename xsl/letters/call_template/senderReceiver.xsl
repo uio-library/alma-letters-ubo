@@ -15,8 +15,6 @@
               <xsl:value-of select="/notification_data/user_for_printing/address1"/>
               <br/>
               <xsl:value-of select="/notification_data/user_for_printing/postal_code"/>&#160;<xsl:value-of select="/notification_data/user_for_printing/city"/>
-              <br/>
-              <xsl:value-of select="/notification_data/user_for_printing/country"/>
             </xsl:when>
             <xsl:when test="/notification_data/receivers/receiver/user">
               <xsl:for-each select="/notification_data/receivers/receiver/user">
@@ -33,8 +31,6 @@
                   </xsl:otherwise>
                 </xsl:choose>
                 <xsl:value-of select="user_address_list/user_address/postal_code"/>&#160;<xsl:value-of select="user_address_list/user_address/city"/>
-                <br/>
-                <xsl:value-of select="user_address_list/user_address/country"/>
               </xsl:for-each>
             </xsl:when>
             <xsl:otherwise/>

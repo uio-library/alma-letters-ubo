@@ -516,9 +516,9 @@
       "modified": "-"
     },
     "xsl/letters/call_template/senderReceiver.xsl": {
-      "checksum": "af7e6abb284f1bab68150bbbbcbb5f886a1fdee9",
+      "checksum": "701230d999fc4a866beed982d8da969548121806",
       "default_checksum": "781823b34ca236631e8d374cdfc36384ac011a40",
-      "modified": "16/02/2018"
+      "modified": "15/11/2018"
     },
     "xsl/letters/call_template/smsRecordTitle.xsl": {
       "checksum": "9f342638f021ee00334305c7d39660c1db2d778b",
