@@ -163,6 +163,10 @@
       <xsl:value-of select="item_title"/>
       <br /><!-- linjeskift for RT -->
     </td>
+    <td valign="top">
+      <xsl:value-of select="../../item_loan/barcode"/>
+      <br /><!-- linjeskift for RT -->
+    </td>
     <td valign="top" style="white-space: nowrap;">
       <xsl:value-of select="translate(status_date,'/','.')"/>
       <br /><!-- linjeskift for RT -->
@@ -269,6 +273,14 @@
         </th>
         <th align="left">
           @@title@@
+          <br /><!-- linjeskift for RT -->
+        </th>
+        <th align="left">
+          <xsl:call-template name="multilingual"><!-- header.xsl -->
+            <xsl:with-param name="nb" select="'DokumentID'"/>
+            <xsl:with-param name="nn" select="'DokumentID'"/>
+            <xsl:with-param name="en" select="'DocumentID'"/>
+          </xsl:call-template>
           <br /><!-- linjeskift for RT -->
         </th>
         <th align="left">
