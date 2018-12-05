@@ -63,15 +63,25 @@
        SLUTT: Hentekode eller informasjon om henting
        =========================================================== -->
 
-  <!-- Examples of "system notes" (notes that may affect the loan):
+  <!--
+    # System_notes (notes that may affect the loan):
+
+    Eksempler:
         - "Cash - Limit of 200.00 NOK exceeded. User has 2,250.00 NOK."
         - "Patron is not active"
-   -->
-  <xsl:if test="/notification_data/request/system_notes != ''">
-    <p>
-      @@notes_affect_loan@@: <xsl:value-of select="/notification_data/request/system_notes"/>
-    </p>
-  </xsl:if>
+        - "Loan - Siste varsel før erstatningskrav . Block created by 'Loans - Overdue and Lost Item' job. Job ID: 8419699160002204."
+
+    Disse har ikke en form som egner seg for sluttbrukerkommunikasjon, og de er heller
+    ikke alltid aktuelle for det relevante lånet. Vi viser dem derfor ikke i hentebrevet.
+
+    @TODO: Vi kunne heller vist en egen melding hvis brukeren skylder mer enn grensen (200 kr).
+
+    <xsl:if test="/notification_data/request/system_notes != ''">
+      <p>
+        @@notes_affect_loan@@: <xsl:value-of select="/notification_data/request/system_notes"/>
+      </p>
+    </xsl:if>
+  -->
 
   <!--
     ## Hentefrist
