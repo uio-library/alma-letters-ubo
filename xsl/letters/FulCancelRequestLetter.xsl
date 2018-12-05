@@ -13,9 +13,6 @@
 
 <xsl:template match="/">
 
-  <xsl:if test="/notification_data/request/resource_sharing_request_id != ''">
-    <xsl:message terminate="yes">Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
-  </xsl:if>
   <xsl:if test="/notification_data/request/status_note = 'ConvertedToResourceSharingRequest'">
     <xsl:message terminate="yes">Converted to Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
   </xsl:if>
@@ -29,7 +26,7 @@
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-    @@we_cancel_y_req_of@@ <xsl:value-of select="request/create_date"/> @@detailed_below@@.
+    @@we_cancel_y_req_of@@ <xsl:value-of select="request/create_date"/> @@detailed_below@@:
   </p>
 
   <ul>
@@ -61,23 +58,19 @@
        </xsl:choose>
       </em>
      </xsl:when>
+     <xsl:when test="request/status_note = 'CannotBeFulfilled'">
+      <!-- Vi trenger ikke å gjenta at bestillingen ikke kan gjennomføres -->
+     </xsl:when>
      <xsl:otherwise>
       @@reason_deleting_request@@:
-      <em><xsl:value-of select="request/status_note_display"/></em>
+      <xsl:value-of select="request/status_note_display"/>.
      </xsl:otherwise>
     </xsl:choose>
   </p>
 
-  <xsl:if test="request/note != ''">
-    <p>
-     @@request_note@@:
-     <xsl:value-of select="request/note"/>
-    </p>
-  </xsl:if>
-
   <xsl:if test="request/system_notes != ''">
     <p>
-     @@request_cancellation_note@@: <xsl:value-of select="request/system_notes"/>
+      <em><xsl:value-of select="request/system_notes"/></em>
     </p>
   </xsl:if>
 
