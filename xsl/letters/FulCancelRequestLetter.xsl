@@ -16,7 +16,9 @@
   <xsl:if test="/notification_data/request/status_note = 'ConvertedToResourceSharingRequest'">
     <xsl:message terminate="yes">Converted to Resource Sharing Request - No automatic cancellation letter sent</xsl:message>
   </xsl:if>
-
+  <xsl:if test="/notification_data/request/status_note = 'RejectedBySupplier'">
+    <xsl:message terminate="yes">Deaktivert inntil videre</xsl:message>
+  </xsl:if>
   <xsl:call-template name="emailTemplate"/><!-- style.xsl -->
 </xsl:template>
 
@@ -26,20 +28,36 @@
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
   <p>
-    @@we_cancel_y_req_of@@ <xsl:value-of select="request/create_date"/> @@detailed_below@@:
+    <xsl:choose>
+      <xsl:when test="request/status_note = 'CancelledAtPatronRequest'">
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
+          <xsl:with-param name="nb" select="'Dette er en bekreftelse på at vi har kansellert bestilllingen din:'"/>
+          <xsl:with-param name="nn" select="'Dette er ei stadfesting på at vi har kansellert bestilllinga di:'"/>
+          <xsl:with-param name="en" select="'This is to confirm that we have cancelled your request:'"/>
+        </xsl:call-template>
+     </xsl:when>
+     <xsl:otherwise>
+       @@we_cancel_y_req_of@@ <xsl:value-of select="request/create_date"/> @@detailed_below@@:
+     </xsl:otherwise>
+    </xsl:choose>
   </p>
-
   <ul>
     <li>
-     <xsl:value-of select="phys_item_display/author"/>:
-     <xsl:value-of select="phys_item_display/title"/> (<xsl:value-of select="phys_item_display/edition"/><xsl:if test="phys_item_display/edition != ''">&#160;</xsl:if><xsl:value-of select="phys_item_display/publication_date"/>)
-
+      <xsl:value-of select="phys_item_display/author"/>:
+      <xsl:value-of select="phys_item_display/title"/> (<xsl:value-of select="phys_item_display/edition"/><xsl:if test="phys_item_display/edition != ''">&#160;</xsl:if><xsl:value-of select="phys_item_display/publication_date"/>)
      <!-- <xsl:call-template name="recordTitle" />--><!-- recordTitle.xsl -->
-    </li> 
+    </li>
   </ul>
 
   <p>
     <xsl:choose>
+     <xsl:when test="request/status_note = 'CannotBeFulfilled'">
+      <xsl:call-template name="multilingual"><!-- header.xsl -->
+        <xsl:with-param name="nb" select="'Vi kan dessverre ikke gjennomføre denne bestilllingen.'"/>
+        <xsl:with-param name="nn" select="'Vi kan dessverre ikkje gjennomføre denne bestilllinga.'"/>
+        <xsl:with-param name="en" select="'Unfortunately we cannot fulfill this request.'"/>
+      </xsl:call-template>
+     </xsl:when>
      <xsl:when test="request/status_note = 'RequestedMaterialCannotBeLocated'">
       <em>
        <xsl:choose>
@@ -58,8 +76,8 @@
        </xsl:choose>
       </em>
      </xsl:when>
-     <xsl:when test="request/status_note = 'CannotBeFulfilled'">
-      <!-- Vi trenger ikke å gjenta at bestillingen ikke kan gjennomføres -->
+     <xsl:when test="request/status_note = 'CancelledAtPatronRequest'">
+      <!-- Hvis det er etter låners ønske trenger vi ikke si "Årsak: Kansellert på låntakers anmodning." -->
      </xsl:when>
      <xsl:otherwise>
       @@reason_deleting_request@@:
@@ -68,14 +86,16 @@
     </xsl:choose>
   </p>
 
+  <!-- "Cancellation note" havner her -->
   <xsl:if test="request/system_notes != ''">
     <p>
       <em><xsl:value-of select="request/system_notes"/></em>
     </p>
   </xsl:if>
 
-  <xsl:call-template name="email-footer" /> <!-- footer.xsl -->
-  <!--<xsl:call-template name="contactUs" />-->
+  <xsl:call-template name="email-footer"><!-- footer.xsl -->
+    <xsl:with-param name="show_my_account" select="true()"/>
+  </xsl:call-template>
 
 </xsl:template>
 </xsl:stylesheet>
