@@ -131,7 +131,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulHoldShelfRequestSlipLetter.xsl": {
-      "default_checksum": "11d26375c8443d2768796b8a3ec3d21b1d07829e"
+      "checksum": "11d26375c8443d2768796b8a3ec3d21b1d07829e",
+      "default_checksum": "11d26375c8443d2768796b8a3ec3d21b1d07829e",
+      "modified": "-"
     },
     "xsl/letters/FulIncomingSlipLetter.xsl": {
       "checksum": "ca97037ff40618d43f45345a0f3ade6894c4553c",
