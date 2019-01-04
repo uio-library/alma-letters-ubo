@@ -45,6 +45,8 @@
      <br />
      <b>@@cancellation_reason@@: </b><xsl:value-of select="notification_data/line/cancellation_reason" />
      <br />
+     <b>@@cancellation_note@@: </b><xsl:value-of select="notification_data/line/cancellation_note" />
+     <br />
      </td>
     </tr>
    </table>

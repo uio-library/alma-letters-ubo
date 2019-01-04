@@ -369,9 +369,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/POLineCancellationLetter.xsl": {
-      "checksum": "ea835afd3aa4ed2358e8be899a61ecc938dd133f",
+      "checksum": "d31f0180d600130f868a099978cd6dda6df14731",
       "default_checksum": "80ec49a6adfc078858a87bc61e6cd231ae56cbe8",
-      "modified": "16/02/2018"
+      "modified": "04/12/2018"
     },
     "xsl/letters/POLineClaimLetter.xsl": {
       "checksum": "a729ced7b25b09fa0c2821afae744a07d2bf24a1",
