@@ -494,9 +494,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/call_template/footer.xsl": {
-      "checksum": "14afea424a3ba6b78aa03d4b300a60227ed1763c",
+      "checksum": "94cfaef5d8e4adfc44142ea31713c19781d45ac6",
       "default_checksum": "51efdaa3307deda01307b3ca1a217bbcaba0f1b1",
-      "modified": "14/11/2018"
+      "modified": "04/01/2019"
     },
     "xsl/letters/call_template/header.xsl": {
       "checksum": "1b1e469f2a7af927910cb9170cd5f917810c4ae9",
