@@ -25,7 +25,16 @@
 <xsl:template match="/notification_data">
 
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
+
+  <p>
+    <xsl:call-template name="multilingual"><!-- header.xsl -->
+      <xsl:with-param name="nb" select="'Hei '"/>
+      <xsl:with-param name="nn" select="'Hei '"/>
+      <xsl:with-param name="en" select="'Hi '"/>
+    </xsl:call-template>
+    <xsl:value-of select="receivers/receiver/user/first_name"/>&#160;<xsl:value-of select="receivers/receiver/user/last_name"/>
+    (<xsl:value-of select="receivers/receiver/user/user_name"/>)
+  </p>
 
   <p>
     <xsl:choose>
@@ -43,9 +52,21 @@
   </p>
   <ul>
     <li>
-      <xsl:value-of select="phys_item_display/author"/>:
-      <xsl:value-of select="phys_item_display/title"/> (<xsl:value-of select="phys_item_display/edition"/><xsl:if test="phys_item_display/edition != ''">&#160;</xsl:if><xsl:value-of select="phys_item_display/publication_date"/>)
-     <!-- <xsl:call-template name="recordTitle" />--><!-- recordTitle.xsl -->
+      <xsl:if test="phys_item_display/author != ''">
+        <xsl:value-of select="phys_item_display/author"/>:&#160;
+      </xsl:if>
+      <em><xsl:value-of select="phys_item_display/title"/></em>
+      (<xsl:value-of select="phys_item_display/edition"/><xsl:if test="phys_item_display/edition != ''">&#160;
+       </xsl:if><xsl:value-of select="phys_item_display/publication_date"/>)
+      <xsl:if test="phys_item_display/issn != ''">
+        <br />ISSN: <xsl:value-of select="phys_item_display/issn"/>
+      </xsl:if>
+      <xsl:if test="phys_item_display/isbn != ''">
+        <br />ISBN: <xsl:value-of select="phys_item_display/isbn"/>
+      </xsl:if>
+      <xsl:if test="request/external_request_id != ''">
+        <br />Bestillingsnummer: <xsl:value-of select="request/external_request_id"/>
+      </xsl:if>
     </li>
   </ul>
 
@@ -59,7 +80,6 @@
       </xsl:call-template>
      </xsl:when>
      <xsl:when test="request/status_note = 'RequestedMaterialCannotBeLocated'">
-      <em>
        <xsl:choose>
         <xsl:when test="receivers/receiver/preferred_language = 'en'">
          Unfortunately the document could not be found at the shelf.
@@ -74,7 +94,6 @@
          Kontakt oss på epostadressen under hvis du ønsker at vi skal sjekke dette for deg.
         </xsl:otherwise>
        </xsl:choose>
-      </em>
      </xsl:when>
      <xsl:when test="request/status_note = 'CancelledAtPatronRequest'">
       <!-- Hvis det er etter låners ønske trenger vi ikke si "Årsak: Kansellert på låntakers anmodning." -->
@@ -89,7 +108,7 @@
   <!-- "Cancellation note" havner her -->
   <xsl:if test="request/system_notes != ''">
     <p>
-      <em><xsl:value-of select="request/system_notes"/></em>
+      <strong><xsl:value-of select="request/system_notes"/></strong>
     </p>
   </xsl:if>
 
