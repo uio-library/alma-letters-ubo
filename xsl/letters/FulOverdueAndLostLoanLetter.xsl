@@ -180,16 +180,16 @@
 
   <p>
     <xsl:call-template name="multilingual"><!-- header.xsl -->
-      <xsl:with-param name="nb" select="'Merk at vi frafraller erstatningskravet for et dokument hvis du returnerer det eller kjøper et nytt erstatningseksemplar selv.'"/>
-      <xsl:with-param name="nn" select="'Merk at vi fråfaller erstatningskravet for eit dokument hvis du returnerer det eller kjøper eit nytt erstatningseksemplar sjølv.'"/>
-      <xsl:with-param name="en" select="'Note that we will waive the replacement cost claim for a document if you return the document or a new replacement copy.'"/>
+      <xsl:with-param name="nb" select="'Vi frafraller erstatningskrav hvis du returnerer dokumentet eller kjøper nytt erstatningseksemplar selv.'"/>
+      <xsl:with-param name="nn" select="'Vi fråfaller erstatningskrav hvis du returnerer dokumentet eller kjøper nytt erstatningseksemplar sjølv.'"/>
+      <xsl:with-param name="en" select="'Replacement cost claims are waived if you return the document or buy a new replacement copy.'"/>
     </xsl:call-template>
 
     <xsl:if test="/notification_data/display_list/overdue_and_lost_loan_notification_display/fines_fees_list/user_fines_fees/fine_fee_type = 'LOSTITEMPROCESSFEE'">
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="' Gebyr må betales uansett.'"/>
         <xsl:with-param name="nn" select="' Gebyr må betalast uansett.'"/>
-        <xsl:with-param name="en" select="' Fees must be paid in any case though.'"/>
+        <xsl:with-param name="en" select="' You will still owe the fees.'"/>
       </xsl:call-template>
     </xsl:if>
   </p>
