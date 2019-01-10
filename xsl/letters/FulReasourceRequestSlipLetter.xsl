@@ -53,10 +53,10 @@
 
             <!-- Enkelte avdelinger ønsker oppstiling etter navn. Fjernlån stilles alltid opp etter navn. -->
             <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån' or notification_data/request/calculated_destination_name = 'UiO Informatikkbiblioteket - Utlånet Inf' or contains(notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket') or contains(notification_data/phys_item_display/available_items/available_item/location_name, 'Fjernlån')">
-              <font size="3">
+              <!--<font size="3">
                 <b><tt><xsl:value-of select="/notification_data/request/work_flow_entity/expiration_date"/>
               </tt></b> (hentefrist)</font>
-              <br />
+              <br />-->
               <font size="7"><b>
                 <xsl:value-of select="notification_data/user_for_printing/name"/>
               </b></font>
