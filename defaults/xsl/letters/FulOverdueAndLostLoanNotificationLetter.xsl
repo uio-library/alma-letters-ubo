@@ -73,7 +73,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
            <td><xsl:value-of select="physical_item_display_for_printing/call_number"/></td>
            <td>
             <xsl:for-each select="fines_fees_list/user_fines_fees">
-             <b><xsl:value-of select="fine_fee_type_display"/>: </b><xsl:value-of select="fine_fee_ammount/sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/>&#160;<xsl:value-of select="ff"/>
+             <b><xsl:value-of select="fine_fee_type_display"/>: </b><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/>&#160;<xsl:value-of select="ff"/>
              <br />
             </xsl:for-each>
            </td>
@@ -88,7 +88,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <tr>
        <td>
         <b>@@overdue_notification_fee@@ </b>
-        <xsl:value-of select="notification_data/overdue_notification_fee_amount/sum"/>&#160;<xsl:value-of select="notification_data/overdue_notification_fee_amount/currency"/>&#160;<xsl:value-of select="ff"/>
+        <xsl:value-of select="notification_data/overdue_notification_fee_amount/normalized_sum"/>&#160;<xsl:value-of select="notification_data/overdue_notification_fee_amount/currency"/>&#160;<xsl:value-of select="ff"/>
        </td>
       </tr>
       </xsl:if>

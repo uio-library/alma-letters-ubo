@@ -143,7 +143,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <td>
     <br />
     <xsl:if test="notification_data/line/foreign_currency_list_price !=''">
-     <xsl:value-of  select="notification_data/line/foreign_currency_list_price/currency"/>&#160;<xsl:value-of select="notification_data/line/foreign_currency_list_price/sum"/>
+     <xsl:value-of  select="notification_data/line/foreign_currency_list_price/currency"/>&#160;<xsl:value-of select="notification_data/line/foreign_currency_list_price/normalized_sum"/>
     </xsl:if>
       <br />
 
@@ -167,7 +167,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <td>@@currency@@: <xsl:value-of select="amount/currency"/></td>
      </tr>
      <tr>
-      <td>@@sum@@: <xsl:value-of select="amount/sum"/></td>
+      <td>@@sum@@: <xsl:value-of select="amount/normalized_sum"/></td>
      </tr>
 
     </table>

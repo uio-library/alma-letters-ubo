@@ -121,10 +121,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <xsl:value-of select="notification_data/assignee_user/first_name"/>&#160;<xsl:value-of select="notification_data/assignee_user/last_name"/>
          </td>
         </tr>
-        <xsl:if test="notification_data/assignee_user/job_title !=''">
+        <xsl:if test="notification_data/job_title_description !=''">
         <tr>
          <td>
-          <xsl:value-of select="notification_data/assignee_user/job_title"/>
+          <xsl:value-of select="notification_data/job_title_description"/>
          </td>
         </tr>
         </xsl:if>

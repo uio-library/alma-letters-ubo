@@ -75,7 +75,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
            <td><xsl:value-of select="description"/></td>
            <td><xsl:value-of select="author"/></td>
            <td><xsl:value-of select="due_date"/></td>
-           <td><xsl:value-of select="fine"/></td>
+           <td><xsl:value-of select="normalized_fine"/></td>
            <td><xsl:value-of select="library_name"/></td>
           </tr>
          </xsl:for-each>
@@ -117,7 +117,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
           <tr>
            <td><xsl:value-of select="title"/></td>
            <td><xsl:value-of select="due_date"/></td>
-           <td><xsl:value-of select="fine"/></td>
+           <td><xsl:value-of select="normalized_fine"/></td>
            <td><xsl:value-of select="description"/></td>
           </tr>
          </xsl:for-each>

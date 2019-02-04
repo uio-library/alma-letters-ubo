@@ -28,19 +28,38 @@
         <div class="messageArea">
           <div class="messageBody">
             <table cellspacing="0" cellpadding="5" border="0">
-    <tr>
-     <td>@@attached_information_regarding@@.<br />
-     @@please_supply@@.
-     </td>
-    </tr>
-    <tr>
+     <xsl:choose>
+       <xsl:when test="notification_data/claim/claim_type='ELECTRONIC' ">
+       <tr>
+        <td>@@attached_information_activated@@.<br />
+        </td>
+       </tr>
+      </xsl:when>
+      <xsl:otherwise>
+       <tr>
+        <td>@@attached_information_regarding@@.<br />
+        @@please_supply@@.
+        </td>
+       </tr>
+      </xsl:otherwise>
+     </xsl:choose>
+
+   <tr>
      <td>
      <xsl:for-each select="notification_data/line_details">
      <table cellspacing="0" cellpadding="5" border="0">
       <tr>
        <td>
-       <strong>@@claim@@:</strong>&#160;@@not_yet_arrived@@
-       <br />
+       <xsl:choose>
+         <xsl:when test="notification_data/claim/claim_type='ELECTRONIC' ">
+         <strong>@@claim@@:</strong>&#160;@@not_yet_activated@@
+         <br />
+        </xsl:when>
+        <xsl:otherwise>
+         <strong>@@claim@@:</strong>&#160;@@not_yet_arrived@@
+         <br />       
+        </xsl:otherwise>
+       </xsl:choose>
        <strong>@@order_line_ref_num@@:</strong>&#160;<xsl:value-of select="poline_reference_number" />
        <br />
        <strong>@@order_date@@:</strong>&#160;<xsl:value-of select="poline_date" />
@@ -51,8 +70,12 @@
        <br />
        <strong>@@vendor_note@@:</strong>&#160;<xsl:value-of select="vendor_note" />
        <br />
-       <strong>@@num_units_arrived@@:</strong>&#160;<xsl:value-of select="items_received" />
-       <br />
+       <xsl:choose>
+         <xsl:when test="notification_data/claim/claim_type!='ELECTRONIC' ">
+         <strong>@@num_units_arrived@@:</strong>&#160;<xsl:value-of select="items_received" />
+         <br />
+        </xsl:when>
+       </xsl:choose>
        <strong>@@num_units_ordered@@:</strong>&#160;<xsl:value-of select="items_oredered" />
        <br />
        <strong>@@currency@@:</strong>&#160;<xsl:value-of select="currency" />

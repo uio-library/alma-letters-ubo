@@ -127,7 +127,7 @@
     },
     "xsl/letters/FulFinesFeesNotificationLetter.xsl": {
       "checksum": "625f5de7a59a33106366d4f2622afcfdcc217d04",
-      "default_checksum": "bcb9c55f510dbf07d2851f07826aa8b650e5dbfe",
+      "default_checksum": "e891d1e698cd404713d15094737fd32066a761f6",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulHoldShelfRequestSlipLetter.xsl": {
@@ -157,17 +157,17 @@
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
       "checksum": "1b8f82a9b7f2cf660cff04486e2e3e74e1c43460",
-      "default_checksum": "649f6f843acb53e8374c47ae1f1ab13cefe00b2e",
+      "default_checksum": "5d4ee7181a8e4ecf71f0e7f6bccdf61d30829e7d",
       "modified": "04/01/2019"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
       "checksum": "208dccc7f99517ba11d2e047c7f30a38a0c990f6",
-      "default_checksum": "649f6f843acb53e8374c47ae1f1ab13cefe00b2e",
+      "default_checksum": "5d4ee7181a8e4ecf71f0e7f6bccdf61d30829e7d",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulLostRefundFeeLoanLetter.xsl": {
       "checksum": "cbc6a0f2cf0fcce9cd8b58bb80977e58e6b1a3d3",
-      "default_checksum": "0fd7f5c0ef9aed34bb5a1e8c69ccd5dd12b0b986",
+      "default_checksum": "f4cc4e83ec175189034ab4fc01091b9a2c2d7be0",
       "modified": "16/02/2018"
     },
     "xsl/letters/FulOutgoingEmailLetter.xsl": {
@@ -177,12 +177,12 @@
     },
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
       "checksum": "78c510afe879ff38a48d9f4eb2dd6dd135e20bd1",
-      "default_checksum": "e5c542d23c6d382c2bc8e5ab540e23dd17bffc7e",
+      "default_checksum": "ff3ee07dfaa0add86c34ed0ccd34a1a67e15218a",
       "modified": "04/01/2019"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
       "checksum": "75f3f115265a67a072a6dc7b18fde8ebeab3c22f",
-      "default_checksum": "1880b5b96b17916ec974897d7b098828c26fbaf7",
+      "default_checksum": "612a1ff3de68252d4913c5cf1ff462d2659c92ef",
       "modified": "26/09/2018"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
@@ -237,7 +237,7 @@
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
       "checksum": "87d288b14f1a616fff09b832c62aac0e1d37a167",
-      "default_checksum": "9eca28112c993ed9988c033fc593abf2da31ac9f",
+      "default_checksum": "df7fa9cd4b5176efb39d63c6b12ddad8db03a705",
       "modified": "03/12/2018"
     },
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
@@ -342,12 +342,12 @@
     },
     "xsl/letters/NotifyUponRenewalLetter.xsl": {
       "checksum": "6bfa5045ed60aa6c9795ca45eda8f17fd318fff5",
-      "default_checksum": "8207dc9c5009e2e1c333f920e1ca1edb31ab1fe8",
+      "default_checksum": "715ae1f26bd99476d288ff8ee3d20b38754c2246",
       "modified": "16/02/2018"
     },
     "xsl/letters/OrderListLetter.xsl": {
       "checksum": "2a85783c2c85b3ecf2b604acc18b7752c497a4f5",
-      "default_checksum": "4d902a3d14923a0aba7486b9c7fc0439d99ff2b9",
+      "default_checksum": "2263cbc36b9fbf5f8afe419a84c26bba2b31d3fa",
       "modified": "16/02/2018"
     },
     "xsl/letters/OrderNowLetter.xsl": {
@@ -377,7 +377,7 @@
     },
     "xsl/letters/POLineClaimLetter.xsl": {
       "checksum": "a729ced7b25b09fa0c2821afae744a07d2bf24a1",
-      "default_checksum": "7928adea12f338aa45445813ca85cb00837d3882",
+      "default_checksum": "db3cceeb47104bcb95ccb0fa0bcf55ce6969cddb",
       "modified": "15/11/2018"
     },
     "xsl/letters/POLineRenewalLetter.xsl": {
@@ -417,7 +417,7 @@
     },
     "xsl/letters/ResearchDepositActionLetter.xsl": {
       "checksum": "d108e3b41d4dab05a4e39cf1572f4765d2cc893b",
-      "default_checksum": "d108e3b41d4dab05a4e39cf1572f4765d2cc893b",
+      "default_checksum": "c27dff1df01b2b6cc84d7cb84907d1caa638ea29",
       "modified": "-"
     },
     "xsl/letters/ResendNotificationLetter.xsl": {
@@ -432,7 +432,7 @@
     },
     "xsl/letters/ResourceSharingReceiveSlipLetter.xsl": {
       "checksum": "b4f03fdca2a8c8c82f62874d0fd955cfcbe47db1",
-      "default_checksum": "0faca6e910196a28d0e310c480a0559f16663167",
+      "default_checksum": "71e9aee4b2548296029ebbedc10d4808b119029f",
       "modified": "16/02/2018"
     },
     "xsl/letters/ResourceSharingReturnSlipLetter.xsl": {
@@ -482,7 +482,7 @@
     },
     "xsl/letters/UserDeletionLetter.xsl": {
       "checksum": "93abc76a4600e7d88318ca7a25cb746489d477e9",
-      "default_checksum": "17b3d7d2e05d998fbdb1a714efb5a31b00f081fa",
+      "default_checksum": "cc39a2a4105c5fa31dda141e5a7301c6d18398df",
       "modified": "16/02/2018"
     },
     "xsl/letters/UserNotificationsLetter.xsl": {

@@ -54,7 +54,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <tr>
       <td><xsl:value-of select="fine_fee_type_display"/></td>
       <td><xsl:value-of select="owner"/></td>
-      <td><xsl:value-of select="fine_fee_ammount/sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
+      <td><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
       <td><xsl:value-of select="item_title"/></td>
       <td><xsl:value-of select="fine_comment"/></td>
      </tr>

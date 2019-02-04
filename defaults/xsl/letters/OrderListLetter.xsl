@@ -82,7 +82,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <td><xsl:value-of select="identifier_type"/>&#160;<xsl:value-of select="identifier"/></td>
       <td><xsl:value-of select="meta_data_values/title"/></td>
       <td><xsl:value-of select="total_quantity"/></td>
-      <td align="right"><xsl:value-of select="total_price_compose/currency"/>&#160;<xsl:value-of select="total_price_compose/sum"/></td>
+      <td align="right"><xsl:value-of select="total_price_compose/currency"/>&#160;<xsl:value-of select="total_price_compose_with_normalized_sum/normalized_sum"/></td>
       <td><xsl:value-of select="vendor_note"/></td>
      </tr>
      </xsl:for-each>

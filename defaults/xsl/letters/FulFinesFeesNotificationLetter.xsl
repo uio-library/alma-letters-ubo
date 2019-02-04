@@ -52,7 +52,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <xsl:for-each select="notification_data/fines_fees_list/user_fines_fees">
      <tr>
       <td><xsl:value-of select="fine_fee_type_display"/></td>
-      <td><xsl:value-of select="fine_fee_ammount/sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
+      <td><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
       <td><xsl:value-of select="fine_comment"/></td>
      </tr>
      </xsl:for-each>
@@ -62,7 +62,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
            <tr>
                <td>
                    <b>@@fine_fee_notification_fee@@ </b>
-                      <xsl:value-of select="notification_data/fine_fee_notification_fee_amount/sum"/>&#160;<xsl:value-of select="notification_data/fine_fee_notification_fee_amount/currency"/>&#160;<xsl:value-of select="ff"/>
+                      <xsl:value-of select="notification_data/fine_fee_notification_fee_amount/normalized_sum"/>&#160;<xsl:value-of select="notification_data/fine_fee_notification_fee_amount/currency"/>&#160;<xsl:value-of select="ff"/>
                   </td>
               </tr>
           </xsl:if>

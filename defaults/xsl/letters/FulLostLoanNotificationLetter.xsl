@@ -77,7 +77,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
      <xsl:for-each select="notification_data/fines_fees_list/user_fines_fees">
      <tr>
       <td><xsl:value-of select="fine_fee_type_display"/></td>
-      <td><xsl:value-of select="fine_fee_ammount/sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
+      <td><xsl:value-of select="fine_fee_ammount/normalized_sum"/>&#160;<xsl:value-of select="fine_fee_ammount/currency"/></td>
       <td><xsl:value-of select="ff"/></td>
      </tr>
      </xsl:for-each>

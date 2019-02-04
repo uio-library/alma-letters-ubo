@@ -93,7 +93,7 @@
        <tr>
         <td>
          <b> @@shipping_cost@@: </b>
-         <xsl:value-of select="notification_data/request/shipping_cost/sum"/>&#160;<xsl:value-of select="notification_data/request/shipping_cost/currency"/>
+         <xsl:value-of select="notification_data/request/shipping_cost/normalized_sum"/>&#160;<xsl:value-of select="notification_data/request/shipping_cost/currency"/>
         </td>
        </tr>
        <xsl:if test="notification_data/citation_id !=''">
