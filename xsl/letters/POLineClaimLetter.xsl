@@ -33,8 +33,16 @@
           <div class="messageBody">
             <table cellspacing="0" cellpadding="5" border="0">
     <tr>
-     <td>@@attached_information_regarding@@.<br />
-     @@please_supply@@.
+     <td>
+       <xsl:choose>
+         <xsl:when test="notification_data/claim/claim_type='ELECTRONIC' ">
+           @@attached_information_activated@@.
+         </xsl:when>
+         <xsl:otherwise>
+           @@attached_information_regarding@@.<br />
+           @@please_supply@@.
+         </xsl:otherwise>
+       </xsl:choose>
      </td>
     </tr>
     <tr>
@@ -43,7 +51,15 @@
      <table cellspacing="0" cellpadding="5" border="0">
       <tr>
        <td>
-       <strong>@@claim@@:</strong>&#160;@@not_yet_arrived@@
+        <strong>@@claim@@:</strong>&#160;
+        <xsl:choose>
+         <xsl:when test="notification_data/claim/claim_type='ELECTRONIC' ">
+          @@not_yet_activated@@
+         </xsl:when>
+         <xsl:otherwise>
+          @@not_yet_arrived@@
+         </xsl:otherwise>
+       </xsl:choose>
        <br />
        <strong>@@order_line_ref_num@@:</strong>&#160;<xsl:value-of select="poline_reference_number" />
        <br />
@@ -55,8 +71,12 @@
        <br />
        <strong>@@vendor_note@@:</strong>&#160;<xsl:value-of select="vendor_note" />
        <br />
-       <strong>@@num_units_arrived@@:</strong>&#160;<xsl:value-of select="items_received" />
-       <br />
+       <xsl:choose>
+         <xsl:when test="notification_data/claim/claim_type!='ELECTRONIC' ">
+         <strong>@@num_units_arrived@@:</strong>&#160;<xsl:value-of select="items_received" />
+         <br />
+        </xsl:when>
+       </xsl:choose>
        <strong>@@num_units_ordered@@:</strong>&#160;<xsl:value-of select="items_oredered" />
        <br />
        <strong>@@currency@@:</strong>&#160;<xsl:value-of select="currency" />
