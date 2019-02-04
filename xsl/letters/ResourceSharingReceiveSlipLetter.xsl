@@ -101,7 +101,6 @@
         </td>
        </tr>
        <xsl:if test="notification_data/citation_id !=''">
-
        <tr>
         <td>
          <br/>
@@ -116,8 +115,15 @@
         </td>
        </tr>
        </xsl:if>
-
-      </table>
+       <xsl:if test="notification_data/fulfillment_note !=''">
+        <tr>
+          <td>
+            <b> @@fulfillment_note@@: </b>
+            <xsl:value-of select="notification_data/fulfillment_note"/>
+          </td>
+        </tr>
+      </xsl:if>
+    </table>
 
       <br/><br/>
 
