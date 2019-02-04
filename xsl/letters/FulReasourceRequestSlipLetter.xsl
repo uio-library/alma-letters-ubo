@@ -259,6 +259,17 @@
             </td>
           </tr>
         </xsl:if>
+
+        <xsl:if test="notification_data/phys_item_display/fulfillment_note != ''">
+          <tr>
+            <td valign="top">Note:</td>
+            <td>
+              <!-- Fulfillment note: Informasjon om lesesalslån o.l. -->
+              <xsl:value-of select="notification_data/phys_item_display/fulfillment_note"/>
+            </td>
+          </tr>
+        </xsl:if>
+
         <!-- Del 3: SLUTT -->
 
 

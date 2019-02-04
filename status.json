@@ -196,14 +196,14 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "1305885639d2fb7cc236b69e12a4d77aa2088971",
+      "checksum": "916ad89980158a04d9377bb8ed865192d6282e7f",
       "default_checksum": "9dd033c82382a97d7d21fbff45056a5013b57779",
-      "modified": "05/12/2018"
+      "modified": "05/02/2019"
     },
     "xsl/letters/FulReasourceRequestSlipLetter.xsl": {
-      "checksum": "d2eb5334048b1b322626ce01bad6f56247b33e62",
+      "checksum": "75345e711f253b2d84ce11a585d5b2242a9ff2fb",
       "default_checksum": "810a47f835ead31e588a3747b0f70a5236a222da",
-      "modified": "08/01/2019"
+      "modified": "05/02/2019"
     },
     "xsl/letters/FulRenewEmailLetter.xsl": {
       "checksum": "3333f4bf50af7b560c3eb9897547acb54f9e5823",
@@ -573,7 +573,7 @@
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
       "checksum": "bea8028d8a778023f01627177e8be808b9d4d561",
       "default_checksum": "272a776b7fb8aaac1df369fd8ab4398d8bb8a708",
-      "modified": "31/07/2018"
+      "modified": "04/02/2019"
     },
     "xsl/letters/sms/SmsFulShortenedDueDateLetter.xsl": {
       "checksum": "9540f8e1e192d53bc7babe98f270ce657d37f17e",

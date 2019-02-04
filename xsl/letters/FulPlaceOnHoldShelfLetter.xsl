@@ -99,6 +99,13 @@
     </p>
   </xsl:if>
 
+  <!-- Fulfillment note: Informasjon om lesesalslån o.l. -->
+  <xsl:if test="/notification_data/phys_item_display/fulfillment_note != ''">
+    <p>
+      <xsl:value-of select="/notification_data/phys_item_display/fulfillment_note"/>
+    </p>
+  </xsl:if>
+
   <xsl:choose>
     <xsl:when test="/notification_data/request/delivery_address != ''">
       <xsl:call-template name="email-footer">
