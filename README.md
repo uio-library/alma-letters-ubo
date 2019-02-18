@@ -53,6 +53,12 @@ of 3080 letters taken during a few days in June 2016 showed the following distri
 In total, only 21 letters were used, but this was in the summer when we're not sending
 overdue letters and such, so I should probably make a new sample later.
 
+### Example XML data
+
+Some examples XML files are provided in the `test-data` folder.
+The files have been generated using test users or anonymized using
+the provided `anonymize.sh` script.
+
 ### Templates
 
 The files in `xsl/letters/call_template` contains templates used by the other
