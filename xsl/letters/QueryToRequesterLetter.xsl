@@ -17,16 +17,39 @@
 
 <xsl:template match="/notification_data">
 
-  <!-- mailReason.xsl -->
-  <!--<xsl:call-template name="emailLogo"/><xsl:call-template name="toWhomIsConcerned"/>--><!-- mailReason.xsl -->
+  <!--
+    Reminder to self:
+
+    Brukes for å gi svar på patron purchase requests (PPR).
+    Brevet har to problemer:
+
+    1) Det mangler vesentlig informasjon under "receivers",
+       deriblant "/notification_data/receivers/receiver/preferred_language",
+       så vi kan ikke lage det på brukers foretrukne språk. Vi fjerner
+       derfor mest mulig av header og footer.
+
+    2) Hele hovedinnholdet i brevet kommer ferdigformatert i ett felt kalt
+       "message_body". Vi har derfor ikke mulighet til å formatere dette
+       som vi vil.
+  -->
+
 
   <p>
-    <xsl:value-of select="message_body" disable-output-escaping="yes"/>
+    <!-- Vi bruker søk-og-erstatt for å fjerne 'Query to requester:'
+         og erstatte 'Regarding your purchase request' med en tospråklig tekst.
+    -->
+    <xsl:call-template name="string-replace"><!-- Defined in header.xsl -->
+      <xsl:with-param name="string">
+        <xsl:call-template name="string-replace"><!-- Defined in header.xsl -->
+          <xsl:with-param name="string" select="message_body"/>
+          <xsl:with-param name="replace" select="'&lt;br&gt;Query to requester:'"/>
+          <xsl:with-param name="with" select="''"/>
+        </xsl:call-template>
+      </xsl:with-param>
+      <xsl:with-param name="replace" select="'Regarding your purchase request'"/>
+      <xsl:with-param name="with" select="'Angående innkjøpsforslaget ditt / Regarding your purchase request:'"/>
+    </xsl:call-template>
   </p>
-
-  <!--<xsl:call-template name="email-footer">
-    <xsl:with-param name="show_help" select="false()"/>
-  </xsl:call-template>--><!-- footer.xsl -->
 
 </xsl:template>
 </xsl:stylesheet>
