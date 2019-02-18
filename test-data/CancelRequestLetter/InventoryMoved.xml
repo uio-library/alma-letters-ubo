@@ -6,8 +6,8 @@
   <general_data>
     <address_c>Ingen</address_c>
     <address_c>Ingen</address_c>
-    <address_from>bibliotek@ub.uio.no</address_from>
-    <current_date>07/12/2018</current_date>
+    <address_from>example-library@example.com</address_from>
+    <current_date>10/12/2018</current_date>
     <letter_channel_info/>
     <letter_name>Slettet bestilling</letter_name>
     <letter_type>FulCancelRequestLetter</letter_type>
@@ -23,7 +23,7 @@
   <metadata>
     <additional_person_name/>
     <autho_initials/>
-    <author>Raad, Isabel</author>
+    <author>Tullin, Christian Braunmann</author>
     <availability/>
     <barcode/>
     <call_number/>
@@ -39,34 +39,34 @@
     <electronic_location/>
     <end_page/>
     <identifier/>
-    <isbn>9788242963086</isbn>
+    <isbn/>
     <issn/>
     <issue/>
     <journal_title/>
     <lcc_number/>
     <material_type>Book</material_type>
-    <normalized_title>Shirog : jenta jeg en gang var</normalized_title>
+    <normalized_title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</normalized_title>
     <note/>
     <oclc_number/>
     <other_standard_id/>
-    <pages/>
-    <pages_normalized/>
+    <pages>61 </pages>
+    <pages_normalized>61 </pages_normalized>
     <part/>
     <place_of_publication/>
     <pmid/>
-    <publication_date>cop. 2018</publication_date>
-    <publisher>Egmont Publ</publisher>
+    <publication_date>1815</publication_date>
+    <publisher>Geo Löwegren</publisher>
     <remote_record_id/>
     <series/>
     <series_title_number/>
     <source>info:sid/primo.exlibrisgroup.com-BIBSYS_ILS</source>
     <start_page/>
     <subjects/>
-    <title>Shirog : jenta jeg en gang var</title>
+    <title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</title>
     <upper_title_link>true</upper_title_link>
     <url/>
     <volume/>
-    <volume_bk/>
+    <volume_bk>3 </volume_bk>
     <year/>
   </metadata>
   <organization_unit>
@@ -115,7 +115,7 @@
     <email>
       <create_date>24/11/2015</create_date>
       <description/>
-      <email>solvi.normalbakke@example.com</email>
+      <email>example-library@example.com</email>
       <entity_action/>
       <external_id/>
       <library_id/>
@@ -168,7 +168,7 @@
     <accession_number/>
     <alt_call_number_type/>
     <attachments/>
-    <author>Raad, Isabel</author>
+    <author>Tullin, Christian Braunmann</author>
     <available_items/>
     <barcode/>
     <call_number/>
@@ -191,31 +191,31 @@
     <enum_g/>
     <enum_h/>
     <fulfillment_note/>
-    <imprint>Egmont Publ cop. 2018</imprint>
+    <imprint>Geo Löwegren 1815</imprint>
     <internal_note1/>
     <internal_note2/>
     <internal_note3/>
     <inventory_material_type/>
-    <isbn>9788242963086</isbn>
+    <isbn/>
     <issn/>
     <issue_level_description/>
     <item_pid/>
     <item_policy/>
     <library_code/>
     <library_name/>
-    <location_code>k00565</location_code>
-    <location_name>UJUR Fjernlån</location_name>
+    <location_code>k00578</location_code>
+    <location_name>UHS Fjernlån</location_name>
     <material_type>Book</material_type>
     <optional_barcodes/>
     <owning_library_details>
-      <address1>Pb 6713 St.Olavs plass</address1>
+      <address1>Pb 1009 Blindern</address1>
       <address2/>
       <address3/>
       <address4/>
       <address5/>
       <city>Lahti</city>
       <country>NOR</country>
-      <email>ujur@ub.uio.no</email>
+      <email>humsam-biblioteket@ub.uio.no</email>
       <first_name/>
       <identifiers>
         <code_value>
@@ -225,16 +225,16 @@
       </identifiers>
       <last_name/>
       <middle_name/>
-      <name>UiO Juridisk bibliotek DB</name>
+      <name>UiO HumSam-biblioteket</name>
       <phone>12345678</phone>
-      <postal_code>0130</postal_code>
+      <postal_code>0315</postal_code>
       <state/>
       <title/>
       <user_group/>
       <user_title/>
     </owning_library_details>
-    <owning_library_id>259825350002204</owning_library_id>
-    <owning_library_name>UiO Juridisk bibliotek DB</owning_library_name>
+    <owning_library_id>259829140002204</owning_library_id>
+    <owning_library_name>UiO HumSam-biblioteket</owning_library_name>
     <parsed_alt_call_number/>
     <parsed_call_number/>
     <parsed_issue_level_description/>
@@ -242,22 +242,22 @@
     <permanent_location/>
     <profile_names/>
     <public_note/>
-    <publication_date>cop. 2018</publication_date>
+    <publication_date>1815</publication_date>
     <publication_place/>
-    <publisher>Egmont Publ</publisher>
+    <publisher>Geo Löwegren</publisher>
     <row_call_number/>
     <shelving_location/>
     <statistics_note1/>
     <statistics_note2/>
     <statistics_note3/>
     <summary_holding_infos/>
-    <title>Shirog : jenta jeg en gang var</title>
-    <title_abcnph>Shirog : jenta jeg en gang var</title_abcnph>
+    <title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</title>
+    <title_abcnph>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</title_abcnph>
   </phys_item_display>
   <receivers>
     <receiver>
       <address_types/>
-      <attached_to_entity_id>7566224830002204</attached_to_entity_id>
+      <attached_to_entity_id>1818573870002204</attached_to_entity_id>
       <email_types/>
       <params/>
       <preferred_language>no</preferred_language>
@@ -286,7 +286,7 @@
       <user_email>
         <create_date>02/09/2018</create_date>
         <description/>
-        <email>solvi.normalbakke@example.com</email>
+        <email>example-patron@example.com</email>
         <entity_action/>
         <external_id>SIS</external_id>
         <library_id/>
@@ -307,19 +307,19 @@
         <preferred_sms/>
       </user_phone>
       <user>
-        <addresses_mask>$preferredlabel$ $false$, ::enc::752E036364F1E39A0748FEA0B48E0485::enc::, ::enc::F1FFB4453802F4721197FC35D9413C0B::enc::, ::enc::A93588DBE9557B31E185600635A09380::enc::, $addresstypeslabel$ ::ctvs::home::ctvs::, $notelabel$ , $startdatelabel$ ::date::::date::, $enddatelabel$ ::date::::date::&lt;br&gt;$preferredlabel$ $true$, ::enc::BE94ABCFF6A27EA5FADD9CF1688C9AAFB7FC07601B1F5AE13FBD6A111DC05C0C::enc::, ::enc::278EF090E3B952E778E8FB8B51F43C07::enc::, ::enc::025BDF8EB0C1297C3E52B263FF4A56B7::enc::, $addresstypeslabel$ ::ctvs::school::ctvs::, $notelabel$ , $startdatelabel$ ::date::::date::, $enddatelabel$ ::date::::date::&lt;br&gt;</addresses_mask>
+        <addresses_mask>$preferredlabel$ $false$, ::enc::EEEDA01A5688B12FCC1BB561FE68D86A167B020AE8ACBB57AA73002BA83F89DD::enc::, ::enc::F1FFB4453802F4721197FC35D9413C0B::enc::, ::enc::595626154FB64C207404EA2F40E4C009::enc::, $addresstypeslabel$ ::ctvs::home::ctvs::, $notelabel$ , $startdatelabel$ ::date::::date::, $enddatelabel$ ::date::::date::&lt;br&gt;$preferredlabel$ $true$, ::enc::EEEDA01A5688B12FCC1BB561FE68D86A7738A9EDBD779BB236A7FC37AAB4C06B::enc::, ::enc::F1FFB4453802F4721197FC35D9413C0B::enc::, ::enc::595626154FB64C207404EA2F40E4C009::enc::, $addresstypeslabel$ ::ctvs::school::ctvs::, $notelabel$ , $startdatelabel$ ::date::::date::, $enddatelabel$ ::date::::date::&lt;br&gt;</addresses_mask>
         <birth_date>01/01/2000</birth_date>
         
         <blocks_mask/>
-        <campus_code>UJUR</campus_code>
-        <campus_code_original_value>UJUR</campus_code_original_value>
+        <campus_code>BLINDERN</campus_code>
+        <campus_code_original_value>BLINDERN</campus_code_original_value>
         <cataloger_level>00</cataloger_level>
         <cataloger_level_original_value>00</cataloger_level_original_value>
         <checksum/>
-        <create_date>26/08/2018</create_date>
+        <create_date>21/08/2013</create_date>
         <default_language>no</default_language>
         <duplicate_user_name>Sølvi Normalbakke</duplicate_user_name>
-        <emails_mask>$preferredlabel$ $false$, ::enc::7AB81DEEFDC4EF09B4B42DF68AEFAA93DD1A3C6A28B1C742FE95CD7FA20A88509442988E14426F2BFB5667594EBF8B77::enc::, $emailtypeslabel$ ::ctvs::work::ctvs::, $descriptionlabel$ &lt;br&gt;$preferredlabel$ $true$, ::enc::35F8167616576E0CBB8F39FA001EEBB83DF3BABFC7716AFB16DE26E1972EA90C::enc::, $emailtypeslabel$ ::ctvs::personal::ctvs::, $descriptionlabel$ &lt;br&gt;</emails_mask>
+        <emails_mask>$preferredlabel$ $false$, ::enc::294F627D8AA07069E9993C7B541ECD4AE4D83B6E56ABBB39986E9FA26148A484::enc::, $emailtypeslabel$ ::ctvs::work::ctvs::, $descriptionlabel$ &lt;br&gt;$preferredlabel$ $true$, ::enc::EEBA564FB93823CBF459254934F09F5699FAA8C7678B13D50BF85D514AE99C2B::enc::, $emailtypeslabel$ ::ctvs::personal::ctvs::, $descriptionlabel$ &lt;br&gt;</emails_mask>
         <encrypted_pin_number/>
         <encrypted_pin_number_original_value/>
         <entity_action/>
@@ -347,7 +347,7 @@
         <force_update_external_original_fields>false</force_update_external_original_fields>
         <from_register_new_user>false</from_register_new_user>
         <gender>NONE</gender>
-        <identifiers_mask>$isactive$ $true$, $typelabel$ ::ctvs::UNIV_ID::ctvs::, $valuelabel$ ::enc::7FDABD94FEA3EF162A7BF2E161D4747F::enc::, $notelabel$ &lt;br&gt;</identifiers_mask>
+        <identifiers_mask>$isactive$ $true$, $typelabel$ ::ctvs::BARCODE::ctvs::, $valuelabel$ ::enc::220809917D55BF0A342CBE4ACD5F7A95::enc::, $notelabel$ &lt;br&gt;$isactive$ $true$, $typelabel$ ::ctvs::UNIV_ID::ctvs::, $valuelabel$ ::enc::5AF9BD90E87B4684E19C71FB9CD5C875::enc::, $notelabel$ &lt;br&gt;</identifiers_mask>
         <from_external_system>true</from_external_system>
         <researcher/>
         <job_description/>
@@ -357,7 +357,7 @@
         <library_id/>
         <library_unit_id/>
         <linked_account>false</linked_account>
-        <linking_id>7566224830002204</linking_id>
+        <linking_id>1818573870002204</linking_id>
         <locked_out>false</locked_out>
         <locked_out_date/>
         <login_restriction_exception/>
@@ -365,11 +365,11 @@
         <middle_name/>
         <notes_mask/>
         <distributed>false</distributed>
-        <original_id/>
+        <original_id>12345678</original_id>
         <originating_id/>
         <password_backup/>
         <password_expiry_date/>
-        <phones_mask>$preferredlabel$ $true$, $preferredsmslabel$ $true$, ::enc::73540468A8C5693CE6E20CE2B0626B52::enc::, $phonetypeslabel$ ::ctvs::mobile::ctvs::&lt;br&gt;</phones_mask>
+        <phones_mask>$preferredlabel$ $true$, $preferredsmslabel$ $true$, ::enc::963424F1D37B3C6B4F36C4B56E9E97E5::enc::, $phonetypeslabel$ ::ctvs::mobile::ctvs::&lt;br&gt;</phones_mask>
         <pin_number/>
         <pin_number_for_display/>
         <pin_number_original_value/>
@@ -402,8 +402,8 @@
         <record_type>PUBLIC</record_type>
         <registration_key/>
         <roles_mask>$rolename$ ::ctvs::200::ctvs::, $rolescope$ ::msvs::2200.2204::msvs::, $isactive$ $true$, $expirydate$ ::date::::date::,  $parameterslabel$ &lt;br&gt;</roles_mask>
-        <library_code>1030000</library_code>
-        <library_code_original_value>1030000</library_code_original_value>
+        <library_code>1030300</library_code>
+        <library_code_original_value>1030300</library_code_original_value>
         <secret_key/>
         <selected_patron_letters/>
         <selected_patron_letters_original_value/>
@@ -411,20 +411,20 @@
         <source_institution_name/>
         <source_link_id/>
         <status>ACTIVE</status>
-        <status_date>26/08/2018</status_date>
+        <status_date>18/11/2015</status_date>
         <status_date_dummy>
-          <calendar>26/08/2018</calendar>
+          <calendar>18/11/2015</calendar>
           <calendar_ui/>
-          <day>26</day>
+          <day>18</day>
           <day_ui/>
-          <default_value_for_with_validation>1535272794845</default_value_for_with_validation>
-          <full_date>2018-08-26</full_date>
+          <default_value_for_with_validation>1447858893013</default_value_for_with_validation>
+          <full_date>2015-11-18</full_date>
           <full_date_from_ui/>
-          <input_date_tag_format>26.08.2018</input_date_tag_format>
-          <month>7</month>
+          <input_date_tag_format>18.11.2015</input_date_tag_format>
+          <month>10</month>
           <month_ui/>
           <date>false</date>
-          <year>2018</year>
+          <year>2015</year>
           <year_ui/>
         </status_date_dummy>
         <temp_generated_password/>
@@ -472,24 +472,24 @@
           <user_email>
             <create_date>02/09/2018</create_date>
             <description/>
-            <email>solvi.normalbakke@example.com</email>
-            <entity_action/>
-            <external_id>SIS</external_id>
-            <library_id/>
-            <library_unit_id/>
-            <originating_id/>
-            <preferred>true</preferred>
-          </user_email>
-          <user_email>
-            <create_date>02/09/2018</create_date>
-            <description/>
-            <email>solvi.normalbakke@example.com</email>
+            <email>example-patron@example.com</email>
             <entity_action/>
             <external_id>SIS</external_id>
             <library_id/>
             <library_unit_id/>
             <originating_id/>
             <preferred>false</preferred>
+          </user_email>
+          <user_email>
+            <create_date>02/09/2018</create_date>
+            <description/>
+            <email>example-patron@example.com</email>
+            <entity_action/>
+            <external_id>SIS</external_id>
+            <library_id/>
+            <library_unit_id/>
+            <originating_id/>
+            <preferred>true</preferred>
           </user_email>
         </user_email_list>
         <user_gender>NONE</user_gender>
@@ -533,16 +533,16 @@
     <author/>
     <author_display/>
     <bulk_request>false</bulk_request>
-    <calculated_destination_name>UiO Juridisk bibliotek DB</calculated_destination_name>
-    <cancel_reason/>
+    <calculated_destination_name>UiO HumSam-biblioteket</calculated_destination_name>
+    <cancel_reason>Mottatt som kopi</cancel_reason>
     <cause_for_recalled_item>false</cause_for_recalled_item>
     <chapter_article_author/>
     <chapter_article_title/>
     <convertable_to_resource_sharing>true</convertable_to_resource_sharing>
     <copyright_declaration_signed/>
     <copyright_source/>
-    <create_date>04/12/2018</create_date>
-    <create_time>09:44:27 CET</create_time>
+    <create_date>26/11/2018</create_date>
+    <create_time>16:21:24 CET</create_time>
     <date_available_from/>
     <date_available_from_dummy>
       <calendar>01/01/1970</calendar>
@@ -607,7 +607,7 @@
     <material_type_display>BK</material_type_display>
     <needs_hold_shelf_processing>false</needs_hold_shelf_processing>
     <pickup>false</pickup>
-    <note/>
+    <note>Physical non-returnable, kopi gitt låner.</note>
     <note1/>
     <note2/>
     <note3/>
@@ -641,9 +641,9 @@
       <accession_number/>
       <titles/>
       <alternate_titles/>
-      <author>Raad, Isabel</author>
+      <author>Tullin, Christian Braunmann</author>
       <author_list>
-        <string>Raad, Isabel</string>
+        <string>Tullin, Christian Braunmann</string>
       </author_list>
       <begin_pub_date>2013</begin_pub_date>
       <bib_id/>
@@ -653,13 +653,13 @@
       <call_number_suffix/>
       <category_of_material/>
       <complete_edition/>
-      <complete_title>Shirog : jenta jeg en gang var</complete_title>
+      <complete_title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</complete_title>
       <completeness/>
       <copy_number/>
       <copy_version_ident_note/>
-      <creator>Raad, Isabel</creator>
-      <date>cop. 2018</date>
-      <date_of_publication>cop. 2018</date_of_publication>
+      <creator>Tullin, Christian Braunmann</creator>
+      <date>1815</date>
+      <date_of_publication>1815</date_of_publication>
       <date_of_report/>
       <description/>
       <description_list/>
@@ -668,13 +668,11 @@
       <format/>
       <general_retention/>
       <holdings/>
-      <id>999920005113502204</id>
+      <id>999920002809502204</id>
       <immediate_source_of_acq_note/>
-      <isbn>9788242963086</isbn>
-      <isbn_az>9788242963086</isbn_az>
-      <isbn_list>
-        <string>9788242963086</string>
-      </isbn_list>
+      <isbn/>
+      <isbn_az/>
+      <isbn_list/>
       <issn/>
       <issn_and_eissn_list/>
       <issn_az/>
@@ -712,7 +710,7 @@
               <value>
                 <operational_fld>
                   <name>date</name>
-                  <value>cop. 2018</value>
+                  <value>1815</value>
                 </operational_fld>
               </value>
             </date>
@@ -722,7 +720,7 @@
               <value>
                 <operational_fld>
                   <name>complete_title</name>
-                  <value>Shirog : jenta jeg en gang var</value>
+                  <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
                 </operational_fld>
               </value>
             </complete_title>
@@ -748,16 +746,6 @@
             </type_of_date>
           </map_entry>
           <map_entry>
-            <isbn>
-              <value>
-                <operational_fld>
-                  <name>isbn</name>
-                  <value>9788242963086</value>
-                </operational_fld>
-              </value>
-            </isbn>
-          </map_entry>
-          <map_entry>
             <language>
               <value>
                 <operational_fld>
@@ -772,7 +760,7 @@
               <value>
                 <operational_fld>
                   <name>title</name>
-                  <value>Shirog : jenta jeg en gang var</value>
+                  <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
                 </operational_fld>
               </value>
             </title>
@@ -802,7 +790,7 @@
               <value>
                 <operational_fld>
                   <name>short_title</name>
-                  <value>Shirog : jenta jeg en gang var</value>
+                  <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
                 </operational_fld>
               </value>
             </short_title>
@@ -812,7 +800,7 @@
               <value>
                 <operational_fld>
                   <name>title_abcnph</name>
-                  <value>Shirog : jenta jeg en gang var</value>
+                  <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
                 </operational_fld>
               </value>
             </title_abcnph>
@@ -822,7 +810,7 @@
               <value>
                 <operational_fld>
                   <name>id</name>
-                  <value>999920005113502204</value>
+                  <value>999920002809502204</value>
                 </operational_fld>
               </value>
             </id>
@@ -832,7 +820,7 @@
               <value>
                 <operational_fld>
                   <name>creator</name>
-                  <value>Raad, Isabel</value>
+                  <value>Tullin, Christian Braunmann</value>
                 </operational_fld>
               </value>
             </creator>
@@ -842,27 +830,17 @@
               <value>
                 <operational_fld>
                   <name>author</name>
-                  <value>Raad, Isabel</value>
+                  <value>Tullin, Christian Braunmann</value>
                 </operational_fld>
               </value>
             </author>
-          </map_entry>
-          <map_entry>
-            <isbn_az>
-              <value>
-                <operational_fld>
-                  <name>isbn_az</name>
-                  <value>9788242963086</value>
-                </operational_fld>
-              </value>
-            </isbn_az>
           </map_entry>
           <map_entry>
             <leganto_complete_title>
               <value>
                 <operational_fld>
                   <name>leganto_complete_title</name>
-                  <value>Shirog : jenta jeg en gang var</value>
+                  <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
                 </operational_fld>
               </value>
             </leganto_complete_title>
@@ -882,7 +860,7 @@
               <value>
                 <operational_fld>
                   <name>short_creator</name>
-                  <value>Raad, Isabel</value>
+                  <value>Tullin, Christian Braunmann</value>
                 </operational_fld>
               </value>
             </short_creator>
@@ -932,7 +910,7 @@
               <value>
                 <operational_fld>
                   <name>date_of_publication</name>
-                  <value>cop. 2018</value>
+                  <value>1815</value>
                 </operational_fld>
               </value>
             </date_of_publication>
@@ -942,7 +920,7 @@
               <value>
                 <operational_fld>
                   <name>publisher</name>
-                  <value>Egmont Publ</value>
+                  <value>Geo Löwegren</value>
                 </operational_fld>
               </value>
             </publisher>
@@ -952,7 +930,7 @@
               <value>
                 <operational_fld>
                   <name>poline_title</name>
-                  <value>Shirog : jenta jeg en gang var</value>
+                  <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
                 </operational_fld>
               </value>
             </poline_title>
@@ -962,7 +940,7 @@
               <value>
                 <operational_fld>
                   <name>publisher_const_b</name>
-                  <value>Egmont Publ</value>
+                  <value>Geo Löwegren</value>
                 </operational_fld>
               </value>
             </publisher_const_b>
@@ -981,11 +959,11 @@
         <flds_list>
           <operational_fld>
             <name>date</name>
-            <value>cop. 2018</value>
+            <value>1815</value>
           </operational_fld>
           <operational_fld>
             <name>complete_title</name>
-            <value>Shirog : jenta jeg en gang var</value>
+            <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
           </operational_fld>
           <operational_fld>
             <name>end_pub_date</name>
@@ -996,16 +974,12 @@
             <value>s</value>
           </operational_fld>
           <operational_fld>
-            <name>isbn</name>
-            <value>9788242963086</value>
-          </operational_fld>
-          <operational_fld>
             <name>language</name>
             <value>eng</value>
           </operational_fld>
           <operational_fld>
             <name>title</name>
-            <value>Shirog : jenta jeg en gang var</value>
+            <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
           </operational_fld>
           <operational_fld>
             <name>registry_id</name>
@@ -1017,31 +991,27 @@
           </operational_fld>
           <operational_fld>
             <name>short_title</name>
-            <value>Shirog : jenta jeg en gang var</value>
+            <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
           </operational_fld>
           <operational_fld>
             <name>title_abcnph</name>
-            <value>Shirog : jenta jeg en gang var</value>
+            <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
           </operational_fld>
           <operational_fld>
             <name>id</name>
-            <value>999920005113502204</value>
+            <value>999920002809502204</value>
           </operational_fld>
           <operational_fld>
             <name>creator</name>
-            <value>Raad, Isabel</value>
+            <value>Tullin, Christian Braunmann</value>
           </operational_fld>
           <operational_fld>
             <name>author</name>
-            <value>Raad, Isabel</value>
-          </operational_fld>
-          <operational_fld>
-            <name>isbn_az</name>
-            <value>9788242963086</value>
+            <value>Tullin, Christian Braunmann</value>
           </operational_fld>
           <operational_fld>
             <name>leganto_complete_title</name>
-            <value>Shirog : jenta jeg en gang var</value>
+            <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
           </operational_fld>
           <operational_fld>
             <name>resource_type</name>
@@ -1049,7 +1019,7 @@
           </operational_fld>
           <operational_fld>
             <name>short_creator</name>
-            <value>Raad, Isabel</value>
+            <value>Tullin, Christian Braunmann</value>
           </operational_fld>
           <operational_fld>
             <name>type_of_record_bib</name>
@@ -1069,19 +1039,19 @@
           </operational_fld>
           <operational_fld>
             <name>date_of_publication</name>
-            <value>cop. 2018</value>
+            <value>1815</value>
           </operational_fld>
           <operational_fld>
             <name>publisher</name>
-            <value>Egmont Publ</value>
+            <value>Geo Löwegren</value>
           </operational_fld>
           <operational_fld>
             <name>poline_title</name>
-            <value>Shirog : jenta jeg en gang var</value>
+            <value>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</value>
           </operational_fld>
           <operational_fld>
             <name>publisher_const_b</name>
-            <value>Egmont Publ</value>
+            <value>Geo Löwegren</value>
           </operational_fld>
           <operational_fld>
             <name>place_code</name>
@@ -1112,10 +1082,10 @@
       <public_access_note/>
       <public_general_note/>
       <public_location_note/>
-      <publisher>Egmont Publ</publisher>
-      <publisher_const>Egmont Publ</publisher_const>
+      <publisher>Geo Löwegren</publisher>
+      <publisher_const>Geo Löwegren</publisher_const>
       <publisher_const_list>
-        <string>Egmont Publ</string>
+        <string>Geo Löwegren</string>
       </publisher_const_list>
       <receipt_acq_status/>
       <registry_id>3</registry_id>
@@ -1153,9 +1123,9 @@
       <series_volume/>
       <shelving_data/>
       <shelving_location/>
-      <short_creator>Raad, Isabel</short_creator>
+      <short_creator>Tullin, Christian Braunmann</short_creator>
       <short_edition/>
-      <short_title>Shirog : jenta jeg en gang var</short_title>
+      <short_title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</short_title>
       <source_found/>
       <special_format_designation/>
       <subjects/>
@@ -1163,8 +1133,8 @@
       <subjects_list_reversed/>
       <summary_holding_list/>
       <terms_use_repro/>
-      <title>Shirog : jenta jeg en gang var</title>
-      <title_abcnph>Shirog : jenta jeg en gang var</title_abcnph>
+      <title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</title>
+      <title_abcnph>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</title_abcnph>
       <type_of_date>s</type_of_date>
       <type_of_record/>
       <type_of_record_bib>a</type_of_record_bib>
@@ -1178,7 +1148,7 @@
     <request_type>PATRON_PHYSICAL</request_type>
     <request_type_display/>
     <required_chapters/>
-    <resource_sharing_request_id>8449139950002204</resource_sharing_request_id>
+    <resource_sharing_request_id>8418554830002204</resource_sharing_request_id>
     <resource_slip_printed>false</resource_slip_printed>
     <resource_slip_reported>false</resource_slip_reported>
     <rule_id/>
@@ -1187,34 +1157,34 @@
     <scan_to_page/>
     <scan_to_page2/>
     <search_type>PHYSICAL_TITLE</search_type>
-    <selected_inventory_id>22219100720002204</selected_inventory_id>
+    <selected_inventory_id>22218599340002204</selected_inventory_id>
     <selected_inventory_type>HOLDING</selected_inventory_type>
     <show_in_task_list/>
     <start_time/>
     <start_time_dummy/>
-    <status_note>DuplicateRequest</status_note>
-    <status_note_display>Bestilt to ganger</status_note_display>
-    <system_notes/>
+    <status_note>InventoryMoved</status_note>
+    <status_note_display>Materiale flyttet</status_note_display>
+    <system_notes>Mottatt som kopi</system_notes>
     <title_display/>
     <total_chapters_count/>
     <user_group>2</user_group>
     <user_statistics1>BIM</user_statistics1>
-    <user_statistics10/>
+    <user_statistics10>BIM</user_statistics10>
     <user_statistics2>BIM</user_statistics2>
-    <user_statistics3/>
-    <user_statistics4/>
-    <user_statistics5/>
-    <user_statistics6/>
-    <user_statistics7/>
-    <user_statistics8/>
-    <user_statistics9/>
+    <user_statistics3>BIM</user_statistics3>
+    <user_statistics4>BIM</user_statistics4>
+    <user_statistics5>BIM</user_statistics5>
+    <user_statistics6>BIM</user_statistics6>
+    <user_statistics7>BIM</user_statistics7>
+    <user_statistics8>BIM</user_statistics8>
+    <user_statistics9>BIM</user_statistics9>
     <volume/>
     <volume_issue/>
     <work_flow_entity/>
   </request>
-  <request_id>8449140050002204</request_id>
+  <request_id>8418554950002204</request_id>
   <request>
-    <message/>
+    <message>Received#2018-12-10 16:08:00</message>
     <acq_request/>
     <active_messages>false</active_messages>
     <active_notes>false</active_notes>
@@ -1224,7 +1194,7 @@
     <allow_other_library/>
     <assign_to/>
     <barcode_visible>false</barcode_visible>
-    <campus_code>UJUR</campus_code>
+    <campus_code>BLINDERN</campus_code>
     <cancel_note/>
     <cancel_reason/>
     <canceled_by/>
@@ -1237,8 +1207,8 @@
       <sum/>
       <vat>0.00</vat>
     </cost_to_patron>
-    <create_date>04/12/2018</create_date>
-    <create_date_str>04/12/2018</create_date_str>
+    <create_date>26/11/2018</create_date>
+    <create_date_str>26/11/2018</create_date_str>
     <delivery_address_id/>
     <delivery_email_id/>
     <description/>
@@ -1254,29 +1224,29 @@
     <entity_action/>
     <event_name/>
     <external_barcode/>
-    <external_request_id/>
+    <external_request_id>47BIBSYSUBO0056349</external_request_id>
     <external_resource/>
     <external_url/>
     <format>PHYSICAL</format>
     <format_display>Lån</format_display>
     <format_str>PHYSICAL</format_str>
-    <ful_request_id>8449140050002204</ful_request_id>
+    <ful_request_id>8418554950002204</ful_request_id>
     <fund_code/>
     <fund_fiscal_year/>
     <held_by_changed>false</held_by_changed>
-    <identifier>9788242963086</identifier>
-    <item_arrival_date/>
+    <identifier/>
+    <item_arrival_date>10/12/2018</item_arrival_date>
     <item_delivery_date/>
     <item_loan_date/>
     <item_loan_id/>
     <item_return_date/>
     <job_title/>
     <journal_title/>
-    <language/>
-    <last_send_date/>
-    <last_send_partner/>
+    <language>Null</language>
+    <last_send_date>26/11/2018</last_send_date>
+    <last_send_partner>992691840002204</last_send_partner>
     <level_of_service/>
-    <library_id>259825350002204</library_id>
+    <library_id>259829140002204</library_id>
     <library_unit_id/>
     <line1/>
     <line1_encrypted/>
@@ -1288,14 +1258,14 @@
     <line4_encrypted/>
     <locate_status>NoResourcesLocated</locate_status>
     <lost_damaged_fee>
-      <currency/>
+      <currency>NOK</currency>
       <sum/>
       <vat>0.00</vat>
     </lost_damaged_fee>
     <match_id/>
     <max_fee/>
-    <mms_id>999920005113502204</mms_id>
-    <modification_date_str>04/12/2018</modification_date_str>
+    <mms_id>999920002809502204</mms_id>
+    <modification_date_str>10/12/2018</modification_date_str>
     <multi_barcode_visible>false</multi_barcode_visible>
     <multi_item_barcode/>
     <multi_item_barcode_str>Multiple barcodes</multi_item_barcode_str>
@@ -1318,7 +1288,7 @@
     <needs_patron_info>false</needs_patron_info>
     <needs_patron_info_date/>
     <needs_patron_info_date_str/>
-    <note/>
+    <note>Physical non-returnable, kopi gitt låner, bgi</note>
     <note_to_partner/>
     <notify_user_on_cancel/>
     <num_of_cancelled_child_requests>0</num_of_cancelled_child_requests>
@@ -1331,12 +1301,12 @@
     <partner_name/>
     <physical_address/>
     <pickup_circ_id/>
-    <pickup_location_id>259825350002204</pickup_location_id>
+    <pickup_location_id>259829140002204</pickup_location_id>
     <pickup_location_str/>
     <pickup_type>LIBRARY</pickup_type>
     <preferred_pickup_institution>47BIBSYS_UBO</preferred_pickup_institution>
     <preferred_pickup_location/>
-    <preferred_send_method/>
+    <preferred_send_method>Null</preferred_send_method>
     <reason_unfilled/>
     <reassign_link_visible>true</reassign_link_visible>
     <recall_date/>
@@ -1351,13 +1321,13 @@
       <vat>0.00</vat>
     </request_cost>
     <request_fee_id/>
-    <request_hash_key>-11365012127628977300-19321128860002121000-701718501020181204101</request_hash_key>
+    <request_hash_key>-1182628377-1157313709051001723021210001515147020181210151</request_hash_key>
     <request_metadata>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;dc:record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;dc:title&gt;Shirog : jenta jeg en gang var&lt;/dc:title&gt;&lt;dc:creator&gt;Raad, Isabel&lt;/dc:creator&gt;&lt;dc:publisher&gt;Egmont Publ&lt;/dc:publisher&gt;&lt;dc:source&gt;info:sid/primo.exlibrisgroup.com-BIBSYS_ILS&lt;/dc:source&gt;&lt;dc:date&gt;cop. 2018&lt;/dc:date&gt;&lt;dc:identifier_isbn&gt;9788242963086&lt;/dc:identifier_isbn&gt;&lt;/dc:record&gt;</request_metadata>
-    <requested_media/>
+&lt;dc:record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;dc:title&gt;Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed&lt;/dc:title&gt;&lt;dc:creator&gt;Tullin, Christian Braunmann&lt;/dc:creator&gt;&lt;dc:publisher&gt;Geo. Löwegren&lt;/dc:publisher&gt;&lt;dc:date&gt;1815&lt;/dc:date&gt;&lt;dc:source&gt;info:sid/primo.exlibrisgroup.com-BIBSYS_ILS&lt;/dc:source&gt;&lt;dc:volume&gt;3&lt;/dc:volume&gt;&lt;dc:rlterms_pages&gt;61&lt;/dc:rlterms_pages&gt;&lt;dc:rlterms_callNumberType&gt;8&lt;/dc:rlterms_callNumberType&gt;&lt;/dc:record&gt;</request_metadata>
+    <requested_media>7</requested_media>
     <requester_exists>true</requester_exists>
-    <requester_id>7566224830002204</requester_id>
-    <requester_id_encrypted>189A767088750C21542B1D9EA9093ECDFB51F46B</requester_id_encrypted>
+    <requester_id>1818573870002204</requester_id>
+    <requester_id_encrypted>71A8BCC14E6FBE239CA6F7B3DB60501B0F7F9340</requester_id_encrypted>
     <requester_name/>
     <requester_primary_id/>
     <requester_visible>true</requester_visible>
@@ -1365,32 +1335,32 @@
     <self_ownership>false</self_ownership>
     <send_message>false</send_message>
     <shipping_cost>
-      <currency/>
-      <sum/>
+      <currency>NOK</currency>
+      <sum>0.00</sum>
       <vat>0.00</vat>
     </shipping_cost>
     <specific_edition>true</specific_edition>
-    <status>REQUEST_CREATED_BOR</status>
-    <stub_item_pid>23219100710002204</stub_item_pid>
+    <status>RECEIVED_PHYSICALLY</status>
+    <stub_item_pid/>
     <temp_barcode/>
     <temp_fund_code/>
     <temp_fund_fiscal_year/>
     <temp_new_due_date/>
-    <title>Shirog : jenta jeg en gang var</title>
-    <title_ui_type>Link</title_ui_type>
+    <title>Majdagen ; Søefartens Oprindelse og Virkninger ; samt Skabningens Ypperlighed</title>
+    <title_ui_type>Label</title_ui_type>
     <transaction_qualifier>1</transaction_qualifier>
     <transaction_result/>
     <user_group>2</user_group>
     <user_statistics1>BIM</user_statistics1>
-    <user_statistics10/>
+    <user_statistics10>BIM</user_statistics10>
     <user_statistics2>BIM</user_statistics2>
-    <user_statistics3/>
-    <user_statistics4/>
-    <user_statistics5/>
-    <user_statistics6/>
-    <user_statistics7/>
-    <user_statistics8/>
-    <user_statistics9/>
+    <user_statistics3>BIM</user_statistics3>
+    <user_statistics4>BIM</user_statistics4>
+    <user_statistics5>BIM</user_statistics5>
+    <user_statistics6>BIM</user_statistics6>
+    <user_statistics7>BIM</user_statistics7>
+    <user_statistics8>BIM</user_statistics8>
+    <user_statistics9>BIM</user_statistics9>
     <user_type>EXTERNAL</user_type>
     <view_visible>false</view_visible>
     <willing_to_pay_indication>false</willing_to_pay_indication>
@@ -1407,11 +1377,15 @@
     <address5/>
     <city>Lahti</city>
     <country/>
-    <email>solvi.normalbakke@example.com</email>
+    <email>example-patron@example.com</email>
     <first_name>Sølvi</first_name>
     <identifiers>
       <code_value>
         <code>Primary Identifier</code>
+        <value>ub1234567</value>
+      </code_value>
+      <code_value>
+        <code>BARCODE</code>
         <value>ub1234567</value>
       </code_value>
       <code_value>

@@ -6,7 +6,7 @@
   <general_data>
     <address_c>Ingen</address_c>
     <address_c>Ingen</address_c>
-    <address_from>bibliotek@ub.uio.no</address_from>
+    <address_from>example-library@example.com</address_from>
     <current_date>05/12/2018</current_date>
     <letter_channel_info/>
     <letter_name>Slettet bestilling</letter_name>
@@ -115,7 +115,7 @@
     <email>
       <create_date>24/11/2015</create_date>
       <description/>
-      <email>solvi.normalbakke@example.com</email>
+      <email>example-library@example.com</email>
       <entity_action/>
       <external_id/>
       <library_id/>
@@ -286,7 +286,7 @@
       <user_email>
         <create_date>24/01/2018</create_date>
         <description/>
-        <email>solvi.normalbakke@example.com</email>
+        <email>example-patron@example.com</email>
         <entity_action/>
         <external_id>SIS_temp</external_id>
         <library_id/>
@@ -472,7 +472,7 @@
           <user_email>
             <create_date>24/01/2018</create_date>
             <description/>
-            <email>solvi.normalbakke@example.com</email>
+            <email>example-patron@example.com</email>
             <entity_action/>
             <external_id>SIS_temp</external_id>
             <library_id/>
@@ -1396,7 +1396,7 @@
     <address5/>
     <city>Lahti</city>
     <country>Null</country>
-    <email>solvi.normalbakke@example.com</email>
+    <email>example-patron@example.com</email>
     <first_name>Sølvi</first_name>
     <identifiers>
       <code_value>
