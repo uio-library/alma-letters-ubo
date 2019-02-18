@@ -406,9 +406,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/QueryToRequesterLetter.xsl": {
-      "checksum": "bf086ed4a58c318fc6613c04da3fb4a6ecf65a09",
+      "checksum": "b688747e72343423c2bf0c65bdb9b0e9e0547544",
       "default_checksum": "58d06a8ec49176810ee6e279401d33e532826710",
-      "modified": "11/09/2018"
+      "modified": "08/02/2019"
     },
     "xsl/letters/ReceivingSlipLetter.xsl": {
       "checksum": "1a3bd67aa91153e0b0cfb4bacd2ea59755e9e36c",

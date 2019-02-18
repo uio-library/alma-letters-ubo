@@ -17,16 +17,16 @@
 
 <xsl:template match="/notification_data">
 
-  <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
-  <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
+  <!-- mailReason.xsl -->
+  <!--<xsl:call-template name="emailLogo"/><xsl:call-template name="toWhomIsConcerned"/>--><!-- mailReason.xsl -->
 
   <p>
     <xsl:value-of select="message_body" disable-output-escaping="yes"/>
   </p>
 
-  <xsl:call-template name="email-footer"><!-- footer.xsl -->
+  <!--<xsl:call-template name="email-footer">
     <xsl:with-param name="show_help" select="false()"/>
-  </xsl:call-template>
+  </xsl:call-template>--><!-- footer.xsl -->
 
 </xsl:template>
 </xsl:stylesheet>
