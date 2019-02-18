@@ -571,9 +571,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
-      "checksum": "bea8028d8a778023f01627177e8be808b9d4d561",
+      "checksum": "d69a026668898f800d60dd677cdfb073f0a790ea",
       "default_checksum": "272a776b7fb8aaac1df369fd8ab4398d8bb8a708",
-      "modified": "04/02/2019"
+      "modified": "18/02/2019"
     },
     "xsl/letters/sms/SmsFulShortenedDueDateLetter.xsl": {
       "checksum": "9540f8e1e192d53bc7babe98f270ce657d37f17e",

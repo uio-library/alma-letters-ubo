@@ -10,7 +10,7 @@
 
 <xsl:value-of select="/notification_data/receivers/receiver/user_phone/phone"/>
 <xsl:text> : </xsl:text>
-<xsl:value-of select="/notification_data/organization_unit/name"/>
+<xsl:value-of select="/notification_data/organization_unit/name"/>: <xsl:if test = "notification_data/receivers/receiver/user/user_name"> <xsl:value-of select="notification_data/receivers/receiver/user/user_name"/></xsl:if>
 <xsl:text>.&#10;</xsl:text><!-- Line feed -->
 
 <!-- Klar til henting ved ... -->
