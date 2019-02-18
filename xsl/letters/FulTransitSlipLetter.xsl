@@ -22,77 +22,82 @@
           <xsl:attribute name="name">libnummer</xsl:attribute>
           <xsl:attribute name="content">
             <xsl:for-each select="notification_data/request">
+              <!--
+                Vi bruker starts-with for å også fange opp verdier av typen
+                "UiO Informatikkbiblioteket - 1030317 Acquisitions Department",
+                men det betyr at vi må være litt forsiktige med rekkefølgen - første treff vinner.
+              -->
               <xsl:choose>
-                <xsl:when test="calculated_destination_name = 'UiO Arkeologisk bibliotek'">
+                <xsl:when test="starts-with(calculated_destination_name, 'UiO Arkeologisk bibliotek')">
                  103 &#160; 0011
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Etnografisk bibliotek'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Etnografisk bibliotek Numismatikk')">
                  103 &#160; 0010
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Etnografisk bibliotek Numismatikk'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Etnografisk bibliotek')">
                  103 &#160; 0010
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO HumSam-biblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO HumSam-biblioteket')">
                  103 &#160; 0300
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Ibsensenterets bibliotek'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Ibsensenterets bibliotek')">
                  103 &#160; 0104
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Informatikkbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Informatikkbiblioteket')">
                  103 &#160; 0317
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Juridisk bibliotek DB'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
                  103 &#160; 0000
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Kriminologibiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Kriminologibiblioteket')">
                  103 &#160; 0002
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Læringssenteret DN'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Læringssenteret DN')">
                  103 &#160; 0009
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Medisinsk bibliotek Rikshospitalet'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Medisinsk bibliotek Rikshospitalet')">
                  103 &#160; 2300
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Menneskerettighetsbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Menneskerettighetsbiblioteket')">
                  103 &#160; 0048
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO NSSF Selvmordsforskning/forebygging'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO NSSF Selvmordsforskning/forebygging')">
                  103 &#160; 2304
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Naturhistorisk museum biblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Naturhistorisk museum biblioteket')">
                  103 &#160; 0500
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Medisinsk bibliotek Odontologi'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Medisinsk bibliotek Odontologi')">
                  103 &#160; 0307
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Offentligrettsbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Offentligrettsbiblioteket')">
                  103 &#160; 0003
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Petroleums- og EU-rettsbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Petroleums- og EU-rettsbiblioteket')">
                  103 &#160; 0005
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Privatrettsbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Privatrettsbiblioteket')">
                  103 &#160; 0001
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Realfagsbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Realfagsbiblioteket')">
                  103 &#160; 0310
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Rettshistorisk samling'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Rettshistorisk samling')">
                  103 &#160; 0015
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Rettsinformatikkbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Rettsinformatikkbiblioteket')">
                  103 &#160; 0004
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Sjørettsbiblioteket'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Sjørettsbiblioteket')">
                  103 &#160; 0006
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Sophus Bugge'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Sophus Bugge')">
                  103 &#160; 0303
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Teologisk bibliotek'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Teologisk bibliotek')">
                  103 &#160; 0301
                </xsl:when>
-               <xsl:when test="calculated_destination_name = 'UiO Medisinsk bibliotek Ullevål sykehus'">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Medisinsk bibliotek Ullevål sykehus')">
                  103 &#160; 0338
                </xsl:when>
                <xsl:otherwise>

@@ -231,9 +231,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulTransitSlipLetter.xsl": {
-      "checksum": "f8df96182683920bcaa48b223c957c2fb08d54da",
+      "checksum": "6fce584acf7efa09401a27a95788097602924c58",
       "default_checksum": "7123666a1031fe712c66677c51bdd4660e5c5c64",
-      "modified": "10/09/2018"
+      "modified": "18/02/2019"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
       "checksum": "87d288b14f1a616fff09b832c62aac0e1d37a167",
