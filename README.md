@@ -118,16 +118,10 @@ løsningen er at html2ps ikke støtter CSS, så vi kan bare gjøre enkel formate
 
 ### Hentehylle og hentenummer
 
-#### `FulReasourceRequestSlipLetter` som hentehyllelapp
+#### <s>`FulReasourceRequestSlipLetter` som hentehyllelapp</s>
 
-Det eksisterer foreløpig ikke en egen hentehyllelapp i Alma ([Se Ideas Exchange-forslag](http://ideas.exlibrisgroup.com/forums/308173-alma/suggestions/32042020-new-letter-for-hold-shelf-slips)).
-Intensjonen til Ex Libris er at `FulReasourceRequestSlipLetter` skal brukes både
-som hentelapp for bibliotekspersonalet *og* som hentehyllelapp, men for oss fungerte
-det dårlig å bruke samme lapp til to nokså forskjellige formål. På hentehylla
-kan vi blant annet ikke vise informasjon som identifiserer hvem som har bestilt
-dokumentet av personvernhensyn.
-
-Det vi har gjort er et hack for å få én stikkseddel til å fylle to behov. I pseudokode:
+Lenge fantes det ikke en egen hentehyllelapp, og `FulReasourceRequestSlipLetter` måtte
+brukes både som hentelapp for bibliotekspersonalet *og* som hentehyllelapp:
 
 ```
 % if work_flow_entity/step_type = 'ON_HOLD_SHELF' then
@@ -137,11 +131,7 @@ Det vi har gjort er et hack for å få én stikkseddel til å fylle to behov. I 
 % endif
 ```
 
-(Stikkseddelen fungerer forresten *også* som sendelapp, så den fyller egentlig *tre* behov)
-
-Ulempen med denne løsningen er at en manuelt må trykke "Print slip" for å få ut hentehyllelappen
-etter man har tatt "Scan In" for å registrere at dokumentet er hentet frem og klar for hentehylla.
-På sikt håper vi Alma får en egen hentehyllelapp.
+I desember 2018 la Ex Libris til en egen hentehyllelapp (basert på et [Ideas Exchange-forslag](http://ideas.exlibrisgroup.com/forums/308173-alma/suggestions/32042020-new-letter-for-hold-shelf-slips)).
 
 #### Hentenummer
 
