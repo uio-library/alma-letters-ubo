@@ -11,7 +11,7 @@
 <xsl:include href="style.xsl"/>
 <xsl:include href="recordTitle.xsl"/>
 
-<!-- Templates -->
+<!-- ============================ Templates ============================ -->
 
 <!--
   Template to standardize table styling without too much inline code.
@@ -52,7 +52,7 @@
 
       Depends on: multilingual
     -->
-    <xsl:value-of select="title"/>
+    <xsl:value-of select="title_abcnph"/>
     <xsl:if test="material_type = 'ISSUE'">
         <xsl:call-template name="multilingual"><!-- header.xsl -->
             <xsl:with-param name="nb" select="', hefte'"/>
@@ -95,13 +95,13 @@
 </xsl:template>
 
 <!--
-  Template: formatLoan
+  Template: formatLoanWithFees
 
   Generates rows for the fines/fees associated with a single document/loan.
   Usually there will be either one (LOSTITEMREPLACEMENTFEE) or two rows
   (LOSTITEMREPLACEMENTFEE and LOSTITEMPROCESSFEE).
 -->
-<xsl:template name="formatLoan">
+<xsl:template name="formatLoanWithFees">
   <xsl:variable name="loan" select="."/>
   <xsl:variable name="fees" select="count(fines_fees_list/user_fines_fees)"/>
   <xsl:for-each select="fines_fees_list/user_fines_fees">
@@ -152,6 +152,7 @@
   </xsl:for-each>
 </xsl:template>
 
+<!-- ============================ The main part of the letter ============================ -->
 
 <!-- The letter itself -->
 
@@ -206,7 +207,7 @@
     </xsl:with-param>
     <xsl:with-param name="body">
       <xsl:for-each select="display_list/overdue_and_lost_loan_notification_display">
-        <xsl:call-template name="formatLoan"></xsl:call-template>
+        <xsl:call-template name="formatLoanWithFees"></xsl:call-template>
       </xsl:for-each>
     </xsl:with-param>
   </xsl:call-template>
