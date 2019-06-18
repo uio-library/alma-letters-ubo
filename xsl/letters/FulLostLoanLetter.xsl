@@ -48,11 +48,27 @@
   <xsl:call-template name="dearLibraryPatron"/><!-- mailReason.xsl -->
 
   <p>
-    <xsl:call-template name="multilingual"><!-- header.xsl -->
-      <xsl:with-param name="nb" select="'Følgende lån er ikke blitt returnert etter flere påminnelser. Derfor mottar du nå erstatningskrav for dette.'"/>
-      <xsl:with-param name="nn" select="'Følgjande lån er ikkje blitt returnert etter fleire påminningar. Derfor mottek du nå erstatningskrav for dette.'"/>
-      <xsl:with-param name="en" select="'The following loan has been recalled several times without success. We now consider it lost and invoice you for the replacement cost.'"/>
-    </xsl:call-template>
+    <xsl:choose>
+
+      <!-- Case A: Brevet sendes ut fordi noen manuelt har markert et dokument som "Lost" i Alma -->
+      <xsl:when test="item_loan/process_status_creator != ''">
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
+          <xsl:with-param name="nb" select="'Følgende lån er nå erklært tapt. Du mottar derfor erstatningskrav for dette.'"/>
+          <xsl:with-param name="nn" select="'Følgjande lån er nå erklært tapt. Du mottek difor erstatningskrav for dette.'"/>
+          <xsl:with-param name="en" select="'The following loan is now declared lost. We therefore invoice you for the replacement cost.'"/>
+        </xsl:call-template>
+      </xsl:when>
+
+      <!-- Case B: Automatisk utsendelse etter flere purringer -->
+      <xsl:otherwise>
+        <xsl:call-template name="multilingual"><!-- header.xsl -->
+          <xsl:with-param name="nb" select="'Følgende lån er ikke blitt returnert etter flere påminnelser. Du mottar derfor nå erstatningskrav for dette.'"/>
+          <xsl:with-param name="nn" select="'Følgjande lån er ikkje blitt returnert etter fleire påminningar. Du mottek difor nå erstatningskrav for dette.'"/>
+          <xsl:with-param name="en" select="'The following loan have been recalled several times without success. We now consider the item lost and invoice you for the replacement cost.'"/>
+        </xsl:call-template>
+      </xsl:otherwise>
+
+    </xsl:choose>
   </p>
 
   <div style="margin: 0.8em 1.2em;">
@@ -76,7 +92,7 @@
     <xsl:call-template name="multilingual"><!-- header.xsl -->
       <xsl:with-param name="nb" select="'Vi frafraller erstatningskravet hvis du returnerer dokumentet eller kjøper nytt erstatningseksemplar selv.'"/>
       <xsl:with-param name="nn" select="'Vi fråfaller erstatningskravet hvis du returnerer dokumentet eller kjøper nytt erstatningseksemplar sjølv.'"/>
-      <xsl:with-param name="en" select="'The replacement cost is waived if you return the document or buy a new replacement copy.'"/>
+      <xsl:with-param name="en" select="'We will waive the replacement cost if you return the document or buy a new replacement copy.'"/>
     </xsl:call-template>
 
     <xsl:if test="fines_fees_list/user_fines_fees/fine_fee_type = 'LOSTITEMPROCESSFEE'">

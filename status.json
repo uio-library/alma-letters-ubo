@@ -156,9 +156,9 @@
       "modified": "-"
     },
     "xsl/letters/FulLostLoanLetter.xsl": {
-      "checksum": "1b8f82a9b7f2cf660cff04486e2e3e74e1c43460",
+      "checksum": "48fd7cc787c6957ba8fad888a54ed77afa4467b4",
       "default_checksum": "5d4ee7181a8e4ecf71f0e7f6bccdf61d30829e7d",
-      "modified": "04/01/2019"
+      "modified": "18/06/2019"
     },
     "xsl/letters/FulLostLoanNotificationLetter.xsl": {
       "checksum": "208dccc7f99517ba11d2e047c7f30a38a0c990f6",
@@ -178,7 +178,7 @@
     "xsl/letters/FulOverdueAndLostLoanLetter.xsl": {
       "checksum": "78c510afe879ff38a48d9f4eb2dd6dd135e20bd1",
       "default_checksum": "ff3ee07dfaa0add86c34ed0ccd34a1a67e15218a",
-      "modified": "04/01/2019"
+      "modified": "18/06/2019"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
       "checksum": "72f669d0f9426628718ec6141b5672bc783feab0",
