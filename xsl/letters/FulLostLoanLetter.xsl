@@ -14,6 +14,7 @@
   <xsl:call-template name="emailTemplate"/><!-- style.xsl -->
 </xsl:template>
 
+<!-- ============================ Templates ============================ -->
 
 <!--
   Template: formatFineFeeType
@@ -42,6 +43,7 @@
   </xsl:choose>
 </xsl:template>
 
+<!-- ============================ The main part of the letter ============================ -->
 
 <xsl:template match="/notification_data">
 
@@ -72,16 +74,16 @@
   </p>
 
   <div style="margin: 0.8em 1.2em;">
-    <strong>
+    <em>
       <xsl:value-of select="phys_item_display/title_abcnph"/>
-    </strong>
-    <br />
-    @@barcode@@: <strong><xsl:value-of select="item_loan/barcode"/></strong>
+    </em>
     <br />
     <xsl:if test="item_loan/description != ''">
-      @@description@@: <xsl:value-of select="item_loan/description"/>
+      <em><xsl:value-of select="item_loan/description"/></em>
       <br />
     </xsl:if>
+    @@barcode@@: <xsl:value-of select="item_loan/barcode"/>
+    <br />
     @@due_date@@:
     <xsl:call-template name="stdDate"><!-- header.xsl -->
       <xsl:with-param name="value" select="item_loan/due_date"/>
