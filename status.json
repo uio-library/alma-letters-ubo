@@ -181,9 +181,9 @@
       "modified": "04/01/2019"
     },
     "xsl/letters/FulOverdueAndLostLoanNotificationLetter.xsl": {
-      "checksum": "75f3f115265a67a072a6dc7b18fde8ebeab3c22f",
+      "checksum": "72f669d0f9426628718ec6141b5672bc783feab0",
       "default_checksum": "612a1ff3de68252d4913c5cf1ff462d2659c92ef",
-      "modified": "26/09/2018"
+      "modified": "18/06/2019"
     },
     "xsl/letters/FulPersonalDeliveryLetter.xsl": {
       "checksum": "3c5eac7d1d04f607f3d681b422eceb5ff3528a9e",
@@ -533,7 +533,7 @@
     "xsl/letters/call_template/style.xsl": {
       "checksum": "4f207dacb89afaeac533dde32bccb04fae0cd70a",
       "default_checksum": "bf038d0c1e6bee6a6033c34397c4a46650aa80d9",
-      "modified": "16/02/2018"
+      "modified": "18/06/2019"
     },
     "xsl/letters/sms/SmsFulCancelRequestLetter.xsl": {
       "checksum": "60729827d27cc4bebf6686749723d6a0e8242638",
