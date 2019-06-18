@@ -236,9 +236,9 @@
       "modified": "18/02/2019"
     },
     "xsl/letters/FulUserBorrowingActivityLetter.xsl": {
-      "checksum": "87d288b14f1a616fff09b832c62aac0e1d37a167",
+      "checksum": "b8b5a54d1d330c6174c6e2a80b7360e9ab473a7b",
       "default_checksum": "df7fa9cd4b5176efb39d63c6b12ddad8db03a705",
-      "modified": "03/12/2018"
+      "modified": "18/06/2019"
     },
     "xsl/letters/FulUserLoansCourtesyLetter.xsl": {
       "checksum": "1510136d5198bc8c74d746dae2ba12d9d5dc6cf5",

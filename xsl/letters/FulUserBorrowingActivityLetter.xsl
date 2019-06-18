@@ -46,21 +46,21 @@
 -->
 <xsl:template name="formatProcessStatus">
   <xsl:choose>
-    <xsl:when test="process_status = 'LOST'">
+    <xsl:when test="item_loan/process_status = 'LOST'">
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Må leveres snarest, erstatningskrav sendt'"/>
         <xsl:with-param name="nn" select="'Må leverast snarast, erstatningskrav sendt'"/>
         <xsl:with-param name="en" select="'Must be returned immediately, lost item bill sent'"/>
       </xsl:call-template>
     </xsl:when>
-    <xsl:when test="process_status = 'RECALL'">
+    <xsl:when test="item_loan/process_status = 'RECALL'">
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Andre lånere venter'"/>
         <xsl:with-param name="nn" select="'Andre lånere venter'"/>
         <xsl:with-param name="en" select="'Other patrons are waiting'"/>
       </xsl:call-template>
     </xsl:when>
-    <xsl:when test="starts-with(barcode, 'RS-')">
+    <xsl:when test="starts-with(item_loan/barcode, 'RS-')">
       <!-- Innlån utland -->
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Kontakt biblioteket'"/>
@@ -68,7 +68,7 @@
         <xsl:with-param name="en" select="'Contact the library'"/>
       </xsl:call-template>
     </xsl:when>
-    <xsl:when test="contains(location_name, 'Fjernlån')">
+    <xsl:when test="contains(item_loan/location_name, 'Fjernlån')">
       <xsl:call-template name="multilingual"><!-- header.xsl -->
         <xsl:with-param name="nb" select="'Fornyes i Oria'"/><!-- Fornyes i Oria? -->
         <xsl:with-param name="nn" select="'Fornyast i Oria'"/>
@@ -125,15 +125,15 @@
 <xsl:template name="formatLoan">
   <tr>
     <td valign="top">
-      <xsl:value-of select="title"/>
-      <xsl:if test="description != ''">
-        <br />(<xsl:value-of select="description"/>)
+      <xsl:value-of select="physical_item_display_for_printing/title_abcnph"/>
+      <xsl:if test="item_loan/description != ''">
+        <br />(<xsl:value-of select="item_loan/description"/>)
       </xsl:if>
       <br /><!-- linjeskift for RT -->
     </td>
     <td valign="top" style="white-space: nowrap;">
       <xsl:call-template name="checkDueDate">
-        <xsl:with-param name="dueDate" select="due_date"/>
+        <xsl:with-param name="dueDate" select="item_loan/due_date"/>
       </xsl:call-template>
       <br /><!-- linjeskift for RT -->
     </td>
@@ -230,16 +230,9 @@
           </th>
         </tr>
 
-        <!-- List overdue loans first -->
-        <xsl:for-each select="overdue_item_loans/item_loan">
-          <xsl:sort select="concat(substring(due_date, 7, 4), substring(due_date, 4, 2), substring(due_date, 1, 2))"
-                    order="ascending" data-type="number" />
-          <xsl:call-template name="formatLoan"></xsl:call-template>
-        </xsl:for-each>
-
-        <!-- Then regular loans -->
-        <xsl:for-each select="item_loans/item_loan">
-          <xsl:sort select="concat(substring(due_date, 7, 4), substring(due_date, 4, 2), substring(due_date, 1, 2))"
+        <!-- Sort by descending due date -->
+        <xsl:for-each select="loans_by_library/library_loans_for_display/item_loans/overdue_and_lost_loan_notification_display">
+          <xsl:sort select="concat(substring(item_loan/due_date, 7, 4), substring(item_loan/due_date, 4, 2), substring(item_loan/due_date, 1, 2))"
                     order="ascending" data-type="number" />
           <xsl:call-template name="formatLoan"></xsl:call-template>
         </xsl:for-each>
@@ -341,6 +334,13 @@
               <xsl:with-param name="nb" select="'Eldre gebyrer'"/>
               <xsl:with-param name="nn" select="'Eldre gebyr'"/>
               <xsl:with-param name="en" select="'Older fees'"/>
+            </xsl:call-template>
+          </td>
+          <td>
+            <xsl:call-template name="multilingual"><!-- header.xsl -->
+              <xsl:with-param name="nb" select="'(Kontakt oss for detaljer)'"/>
+              <xsl:with-param name="nn" select="'(Kontakt oss for detaljer)'"/>
+              <xsl:with-param name="en" select="'(Contact us for details)'"/>
             </xsl:call-template>
           </td>
           <td>
