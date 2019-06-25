@@ -106,6 +106,35 @@
     </p>
   </xsl:if>
 
+  <xsl:if test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket')">
+    <p>
+      <xsl:choose>
+        <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'en'">
+          <strong>Please note:</strong> The Science Library will be closed for the Summer from 29 June,
+          but books for pick-up will be moved to the library in Georg Sverdrups hus, where they can be picked up after that date.
+        </xsl:when>
+        <xsl:otherwise>
+          <strong>Merk:</strong> Realfagsbiblioteket holder sommerstengt fra 29. juni,
+          men bøker til henting flyttes ned i HumSam-biblioteket i Georg Sverdrups hus slik at du kan hente der etter denne datoen.
+        </xsl:otherwise>
+      </xsl:choose>
+    </p>
+  </xsl:if>
+  <xsl:if test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Informatikkbiblioteket')">
+    <p>
+      <xsl:choose>
+        <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'en'">
+          <strong>Please note:</strong> The Informatics Library will be closed for the Summer from 29 June,
+          but books for pick-up will be moved to the library in Georg Sverdrups hus, where they can be picked up after that date.
+        </xsl:when>
+        <xsl:otherwise>
+          <strong>Merk:</strong> Informatikkbiblioteket holder sommerstengt fra 29. juni,
+          men bøker til henting flyttes ned i HumSam-biblioteket i Georg Sverdrups hus slik at du kan hente der etter denne datoen.
+        </xsl:otherwise>
+      </xsl:choose>
+    </p>
+  </xsl:if>
+
   <xsl:choose>
     <xsl:when test="/notification_data/request/delivery_address != ''">
       <xsl:call-template name="email-footer">
