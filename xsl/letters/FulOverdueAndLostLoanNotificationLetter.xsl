@@ -55,7 +55,7 @@
     </xsl:when>
     <xsl:otherwise>
       <xsl:call-template name="multilingual"><!-- header.xsl -->
-        <xsl:with-param name="nb" select="'Må leveres."/><!-- Fornyes automatisk? -->
+        <xsl:with-param name="nb" select="'Må leveres.'"/><!-- Fornyes automatisk? -->
         <xsl:with-param name="nn" select="'Må leverast.'"/>
         <xsl:with-param name="en" select="'Must be returned.'"/><!-- Renewed automatically -->
       </xsl:call-template>

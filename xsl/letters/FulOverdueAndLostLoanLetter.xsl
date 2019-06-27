@@ -52,17 +52,17 @@
 
       Depends on: multilingual
     -->
-    <xsl:value-of select="title_abcnph"/>
-    <xsl:if test="material_type = 'ISSUE'">
+    <xsl:value-of select="physical_item_display_for_printing/title_abcnph"/>
+    <xsl:if test="item_loan/material_type = 'ISSUE'">
         <xsl:call-template name="multilingual"><!-- header.xsl -->
             <xsl:with-param name="nb" select="', hefte'"/>
             <xsl:with-param name="nn" select="', hefte'"/>
             <xsl:with-param name="en" select="', issue'"/>
         </xsl:call-template>
     </xsl:if>
-    <xsl:if test="item_description != ''">
+    <xsl:if test="item_loan/item_description != ''">
         <xsl:text> </xsl:text>
-        <xsl:value-of select="item_description"/><!-- Such as "53(2008) 11" -->
+        <xsl:value-of select="item_loan/item_description"/><!-- Such as "53(2008) 11" -->
     </xsl:if>
 </xsl:template>
 
@@ -119,7 +119,7 @@
           <xsl:attribute name="rowspan">
             <xsl:value-of select="$fees"/>
           </xsl:attribute>
-          <xsl:for-each select="$loan/item_loan">
+          <xsl:for-each select="$loan">
             <!-- Not really a loop, we use for-each just to change scope to item_loan -->
             <xsl:call-template name="formatItemTitle"></xsl:call-template>
           </xsl:for-each>
