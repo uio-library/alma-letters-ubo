@@ -16,6 +16,9 @@
 <!-- Klar til henting ved ... -->
 <xsl:text>@@can_picked_at@@ </xsl:text>
 <xsl:choose>
+  <xsl:when test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket') or starts-with(/notification_data/request/calculated_destination_name, 'UiO Informatikkbiblioteket')">
+    UiO HumSam-biblioteket (Georg Sverdrups hus)
+  </xsl:when>
   <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
 
     <xsl:value-of select="/notification_data/phys_item_display/owning_library_name"/>
