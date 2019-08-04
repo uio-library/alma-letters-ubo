@@ -28,9 +28,6 @@
   <p>
     @@following_item_requested_on@@
     <xsl:choose>
-      <xsl:when test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket') or starts-with(/notification_data/request/calculated_destination_name, 'UiO Informatikkbiblioteket')">
-        UiO HumSam-biblioteket (Georg Sverdrups hus)
-      </xsl:when>
       <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
 
         <xsl:value-of select="/notification_data/phys_item_display/owning_library_name"/>
@@ -106,41 +103,6 @@
   <xsl:if test="/notification_data/phys_item_display/fulfillment_note != ''">
     <p>
       <xsl:value-of select="/notification_data/phys_item_display/fulfillment_note"/>
-    </p>
-  </xsl:if>
-
-  <xsl:if test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket')">
-    <p>
-      <xsl:choose>
-        <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'en'">
-          <strong>Please note:</strong> The Science Library building will be closed from July 1 to August 4,
-          but library services will still be available. We will process requests and e-mails,
-          and counter services (pickup, return etc.) will be available through the Humanities
-          and Social sciences library in Georg Sverdrups hus.
-        </xsl:when>
-        <xsl:otherwise>
-          <strong>Merk:</strong> Realfagsbiblioteket holder sommerstengt fra 1. juli til 4.august,
-          men bibliotekstjenester vil allikevel være tilgjengelige. Vi behandler bestillinger og e-post,
-          og henting, retur, etc. kan gjøres ved HumSam-biblioteket i Georg Sverdrups hus.
-        </xsl:otherwise>
-      </xsl:choose>
-    </p>
-  </xsl:if>
-  <xsl:if test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Informatikkbiblioteket')">
-    <p>
-      <xsl:choose>
-        <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'en'">
-          <strong>Please note:</strong> The Informatics Library building will be closed from July 1 to August 4,
-          but library services will still be available. We will process requests and e-mails,
-          and counter services (pickup, return etc.) will be available through the Humanities
-          and Social sciences library in Georg Sverdrups hus.
-        </xsl:when>
-        <xsl:otherwise>
-          <strong>Merk:</strong> Informatikkbiblioteket holder sommerstengt fra 1. juli til 4.august,
-          men bibliotekstjenester vil allikevel være tilgjengelige. Vi behandler bestillinger og e-post,
-          og henting, retur, etc. kan gjøres ved HumSam-biblioteket i Georg Sverdrups hus.
-        </xsl:otherwise>
-      </xsl:choose>
     </p>
   </xsl:if>
 

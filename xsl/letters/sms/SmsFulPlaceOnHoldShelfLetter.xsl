@@ -16,9 +16,6 @@
 <!-- Klar til henting ved ... -->
 <xsl:text>@@can_picked_at@@ </xsl:text>
 <xsl:choose>
-  <xsl:when test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket') or starts-with(/notification_data/request/calculated_destination_name, 'UiO Informatikkbiblioteket')">
-    UiO HumSam-biblioteket (Georg Sverdrups hus)
-  </xsl:when>
   <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
 
     <xsl:value-of select="/notification_data/phys_item_display/owning_library_name"/>
@@ -69,16 +66,6 @@
     <xsl:with-param name="value" select="/notification_data/request/work_flow_entity/expiration_date"/>
   </xsl:call-template>
   <xsl:text>.</xsl:text>
-</xsl:if>
-<xsl:if test="starts-with(/notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket') or starts-with(/notification_data/request/calculated_destination_name, 'UiO Informatikkbiblioteket')">
-  <xsl:choose>
-    <xsl:when test="/notification_data/receivers/receiver/preferred_language = 'en'">
-      &#10;From 1 July: pick-up in the library in Georg Sverdrups hus.
-    </xsl:when>
-    <xsl:otherwise>
-      &#10;Fra 1. juli: henting i biblioteket i Georg Sverdrups hus.
-    </xsl:otherwise>
-  </xsl:choose>
 </xsl:if>
 
 </xsl:template>
