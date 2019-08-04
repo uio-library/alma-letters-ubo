@@ -2,7 +2,7 @@
 <xsl:include href="smsRecordTitle.xsl" />
  <xsl:template match="/">
 
-<xsl:value-of select="notification_data/receivers/receiver/user_phone/phone"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.: <xsl:for-each select="notification_data/user_for_printing/identifiers/code_value"><xsl:if test="code = 'Primary Identifier'"><xsl:value-of select="value" /></xsl:if></xsl:for-each>. 
+<xsl:value-of select="notification_data/receivers/receiver/user_phone/phone"/> : <xsl:value-of select="notification_data/organization_unit/name"/>.: <xsl:if test = "notification_data/receivers/receiver/user/user_name"> <xsl:value-of select="notification_data/receivers/receiver/user/user_name"/></xsl:if>
 @@can_picked_at@@  <xsl:choose>
   <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
 

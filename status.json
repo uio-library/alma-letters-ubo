@@ -97,7 +97,7 @@
     },
     "xsl/letters/FulCancelRequestLetter.xsl": {
       "checksum": "85606d3543d8ee0fc2ffe52fc0ebc1bfa25a9b03",
-      "default_checksum": "c1b4d836ccda342a43ba4bb1f6109cb3e252d470",
+      "default_checksum": "f0f5cad780cc374151177ee26611931cd7572c38",
       "modified": "10/12/2018"
     },
     "xsl/letters/FulCitationSlipLetter.xsl": {
@@ -292,7 +292,7 @@
     },
     "xsl/letters/LegantoNotificationsLetter.xsl": {
       "checksum": "c4dce00ec02fd5a65534f987e26b6c4984164b58",
-      "default_checksum": "3458e741b9ec824ea0b93389c71d0660576b03e0",
+      "default_checksum": "c4b84a70a3a220c6be8d54704b6a8103ac321606",
       "modified": "16/02/2018"
     },
     "xsl/letters/LenderCheckedInEmailLetter.xsl": {
@@ -400,6 +400,11 @@
       "default_checksum": "79e070c95c413ead652acbb3871f2028b8adbea0",
       "modified": "09/10/2018"
     },
+    "xsl/letters/PzSystemJobLetter.xsl": {
+      "checksum": "ccbfd20301371fc08622f8e1f0d0d37f76c89d81",
+      "default_checksum": "ccbfd20301371fc08622f8e1f0d0d37f76c89d81",
+      "modified": "-"
+    },
     "xsl/letters/QueryToPatronLetter.xsl": {
       "checksum": "0bb37296eafe416018f8d592ba9f9a1f02bff9a0",
       "default_checksum": "f5978d1ba2090f04541f47012e3705889939240b",
@@ -417,7 +422,7 @@
     },
     "xsl/letters/ResearchDepositActionLetter.xsl": {
       "checksum": "d108e3b41d4dab05a4e39cf1572f4765d2cc893b",
-      "default_checksum": "c27dff1df01b2b6cc84d7cb84907d1caa638ea29",
+      "default_checksum": "c3f51df3238821231a6cbad814e247823de6391f",
       "modified": "-"
     },
     "xsl/letters/ResendNotificationLetter.xsl": {
@@ -494,6 +499,26 @@
       "checksum": "f4bb3ab7eadb0e6e4f83431d719776db8b5c13f3",
       "default_checksum": "c6a5521ad686c32bc9b1cfc9cc1924e603a9b907",
       "modified": "16/02/2018"
+    },
+    "xsl/letters/call_template/esploroFooter.xsl": {
+      "checksum": "d0e0a13ffe9b7401631843d89cfc0611f2fe8a60",
+      "default_checksum": "d0e0a13ffe9b7401631843d89cfc0611f2fe8a60",
+      "modified": "-"
+    },
+    "xsl/letters/call_template/esploroHeader.xsl": {
+      "checksum": "c9b52c2622eac71bf29114c399bf9b65a0040cdc",
+      "default_checksum": "c9b52c2622eac71bf29114c399bf9b65a0040cdc",
+      "modified": "-"
+    },
+    "xsl/letters/call_template/esploroSenderReceiver.xsl": {
+      "checksum": "9f400d0290465e3f86193eba1ecfdbf13941f4eb",
+      "default_checksum": "9f400d0290465e3f86193eba1ecfdbf13941f4eb",
+      "modified": "-"
+    },
+    "xsl/letters/call_template/esploroStyle.xsl": {
+      "checksum": "dc602b5476a6511032ae558748efad089dc439e8",
+      "default_checksum": "dc602b5476a6511032ae558748efad089dc439e8",
+      "modified": "-"
     },
     "xsl/letters/call_template/footer.xsl": {
       "checksum": "94cfaef5d8e4adfc44142ea31713c19781d45ac6",
@@ -572,7 +597,7 @@
     },
     "xsl/letters/sms/SmsFulPlaceOnHoldShelfLetter.xsl": {
       "checksum": "d5424ca7fa45ed6ac7748c9119fbef8dff6ec095",
-      "default_checksum": "272a776b7fb8aaac1df369fd8ab4398d8bb8a708",
+      "default_checksum": "ee8b461a21d9aef9e8f4208a6dc6a6653b379626",
       "modified": "30/06/2019"
     },
     "xsl/letters/sms/SmsFulShortenedDueDateLetter.xsl": {

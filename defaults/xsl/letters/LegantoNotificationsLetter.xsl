@@ -33,9 +33,9 @@
        <tr>
         <td style="font-size:18px;padding: 0px 0 5px 10px;">
          <b>
-          You have
+          @@you_have@@
           <xsl:value-of select="notification_data/sum_of_notifications" />
-          new notifications:
+          @@new_notifications@@
          </b>
          <br />
          <br />
@@ -55,7 +55,7 @@
        
        <xsl:if test="notification_data/leganto_url  !=''">
        <span style="padding:0 0 5px 10px;">
-       To see all your lists
+       @@see_all_your_lists@@
        <xsl:element name="a">
         <xsl:attribute name="href">
          <xsl:value-of select="notification_data/leganto_url" />
@@ -64,7 +64,7 @@
         <xsl:attribute name="style">
          <xsl:value-of select="'color:#337ab7;font-weight:bold;'"/>
         </xsl:attribute>
-        go to Leganto
+        @@go_leganto@@
        </xsl:element>
        </span>
        </xsl:if>

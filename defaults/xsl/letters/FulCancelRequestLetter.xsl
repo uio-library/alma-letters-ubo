@@ -292,11 +292,11 @@
          <xsl:value-of select="notification_data/request/status_note_display" />
         </td>
        </tr>
-       <xsl:if test="notification_data/request/system_notes != ''">
+       <xsl:if test="notification_data/request/cancel_reason != ''">
         <tr>
          <td>
           <b> @@request_cancellation_note@@: </b>
-          <xsl:value-of select="notification_data/request/system_notes" />
+          <xsl:value-of select="notification_data/request/cancel_reason" />
          </td>
         </tr>
        </xsl:if>
