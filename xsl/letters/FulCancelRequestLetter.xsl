@@ -106,9 +106,9 @@
   </p>
 
   <!-- "Cancellation note" havner her -->
-  <xsl:if test="request/system_notes != ''">
+  <xsl:if test="request/cancel_reason != ''">
     <p>
-      <strong><xsl:value-of select="request/system_notes"/></strong>
+      <strong><xsl:value-of select="request/cancel_reason"/></strong>
     </p>
   </xsl:if>
 
