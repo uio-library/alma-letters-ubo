@@ -96,9 +96,9 @@
       "modified": "16/02/2018"
     },
     "xsl/letters/FulCancelRequestLetter.xsl": {
-      "checksum": "d4f927424dbe97cb9011ff75f6875aa0a36a1a51",
+      "checksum": "017889ed5520a707cd838426e325f022d81efbd4",
       "default_checksum": "f0f5cad780cc374151177ee26611931cd7572c38",
-      "modified": "04/08/2019"
+      "modified": "12/09/2019"
     },
     "xsl/letters/FulCitationSlipLetter.xsl": {
       "checksum": "3785f989e9680b4eb6dfcfeb8d1d8573b569eb26",

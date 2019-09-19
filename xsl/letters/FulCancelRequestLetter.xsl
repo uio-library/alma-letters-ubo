@@ -19,6 +19,9 @@
   <xsl:if test="/notification_data/request/status_note = 'RejectedBySupplier'">
     <xsl:message terminate="yes">Deaktivert inntil videre</xsl:message>
   </xsl:if>
+ <xsl:if test="/notification_data/request/status_note = 'ResourceFoundInInstitution'">
+    <xsl:message terminate="yes">Converted to local request - No automatic cancellation letter sent</xsl:message>
+  </xsl:if>
   <xsl:call-template name="emailTemplate"/><!-- style.xsl -->
 </xsl:template>
 
