@@ -17,6 +17,15 @@
 
 <xsl:template match="/notification_data">
 
+  <!--
+    Hvem skal ha dokumenter tilsendt med internpost?
+    - NHM (Postboks 1172)
+  -->
+  <xsl:variable 
+    name="internpost"
+    select="contains(/notification_data/user_for_printing/address1, 'Postboks 1172')"
+  />
+
   <xsl:call-template name="emailLogo"/><!-- mailReason.xsl -->
   <xsl:call-template name="toWhomIsConcerned"/><!-- mailReason.xsl -->
 
@@ -26,10 +35,21 @@
     nn: Følgjande er klar til henting i {navn på bibliotek}:
   -->
   <p>
-    @@following_item_requested_on@@
     <xsl:choose>
-      <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
 
+      <!-- Case 1: Dokumenter som skal sendes med internpost -->
+      <xsl:when test="$internpost">
+        <xsl:call-template name="multilingual">
+          <!-- header.xsl -->
+          <xsl:with-param name="nb" select="'Denne er sendt med internpost fra oss og bør være hos deg snart'" />
+          <xsl:with-param name="nn" select="'Denne er sendt med internpost fra oss og bør være hos deg snart'" />
+          <xsl:with-param name="en" select="'We have just shipped this to you using internal mail, it should arrive soon'" />
+        </xsl:call-template>
+      </xsl:when>
+
+      <!-- Case 2: Artikkelkopier -->
+      <xsl:when test="/notification_data/outgoing/format = 'PHYSICAL_NON_RETURNABLE'">
+        @@following_item_requested_on@@
         <xsl:value-of select="/notification_data/phys_item_display/owning_library_name"/>
         <!-- Vi kunne også brukt `outgoing/pickup_location_str` her, men bruker
              i stedet `phys_item_display/owning_library_name` fordi denne ikke inkluderer skrankenavn.
@@ -37,13 +57,14 @@
              - 'phys_item_display/owning_library_name' : 'UiO Realfagsbiblioteket'
              - 'outgoing/pickup_location_str'          : 'UiO Realfagsbiblioteket – Utlånet Ureal'
         -->
-
       </xsl:when>
+    
+      <!-- Case 3: Vanlige utlån -->
       <xsl:otherwise>
-
+        @@following_item_requested_on@@
         <xsl:value-of select="/notification_data/request/delivery_address"/>
-
       </xsl:otherwise>
+
     </xsl:choose>:
   </p>
 
@@ -54,11 +75,24 @@
   <!-- ===========================================================
        START: Hentekode eller informasjon om henting
        =========================================================== -->
-  <xsl:if test="/notification_data/request/work_flow_entity/expiration_date">
-    <p>
-      <xsl:call-template name="pickupNumberWithLabel"/><!-- header.xsl -->
-    </p>
-  </xsl:if>
+  <xsl:choose>
+    <xsl:when test="$internpost">
+      <p>
+        <xsl:call-template name="multilingual">
+          <!-- header.xsl -->
+          <xsl:with-param name="nb" select="'Du trenger ikke å komme innom biblioteket for å hente denne.'" />
+          <xsl:with-param name="nn" select="'Du trenger ikke å komme innom biblioteket for å hente denne.'" />
+          <xsl:with-param name="en" select="'You do not need to visit the library to pick this up.'" />
+        </xsl:call-template>
+      </p>
+    </xsl:when>
+    <xsl:when test="/notification_data/request/work_flow_entity/expiration_date">
+      <p>
+        <xsl:call-template name="pickupNumberWithLabel"/><!-- header.xsl -->
+      </p>
+    </xsl:when>
+  </xsl:choose>
+
   <!-- ===========================================================
        SLUTT: Hentekode eller informasjon om henting
        =========================================================== -->
@@ -90,7 +124,8 @@
                innlånte bøker stå lenger, inntil 28 dager hvis det er plass. For å ikke
                gjøre dette altfor komplisert skjuler vi bare hentefristen for innlånte bøker.
   -->
-  <xsl:if test="/notification_data/request/work_flow_entity/expiration_date != '' and not(contains(/notification_data/phys_item_display/location_name, 'Fjernlån'))">
+
+  <xsl:if test="not($internpost) and /notification_data/request/work_flow_entity/expiration_date != '' and not(contains(/notification_data/phys_item_display/location_name, 'Fjernlån'))">
     <p>
       @@note_item_held_until@@
       <xsl:call-template name="stdDate"><!-- header.xsl -->

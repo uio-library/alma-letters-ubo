@@ -13,6 +13,16 @@
 <xsl:include href="recordTitle.xsl" />
 
 <xsl:template match="/">
+
+<!--
+  Hvem skal ha dokumenter tilsendt med internpost?
+  - NHM (Postboks 1172)
+-->
+<xsl:variable 
+  name="internpost"
+  select="contains(/notification_data/user_for_printing/address1, 'Postboks 1172')"
+/>
+
 <html>
   <head>
     <xsl:call-template name="generalStyle" />
@@ -50,6 +60,25 @@
       <xsl:when test="notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
         <td>
           <xsl:choose>
+
+            <!-- Bøker til folk på NHM sendes med internpost -->
+            <xsl:when test="$internpost">
+              <h2>Lånes ut og sendes med internpost</h2>
+              <hr/>
+              <p>
+                Dette dokumentet skal ikke på hentehylla, men
+                lånes ut og sendes med internpost til: 
+              </p>
+              <p>
+                <xsl:value-of select="/notification_data/user_for_printing/first_name"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="/notification_data/user_for_printing/middle_name"/>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="/notification_data/user_for_printing/last_name"/>
+                <br />
+                <xsl:value-of select="/notification_data/user_for_printing/address1"/>
+              </p>
+            </xsl:when>
 
             <!-- Enkelte avdelinger ønsker oppstiling etter navn. Fjernlån stilles alltid opp etter navn. -->
             <xsl:when test="notification_data/request/calculated_destination_name = 'UiO HumSam-biblioteket - HumSam-biblioteket-Innlån' or notification_data/request/calculated_destination_name = 'UiO Informatikkbiblioteket - Utlånet Inf' or contains(notification_data/request/calculated_destination_name, 'UiO Realfagsbiblioteket') or contains(notification_data/phys_item_display/available_items/available_item/location_name, 'Fjernlån')">
@@ -112,20 +141,19 @@
     </tr>
   </table>
 
-
   <div class="messageArea">
     <div class="messageBody">
 
       <table cellspacing="0" cellpadding="5" border="0" width="100%">
 
         <!-- Del 1: Infotekst til hentehyllelapp -->
-        <xsl:if test="notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
+        <xsl:if test="not($internpost) and notification_data/request/work_flow_entity/step_type = 'ON_HOLD_SHELF'">
           <!-- Skulle gjerne testet språk, men det finnes ikke i XML-en -->
-         <h1>Til henting / for pick-up</h1>
-         <h2><ul>
-          <li>Lån ut eksemplaret til deg selv på automaten</li>
-          <li>Please check out the item on the self-checkout machine</li>
-         </ul></h2>
+          <h1>Til henting / for pick-up</h1>
+          <h2><ul>
+            <li>Lån ut eksemplaret til deg selv på automaten</li>
+            <li>Please check out the item on the self-checkout machine</li>
+          </ul></h2>
         </xsl:if>
         <!-- Del 1: SLUTT -->
 
