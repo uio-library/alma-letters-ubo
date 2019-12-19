@@ -46,7 +46,7 @@
                <xsl:when test="starts-with(calculated_destination_name, 'UiO Informatikkbiblioteket')">
                  103 &#160; 0317
                </xsl:when>
-               <xsl:when test="starts-with(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
+               <xsl:when test="starts-with(calculated_destination_name, 'UiO Juridisk bibliotek DJ')">
                  103 &#160; 0000
                </xsl:when>
                <xsl:when test="starts-with(calculated_destination_name, 'UiO Kriminologibiblioteket')">
