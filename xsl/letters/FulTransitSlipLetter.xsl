@@ -113,8 +113,8 @@
           <xsl:attribute name="content">
 
             <xsl:for-each select="notification_data/request">
-               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
-                 Juridisk bibliotek, DB
+               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DJ')">
+                 Juridisk bibliotek, DJ
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Kriminologibiblioteket')">
                  IKR-bibl, DN 6. etg.
