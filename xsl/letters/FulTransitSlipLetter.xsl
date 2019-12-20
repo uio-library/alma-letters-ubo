@@ -116,26 +116,11 @@
                <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DJ')">
                  Juridisk bibliotek, DJ
                </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Kriminologibiblioteket')">
-                 IKR-bibl, DN 6. etg.
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Læringssenteret DN')">
-                 Læringssenteret, DN 2. etg
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Menneskerettighetsbiblioteket')">
-                 SMR-bibl, CA 30
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Offentligrettsbiblioteket')">
-                 IOR-bibl, DB
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Petroleums- og EU-rettsbiblioteket')">
-                 EU-bibl, DMØ
+               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DB')">
+                 Juridisk bibliotek, DB
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Rettshistorisk samling')">
-                 RS, DB 2. etg
-               </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Rettsinformatikkbiblioteket')">
-                 SERI-bibl, DN 4. etg.
+                 RS, DB 1. etg
                </xsl:if>
                </xsl:for-each>
            </xsl:attribute>
