@@ -116,7 +116,7 @@
                <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk bibliotek DJ')">
                  Juridisk bibliotek, DJ
                </xsl:if>
-               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk magasinbygg DB')">
+               <xsl:if test="contains(calculated_destination_name, 'UiO Juridisk magasin DB')">
                  DB, postrom K16
                </xsl:if>
                <xsl:if test="contains(calculated_destination_name, 'UiO Rettshistorisk samling')">
