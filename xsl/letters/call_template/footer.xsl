@@ -80,6 +80,10 @@
                   </xsl:call-template>
                </xsl:otherwise>
             </xsl:choose>
+            <br />
+            <a>
+              <xsl:attribute name="href">https://ub.uio.no/</xsl:attribute>
+              https://ub.uio.no/</a>
          </p>
       </div>
    </xsl:template>
