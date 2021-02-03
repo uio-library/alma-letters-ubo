@@ -133,7 +133,7 @@
                       Legg inn DokumentID (se over) i kommentarfeltet.
                     </li>
                     <li>
-                      Kortterminal i skranken i biblioteket (Georg Sverdrups hus, Domus Bibliotheca eller Rikshospitalet).
+                      Kortterminal i skranken i biblioteket (Georg Sverdrups hus eller Domus Juridica).
                     </li>
                   </ul>
                </xsl:when>
@@ -153,7 +153,7 @@
                       Legg inn DokumentID (se over) i kommentarfeltet.
                     </li>
                     <li>
-                      Kortterminal i skranken i biblioteket (Georg Sverdrups hus, Domus Bibliotheca eller Rikshospitalet)
+                      Kortterminal i skranken i biblioteket (Georg Sverdrups hus eller Domus Bibliotheca)
                     </li>
                   </ul>
                </xsl:when>
@@ -172,7 +172,7 @@
                       Please include the DocumentID (see above) in the comment field.
                     </li>
                     <li>
-                      Credit card terminal in the library (Georg Sverdrups hus, Domus Bibliotheca or Rikshospitalet).
+                      Credit card terminal in the library (Georg Sverdrups hus or Domus Bibliotheca).
                     </li>
                   </ul>
                 </xsl:otherwise>
