@@ -1,3 +1,10 @@
+# ⚠️ Archived
+
+This repository has been archived on Oct 14, 2022. Unfortunately we did not have the time and resources to update [slipsomat](https://github.com/scriptotek/alma-slipsomat), our hacky synchronizing tool, after a breaking change in Alma.
+
+Synchronizing the letters would be much easier if there was an API for doing so, so feel free to vote for this idea (if it's not yet implemented when you read this ✨): https://ideas.exlibrisgroup.com/forums/308173-alma/suggestions/12471084-synchronizing-xsl-templates-with-external-systems
+
+# alma-letters-ubo
 
 This is a collection of the XSL files used to generate letters and slips in
 Alma, as customized by the University of Oslo Library. In general, we try to
